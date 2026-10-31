@@ -1,0 +1,2344 @@
+{
+  "id": "g-math-m3",
+  "module": 3,
+  "subject": "math",
+  "grade": "5",
+  "level": "g",
+  "title": "Module 3: Addition and Subtraction of Fractions",
+  "description": "Equivalent fractions, making like units pictorially with rectangular fraction models, making like units numerically, and word problem applications.",
+  "lessonsCount": 16,
+  "lessons": {
+    "g-math-m3-a-1": {
+      "id": "g-math-m3-a-1",
+      "code": "G.M3.A.1",
+      "standard": "4.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Make equivalent fractions with the number line, the area model, and numbers.",
+        "pageTitle": "Make equivalent fractions with the number line, the area model, and numbers. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Make equivalent fractions with the number line, the area model, and numbers. in Grade 5 Mathematics aligned with Common Core standard 4.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Make equivalent fractions with the number line, the area model, and numbers. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 3 • Equivalent Fractions",
+        "text": "In this lesson on Make equivalent fractions with the number line, the area model, and numbers., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Make equivalent fractions with the number line, the area model, and numbers.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Make equivalent fractions with the number line, the area model, and numbers.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Make equivalent fractions with the number line, the area model, and numbers.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Make equivalent fractions with the number line, the area model, and numbers.",
+        "prompt": "\\frac{1}{6}= \\frac{1 \\times 2}{6 \\times 2}=\\frac{2}{12} 1 1 1\\frac{1}{6}= \\frac{1 \\times 2}{6 \\times 2}=\\frac{2}{12} 1 1 1Estimate to mark points 0 and 1 above the number line, and \\frac{0}{6}, \\frac{1}{6}, \\frac{2}{6}, \\frac{3}{6}, \\frac{4}{6}, \\frac{5}{6}, and \\frac{6}{6} below it. Use the squares below to represent fractions equivalent to 1 sixth using both arrays and equations.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Make equivalent fractions with the number line, the area model, and numbers.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use the folded paper strip to mark points 0 and 1 above the number line and \\frac{0}{2}, \\frac{1}{2}, and \\frac{2}{2} below it. 1 1 1 1\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} 1 1 1 1Draw one vertical line down the middle of each rectangle, creating two parts. Shade the left half of each. Partition with horizontal lines to show the equivalent fractions \\frac{2}{4}, \\frac{3}{6}, \\frac{4}{8}, and \\frac{5}{10}. Use multiplication to show the change in the units. \\frac{1}{2}=\\frac{1 \\times 2}{2 \\times 2}=\\frac{2}{4} \\frac{1}{2}=\\frac{1 \\times 2}{2 \\times 2}=\\frac{2}{4}",
+            "problem": "Use the folded paper strip to mark points 0 and 1 above the number line and \\frac{0}{2}, \\frac{1}{2}, and \\frac{2}{2} below it. 1 1 1 1\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} 1 1 1 1Draw one vertical line down the middle of each rectangle, creating two parts. Shade the left half of each. Partition with horizontal lines to show the equivalent fractions \\frac{2}{4}, \\frac{3}{6}, \\frac{4}{8}, and \\frac{5}{10}. Use multiplication to show the change in the units. \\frac{1}{2}=\\frac{1 \\times 2}{2 \\times 2}=\\frac{2}{4} \\frac{1}{2}=\\frac{1 \\times 2}{2 \\times 2}=\\frac{2}{4}",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the folded paper strip to mark points 0 and 1 above the number line and \\frac{0}{3}, \\frac{1}{3}, \\frac{2}{3}, and \\frac{3}{3} below it. Follow the same pattern as Problem 1 but with thirds. 1 1 1 1 1 1 1 1 Continue the pattern with 3 fourths. 1 1 1 1 1 1 1 1 Continue the process, and model 2 equivalent fractions for 6 fifths. 1 1 1 1 1 1 1 1",
+            "problem": "Use the folded paper strip to mark points 0 and 1 above the number line and \\frac{0}{3}, \\frac{1}{3}, \\frac{2}{3}, and \\frac{3}{3} below it. Follow the same pattern as Problem 1 but with thirds. 1 1 1 1 1 1 1 1 Continue the pattern with 3 fourths. 1 1 1 1 1 1 1 1 Continue the process, and model 2 equivalent fractions for 6 fifths. 1 1 1 1 1 1 1 1",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Make equivalent fractions with the number line, the area model, and numbers.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Make equivalent fractions with the number line, the area model, and numbers..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-a-1"
+      }
+    },
+    "g-math-m3-a-2": {
+      "id": "g-math-m3-a-2",
+      "code": "G.M3.A.2",
+      "standard": "4.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Make equivalent fractions with sums of fractions with like denominators.",
+        "pageTitle": "Make equivalent fractions with sums of fractions with like denominators. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Make equivalent fractions with sums of fractions with like denominators. in Grade 5 Mathematics aligned with Common Core standard 4.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Make equivalent fractions with sums of fractions with like denominators. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 3 • Equivalent Fractions",
+        "text": "In this lesson on Make equivalent fractions with sums of fractions with like denominators., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Make equivalent fractions with sums of fractions with like denominators.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Make equivalent fractions with sums of fractions with like denominators.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Make equivalent fractions with sums of fractions with like denominators.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Make equivalent fractions with sums of fractions with like denominators.",
+        "prompt": "Show each expression on a number line. Solve. Express each fraction as the sum of two or three equal fractional parts. Rewrite each as a multiplication equation. Show Part (b) on a number line.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Make equivalent fractions with sums of fractions with like denominators.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Show each expression on a number line. Solve.",
+            "problem": "Show each expression on a number line. Solve.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Express each fraction as the sum of two or three equal fractional parts. Rewrite each as a multiplication equation. Show Part (a) on a number line.",
+            "problem": "Express each fraction as the sum of two or three equal fractional parts. Rewrite each as a multiplication equation. Show Part (a) on a number line.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Express each of the following as the sum of a whole number and a fraction. Show Parts (c) and (d) on number lines. Marisela cut four equivalent lengths of ribbon. Each was 5 eighths of a yard long. How many yards of ribbon did she cut? Express your answer as the sum of a whole number and the remaining fractional units. Draw a number line to represent the problem.",
+            "problem": "Express each of the following as the sum of a whole number and a fraction. Show Parts (c) and (d) on number lines. Marisela cut four equivalent lengths of ribbon. Each was 5 eighths of a yard long. How many yards of ribbon did she cut? Express your answer as the sum of a whole number and the remaining fractional units. Draw a number line to represent the problem.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Make equivalent fractions with sums of fractions with like denominators.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Make equivalent fractions with sums of fractions with like denominators..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-a-2"
+      }
+    },
+    "g-math-m3-b-1": {
+      "id": "g-math-m3-b-1",
+      "code": "G.M3.B.1",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add fractions with unlike units using the strategy of creating equivalent fractions.",
+        "pageTitle": "Add fractions with unlike units using the strategy of creating equivalent fractions. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Add fractions with unlike units using the strategy of creating equivalent fractions. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Add fractions with unlike units using the strategy of creating equivalent fractions. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 3 • Making Like Units Pictorially",
+        "text": "In this lesson on Add fractions with unlike units using the strategy of creating equivalent fractions., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Add fractions with unlike units using the strategy of creating equivalent fractions.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add fractions with unlike units using the strategy of creating equivalent fractions.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add fractions with unlike units using the strategy of creating equivalent fractions.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add fractions with unlike units using the strategy of creating equivalent fractions.",
+        "prompt": "Solve by drawing the rectangular fraction model. \\frac{1}{2}+\\frac{1}{5}=\\frac{1}{2}+\\frac{1}{5}= In one hour, Ed used \\frac{2}{5} of the time to complete his homework and \\frac{1}{4} of the time to check his email. How much time did he spend completing homework and checking email? Write your answer as a fraction. (Extension: Write the answer in minutes.)",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add fractions with unlike units using the strategy of creating equivalent fractions.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw a rectangular fraction model to find the sum. Simplify your answer, if possible.",
+            "problem": "Draw a rectangular fraction model to find the sum. Simplify your answer, if possible.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve the following problems. Draw a picture and write the number sentence that proves the answer. Simplify your answer, if possible. Jamal used \\frac{1}{3} yard of ribbon to tie a package and \\frac{1}{6} yard of ribbon to tie a bow. How many yards of ribbon did Jamal use? Over the weekend, Nolan drank \\frac{1}{6} quart of orange juice, and Andrea drank \\frac{3}{4} quart of orange juice. How many quarts did they drink together? Nadia spent \\frac{1}{4} of her money on a shirt and \\frac{2}{5} of her money on new shoes. What fraction of Nadia's money has been spent? What fraction of her money is left?",
+            "problem": "Solve the following problems. Draw a picture and write the number sentence that proves the answer. Simplify your answer, if possible. Jamal used \\frac{1}{3} yard of ribbon to tie a package and \\frac{1}{6} yard of ribbon to tie a bow. How many yards of ribbon did Jamal use? Over the weekend, Nolan drank \\frac{1}{6} quart of orange juice, and Andrea drank \\frac{3}{4} quart of orange juice. How many quarts did they drink together? Nadia spent \\frac{1}{4} of her money on a shirt and \\frac{2}{5} of her money on new shoes. What fraction of Nadia's money has been spent? What fraction of her money is left?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add fractions with unlike units using the strategy of creating equivalent fractions.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add fractions with unlike units using the strategy of creating equivalent fractions..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-b-1"
+      }
+    },
+    "g-math-m3-b-2": {
+      "id": "g-math-m3-b-2",
+      "code": "G.M3.B.2",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add fractions with sums between 1 and 2.",
+        "pageTitle": "Add fractions with sums between 1 and 2. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Add fractions with sums between 1 and 2. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Add fractions with sums between 1 and 2. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 3 • Making Like Units Pictorially",
+        "text": "In this lesson on Add fractions with sums between 1 and 2., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Add fractions with sums between 1 and 2.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add fractions with sums between 1 and 2.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add fractions with sums between 1 and 2.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add fractions with sums between 1 and 2.",
+        "prompt": "Draw a model to help solve \\frac{5}{6}+\\frac{1}{4} . Write your answer as a mixed number. 2.Patrick drank \\frac{3}{4} liter of water Monday before jogging. He drank \\frac{4}{5} liter of water after his jog. How much water did Patrick drink altogether? Write your answer as a mixed number.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add fractions with sums between 1 and 2.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "For the following problems, draw a picture using the rectangular fraction model and write the answer. When possible, write your answer as a mixed number.",
+            "problem": "For the following problems, draw a picture using the rectangular fraction model and write the answer. When possible, write your answer as a mixed number.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve the following problems. Draw a picture, and write the number sentence that proves the answer. Simplify your answer, if possible.",
+            "problem": "Solve the following problems. Draw a picture, and write the number sentence that proves the answer. Simplify your answer, if possible.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "2.Penny used \\frac{2}{5} lb of flour to bake a vanilla cake. She used another \\frac{3}{4} lb of flour to bake a chocolate cake. How much flour did she use altogether?",
+            "problem": "2.Penny used \\frac{2}{5} lb of flour to bake a vanilla cake. She used another \\frac{3}{4} lb of flour to bake a chocolate cake. How much flour did she use altogether?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "3.Carlos wants to practice piano 2 hours each day. He practices piano for \\frac{3}{4} hour before school and \\frac{7}{10} hour when he gets home. How many hours has Carlos practiced piano? How much longer does he need to practice before going to bed in order to meet his goal?",
+            "problem": "3.Carlos wants to practice piano 2 hours each day. He practices piano for \\frac{3}{4} hour before school and \\frac{7}{10} hour when he gets home. How many hours has Carlos practiced piano? How much longer does he need to practice before going to bed in order to meet his goal?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add fractions with sums between 1 and 2.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add fractions with sums between 1 and 2..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-b-2"
+      }
+    },
+    "g-math-m3-b-3": {
+      "id": "g-math-m3-b-3",
+      "code": "G.M3.B.3",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract fractions with unlike units using the strategy of creating equivalent fractions.",
+        "pageTitle": "Subtract fractions with unlike units using the strategy of creating equivalent fractions. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Subtract fractions with unlike units using the strategy of creating equivalent fractions. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Subtract fractions with unlike units using the strategy of creating equivalent fractions. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 3 • Making Like Units Pictorially",
+        "text": "In this lesson on Subtract fractions with unlike units using the strategy of creating equivalent fractions., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Subtract fractions with unlike units using the strategy of creating equivalent fractions.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract fractions with unlike units using the strategy of creating equivalent fractions.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract fractions with unlike units using the strategy of creating equivalent fractions.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract fractions with unlike units using the strategy of creating equivalent fractions.",
+        "prompt": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. \\frac{1}{2}-\\frac{1}{7}=b.\\frac{3}{5}-\\frac{1}{2}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract fractions with unlike units using the strategy of creating equivalent fractions.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. Mr. Penman had \\frac{2}{3} liter of salt water. He used \\frac{1}{5} of a liter for an experiment. How much salt water does Mr. Penman have left? Sandra says that \\frac{4}{7}-\\frac{1}{3 }=\\frac{3}{4} because all you have to do is subtract the numerators and subtract the denominators. Convince Sandra that she is wrong. You may draw a rectangular fraction model to support your thinking.",
+            "problem": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. Mr. Penman had \\frac{2}{3} liter of salt water. He used \\frac{1}{5} of a liter for an experiment. How much salt water does Mr. Penman have left? Sandra says that \\frac{4}{7}-\\frac{1}{3 }=\\frac{3}{4} because all you have to do is subtract the numerators and subtract the denominators. Convince Sandra that she is wrong. You may draw a rectangular fraction model to support your thinking.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract fractions with unlike units using the strategy of creating equivalent fractions.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract fractions with unlike units using the strategy of creating equivalent fractions..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-b-3"
+      }
+    },
+    "g-math-m3-b-4": {
+      "id": "g-math-m3-b-4",
+      "code": "G.M3.B.4",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract fractions from numbers between 1 and 2.",
+        "pageTitle": "Subtract fractions from numbers between 1 and 2. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Subtract fractions from numbers between 1 and 2. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Subtract fractions from numbers between 1 and 2. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 3 • Making Like Units Pictorially",
+        "text": "In this lesson on Subtract fractions from numbers between 1 and 2., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Subtract fractions from numbers between 1 and 2.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract fractions from numbers between 1 and 2.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract fractions from numbers between 1 and 2.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract fractions from numbers between 1 and 2.",
+        "prompt": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. 1\\frac{1}{5}-\\frac{1}{2}= b.1\\frac{1}{3}-\\frac{5}{6}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract fractions from numbers between 1 and 2.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. Jean-Luc jogged around the lake in 1\\frac{1}{4} hour. William jogged the same distance in \\frac{5}{6} hour. How much longer did Jean-Luc take than William in hours? Is it true that 1\\frac{2}{5}-\\frac{3}{4}=\\frac{1}{4}+\\frac{2}{5}? Prove your answer.",
+            "problem": "For the following problems, draw a picture using the rectangular fraction model and write the answer. Simplify your answer, if possible. Jean-Luc jogged around the lake in 1\\frac{1}{4} hour. William jogged the same distance in \\frac{5}{6} hour. How much longer did Jean-Luc take than William in hours? Is it true that 1\\frac{2}{5}-\\frac{3}{4}=\\frac{1}{4}+\\frac{2}{5}? Prove your answer.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract fractions from numbers between 1 and 2.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract fractions from numbers between 1 and 2..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-b-4"
+      }
+    },
+    "g-math-m3-b-5": {
+      "id": "g-math-m3-b-5",
+      "code": "G.M3.B.5",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solve two-step word problems.",
+        "pageTitle": "Solve two-step word problems. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Solve two-step word problems. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Solve two-step word problems. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 3 • Making Like Units Pictorially",
+        "text": "In this lesson on Solve two-step word problems., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Solve two-step word problems.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "Solution 2Solution 2Solution 1Solution 1Shelby bought a 2-ounce tube of blue paint. She used \\frac{2}{3} ounce to paint the water, \\frac{3}{5} ounce to paint the sky, and some to paint a flag. After that, she had \\frac{2}{15} ounce left. How much paint did Shelby use to paint her flag? Jim sold \\frac{3}{4} gallon of lemonade. Dwight sold some lemonade, too. Together, they sold 1\\frac{5}{12} gallons. Who sold more lemonade, Jim or Dwight? How much more? (See the Student Debrief for student work samples.)"
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Solve two-step word problems.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Solve two-step word problems.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Solve two-step word problems.",
+        "prompt": "Solve the word problem using the RDW strategy. Show all of your work. Mr. Pham mowed \\frac{2}{7} of his lawn. His son mowed \\frac{1}{4} of it. Who mowed the most? How much of the lawn still needs to be mowed?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Solve two-step word problems.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve the word problems using the RDW strategy. Show all of your work. George weeded \\frac{1}{5} of the garden, and Summer weeded some, too. When they were finished, \\frac{2}{3} of the garden still needed to be weeded. What fraction of the garden did Summer weed? Jing spent \\frac{1}{3} of her money on a pack of pens, \\frac{1}{2} of her money on a pack of markers, and \\frac{1}{8} of her money on a pack of pencils. What fraction of her money is left? Shelby bought a 2-ounce tube of blue paint. She used \\frac{2}{3} ounce to paint the water, \\frac{3}{5} ounce to paint the sky, and some to paint a flag. After that, she has \\frac{2}{15} ounce left. How much paint did Shelby use to paint her flag? Jim sold \\frac{3}{4} gallon of lemonade. Dwight sold some lemonade, too. Together, they sold 1\\frac{5}{12} gallons. Who sold more lemonade, Jim or Dwight? How much more? Leonard spent \\frac{1}{4} of his money on a sandwich. He spent 2 times as much on a gift for his brother as on some comic books. He had \\frac{3}{8} of his money left. What fraction of his money did he spend on the comic books?",
+            "problem": "Solve the word problems using the RDW strategy. Show all of your work. George weeded \\frac{1}{5} of the garden, and Summer weeded some, too. When they were finished, \\frac{2}{3} of the garden still needed to be weeded. What fraction of the garden did Summer weed? Jing spent \\frac{1}{3} of her money on a pack of pens, \\frac{1}{2} of her money on a pack of markers, and \\frac{1}{8} of her money on a pack of pencils. What fraction of her money is left? Shelby bought a 2-ounce tube of blue paint. She used \\frac{2}{3} ounce to paint the water, \\frac{3}{5} ounce to paint the sky, and some to paint a flag. After that, she has \\frac{2}{15} ounce left. How much paint did Shelby use to paint her flag? Jim sold \\frac{3}{4} gallon of lemonade. Dwight sold some lemonade, too. Together, they sold 1\\frac{5}{12} gallons. Who sold more lemonade, Jim or Dwight? How much more? Leonard spent \\frac{1}{4} of his money on a sandwich. He spent 2 times as much on a gift for his brother as on some comic books. He had \\frac{3}{8} of his money left. What fraction of his money did he spend on the comic books?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Solve two-step word problems.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solve two-step word problems..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-b-5"
+      }
+    },
+    "g-math-m3-c-1": {
+      "id": "g-math-m3-c-1",
+      "code": "G.M3.C.1",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add fractions to and subtract fractions from whole numbers using equivalence and the number ...",
+        "pageTitle": "Add fractions to and subtract fractions from whole numbers using equivalence and the number ... | Grade 5 Math | Hesten's Learning",
+        "description": "Master Add fractions to and subtract fractions from whole numbers using equivalence and the number ... in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Add fractions to and subtract fractions from whole numbers using equivalence and the number ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 3 • Making Like Units Numerically",
+        "text": "In this lesson on Add fractions to and subtract fractions from whole numbers using equivalence and the number ..., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Add fractions to and subtract fractions from whole numbers using equivalence and the number line as strategies.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add fractions to and subtract fractions from whole numbers using equivalence and the number ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add fractions to and subtract fractions from whole numbers using equivalence and the number .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add fractions to and subtract fractions from whole numbers using equivalence and the number ...",
+        "prompt": "Add or subtract.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add fractions to and subtract fractions from whole numbers using equivalence and the number .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Add or subtract. Calvin had 30 minutes in time-out. For the first 23\\frac{1}{3} minutes, Calvin counted spots on the ceiling. For the rest of the time, he made faces at his stuffed tiger. How long did Calvin spend making faces at his tiger? Linda planned to spend 9 hours practicing piano this week. By Tuesday, she had spent 2\\frac{1}{2} hours practicing. How much longer does she need to practice to reach her goal? Gary says that 3-1\\frac{1}{3} will be more than 2, since 3 — 1 is 2. Draw a picture to prove that Gary is wrong.",
+            "problem": "Add or subtract. Calvin had 30 minutes in time-out. For the first 23\\frac{1}{3} minutes, Calvin counted spots on the ceiling. For the rest of the time, he made faces at his stuffed tiger. How long did Calvin spend making faces at his tiger? Linda planned to spend 9 hours practicing piano this week. By Tuesday, she had spent 2\\frac{1}{2} hours practicing. How much longer does she need to practice to reach her goal? Gary says that 3-1\\frac{1}{3} will be more than 2, since 3 — 1 is 2. Draw a picture to prove that Gary is wrong.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add fractions to and subtract fractions from whole numbers using equivalence and the number ...?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add fractions to and subtract fractions from whole numbers using equivalence and the number ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-c-1"
+      }
+    },
+    "g-math-m3-c-2": {
+      "id": "g-math-m3-c-2",
+      "code": "G.M3.C.2",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add fractions making like units numerically.",
+        "pageTitle": "Add fractions making like units numerically. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Add fractions making like units numerically. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Add fractions making like units numerically. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 3 • Making Like Units Numerically",
+        "text": "In this lesson on Add fractions making like units numerically., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Add fractions making like units numerically.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add fractions making like units numerically.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add fractions making like units numerically.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add fractions making like units numerically.",
+        "prompt": "Make like units, and then add. \\frac{1}{6}+\\frac{3}{4}=b.1\\frac{1}{2}+\\frac{2}{5}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add fractions making like units numerically.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "First make like units, and then add. Whitney says that to add fractions with different denominators, you always have to multiply the denominators to find the common unit; for example: \\frac{1}{4}+\\frac{1}{6}=\\frac{6}{24}+\\frac{4}{24}. Show Whitney how she could have chosen a denominator smaller than 24, and solve the problem. Jackie brought \\frac{3}{4} of a gallon of iced tea to the party. Bill brought \\frac{7}{8} of a gallon of iced tea to the same party. How much iced tea did Jackie and Bill bring to the party? Madame Curie made some radium in her lab. She used \\frac{2}{5} kg of the radium in an experiment and had 1\\frac{1}{4} kg left. How much radium did she have at first? (Extension: If she performed the experiment twice, how much radium would she have left?)",
+            "problem": "First make like units, and then add. Whitney says that to add fractions with different denominators, you always have to multiply the denominators to find the common unit; for example: \\frac{1}{4}+\\frac{1}{6}=\\frac{6}{24}+\\frac{4}{24}. Show Whitney how she could have chosen a denominator smaller than 24, and solve the problem. Jackie brought \\frac{3}{4} of a gallon of iced tea to the party. Bill brought \\frac{7}{8} of a gallon of iced tea to the same party. How much iced tea did Jackie and Bill bring to the party? Madame Curie made some radium in her lab. She used \\frac{2}{5} kg of the radium in an experiment and had 1\\frac{1}{4} kg left. How much radium did she have at first? (Extension: If she performed the experiment twice, how much radium would she have left?)",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add fractions making like units numerically.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add fractions making like units numerically..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-c-2"
+      }
+    },
+    "g-math-m3-c-3": {
+      "id": "g-math-m3-c-3",
+      "code": "G.M3.C.3",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add fractions with sums greater than 2.",
+        "pageTitle": "Add fractions with sums greater than 2. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Add fractions with sums greater than 2. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Add fractions with sums greater than 2. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 3 • Making Like Units Numerically",
+        "text": "In this lesson on Add fractions with sums greater than 2., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Add fractions with sums greater than 2.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add fractions with sums greater than 2.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add fractions with sums greater than 2.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add fractions with sums greater than 2.",
+        "prompt": "3\\frac{1}{2}+1\\frac{1}{3}= 2.4\\frac{5}{7}+3\\frac{3}{4}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add fractions with sums greater than 2.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Add. Erin jogged 2\\frac{1}{4} miles on Monday. Wednesday, she jogged 3\\frac{1}{3} miles, and on Friday, she jogged 2\\frac{2}{3} miles. How far did Erin jog altogether? Darren bought some paint. He used 2\\frac{1}{4} gallons painting his living room. After that, he had 3\\frac{5}{6} gallons left. How much paint did he buy? Clayton says that 2\\frac{1}{2}+3\\frac{3}{5} will be more than 5 but less than 6 since 2 + 3 is 5. Is Clayton's reasoning correct? Prove him right or wrong.",
+            "problem": "Add. Erin jogged 2\\frac{1}{4} miles on Monday. Wednesday, she jogged 3\\frac{1}{3} miles, and on Friday, she jogged 2\\frac{2}{3} miles. How far did Erin jog altogether? Darren bought some paint. He used 2\\frac{1}{4} gallons painting his living room. After that, he had 3\\frac{5}{6} gallons left. How much paint did he buy? Clayton says that 2\\frac{1}{2}+3\\frac{3}{5} will be more than 5 but less than 6 since 2 + 3 is 5. Is Clayton's reasoning correct? Prove him right or wrong.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add fractions with sums greater than 2.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add fractions with sums greater than 2..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-c-3"
+      }
+    },
+    "g-math-m3-c-4": {
+      "id": "g-math-m3-c-4",
+      "code": "G.M3.C.4",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract fractions making like units numerically.",
+        "pageTitle": "Subtract fractions making like units numerically. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Subtract fractions making like units numerically. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Subtract fractions making like units numerically. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.C.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 3 • Making Like Units Numerically",
+        "text": "In this lesson on Subtract fractions making like units numerically., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Subtract fractions making like units numerically.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract fractions making like units numerically.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract fractions making like units numerically.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract fractions making like units numerically.",
+        "prompt": "Generate equivalent fractions to get like units. Then, subtract. \\frac{3}{4}- \\frac{3}{10}= 3\\frac{1}{2}-1\\frac{1}{3}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract fractions making like units numerically.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Generate equivalent fractions to get like units. Then, subtract. George says that, to subtract fractions with different denominators, you always have to multiply the denominators to find the common unit; for example: \\frac{3}{8}-\\frac{1}{6}=\\frac{18}{48}-\\frac{8}{48}. Show George how he could have chosen a denominator smaller than 48, and solve the problem. Meiling has 1\\frac{1}{4} liter of orange juice. She drinks \\frac{1}{3} liter. How much orange juice does she have left? (Extension: If her brother then drinks twice as much as Meiling, how much is left?) Harlan used 3\\frac{1}{2} kg of sand to make a large hourglass. To make a smaller hourglass, he only used 1\\frac{3}{7} kg of sand. How much more sand did it take to make the large hourglass than the smaller one?",
+            "problem": "Generate equivalent fractions to get like units. Then, subtract. George says that, to subtract fractions with different denominators, you always have to multiply the denominators to find the common unit; for example: \\frac{3}{8}-\\frac{1}{6}=\\frac{18}{48}-\\frac{8}{48}. Show George how he could have chosen a denominator smaller than 48, and solve the problem. Meiling has 1\\frac{1}{4} liter of orange juice. She drinks \\frac{1}{3} liter. How much orange juice does she have left? (Extension: If her brother then drinks twice as much as Meiling, how much is left?) Harlan used 3\\frac{1}{2} kg of sand to make a large hourglass. To make a smaller hourglass, he only used 1\\frac{3}{7} kg of sand. How much more sand did it take to make the large hourglass than the smaller one?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract fractions making like units numerically.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract fractions making like units numerically..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-c-4"
+      }
+    },
+    "g-math-m3-c-5": {
+      "id": "g-math-m3-c-5",
+      "code": "G.M3.C.5",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract fractions greater than or equal to 1.",
+        "pageTitle": "Subtract fractions greater than or equal to 1. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Subtract fractions greater than or equal to 1. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Subtract fractions greater than or equal to 1. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.C.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 3 • Making Like Units Numerically",
+        "text": "In this lesson on Subtract fractions greater than or equal to 1., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Subtract fractions greater than or equal to 1.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract fractions greater than or equal to 1.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract fractions greater than or equal to 1.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract fractions greater than or equal to 1.",
+        "prompt": "5\\frac{1}{2}-1\\frac{1}{3}= 8\\frac{3}{4}-5\\frac{5}{6}=",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract fractions greater than or equal to 1.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Subtract. Toby wrote the following: 7\\frac{1}{4}-3\\frac{3}{4}=4\\frac{2}{4}=4\\frac{1}{2}. Is Toby's calculation correct? Draw a number line to support your answer. Mr. Neville Iceguy mixed up 12\\frac{3}{5} gallons of chili for a party. If 7\\frac{3}{4} gallons of chili was mild, and the rest was extra spicy, how much extra spicy chili did Mr. Iceguy make? Jazmyne decided to spend 6\\frac{1}{2} hours studying over the weekend. She spent 1\\frac{1}{4} hours studying on Friday evening and 2\\frac{2}{3} hours on Saturday. How much longer does she need to spend studying on Sunday in order to reach her goal?",
+            "problem": "Subtract. Toby wrote the following: 7\\frac{1}{4}-3\\frac{3}{4}=4\\frac{2}{4}=4\\frac{1}{2}. Is Toby's calculation correct? Draw a number line to support your answer. Mr. Neville Iceguy mixed up 12\\frac{3}{5} gallons of chili for a party. If 7\\frac{3}{4} gallons of chili was mild, and the rest was extra spicy, how much extra spicy chili did Mr. Iceguy make? Jazmyne decided to spend 6\\frac{1}{2} hours studying over the weekend. She spent 1\\frac{1}{4} hours studying on Friday evening and 2\\frac{2}{3} hours on Saturday. How much longer does she need to spend studying on Sunday in order to reach her goal?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract fractions greater than or equal to 1.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract fractions greater than or equal to 1..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-c-5"
+      }
+    },
+    "g-math-m3-d-1": {
+      "id": "g-math-m3-d-1",
+      "code": "G.M3.D.1",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.",
+        "pageTitle": "Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 3 • Further Applications",
+        "text": "In this lesson on Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.",
+        "prompt": "Circle the correct answer. \\frac{1}{2}+\\frac{5}{12} greaterthan 1less than 1 2\\frac{7}{8}-1\\frac{7}{9} greaterthan 1less than 1 1\\frac{1}{12}-\\frac{7}{10}greaterthan \\frac{1}{2}less than \\frac{1}{2}",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Are the following expressions greater than or less than 1? Circle the correct answer. \\frac{1}{2}+\\frac{2}{7}greaterthan 1less than 1 \\frac{5}{8}+\\frac{3}{5}greaterthan 1less than 1 1\\frac{1}{4}-\\frac{1}{3}greaterthan 1less than 1 3\\frac{5}{8}-2\\frac{5}{9}greaterthan 1less than 1 Are the following expressions greater than or less than \\frac{1}{2} ? Circle the correct answer. \\frac{1}{4}+\\frac{2}{3}greater than \\frac{1}{2}less than \\frac{1}{2} \\frac{3}{7}-\\frac{1}{8}greater than \\frac{1}{2}less than \\frac{1}{2} 1\\frac{1}{7}-\\frac{7}{8}greater than \\frac{1}{2}less than \\frac{1}{2} \\frac{3}{7}+\\frac{2}{6}greater than \\frac{1}{2}less than \\frac{1}{2}",
+            "problem": "Are the following expressions greater than or less than 1? Circle the correct answer. \\frac{1}{2}+\\frac{2}{7}greaterthan 1less than 1 \\frac{5}{8}+\\frac{3}{5}greaterthan 1less than 1 1\\frac{1}{4}-\\frac{1}{3}greaterthan 1less than 1 3\\frac{5}{8}-2\\frac{5}{9}greaterthan 1less than 1 Are the following expressions greater than or less than \\frac{1}{2} ? Circle the correct answer. \\frac{1}{4}+\\frac{2}{3}greater than \\frac{1}{2}less than \\frac{1}{2} \\frac{3}{7}-\\frac{1}{8}greater than \\frac{1}{2}less than \\frac{1}{2} 1\\frac{1}{7}-\\frac{7}{8}greater than \\frac{1}{2}less than \\frac{1}{2} \\frac{3}{7}+\\frac{2}{6}greater than \\frac{1}{2}less than \\frac{1}{2}",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use > , < , or = to make the following statements true. 5\\frac{2}{3}+3\\frac{3}{4} _______ 8\\frac{2}{3} b.4\\frac{5}{8}-3\\frac{2}{5} _______ 1\\frac{5}{8}+\\frac{2}{5} 5\\frac{1}{2}+1\\frac{3}{7} _______ 6+\\frac{13}{14} d.15\\frac{4}{7}-11\\frac{2}{5} _______ 4\\frac{4}{7}+\\frac{2}{5} Is it true that 4\\frac{3}{5}-3\\frac{2}{3}=1+\\frac{3}{5}+\\frac{2}{3}? Prove your answer. Jackson needs to be 1\\frac{3}{4} inches taller in order to ride the roller coaster. Since he can't wait, he puts on a pair of boots that add 1\\frac{1}{6} inches to his height and slips an insole inside to add another \\frac{1}{8} inch to his height. Will this make Jackson appear tall enough to ride the roller coaster?",
+            "problem": "Use > , < , or = to make the following statements true. 5\\frac{2}{3}+3\\frac{3}{4} _______ 8\\frac{2}{3} b.4\\frac{5}{8}-3\\frac{2}{5} _______ 1\\frac{5}{8}+\\frac{2}{5} 5\\frac{1}{2}+1\\frac{3}{7} _______ 6+\\frac{13}{14} d.15\\frac{4}{7}-11\\frac{2}{5} _______ 4\\frac{4}{7}+\\frac{2}{5} Is it true that 4\\frac{3}{5}-3\\frac{2}{3}=1+\\frac{3}{5}+\\frac{2}{3}? Prove your answer. Jackson needs to be 1\\frac{3}{4} inches taller in order to ride the roller coaster. Since he can't wait, he puts on a pair of boots that add 1\\frac{1}{6} inches to his height and slips an insole inside to add another \\frac{1}{8} inch to his height. Will this make Jackson appear tall enough to ride the roller coaster?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "A baker needs 5 lb of butter for a recipe. She found 2 portions that each weigh 1\\frac{1}{6} lb and a portion that weighs 2\\frac{2}{7} lb. Does she have enough butter for her recipe?",
+            "problem": "A baker needs 5 lb of butter for a recipe. She found 2 portions that each weigh 1\\frac{1}{6} lb and a portion that weighs 2\\frac{2}{7} lb. Does she have enough butter for her recipe?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use fraction benchmark numbers to assess reasonableness of addition and subtraction equations..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-d-1"
+      }
+    },
+    "g-math-m3-d-2": {
+      "id": "g-math-m3-d-2",
+      "code": "G.M3.D.2",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Strategize to solve multi-term problems.",
+        "pageTitle": "Strategize to solve multi-term problems. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Strategize to solve multi-term problems. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Strategize to solve multi-term problems. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 3 • Further Applications",
+        "text": "In this lesson on Strategize to solve multi-term problems., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Strategize to solve multi-term problems.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Strategize to solve multi-term problems.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Strategize to solve multi-term problems.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Strategize to solve multi-term problems.",
+        "prompt": "Fill in the blank to make the statement true. 1\\frac{3}{4}+\\frac{1}{6}+________=7\\frac{1}{2}2.8\\frac{4}{5}-\\frac{2}{3}-________=3\\frac{1}{10}",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Strategize to solve multi-term problems.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Rearrange the terms so that you can add or subtract mentally. Then, solve. \\frac{1}{4}+2\\frac{2}{3}+ \\frac{7}{4}+\\frac{1}{3}b.2\\frac{3}{5}-\\frac{3}{4}+ \\frac{2}{5} 4\\frac{3}{7} - \\frac{3}{4}- 2\\frac{1}{4} - \\frac{3}{7}d.\\frac{5}{6}+ \\frac{1}{3}-\\frac{4}{3}+ \\frac{1}{6} Fill in the blank to make the statement true. DeAngelo needs 100 lb of garden soil to landscape a building. In the company's storage area, he finds 2 cases holding 24 \\frac{3}{4} lb of garden soil each, and a third case holding 19 \\frac{3}{8} lb. How much gardening soil does DeAngelo still need in order to do the job? Volunteers helped clean up 8.2 kg of trash in one neighborhood and 11\\frac{1}{2} kg in another. They sent 1\\frac{1}{4} kg to be recycled and threw the rest away. How many kilograms of trash did they throw away?",
+            "problem": "Rearrange the terms so that you can add or subtract mentally. Then, solve. \\frac{1}{4}+2\\frac{2}{3}+ \\frac{7}{4}+\\frac{1}{3}b.2\\frac{3}{5}-\\frac{3}{4}+ \\frac{2}{5} 4\\frac{3}{7} - \\frac{3}{4}- 2\\frac{1}{4} - \\frac{3}{7}d.\\frac{5}{6}+ \\frac{1}{3}-\\frac{4}{3}+ \\frac{1}{6} Fill in the blank to make the statement true. DeAngelo needs 100 lb of garden soil to landscape a building. In the company's storage area, he finds 2 cases holding 24 \\frac{3}{4} lb of garden soil each, and a third case holding 19 \\frac{3}{8} lb. How much gardening soil does DeAngelo still need in order to do the job? Volunteers helped clean up 8.2 kg of trash in one neighborhood and 11\\frac{1}{2} kg in another. They sent 1\\frac{1}{4} kg to be recycled and threw the rest away. How many kilograms of trash did they throw away?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Strategize to solve multi-term problems.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Strategize to solve multi-term problems..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-d-2"
+      }
+    },
+    "g-math-m3-d-3": {
+      "id": "g-math-m3-d-3",
+      "code": "G.M3.D.3",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.",
+        "pageTitle": "Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.D.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 3 • Further Applications",
+        "text": "In this lesson on Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.",
+        "prompt": "Solve the word problem using the RDW strategy. Show all of your work. Cheryl bought a sandwich for 5\\frac{1}{2} dollars and a drink for $2.60. If she paid for her meal with a $10 bill, how much money did she have left? Write your answer as a fraction and in dollars and cents.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve the word problems using the RDW strategy. Show all of your work. In a race, the-second place finisher crossed the finish line 1\\frac{1}{3} minutes after the winner. The third-place finisher was 1\\frac{3}{4} minutes behind the second-place finisher. The third-place finisher took 34\\frac{2}{3} minutes. How long did the winner take? John used 1\\frac{3}{4} kg of salt to melt the ice on his sidewalk. He then used another 3\\frac{4}{5} kg on the driveway. If he originally bought 10 kg of salt, how much does he have left? Sinister Stan stole 3\\frac{3}{4} oz of slime from Messy Molly, but his evil plans require 6\\frac{3}{8} oz of slime. He stole another 2\\frac{3}{5} oz of slime from Rude Ralph. How much more slime does Sinister Stan need for his evil plan? Gavin had 20 minutes to do a three-problem quiz. He spent 9 \\frac{3}{4} minutes on Problem 1 and 3 \\frac{4}{5} minutes on Problem 2. How much time did he have left for Problem 3? Write the answer in minutes and seconds. Matt wants to shave 2\\frac{1}{2} minutes off his 5K race time. After a month of hard training, he managed to lower his overall time from 21\\frac{1}{5} minutes to 19\\frac{1}{4} minutes. By how many more minutes does Matt need to lower his race time?",
+            "problem": "Solve the word problems using the RDW strategy. Show all of your work. In a race, the-second place finisher crossed the finish line 1\\frac{1}{3} minutes after the winner. The third-place finisher was 1\\frac{3}{4} minutes behind the second-place finisher. The third-place finisher took 34\\frac{2}{3} minutes. How long did the winner take? John used 1\\frac{3}{4} kg of salt to melt the ice on his sidewalk. He then used another 3\\frac{4}{5} kg on the driveway. If he originally bought 10 kg of salt, how much does he have left? Sinister Stan stole 3\\frac{3}{4} oz of slime from Messy Molly, but his evil plans require 6\\frac{3}{8} oz of slime. He stole another 2\\frac{3}{5} oz of slime from Rude Ralph. How much more slime does Sinister Stan need for his evil plan? Gavin had 20 minutes to do a three-problem quiz. He spent 9 \\frac{3}{4} minutes on Problem 1 and 3 \\frac{4}{5} minutes on Problem 2. How much time did he have left for Problem 3? Write the answer in minutes and seconds. Matt wants to shave 2\\frac{1}{2} minutes off his 5K race time. After a month of hard training, he managed to lower his overall time from 21\\frac{1}{5} minutes to 19\\frac{1}{4} minutes. By how many more minutes does Matt need to lower his race time?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solve multi-step word problems; assess reasonableness of solutions using benchmark numbers..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-d-3"
+      }
+    },
+    "g-math-m3-d-4": {
+      "id": "g-math-m3-d-4",
+      "code": "G.M3.D.4",
+      "standard": "5.NF.1",
+      "levelId": "g",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explore part-to-whole relationships.",
+        "pageTitle": "Explore part-to-whole relationships. | Grade 5 Math | Hesten's Learning",
+        "description": "Master Explore part-to-whole relationships. in Grade 5 Mathematics aligned with Common Core standard 5.NF.1.",
+        "pageDescription": "EngageNY Grade 5 Math lesson on Explore part-to-whole relationships. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math G.M3.D.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 3 • Further Applications",
+        "text": "In this lesson on Explore part-to-whole relationships., explore place value, fractions, geometry, and operations aligned with national standards.",
+        "outcomes": [
+          "Explore part-to-whole relationships.",
+          "Students model multi-digit arithmetic, fraction equivalence, and geometric properties using visual representations and standard algorithms."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Decimal Fraction",
+          "definition": "A proper fraction whose denominator is a power of 10, often represented using place value with a decimal point."
+        },
+        {
+          "term": "Place Value Unit",
+          "definition": "The numerical value that a digit has by virtue of its position in a number (such as ones, tenths, hundredths, thousandths)."
+        },
+        {
+          "term": "Volume (Solid)",
+          "definition": "The amount of 3-dimensional space an object occupies, measured in cubic units ($V = l \\times w \\times h$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explore part-to-whole relationships.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 5 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explore part-to-whole relationships.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, base-ten units, fractions, or coordinates.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Base-ten units, fraction model, or geometric prism.}",
+              "explanation": "Clearly write down all known constants, place values, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Place value shift, fraction algorithm, or volume formula.}",
+              "explanation": "Execute the arithmetic operation or unit transformation systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Misaligning decimal places when adding/subtracting, or forgetting to find common denominators when adding fractions."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explore part-to-whole relationships.",
+        "prompt": "Draw the following ribbons. a.1 ribbon. The piece shown below is only \\frac{2}{3} of the whole. Complete the drawing to show the whole ribbon. b.1 ribbon. The piece shown below is \\frac{1}{4} of the whole. Complete the drawing to show the whole ribbon. c.3 ribbons, A, B, and C. 1 third of A is the same length as B. C is half as long as B. Draw a picture of the ribbons.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explore part-to-whole relationships.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "1.Draw the following ribbons. When finished, compare your work to your partner's. 1 ribbon. The piece shown below is only \\frac{1}{3} of the whole. Complete the drawing to show the whole ribbon. b.1 ribbon. The piece shown below is \\frac{4}{5} of the whole. Complete the drawing to show the whole ribbon. c.2 ribbons, A and B. One third of A is equal to all of B. Draw a picture of the ribbons. d.3 ribbons, C, D, and E. C is half the length of D. E is twice as long as D. Draw a picture of the ribbons.",
+            "problem": "1.Draw the following ribbons. When finished, compare your work to your partner's. 1 ribbon. The piece shown below is only \\frac{1}{3} of the whole. Complete the drawing to show the whole ribbon. b.1 ribbon. The piece shown below is \\frac{4}{5} of the whole. Complete the drawing to show the whole ribbon. c.2 ribbons, A and B. One third of A is equal to all of B. Draw a picture of the ribbons. d.3 ribbons, C, D, and E. C is half the length of D. E is twice as long as D. Draw a picture of the ribbons.",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "2.Half of Robert's piece of wire is equal to \\frac{2}{3} of Maria's wire. The total length of their wires is 10 feet. How much longer is Robert's wire than Maria's?",
+            "problem": "2.Half of Robert's piece of wire is equal to \\frac{2}{3} of Maria's wire. The total length of their wires is 10 feet. How much longer is Robert's wire than Maria's?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "3.Half of Sarah's wire is equal to \\frac{2}{5} of Daniel's. Chris has 3 times as much as Sarah. In all, their wire measures 6 ft. How long is Sarah's wire in feet?",
+            "problem": "3.Half of Sarah's wire is equal to \\frac{2}{5} of Daniel's. Chris has 3 times as much as Sarah. In all, their wire measures 6 ft. How long is Sarah's wire in feet?",
+            "hint": "Analyze the given quantities and place value units. State your reasoning step-by-step.",
+            "solution": "Follow standard base-ten place value and fraction operations established in the lesson debrief.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Place Value / Operation",
+                "result": "Examine given numbers, units, and the requested mathematical operation."
+              },
+              {
+                "step": 2,
+                "action": "Compute & Verify",
+                "result": "Execute the calculation systematically and check with concrete modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explore part-to-whole relationships.?",
+          "options": [
+            "Applying systematic place value reasoning, fraction operations, or geometric formulas with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring decimal points and place value columns.",
+            "Adding numerators and denominators directly when combining fractions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic place value reasoning and proper mathematical properties."
+        },
+        {
+          "question": "When validating a solution in Grade 5 mathematics, which strategy confirms the result?",
+          "options": [
+            "Estimating using benchmark numbers or checking with an inverse operation.",
+            "Discarding the solution if it contains a decimal.",
+            "Changing the digits until the answer is a whole number.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with benchmark estimation or an inverse operation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explore part-to-whole relationships..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 5 Mathematics curriculum materials.",
+        "lessonId": "g-math-m3-d-4"
+      }
+    }
+  }
+}

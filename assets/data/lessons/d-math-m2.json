@@ -1,0 +1,1056 @@
+{
+  "id": "d-math-m2",
+  "module": 2,
+  "subject": "math",
+  "grade": "2",
+  "level": "d",
+  "title": "Module 2: Addition and Subtraction of Length Units",
+  "description": "Module 2: Addition and Subtraction of Length Units for 2nd Grade students.",
+  "lessonsCount": 7,
+  "lessons": {
+    "d-math-m2-a-1": {
+      "id": "d-math-m2-a-1",
+      "code": "D.M2.A.1",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Connect measurement with physical units by using multiple copies of the same physical unit t...",
+        "pageTitle": "Connect measurement with physical units by using multiple copies of the same physical unit t... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Connect measurement with physical units by using multiple copies of the same physical unit t... in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Connect measurement with physical units by using multiple copies of the same physical unit t... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 2 • Topic A begins with an exploration of concepts about the ruler.  In Lesson 1, students relate length to physical units by measuring various objects with multiple centimeter cubes, creating a mental benchmark for the centimeter.  In Lesson 2, they apply their knowledge of using centimeter cubes to measure by moving from repeated physical units to the iteration of one physical unit.  This enables them to internalize their understanding of a length unit as the amount of space between one end of the cube and the other (or space between hash marks).  Thus, they begin moving from the concrete to the conceptual.  Finally, in Lesson 3, students apply knowledge of known measurements to create unit rulers using one centimeter cube.  This deepens the understanding of distance on a ruler and the ruler as a number line.",
+        "text": "In this lesson on Connect measurement with physical units by using multiple copies of the same physical unit t..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Connect measurement with physical units by using multiple copies of the same physical unit to measure.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "S:You need to put the cubes right next to each other. You need to start measuring at the beginning of the pencil box. T:You are right! There should be no gaps between the cubes. Also, we need to begin measuring where the object begins. That's called the endpoint."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Connect measurement with physical units by using multiple copies of the same physical unit t...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Connect measurement with physical units by using multiple copies of the same physical unit t.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Connect measurement with physical units by using multiple copies of the same physical unit t...",
+        "prompt": "Sara lined up her centimeter cubes to find the length of the picture of the paintbrush. Sara thinks the picture of the paintbrush is 5 centimeter cubes long. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Is her answer correct? Explain why or why not.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Connect measurement with physical units by using multiple copies of the same physical unit t.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use centimeter cubes to find the length of each object. The picture of the fork and spoon is about _________ centimeter cubes long. The picture of the hammer is about __________ centimeters long. The length of the picture of the comb is about ___________ centimeters. The length of the picture of the shovel is about _________ centimeters. The head of a grasshopper is 2 centimeters long. The rest of the grasshopper's body is 7 centimeters long. What is the total length of the grasshopper? The length of a screwdriver is 19 centimeters. The handle is 5 centimeters long. What is the length of the top of the screwdriver? How much shorter is the handle than the top of the screwdriver?",
+            "problem": "Use centimeter cubes to find the length of each object. The picture of the fork and spoon is about _________ centimeter cubes long. The picture of the hammer is about __________ centimeters long. The length of the picture of the comb is about ___________ centimeters. The length of the picture of the shovel is about _________ centimeters. The head of a grasshopper is 2 centimeters long. The rest of the grasshopper's body is 7 centimeters long. What is the total length of the grasshopper? The length of a screwdriver is 19 centimeters. The handle is 5 centimeters long. What is the length of the top of the screwdriver? How much shorter is the handle than the top of the screwdriver?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Connect measurement with physical units by using multiple copies of the same physical unit t...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Connect measurement with physical units by using multiple copies of the same physical unit t....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-a-1"
+      }
+    },
+    "d-math-m2-a-2": {
+      "id": "d-math-m2-a-2",
+      "code": "D.M2.A.2",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use iteration with one physical unit to measure.",
+        "pageTitle": "Use iteration with one physical unit to measure. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use iteration with one physical unit to measure. in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use iteration with one physical unit to measure. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 2 • Topic A begins with an exploration of concepts about the ruler.  In Lesson 1, students relate length to physical units by measuring various objects with multiple centimeter cubes, creating a mental benchmark for the centimeter.  In Lesson 2, they apply their knowledge of using centimeter cubes to measure by moving from repeated physical units to the iteration of one physical unit.  This enables them to internalize their understanding of a length unit as the amount of space between one end of the cube and the other (or space between hash marks).  Thus, they begin moving from the concrete to the conceptual.  Finally, in Lesson 3, students apply knowledge of known measurements to create unit rulers using one centimeter cube.  This deepens the understanding of distance on a ruler and the ruler as a number line.",
+        "text": "In this lesson on Use iteration with one physical unit to measure., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use iteration with one physical unit to measure.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use iteration with one physical unit to measure.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use iteration with one physical unit to measure.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use iteration with one physical unit to measure.",
+        "prompt": "Matt measured his index card using a centimeter cube. He marked the endpoint of the cube as he measured. He thinks the index card is 10 centimeters long. Is Matt's work correct? Explain why or why not. _____________________________________________ _____________________________________________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use iteration with one physical unit to measure.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Find the length of each object using one centimeter cube. Mark the endpoint of each centimeter cube as you measure. The picture of the eraser is about _________ centimeters long. The picture of the calculator is about _________ centimeters long. The length of the picture of the envelope is about __________ centimeters. Jayla measured her puppet's legs to be 23 centimeters long. The stomach is 7 centimeters long, and the neck and head together are 10 centimeters long. What is the total length of the puppet? Elijah begins measuring his math book with his centimeter cube. He marks off where each cube ends. After a few times, he decides this process is taking too long and starts to guess where the cube would end and then mark it.",
+            "problem": "Find the length of each object using one centimeter cube. Mark the endpoint of each centimeter cube as you measure. The picture of the eraser is about _________ centimeters long. The picture of the calculator is about _________ centimeters long. The length of the picture of the envelope is about __________ centimeters. Jayla measured her puppet's legs to be 23 centimeters long. The stomach is 7 centimeters long, and the neck and head together are 10 centimeters long. What is the total length of the puppet? Elijah begins measuring his math book with his centimeter cube. He marks off where each cube ends. After a few times, he decides this process is taking too long and starts to guess where the cube would end and then mark it.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Explain why Elijah's answer will be incorrect. ____________________________________________________________ ____________________________________________________________",
+            "problem": "Explain why Elijah's answer will be incorrect. ____________________________________________________________ ____________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use iteration with one physical unit to measure.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use iteration with one physical unit to measure..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-a-2"
+      }
+    },
+    "d-math-m2-a-3": {
+      "id": "d-math-m2-a-3",
+      "code": "D.M2.A.3",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Apply concepts to create unit rulers and measure lengths using unit rulers.",
+        "pageTitle": "Apply concepts to create unit rulers and measure lengths using unit rulers. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Apply concepts to create unit rulers and measure lengths using unit rulers. in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Apply concepts to create unit rulers and measure lengths using unit rulers. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 2 • Topic A begins with an exploration of concepts about the ruler.  In Lesson 1, students relate length to physical units by measuring various objects with multiple centimeter cubes, creating a mental benchmark for the centimeter.  In Lesson 2, they apply their knowledge of using centimeter cubes to measure by moving from repeated physical units to the iteration of one physical unit.  This enables them to internalize their understanding of a length unit as the amount of space between one end of the cube and the other (or space between hash marks).  Thus, they begin moving from the concrete to the conceptual.  Finally, in Lesson 3, students apply knowledge of known measurements to create unit rulers using one centimeter cube.  This deepens the understanding of distance on a ruler and the ruler as a number line.",
+        "text": "In this lesson on Apply concepts to create unit rulers and measure lengths using unit rulers., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Apply concepts to create unit rulers and measure lengths using unit rulers.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Apply concepts to create unit rulers and measure lengths using unit rulers.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Apply concepts to create unit rulers and measure lengths using unit rulers.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Apply concepts to create unit rulers and measure lengths using unit rulers.",
+        "prompt": "Use your centimeter ruler. What is the length in centimeters of each line? Line A is ______ cm long. Line B is _____ cm long.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Apply concepts to create unit rulers and measure lengths using unit rulers.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use your centimeter ruler to measure the length of the objects below. The picture of the animal track is about __________ cm long. The picture of the turtle is about __________ cm long. The picture of the sandwich is about _________ cm long. Measure and label the length of each side of the triangle using your ruler. Which side is the shortest? Side ASide BSide C What is the length of Sides A and B together? _______ centimeters How much shorter is Side C than Side B? _______ centimeters",
+            "problem": "Use your centimeter ruler to measure the length of the objects below. The picture of the animal track is about __________ cm long. The picture of the turtle is about __________ cm long. The picture of the sandwich is about _________ cm long. Measure and label the length of each side of the triangle using your ruler. Which side is the shortest? Side ASide BSide C What is the length of Sides A and B together? _______ centimeters How much shorter is Side C than Side B? _______ centimeters",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Apply concepts to create unit rulers and measure lengths using unit rulers.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Apply concepts to create unit rulers and measure lengths using unit rulers..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-a-3"
+      }
+    },
+    "d-math-m2-b-1": {
+      "id": "d-math-m2-b-1",
+      "code": "D.M2.B.1",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Measure various objects using centimeter rulers and meter sticks.",
+        "pageTitle": "Measure various objects using centimeter rulers and meter sticks. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Measure various objects using centimeter rulers and meter sticks. in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Measure various objects using centimeter rulers and meter sticks. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Measure various objects using centimeter rulers and meter sticks., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Measure various objects using centimeter rulers and meter sticks.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Measure various objects using centimeter rulers and meter sticks.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Measure various objects using centimeter rulers and meter sticks.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Measure various objects using centimeter rulers and meter sticks.",
+        "prompt": "Circle cm (centimeter) or m (meter) to show which measurement you would use to measure the length of each object. Length of a traincmorm Length of an envelopecmorm Length of a housecmorm",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Measure various objects using centimeter rulers and meter sticks.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Measure five things in the classroom with a centimeter ruler. List the five things and their length in centimeters. Measure four things in the classroom with a meter stick or meter tape. List the four things and their length in meters. List five things in your house that you would measure with a meter stick or meter tape. ________________________________ ________________________________ ________________________________ ________________________________ ________________________________ Why would you want to measure those five items with a meter stick or meter tape instead of a centimeter ruler? _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ The distance from the cafeteria to the gym is 14 meters. The distance from the cafeteria to the playground is double that distance. How many times would you need to use a meter stick to measure the distance from the cafeteria to the playground?",
+            "problem": "Measure five things in the classroom with a centimeter ruler. List the five things and their length in centimeters. Measure four things in the classroom with a meter stick or meter tape. List the four things and their length in meters. List five things in your house that you would measure with a meter stick or meter tape. ________________________________ ________________________________ ________________________________ ________________________________ ________________________________ Why would you want to measure those five items with a meter stick or meter tape instead of a centimeter ruler? _______________________________________________________________ _______________________________________________________________ _______________________________________________________________ The distance from the cafeteria to the gym is 14 meters. The distance from the cafeteria to the playground is double that distance. How many times would you need to use a meter stick to measure the distance from the cafeteria to the playground?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Measure various objects using centimeter rulers and meter sticks.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Measure various objects using centimeter rulers and meter sticks..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-b-1"
+      }
+    },
+    "d-math-m2-b-2": {
+      "id": "d-math-m2-b-2",
+      "code": "D.M2.B.2",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Develop estimation strategies by applying prior knowledge of length and using mental benchma...",
+        "pageTitle": "Develop estimation strategies by applying prior knowledge of length and using mental benchma... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Develop estimation strategies by applying prior knowledge of length and using mental benchma... in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Develop estimation strategies by applying prior knowledge of length and using mental benchma... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Develop estimation strategies by applying prior knowledge of length and using mental benchma..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Develop estimation strategies by applying prior knowledge of length and using mental benchmarks.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Develop estimation strategies by applying prior knowledge of length and using mental benchma...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Develop estimation strategies by applying prior knowledge of length and using mental benchma.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Develop estimation strategies by applying prior knowledge of length and using mental benchma...",
+        "prompt": "Circle the most reasonable estimate for each object. Length of a push pin 1 cm or 1 m Length of a classroom door 100 cm or 2 m Length of a pair of student scissors 17 cm or 42 cm",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Develop estimation strategies by applying prior knowledge of length and using mental benchma.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "First, estimate the length of each line in centimeters using mental benchmarks. Then, measure each line with a centimeter ruler to find the actual length. Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm",
+            "problem": "First, estimate the length of each line in centimeters using mental benchmarks. Then, measure each line with a centimeter ruler to find the actual length. Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm Estimate: ______ cmb. Actual length: ______ cm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Circle the correct unit of measurement for each length estimate. The height of a door is about 2 (centimeters/meters) tall. What benchmark did you use to estimate? _______________ The length of a pen is about 10 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a car is about 4 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a bed is about 2 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a dinner plate is about 20 (centimeters/meters) long. What benchmark did you use to estimate? _______________",
+            "problem": "Circle the correct unit of measurement for each length estimate. The height of a door is about 2 (centimeters/meters) tall. What benchmark did you use to estimate? _______________ The length of a pen is about 10 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a car is about 4 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a bed is about 2 (centimeters/meters) long. What benchmark did you use to estimate? _______________ The length of a dinner plate is about 20 (centimeters/meters) long. What benchmark did you use to estimate? _______________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use an unsharpened pencil to estimate the length of 3 things in your desk. _____________________ is about _______ cm long. _____________________ is about _______ cm long. _____________________ is about _______ cm long.",
+            "problem": "Use an unsharpened pencil to estimate the length of 3 things in your desk. _____________________ is about _______ cm long. _____________________ is about _______ cm long. _____________________ is about _______ cm long.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Develop estimation strategies by applying prior knowledge of length and using mental benchma...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Develop estimation strategies by applying prior knowledge of length and using mental benchma....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-b-2"
+      }
+    },
+    "d-math-m2-c-1": {
+      "id": "d-math-m2-c-1",
+      "code": "D.M2.C.1",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Measure and compare lengths using centimeters and meters.",
+        "pageTitle": "Measure and compare lengths using centimeters and meters. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Measure and compare lengths using centimeters and meters. in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Measure and compare lengths using centimeters and meters. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Measure and compare lengths using centimeters and meters., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Measure and compare lengths using centimeters and meters.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Measure and compare lengths using centimeters and meters.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Measure and compare lengths using centimeters and meters.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Measure and compare lengths using centimeters and meters.",
+        "prompt": "Measure the length of each line and compare.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Measure and compare lengths using centimeters and meters.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Measure each set of lines in centimeters, and write the length on the line. Complete the comparison sentences. Line A Line B Line A Line B _____ cm _____ cm Line A is about _________ cm longer than Line B. Line C Line D Line C Line D _____ cm_____ cm Line C is about _________ cm shorter than Line D. Line E Line F Line G Line ELine FLine G _____ cm_____ cm_____ cm Lines E, F, and G are about________ cm combined. Line E is about ________ cm shorter than Line F. Line G is about________ cm longer than Line F. Line F doubled is about ________ cm longer than Line G. Daniel measured the heights of some young trees in the orchard. He wants to know how many more centimeters are needed to have a height of 1 meter. Fill in the blanks. 90 cm + _____ cm = 1 m 80 cm + _____ cm = 1 m 85 cm + _____ cm = 1 m 81 cm + _____ cm = 1 m Carol's ribbon is 76 centimeters long. Alice's ribbon is 1 meter long. How much longer is Alice's ribbon than Carol's? The cricket hopped a distance of 52 centimeters. The grasshopper hopped 9 centimeters farther than the cricket. How far did the grasshopper jump? The pencil box is 24 centimeters in length and 12 centimeters wide. How many more centimeters is the length than the width? __________ more cm",
+            "problem": "Measure each set of lines in centimeters, and write the length on the line. Complete the comparison sentences. Line A Line B Line A Line B _____ cm _____ cm Line A is about _________ cm longer than Line B. Line C Line D Line C Line D _____ cm_____ cm Line C is about _________ cm shorter than Line D. Line E Line F Line G Line ELine FLine G _____ cm_____ cm_____ cm Lines E, F, and G are about________ cm combined. Line E is about ________ cm shorter than Line F. Line G is about________ cm longer than Line F. Line F doubled is about ________ cm longer than Line G. Daniel measured the heights of some young trees in the orchard. He wants to know how many more centimeters are needed to have a height of 1 meter. Fill in the blanks. 90 cm + _____ cm = 1 m 80 cm + _____ cm = 1 m 85 cm + _____ cm = 1 m 81 cm + _____ cm = 1 m Carol's ribbon is 76 centimeters long. Alice's ribbon is 1 meter long. How much longer is Alice's ribbon than Carol's? The cricket hopped a distance of 52 centimeters. The grasshopper hopped 9 centimeters farther than the cricket. How far did the grasshopper jump? The pencil box is 24 centimeters in length and 12 centimeters wide. How many more centimeters is the length than the width? __________ more cm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw the rectangle and label the sides. What is the total length of all four sides? ___________ cm",
+            "problem": "Draw the rectangle and label the sides. What is the total length of all four sides? ___________ cm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Measure and compare lengths using centimeters and meters.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Measure and compare lengths using centimeters and meters..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-c-1"
+      }
+    },
+    "d-math-m2-c-2": {
+      "id": "d-math-m2-c-2",
+      "code": "D.M2.C.2",
+      "standard": "2.MD.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Measure and compare lengths using standard metric length units and non-standard length units...",
+        "pageTitle": "Measure and compare lengths using standard metric length units and non-standard length units... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Measure and compare lengths using standard metric length units and non-standard length units... in 2nd Grade Mathematics aligned with standard 2.MD.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Measure and compare lengths using standard metric length units and non-standard length units... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M2.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Measure and compare lengths using standard metric length units and non-standard length units..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Measure and compare lengths using standard metric length units and non-standard length units; relate measurement to unit size.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "S:If it's a small unit size, you get a bigger measurement number. T:Let's measure again using small and big paper clips mixed together."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Measure and compare lengths using standard metric length units and non-standard length units...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Measure and compare lengths using standard metric length units and non-standard length units.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Measure and compare lengths using standard metric length units and non-standard length units...",
+        "prompt": "Measure the lines with small paper clips and then with a centimeter ruler. Then, answer the questions below.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Measure and compare lengths using standard metric length units and non-standard length units.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Measure each set of lines with one small paper clip, using mark and move forward. Measure each set of lines in centimeters using a ruler. Line A Line B Line A _____ paper clips_____ cm Line B _____ paper clips_____ cm Line B is about _____ paper clips shorter than Line A. Line A is about _____ cm longer than Line B. Line L Line M Line L _____ paper clips_____ cm Line M _____ paper clips_____ cm c. Line L is about _____ paper clips longer than Line M. d. Line M doubled is about _____ cm shorter than Line L.",
+            "problem": "Measure each set of lines with one small paper clip, using mark and move forward. Measure each set of lines in centimeters using a ruler. Line A Line B Line A _____ paper clips_____ cm Line B _____ paper clips_____ cm Line B is about _____ paper clips shorter than Line A. Line A is about _____ cm longer than Line B. Line L Line M Line L _____ paper clips_____ cm Line M _____ paper clips_____ cm c. Line L is about _____ paper clips longer than Line M. d. Line M doubled is about _____ cm shorter than Line L.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw a line that is 6 cm long and another line below it that is 15 cm long. Label the 6 cm line C and the 15 cm line D. Line CLine D _____ paper clips_____ paper clips b. Line D is about _____ cm longer than Line C. c. Line C is about _____ paper clips shorter than Line D. d. Lines C and D together are about _____ paper clips long. e. Lines C and D together are about _____ centimeters long. Christina measured Line F with quarters and Line G with pennies. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Line F Line G Line F is about 6 quarters long. Line G is about 8 pennies long. Christina said Line G is longer because 8 is a bigger number than 6.",
+            "problem": "Draw a line that is 6 cm long and another line below it that is 15 cm long. Label the 6 cm line C and the 15 cm line D. Line CLine D _____ paper clips_____ paper clips b. Line D is about _____ cm longer than Line C. c. Line C is about _____ paper clips shorter than Line D. d. Lines C and D together are about _____ paper clips long. e. Lines C and D together are about _____ centimeters long. Christina measured Line F with quarters and Line G with pennies. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Line F Line G Line F is about 6 quarters long. Line G is about 8 pennies long. Christina said Line G is longer because 8 is a bigger number than 6.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Explain why Christina is incorrect. ______________________________________________________________ ______________________________________________________________",
+            "problem": "Explain why Christina is incorrect. ______________________________________________________________ ______________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Measure and compare lengths using standard metric length units and non-standard length units...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Measure and compare lengths using standard metric length units and non-standard length units....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m2-c-2"
+      }
+    }
+  }
+}

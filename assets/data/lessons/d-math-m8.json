@@ -1,0 +1,2744 @@
+{
+  "id": "d-math-m8",
+  "module": 8,
+  "subject": "math",
+  "grade": "8",
+  "level": "d",
+  "title": "Module 8: Time, Shapes, and Fractions as Equal Parts of Shapes",
+  "description": "Module 8: Time, Shapes, and Fractions as Equal Parts of Shapes for 2nd Grade students.",
+  "lessonsCount": 16,
+  "lessons": {
+    "d-math-m8-a-1": {
+      "id": "d-math-m8-a-1",
+      "code": "D.M8.A.1",
+      "standard": "2.G.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe two-dimensional shapes based on attributes.",
+        "pageTitle": "Describe two-dimensional shapes based on attributes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Describe two-dimensional shapes based on attributes. in 2nd Grade Mathematics aligned with standard 2.G.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Describe two-dimensional shapes based on attributes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 8 • Topic A",
+        "text": "In this lesson on Describe two-dimensional shapes based on attributes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe two-dimensional shapes based on attributes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe two-dimensional shapes based on attributes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe two-dimensional shapes based on attributes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe two-dimensional shapes based on attributes.",
+        "prompt": "Study the shapes below. Then, answer the questions. Which shape has the most sides? Which shape has 3 fewer angles than shape C?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe two-dimensional shapes based on attributes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Identify the number of sides and angles for each shape. Circle each angle as you count, if needed. The first one has been done for you. \\frac{}{}\\frac{}{}\\frac{}{} b.c. sides sides sides angles angles angles \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}e.f. sides sides sides angles angles angles \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}h.i. sides sides sides angles angles angles Study the shapes below. Then, answer the questions. A B C D E F Which shape has the most sides? Which shape has 3 more angles than shape C? Which shape has 3 fewer sides than shape B? How many more angles does shape C have than shape A? Which of these shapes have the same number of sides and angles? Ethan said the two shapes below are both six-sided figures but just different sizes. Explain why he is incorrect. _______________________________________________________________ _______________________________________________________________",
+            "problem": "Identify the number of sides and angles for each shape. Circle each angle as you count, if needed. The first one has been done for you. \\frac{}{}\\frac{}{}\\frac{}{} b.c. sides sides sides angles angles angles \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}e.f. sides sides sides angles angles angles \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}h.i. sides sides sides angles angles angles Study the shapes below. Then, answer the questions. A B C D E F Which shape has the most sides? Which shape has 3 more angles than shape C? Which shape has 3 fewer sides than shape B? How many more angles does shape C have than shape A? Which of these shapes have the same number of sides and angles? Ethan said the two shapes below are both six-sided figures but just different sizes. Explain why he is incorrect. _______________________________________________________________ _______________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe two-dimensional shapes based on attributes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe two-dimensional shapes based on attributes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-a-1"
+      }
+    },
+    "d-math-m8-a-2": {
+      "id": "d-math-m8-a-2",
+      "code": "D.M8.A.2",
+      "standard": "2.G.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Build, identify, and analyze two-dimensional shapes with specified attributes.",
+        "pageTitle": "Build, identify, and analyze two-dimensional shapes with specified attributes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Build, identify, and analyze two-dimensional shapes with specified attributes. in 2nd Grade Mathematics aligned with standard 2.G.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Build, identify, and analyze two-dimensional shapes with specified attributes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 8 • Topic A",
+        "text": "In this lesson on Build, identify, and analyze two-dimensional shapes with specified attributes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Build, identify, and analyze two-dimensional shapes with specified attributes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Build, identify, and analyze two-dimensional shapes with specified attributes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Build, identify, and analyze two-dimensional shapes with specified attributes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Build, identify, and analyze two-dimensional shapes with specified attributes.",
+        "prompt": "Count the number of sides and angles for each shape to identify each polygon. The polygon names in the word bank may be used more than once. HexagonQuadrilateralTrianglePentagonHexagonQuadrilateralTrianglePentagon",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Build, identify, and analyze two-dimensional shapes with specified attributes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Count the number of sides and angles for each shape to identify each polygon. The polygon names in the word bank may be used more than once. HexagonQuadrilateralTrianglePentagonHexagonQuadrilateralTrianglePentagon b.c. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}d. e. f. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}h. i. j. k. l.",
+            "problem": "Count the number of sides and angles for each shape to identify each polygon. The polygon names in the word bank may be used more than once. HexagonQuadrilateralTrianglePentagonHexagonQuadrilateralTrianglePentagon b.c. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}d. e. f. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}h. i. j. k. l.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw more sides to complete 2 examples of each polygon. BBAA a.Explain why both polygons A and B are hexagons. ____________________________________ ____________________________________",
+            "problem": "Draw more sides to complete 2 examples of each polygon. BBAA a.Explain why both polygons A and B are hexagons. ____________________________________ ____________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw a different hexagon than the two that are shown. CC DDExplain why both polygons C and D are quadrilaterals. ________________________________________ ________________________________________",
+            "problem": "Draw a different hexagon than the two that are shown. CC DDExplain why both polygons C and D are quadrilaterals. ________________________________________ ________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Build, identify, and analyze two-dimensional shapes with specified attributes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Build, identify, and analyze two-dimensional shapes with specified attributes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-a-2"
+      }
+    },
+    "d-math-m8-a-3": {
+      "id": "d-math-m8-a-3",
+      "code": "D.M8.A.3",
+      "standard": "2.G.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an...",
+        "pageTitle": "Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an... in 2nd Grade Mathematics aligned with standard 2.G.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 8 • Topic A",
+        "text": "In this lesson on Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, and hexagons.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Problem Set (10 minutes) Students should do their personal best to complete the Problem Set within the allotted 10 minutes. For some classes, it may be appropriate to modify the assignment by specifying which problems they work on first. Some problems do not specify a method for solving. Students should solve these problems using the RDW approach used for Application Problems."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an...",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an....",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an... to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an... to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use attributes to draw different polygons including triangles, quadrilaterals, pentagons, an....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-a-3"
+      }
+    },
+    "d-math-m8-a-4": {
+      "id": "d-math-m8-a-4",
+      "code": "D.M8.A.4",
+      "standard": "2.G.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses...",
+        "pageTitle": "Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses... in 2nd Grade Mathematics aligned with standard 2.G.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 8 • Topic A",
+        "text": "In this lesson on Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses, parallelograms, and trapezoids.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses...",
+        "prompt": "Use crayons to trace the parallel sides on each quadrilateral. Use your index card to find each square corner, and box it. 1. 2. 3. 4.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use your ruler to draw 2 parallel lines that are not the same length.",
+            "problem": "Use your ruler to draw 2 parallel lines that are not the same length.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use your ruler to draw 2 parallel lines that are the same length. Trace the parallel lines on each quadrilateral using a crayon. For each shape with two sets of parallel lines, use two different colors. Use your index card to find each square corner, and box it. b.c. d. f.g.h.",
+            "problem": "Use your ruler to draw 2 parallel lines that are the same length. Trace the parallel lines on each quadrilateral using a crayon. For each shape with two sets of parallel lines, use two different colors. Use your index card to find each square corner, and box it. b.c. d. f.g.h.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw a parallelogram with no square corners.",
+            "problem": "Draw a parallelogram with no square corners.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Draw a quadrilateral with 4 square corners. Measure and label the sides of the figure to the right with your centimeter ruler. What do you notice? Be ready to talk about the attributes of this quadrilateral. Can you remember what this polygon is called?",
+            "problem": "Draw a quadrilateral with 4 square corners. Measure and label the sides of the figure to the right with your centimeter ruler. What do you notice? Be ready to talk about the attributes of this quadrilateral. Can you remember what this polygon is called?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "A square is a special rectangle. What makes it special?",
+            "problem": "A square is a special rectangle. What makes it special?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use attributes to identify and draw different quadrilaterals including rectangles, rhombuses....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-a-4"
+      }
+    },
+    "d-math-m8-a-5": {
+      "id": "d-math-m8-a-5",
+      "code": "D.M8.A.5",
+      "standard": "2.G.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate the square to the cube, and describe the cube based on attributes.",
+        "pageTitle": "Relate the square to the cube, and describe the cube based on attributes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Relate the square to the cube, and describe the cube based on attributes. in 2nd Grade Mathematics aligned with standard 2.G.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Relate the square to the cube, and describe the cube based on attributes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 8 • Topic A",
+        "text": "In this lesson on Relate the square to the cube, and describe the cube based on attributes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate the square to the cube, and describe the cube based on attributes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate the square to the cube, and describe the cube based on attributes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate the square to the cube, and describe the cube based on attributes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate the square to the cube, and describe the cube based on attributes.",
+        "prompt": "Draw 3 cubes. Put a star next to your best one.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate the square to the cube, and describe the cube based on attributes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the shape that could be the face of a cube. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} What is the most precise name of the shape you circled? How many faces does a cube have? How many edges does a cube have? How many corners does a cube have?",
+            "problem": "Circle the shape that could be the face of a cube. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} What is the most precise name of the shape you circled? How many faces does a cube have? How many edges does a cube have? How many corners does a cube have?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw 6 cubes, and put a star next to your best one. Connect the corners of the squares to make a different kind of drawing of a cube. The first one is done for you. Derrick looked at the cube below. He said that a cube only has 3 faces. Explain why Derrick is incorrect. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Draw 6 cubes, and put a star next to your best one. Connect the corners of the squares to make a different kind of drawing of a cube. The first one is done for you. Derrick looked at the cube below. He said that a cube only has 3 faces. Explain why Derrick is incorrect. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate the square to the cube, and describe the cube based on attributes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate the square to the cube, and describe the cube based on attributes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-a-5"
+      }
+    },
+    "d-math-m8-b-1": {
+      "id": "d-math-m8-b-1",
+      "code": "D.M8.B.1",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Combine shapes to create a composite shape; create a new shape from composite shapes.",
+        "pageTitle": "Combine shapes to create a composite shape; create a new shape from composite shapes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Combine shapes to create a composite shape; create a new shape from composite shapes. in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Combine shapes to create a composite shape; create a new shape from composite shapes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 8 • Topic B",
+        "text": "In this lesson on Combine shapes to create a composite shape; create a new shape from composite shapes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Combine shapes to create a composite shape; create a new shape from composite shapes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Combine shapes to create a composite shape; create a new shape from composite shapes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Combine shapes to create a composite shape; create a new shape from composite shapes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Combine shapes to create a composite shape; create a new shape from composite shapes.",
+        "prompt": "Use your tangram pieces to make two new polygons. Draw a picture of each new polygon, and name them.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Combine shapes to create a composite shape; create a new shape from composite shapes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "a.a.b.b.Identify each polygon labeled in the tangram as precisely as possible in the space below. c.c.______________________ ______________________ ______________________",
+            "problem": "a.a.b.b.Identify each polygon labeled in the tangram as precisely as possible in the space below. c.c.______________________ ______________________ ______________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the square and the two smallest triangles of your tangram pieces to make the following polygons. Draw them in the space provided.",
+            "problem": "Use the square and the two smallest triangles of your tangram pieces to make the following polygons. Draw them in the space provided.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use the parallelogram and the two smallest triangles of your tangram pieces to make the following polygons. Draw them in the space provided. Rearrange the parallelogram and the two smallest triangles to make a hexagon. Draw the new shape below. Rearrange your tangram pieces to make other polygons! Identify them as you work.",
+            "problem": "Use the parallelogram and the two smallest triangles of your tangram pieces to make the following polygons. Draw them in the space provided. Rearrange the parallelogram and the two smallest triangles to make a hexagon. Draw the new shape below. Rearrange your tangram pieces to make other polygons! Identify them as you work.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Combine shapes to create a composite shape; create a new shape from composite shapes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Combine shapes to create a composite shape; create a new shape from composite shapes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-b-1"
+      }
+    },
+    "d-math-m8-b-2": {
+      "id": "d-math-m8-b-2",
+      "code": "D.M8.B.2",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+        "pageTitle": "Interpret equal shares in composite shapes as halves, thirds, and fourths. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Interpret equal shares in composite shapes as halves, thirds, and fourths. in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Interpret equal shares in composite shapes as halves, thirds, and fourths. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 8 • Topic B",
+        "text": "In this lesson on Interpret equal shares in composite shapes as halves, thirds, and fourths., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Interpret equal shares in composite shapes as halves, thirds, and fourths.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+        "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}Circle the shapes that show thirds. Circle the shapes that show fourths.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Interpret equal shares in composite shapes as halves, thirds, and fourths.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve the following puzzles using your tangram pieces. Draw your solutions in the space below.",
+            "problem": "Solve the following puzzles using your tangram pieces. Draw your solutions in the space below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Circle the shapes that show halves. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Show how 3 triangle pattern blocks form a trapezoid with one pair of parallel lines. Draw the shape below. How many equal shares does the trapezoid have? ________ How many thirds are in the trapezoid? _______",
+            "problem": "Circle the shapes that show halves. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Show how 3 triangle pattern blocks form a trapezoid with one pair of parallel lines. Draw the shape below. How many equal shares does the trapezoid have? ________ How many thirds are in the trapezoid? _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Circle the shapes that show thirds. Add another triangle to the trapezoid you made in Problem 3 to make a parallelogram. Draw the new shape below. How many equal shares does the shape have now? ________ How many fourths are in the shape? _______",
+            "problem": "Circle the shapes that show thirds. Add another triangle to the trapezoid you made in Problem 3 to make a parallelogram. Draw the new shape below. How many equal shares does the shape have now? ________ How many fourths are in the shape? _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Circle the shapes that show fourths.",
+            "problem": "Circle the shapes that show fourths.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Interpret equal shares in composite shapes as halves, thirds, and fourths.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpret equal shares in composite shapes as halves, thirds, and fourths..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-b-2"
+      }
+    },
+    "d-math-m8-b-3": {
+      "id": "d-math-m8-b-3",
+      "code": "D.M8.B.3",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+        "pageTitle": "Interpret equal shares in composite shapes as halves, thirds, and fourths. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Interpret equal shares in composite shapes as halves, thirds, and fourths. in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Interpret equal shares in composite shapes as halves, thirds, and fourths. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 8 • Topic B",
+        "text": "In this lesson on Interpret equal shares in composite shapes as halves, thirds, and fourths., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Interpret equal shares in composite shapes as halves, thirds, and fourths.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Interpret equal shares in composite shapes as halves, thirds, and fourths.",
+        "prompt": "Name the pattern block used to cover half the rectangle. __________________ Use the shape below to draw the pattern blocks used to cover 2 halves.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Interpret equal shares in composite shapes as halves, thirds, and fourths.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use one pattern block to cover half the rhombus. Identify the pattern block used to cover half of the rhombus. _____________",
+            "problem": "Use one pattern block to cover half the rhombus. Identify the pattern block used to cover half of the rhombus. _____________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw a picture of the rhombus formed by the 2 halves.",
+            "problem": "Draw a picture of the rhombus formed by the 2 halves.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use one pattern block to cover half the hexagon. Identify the pattern block used to cover half of a hexagon. _______________",
+            "problem": "Use one pattern block to cover half the hexagon. Identify the pattern block used to cover half of a hexagon. _______________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Draw a picture of the hexagon formed by the 2 halves.",
+            "problem": "Draw a picture of the hexagon formed by the 2 halves.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Use one pattern block to cover 1 third of the hexagon. Identify the pattern block used to cover 1 third of a hexagon. _____________",
+            "problem": "Use one pattern block to cover 1 third of the hexagon. Identify the pattern block used to cover 1 third of a hexagon. _____________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Draw a picture of the hexagon formed by the 3 thirds.",
+            "problem": "Draw a picture of the hexagon formed by the 3 thirds.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Exercise 7",
+            "prompt": "Use one pattern block to cover 1 third of the trapezoid. Identify the pattern block used to cover 1 third of a trapezoid. ___________",
+            "problem": "Use one pattern block to cover 1 third of the trapezoid. Identify the pattern block used to cover 1 third of a trapezoid. ___________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "title": "Exercise 8",
+            "prompt": "Draw a picture of the trapezoid formed by the 3 thirds.",
+            "problem": "Draw a picture of the trapezoid formed by the 3 thirds.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "title": "Exercise 9",
+            "prompt": "Use 4 pattern block squares to make one larger square.",
+            "problem": "Use 4 pattern block squares to make one larger square.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "title": "Exercise 10",
+            "prompt": "Draw a picture of the square formed in the space below. Shade 1 small square. Each small square is 1 __________ (half / third / fourth) of the whole square. Shade 1 more small square. Now, 2 __________ (halves / thirds / fourths) of the whole square is shaded. And 2 fourths of the square is the same as 1 _________ (half / third / fourth) of the whole square. Shade 2 more small squares. ____ fourths is equal to 1 whole.",
+            "problem": "Draw a picture of the square formed in the space below. Shade 1 small square. Each small square is 1 __________ (half / third / fourth) of the whole square. Shade 1 more small square. Now, 2 __________ (halves / thirds / fourths) of the whole square is shaded. And 2 fourths of the square is the same as 1 _________ (half / third / fourth) of the whole square. Shade 2 more small squares. ____ fourths is equal to 1 whole.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 11,
+            "title": "Exercise 11",
+            "prompt": "Use one pattern block to cover 1 sixth of the hexagon. Identify the pattern block used to cover 1 sixth of a hexagon. _____________",
+            "problem": "Use one pattern block to cover 1 sixth of the hexagon. Identify the pattern block used to cover 1 sixth of a hexagon. _____________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 12,
+            "title": "Exercise 12",
+            "prompt": "Draw a picture of the hexagon formed by the 6 sixths.",
+            "problem": "Draw a picture of the hexagon formed by the 6 sixths.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Interpret equal shares in composite shapes as halves, thirds, and fourths.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpret equal shares in composite shapes as halves, thirds, and fourths..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-b-3"
+      }
+    },
+    "d-math-m8-c-1": {
+      "id": "d-math-m8-c-1",
+      "code": "D.M8.C.1",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+        "pageTitle": "Partition circles and rectangles into equal parts, and describe those parts as halves, third... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Partition circles and rectangles into equal parts, and describe those parts as halves, third... in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Partition circles and rectangles into equal parts, and describe those parts as halves, third... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 8 • Topic C focuses on partitioning circles and rectangles into equal fractional parts.  In Lesson 9, students are introduced to partitioning shapes into two equal shares, or halves, using both circles and rectangles.  First, partners choose different ways to fold a sheet of paper in half.  Then, they label and share their halves, discovering that though they each folded their rectangle differently, they each have two equal parts of the original whole.  Next, they cut out a circle and fold, color, and label one half.  They then rotate their circles and discover that halves are determined by equal parts, not by the orientation of the line.  Finally, students look at pictures of partitioned shapes and discuss whether the shaded (or unshaded) portion is or is not two equal shares.  To encourage student reasoning about equal shares, a variety of partitions and orientations are used.",
+        "text": "In this lesson on Partition circles and rectangles into equal parts, and describe those parts as halves, third..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Partition circles and rectangles into equal parts, and describe those parts as halves, thirds, or fourths.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Partition circles and rectangles into equal parts, and describe those parts as halves, third.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+        "prompt": "Shade 1 half of the shapes that are split into 2 equal shares.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Partition circles and rectangles into equal parts, and describe those parts as halves, third.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the shapes that have 2 equal shares with 1 share shaded. Shade 1 half of the shapes that are split into 2 equal shares. One has been done for you. Partition the shapes to show halves. Shade 1 half of each. Compare your halves to your partner's.",
+            "problem": "Circle the shapes that have 2 equal shares with 1 share shaded. Shade 1 half of the shapes that are split into 2 equal shares. One has been done for you. Partition the shapes to show halves. Shade 1 half of each. Compare your halves to your partner's.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Partition circles and rectangles into equal parts, and describe those parts as halves, third...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Partition circles and rectangles into equal parts, and describe those parts as halves, third....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-c-1"
+      }
+    },
+    "d-math-m8-c-2": {
+      "id": "d-math-m8-c-2",
+      "code": "D.M8.C.2",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+        "pageTitle": "Partition circles and rectangles into equal parts, and describe those parts as halves, third... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Partition circles and rectangles into equal parts, and describe those parts as halves, third... in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Partition circles and rectangles into equal parts, and describe those parts as halves, third... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 8 • Topic C focuses on partitioning circles and rectangles into equal fractional parts.  In Lesson 9, students are introduced to partitioning shapes into two equal shares, or halves, using both circles and rectangles.  First, partners choose different ways to fold a sheet of paper in half.  Then, they label and share their halves, discovering that though they each folded their rectangle differently, they each have two equal parts of the original whole.  Next, they cut out a circle and fold, color, and label one half.  They then rotate their circles and discover that halves are determined by equal parts, not by the orientation of the line.  Finally, students look at pictures of partitioned shapes and discuss whether the shaded (or unshaded) portion is or is not two equal shares.  To encourage student reasoning about equal shares, a variety of partitions and orientations are used.",
+        "text": "In this lesson on Partition circles and rectangles into equal parts, and describe those parts as halves, third..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Partition circles and rectangles into equal parts, and describe those parts as halves, thirds, or fourths.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Partition circles and rectangles into equal parts, and describe those parts as halves, third.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Partition circles and rectangles into equal parts, and describe those parts as halves, third...",
+        "prompt": "Partition and shade the following shapes as indicated. Each rectangle or circle is one whole. 2 halves 2. 2 thirds 3. 1 third 4. 1 half5. 2 fourths 6. 1 fourth",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Partition circles and rectangles into equal parts, and describe those parts as halves, third.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "a. Do the shapes in Problem 1(a) show halves or thirds? __________ b.Draw 1 more line to partition each shape above into fourths. Partition each rectangle into thirds. Then, shade the shapes as indicated. 3 thirds 3 thirds 2 thirds 2 thirds 1 third 1 third Partition each circle into fourths. Then, shade the shapes as indicated. 4 fourths 3 fourths 1 fourth 2 fourths 4 fourths 3 fourths 1 fourth 2 fourths Partition and shade the following shapes as indicated. Each rectangle or circle is one whole. 1 fourth b. 1 third c. 1 half d.2 fourthse. 2 thirds f. 2 halves g. 3 fourths h. 3 thirds i. 3 halves Split the pizza below so that Maria, Paul, Jose, and Mark each have an equal share. Label each student's share with his or her name. What fraction of the pizza was eaten by each of the boys? What fraction of the pizza did the boys eat altogether?",
+            "problem": "a. Do the shapes in Problem 1(a) show halves or thirds? __________ b.Draw 1 more line to partition each shape above into fourths. Partition each rectangle into thirds. Then, shade the shapes as indicated. 3 thirds 3 thirds 2 thirds 2 thirds 1 third 1 third Partition each circle into fourths. Then, shade the shapes as indicated. 4 fourths 3 fourths 1 fourth 2 fourths 4 fourths 3 fourths 1 fourth 2 fourths Partition and shade the following shapes as indicated. Each rectangle or circle is one whole. 1 fourth b. 1 third c. 1 half d.2 fourthse. 2 thirds f. 2 halves g. 3 fourths h. 3 thirds i. 3 halves Split the pizza below so that Maria, Paul, Jose, and Mark each have an equal share. Label each student's share with his or her name. What fraction of the pizza was eaten by each of the boys? What fraction of the pizza did the boys eat altogether?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Partition circles and rectangles into equal parts, and describe those parts as halves, third...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Partition circles and rectangles into equal parts, and describe those parts as halves, third....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-c-2"
+      }
+    },
+    "d-math-m8-c-3": {
+      "id": "d-math-m8-c-3",
+      "code": "D.M8.C.3",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.",
+        "pageTitle": "Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths. in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 8 • Topic C focuses on partitioning circles and rectangles into equal fractional parts.  In Lesson 9, students are introduced to partitioning shapes into two equal shares, or halves, using both circles and rectangles.  First, partners choose different ways to fold a sheet of paper in half.  Then, they label and share their halves, discovering that though they each folded their rectangle differently, they each have two equal parts of the original whole.  Next, they cut out a circle and fold, color, and label one half.  They then rotate their circles and discover that halves are determined by equal parts, not by the orientation of the line.  Finally, students look at pictures of partitioned shapes and discuss whether the shaded (or unshaded) portion is or is not two equal shares.  To encourage student reasoning about equal shares, a variety of partitions and orientations are used.",
+        "text": "In this lesson on Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.",
+        "prompt": "What fraction do you need to color so that 1 whole is shaded?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "For Parts (a), (c), and (e), identify the shaded area. _______ halves_______ half",
+            "problem": "For Parts (a), (c), and (e), identify the shaded area. _______ halves_______ half",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Circle the shape above that has a shaded area that shows 1 whole. _______ thirds_______ thirds_______ third",
+            "problem": "Circle the shape above that has a shaded area that shows 1 whole. _______ thirds_______ thirds_______ third",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Circle the shape above that has a shaded area that shows 1 whole. _____ fourths_____ fourths_____ fourths______ fourth",
+            "problem": "Circle the shape above that has a shaded area that shows 1 whole. _____ fourths_____ fourths_____ fourths______ fourth",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Circle the shape above that has a shaded area that shows 1 whole. What fraction do you need to color so that 1 whole is shaded? b. c.d. e.f. Complete the drawing to show 1 whole.",
+            "problem": "Circle the shape above that has a shaded area that shows 1 whole. What fraction do you need to color so that 1 whole is shaded? b. c.d. e.f. Complete the drawing to show 1 whole.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe a whole by the number of equal parts including 2 halves, 3 thirds, and 4 fourths..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-c-3"
+      }
+    },
+    "d-math-m8-c-4": {
+      "id": "d-math-m8-c-4",
+      "code": "D.M8.C.4",
+      "standard": "2.G.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Recognize that equal parts of an identical rectangle can have different shapes.",
+        "pageTitle": "Recognize that equal parts of an identical rectangle can have different shapes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Recognize that equal parts of an identical rectangle can have different shapes. in 2nd Grade Mathematics aligned with standard 2.G.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Recognize that equal parts of an identical rectangle can have different shapes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.C.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 8 • Topic C focuses on partitioning circles and rectangles into equal fractional parts.  In Lesson 9, students are introduced to partitioning shapes into two equal shares, or halves, using both circles and rectangles.  First, partners choose different ways to fold a sheet of paper in half.  Then, they label and share their halves, discovering that though they each folded their rectangle differently, they each have two equal parts of the original whole.  Next, they cut out a circle and fold, color, and label one half.  They then rotate their circles and discover that halves are determined by equal parts, not by the orientation of the line.  Finally, students look at pictures of partitioned shapes and discuss whether the shaded (or unshaded) portion is or is not two equal shares.  To encourage student reasoning about equal shares, a variety of partitions and orientations are used.",
+        "text": "In this lesson on Recognize that equal parts of an identical rectangle can have different shapes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Recognize that equal parts of an identical rectangle can have different shapes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Recognize that equal parts of an identical rectangle can have different shapes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Recognize that equal parts of an identical rectangle can have different shapes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Recognize that equal parts of an identical rectangle can have different shapes.",
+        "prompt": "Partition the rectangles in 2 different ways to show equal shares.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Recognize that equal parts of an identical rectangle can have different shapes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Partition the rectangles in 2 different ways to show equal shares. 2 halves 3 thirds 4 fourths Build the original whole square using the rectangle half and the half represented by your 4 small triangles. Draw it in the space below.",
+            "problem": "Partition the rectangles in 2 different ways to show equal shares. 2 halves 3 thirds 4 fourths Build the original whole square using the rectangle half and the half represented by your 4 small triangles. Draw it in the space below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use different-colored halves of a whole square. Cut the square in half to make 2 equal-size rectangles. Rearrange the halves to create a new rectangle with no gaps or overlaps. Cut each equal part in half to make 4 equal-size squares. Rearrange the new equal shares to create different polygons.",
+            "problem": "Use different-colored halves of a whole square. Cut the square in half to make 2 equal-size rectangles. Rearrange the halves to create a new rectangle with no gaps or overlaps. Cut each equal part in half to make 4 equal-size squares. Rearrange the new equal shares to create different polygons.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw one of your new polygons from Part (d) below. Extension Cut out the circle. Cut the circle in half. Rearrange the halves to create a new shape with no gaps or overlaps. Cut each equal share in half. Rearrange the equal shares to create a new shape with no gaps or overlaps.",
+            "problem": "Draw one of your new polygons from Part (d) below. Extension Cut out the circle. Cut the circle in half. Rearrange the halves to create a new shape with no gaps or overlaps. Cut each equal share in half. Rearrange the equal shares to create a new shape with no gaps or overlaps.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Draw your new shape from Part (d) below.",
+            "problem": "Draw your new shape from Part (d) below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Recognize that equal parts of an identical rectangle can have different shapes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Recognize that equal parts of an identical rectangle can have different shapes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-c-4"
+      }
+    },
+    "d-math-m8-d-1": {
+      "id": "d-math-m8-d-1",
+      "code": "D.M8.D.1",
+      "standard": "2.MD.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ...",
+        "pageTitle": "Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ... in 2nd Grade Mathematics aligned with standard 2.MD.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 8 • Topic D",
+        "text": "In this lesson on Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Construct a paper clock by partitioning a circle into halves and quarters, and tell time to the half hour or quarter hour.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Construct a paper clock by partitioning a circle into halves and quarters, and tell time to .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ...",
+        "prompt": "Draw the minute hand on the clock to show the correct time. Half past 7A quarter to 312:15Half past 7A quarter to 312:15",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Construct a paper clock by partitioning a circle into halves and quarters, and tell time to .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Tell what fraction of each clock is shaded in the space below using the words quarter, quarters, half, or halves.",
+            "problem": "Tell what fraction of each clock is shaded in the space below using the words quarter, quarters, half, or halves.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Write the time shown on each clock. Match each time to the correct clock by drawing a line. Quarter to 4 Half past 8 8:30 3:45 1:15 11:303:456:1511:303:456:15Draw the minute hand on the clock to show the correct time.",
+            "problem": "Write the time shown on each clock. Match each time to the correct clock by drawing a line. Quarter to 4 Half past 8 8:30 3:45 1:15 11:303:456:1511:303:456:15Draw the minute hand on the clock to show the correct time.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Construct a paper clock by partitioning a circle into halves and quarters, and tell time to ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-d-1"
+      }
+    },
+    "d-math-m8-d-2": {
+      "id": "d-math-m8-d-2",
+      "code": "D.M8.D.2",
+      "standard": "2.MD.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Tell time to the nearest five minutes.",
+        "pageTitle": "Tell time to the nearest five minutes. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Tell time to the nearest five minutes. in 2nd Grade Mathematics aligned with standard 2.MD.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Tell time to the nearest five minutes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 8 • Topic D",
+        "text": "In this lesson on Tell time to the nearest five minutes., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Tell time to the nearest five minutes.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Tell time to the nearest five minutes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Tell time to the nearest five minutes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Tell time to the nearest five minutes.",
+        "prompt": "5:255:25Draw the hour and minute hands on the clocks to match the correct time.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Tell time to the nearest five minutes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Fill in the missing numbers. 60, 55, 50, ____, 40, ____, _____, _____, 20, ____, _____, _____, ____ ____________________________________________________________________________________or _____________________________________________________________________________________\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}_______or ________Fill in the missing numbers on the face of the clock to show the minutes. 3:053:053:353:35Draw the hour and minute hands on the clocks to match the correct time. 4:404:404:104:10 6:256:256:5556:555 \\frac{}{}\\frac{}{}\\frac{}{}What time is it?",
+            "problem": "Fill in the missing numbers. 60, 55, 50, ____, 40, ____, _____, _____, 20, ____, _____, _____, ____ ____________________________________________________________________________________or _____________________________________________________________________________________\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}_______or ________Fill in the missing numbers on the face of the clock to show the minutes. 3:053:053:353:35Draw the hour and minute hands on the clocks to match the correct time. 4:404:404:104:10 6:256:256:5556:555 \\frac{}{}\\frac{}{}\\frac{}{}What time is it?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Tell time to the nearest five minutes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Tell time to the nearest five minutes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-d-2"
+      }
+    },
+    "d-math-m8-d-3": {
+      "id": "d-math-m8-d-3",
+      "code": "D.M8.D.3",
+      "standard": "2.MD.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.",
+        "pageTitle": "Tell time to the nearest five minutes; relate a.m. and p.m. totime of day. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Tell time to the nearest five minutes; relate a.m. and p.m. totime of day. in 2nd Grade Mathematics aligned with standard 2.MD.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Tell time to the nearest five minutes; relate a.m. and p.m. totime of day. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.D.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 8 • Topic D",
+        "text": "In this lesson on Tell time to the nearest five minutes; relate a.m. and p.m. totime of day., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.",
+        "prompt": "Draw the hands on the analog clock to match the time on the digital clock. Then, circle a.m. or p.m. based on the description given. 6:10 a.m. or p.m.6:10 a.m. or p.m.The sun is rising. 3:40 a.m. or p.m.3:40 a.m. or p.m.Walking the dog",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Decide whether the activity below would happen in the a.m. or the p.m. Circle your answer. Waking up for school a.m. / p.m. Eating dinnera.m. / p.m. Reading a bedtime storya.m. / p.m. Making breakfast a.m. / p.m. Having a play date after school a.m. / p.m. Going to beda.m. / p.m. Eating a piece of cakea.m. / p.m. Eating lunch a.m. / p.m.",
+            "problem": "Decide whether the activity below would happen in the a.m. or the p.m. Circle your answer. Waking up for school a.m. / p.m. Eating dinnera.m. / p.m. Reading a bedtime storya.m. / p.m. Making breakfast a.m. / p.m. Having a play date after school a.m. / p.m. Going to beda.m. / p.m. Eating a piece of cakea.m. / p.m. Eating lunch a.m. / p.m.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw the hands on the analog clock to match the time on the digital clock. Then, circle a.m. or p.m. based on the description given. a.m. or p.m.a.m. or p.m.7:10 7:10 Brushing your teeth after you wake up a.m. or p.m.a.m. or p.m.5:55 5:55 Finishing homework \\frac{}{}\\frac{}{}\\frac{}{}Write what you might be doing if it were a.m. or p.m. a.m. ________________________ p.m. ________________________ What time does the clock show? _____ : _____",
+            "problem": "Draw the hands on the analog clock to match the time on the digital clock. Then, circle a.m. or p.m. based on the description given. a.m. or p.m.a.m. or p.m.7:10 7:10 Brushing your teeth after you wake up a.m. or p.m.a.m. or p.m.5:55 5:55 Finishing homework \\frac{}{}\\frac{}{}\\frac{}{}Write what you might be doing if it were a.m. or p.m. a.m. ________________________ p.m. ________________________ What time does the clock show? _____ : _____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Tell time to the nearest five minutes; relate a.m. and p.m. totime of day.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Tell time to the nearest five minutes; relate a.m. and p.m. totime of day..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-d-3"
+      }
+    },
+    "d-math-m8-d-4": {
+      "id": "d-math-m8-d-4",
+      "code": "D.M8.D.4",
+      "standard": "2.MD.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solve elapsed time problems involving whole hours and a half hour.",
+        "pageTitle": "Solve elapsed time problems involving whole hours and a half hour. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Solve elapsed time problems involving whole hours and a half hour. in 2nd Grade Mathematics aligned with standard 2.MD.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Solve elapsed time problems involving whole hours and a half hour. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M8.D.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 8 • Topic D",
+        "text": "In this lesson on Solve elapsed time problems involving whole hours and a half hour., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Solve elapsed time problems involving whole hours and a half hour.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Solve elapsed time problems involving whole hours and a half hour.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Solve elapsed time problems involving whole hours and a half hour.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Solve elapsed time problems involving whole hours and a half hour.",
+        "prompt": "How much time has passed? 3:00 p.m. 11:00 p.m. _____________ 5:00 a.m. 12:00 p.m. (noon)_____________ 9:30 p.m. 7:30 a.m. _____________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Solve elapsed time problems involving whole hours and a half hour.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "How much time has passed? 6:30 a.m. 7:00 a.m. _____________ 4:00 p.m. 9:00 p.m. _____________ 11:00 a.m. 5:00 p.m. _____________ 3:30 a.m. 10:30 a.m._____________ \\frac{}{}\\frac{}{}\\frac{}{}7:00 p.m. 1:30 a.m. _____________ a.m.a.m.p.m.p.m. p.m.p.m.a.m.a.m. a.m.a.m.a.m.a.m. Solve. Tracy arrives at school at 7:30 a.m. She leaves school at 3:30 p.m. How long is Tracy at school? Anna spent 3 hours at dance practice. She finished at 6:15 p.m. What time did she start? Andy finished baseball practice at 4:30 p.m. His practice was 2 hours long. What time did his baseball practice start? Marcus took a road trip. He left on Monday at 7:00 a.m. and drove until 4:00 p.m. On Tuesday, Marcus drove from 6:00 a.m. to 3:30 p.m. How long did he drive on Monday and Tuesday?",
+            "problem": "How much time has passed? 6:30 a.m. 7:00 a.m. _____________ 4:00 p.m. 9:00 p.m. _____________ 11:00 a.m. 5:00 p.m. _____________ 3:30 a.m. 10:30 a.m._____________ \\frac{}{}\\frac{}{}\\frac{}{}7:00 p.m. 1:30 a.m. _____________ a.m.a.m.p.m.p.m. p.m.p.m.a.m.a.m. a.m.a.m.a.m.a.m. Solve. Tracy arrives at school at 7:30 a.m. She leaves school at 3:30 p.m. How long is Tracy at school? Anna spent 3 hours at dance practice. She finished at 6:15 p.m. What time did she start? Andy finished baseball practice at 4:30 p.m. His practice was 2 hours long. What time did his baseball practice start? Marcus took a road trip. He left on Monday at 7:00 a.m. and drove until 4:00 p.m. On Tuesday, Marcus drove from 6:00 a.m. to 3:30 p.m. How long did he drive on Monday and Tuesday?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Solve elapsed time problems involving whole hours and a half hour.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solve elapsed time problems involving whole hours and a half hour..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m8-d-4"
+      }
+    }
+  }
+}

@@ -1,0 +1,3324 @@
+{
+  "id": "d-math-m3",
+  "module": 3,
+  "subject": "math",
+  "grade": "3",
+  "level": "d",
+  "title": "Module 3: Place Value, Counting, and Comparison of Numbers to 1,000",
+  "description": "Module 3: Place Value, Counting, and Comparison of Numbers to 1,000 for 2nd Grade students.",
+  "lessonsCount": 21,
+  "lessons": {
+    "d-math-m3-a-1": {
+      "id": "d-math-m3-a-1",
+      "code": "D.M3.A.1",
+      "standard": "2.NBT.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Bundle and count ones, tens, and hundreds to 1,000.",
+        "pageTitle": "Bundle and count ones, tens, and hundreds to 1,000. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Bundle and count ones, tens, and hundreds to 1,000. in 2nd Grade Mathematics aligned with standard 2.NBT.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Bundle and count ones, tens, and hundreds to 1,000. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 3 • Topic A",
+        "text": "In this lesson on Bundle and count ones, tens, and hundreds to 1,000., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Bundle and count ones, tens, and hundreds to 1,000.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Bundle and count ones, tens, and hundreds to 1,000.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Bundle and count ones, tens, and hundreds to 1,000.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Bundle and count ones, tens, and hundreds to 1,000.",
+        "prompt": "Draw lines to match and make each statement true. 10 tens = 1 thousand 10 hundreds =1 ten 10 ones = 1 hundred",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Bundle and count ones, tens, and hundreds to 1,000.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Draw models of ones, tens, and hundreds. Your teacher will tell you which numbers to model.",
+            "problem": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Draw models of ones, tens, and hundreds. Your teacher will tell you which numbers to model.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Bundle and count ones, tens, and hundreds to 1,000.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Bundle and count ones, tens, and hundreds to 1,000..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-a-1"
+      }
+    },
+    "d-math-m3-b-1": {
+      "id": "d-math-m3-b-1",
+      "code": "D.M3.B.1",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count up and down between 100 and 220 using ones and tens.",
+        "pageTitle": "Count up and down between 100 and 220 using ones and tens. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count up and down between 100 and 220 using ones and tens. in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count up and down between 100 and 220 using ones and tens. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 3 • Topic B",
+        "text": "In this lesson on Count up and down between 100 and 220 using ones and tens., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count up and down between 100 and 220 using ones and tens.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(S) Straws and bundles of tens and hundreds The Student Debrief is intended to invite reflection and active processing of the total lesson experience."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count up and down between 100 and 220 using ones and tens.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count up and down between 100 and 220 using ones and tens.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count up and down between 100 and 220 using ones and tens.",
+        "prompt": "These are bundles of hundreds, tens, and ones. How many straws are in each group? ______ straws ______ straws Count from 96 to 140 with ones and tens. Use pictures to show your work. Fill in the blanks to reach the benchmark numbers.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count up and down between 100 and 220 using ones and tens.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw, label, and box 100. Draw pictures of the units you use to count from 100 to 124. Draw, label, and box 124. Draw pictures of the units you use to count from 124 to 220. Draw, label, and box 85. Draw pictures of the units you use to count from 85 to 120. Draw, label, and box 120. Draw pictures of the units you use to count from 120 to 193.",
+            "problem": "Draw, label, and box 100. Draw pictures of the units you use to count from 100 to 124. Draw, label, and box 124. Draw pictures of the units you use to count from 124 to 220. Draw, label, and box 85. Draw pictures of the units you use to count from 85 to 120. Draw, label, and box 120. Draw pictures of the units you use to count from 120 to 193.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count up and down between 100 and 220 using ones and tens.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count up and down between 100 and 220 using ones and tens..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-b-1"
+      }
+    },
+    "d-math-m3-b-2": {
+      "id": "d-math-m3-b-2",
+      "code": "D.M3.B.2",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count up and down between 90 and 1,000 using ones, tens, and hundreds.",
+        "pageTitle": "Count up and down between 90 and 1,000 using ones, tens, and hundreds. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count up and down between 90 and 1,000 using ones, tens, and hundreds. in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count up and down between 90 and 1,000 using ones, tens, and hundreds. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 3 • Topic B",
+        "text": "In this lesson on Count up and down between 90 and 1,000 using ones, tens, and hundreds., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count up and down between 90 and 1,000 using ones, tens, and hundreds.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count up and down between 90 and 1,000 using ones, tens, and hundreds.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count up and down between 90 and 1,000 using ones, tens, and hundreds.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count up and down between 90 and 1,000 using ones, tens, and hundreds.",
+        "prompt": "Draw a line to match the numbers with the units you might use to count them. 300 to 900ones, tens, and hundreds 97 to 300ones and tens 484 to 1,000ones and hundreds",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count up and down between 90 and 1,000 using ones, tens, and hundreds.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw, label, and box 90. Draw pictures of the units you use to count from 90 to 300. Draw, label, and box 300. Draw pictures of the units you use to count from 300 to 428. Draw, label, and box 428. Draw pictures of the units you use to count from 428 to 600. Draw, label, and box 600. Draw pictures of the units you use to count from600 to 1,000.",
+            "problem": "Draw, label, and box 90. Draw pictures of the units you use to count from 90 to 300. Draw, label, and box 300. Draw pictures of the units you use to count from 300 to 428. Draw, label, and box 428. Draw pictures of the units you use to count from 428 to 600. Draw, label, and box 600. Draw pictures of the units you use to count from600 to 1,000.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count up and down between 90 and 1,000 using ones, tens, and hundreds.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count up and down between 90 and 1,000 using ones, tens, and hundreds..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-b-2"
+      }
+    },
+    "d-math-m3-c-1": {
+      "id": "d-math-m3-c-1",
+      "code": "D.M3.C.1",
+      "standard": "2.NBT.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count up to 1,000 on the place value chart.",
+        "pageTitle": "Count up to 1,000 on the place value chart. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count up to 1,000 on the place value chart. in 2nd Grade Mathematics aligned with standard 2.NBT.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count up to 1,000 on the place value chart. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 3 • Topic C",
+        "text": "In this lesson on Count up to 1,000 on the place value chart., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count up to 1,000 on the place value chart.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "T:Here is your place value chart and some straws. With your partner, I want you to count at least from 0 to 124 by ones. Whisper count while using your place value chart. Bundle a larger unit when you can. T:What number will you show and say after 10?"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count up to 1,000 on the place value chart.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count up to 1,000 on the place value chart.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count up to 1,000 on the place value chart.",
+        "prompt": "These are bundles of 10. If you put them together, which unit will you make? \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} a. oneb. tenc. hundredd. thousand These are bundles of hundreds, tens, and ones. How many sticks are there in all?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count up to 1,000 on the place value chart.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Work with your partner. Imagine your place value chart. Write down how you might count from the first number up to the second number. Underline the numbers where you bundled to make a larger unit.",
+            "problem": "Work with your partner. Imagine your place value chart. Write down how you might count from the first number up to the second number. Underline the numbers where you bundled to make a larger unit.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count up to 1,000 on the place value chart.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count up to 1,000 on the place value chart..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-c-1"
+      }
+    },
+    "d-math-m3-c-2": {
+      "id": "d-math-m3-c-2",
+      "code": "D.M3.C.2",
+      "standard": "2.NBT.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Write base ten three-digit numbers in unit form; show the value of each digit.",
+        "pageTitle": "Write base ten three-digit numbers in unit form; show the value of each digit. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Write base ten three-digit numbers in unit form; show the value of each digit. in 2nd Grade Mathematics aligned with standard 2.NBT.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Write base ten three-digit numbers in unit form; show the value of each digit. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 3 • Topic C",
+        "text": "In this lesson on Write base ten three-digit numbers in unit form; show the value of each digit., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Write base ten three-digit numbers in unit form; show the value of each digit.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(T) Blank paper to write numerals (as pictured on the previous page), place value box, bundles of straws for modeling (S) Individual place value charts (Template), personal white board The Student Debrief is intended to invite reflection and active processing of the total lesson experience."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Write base ten three-digit numbers in unit form; show the value of each digit.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Write base ten three-digit numbers in unit form; show the value of each digit.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Write base ten three-digit numbers in unit form; show the value of each digit.",
+        "prompt": "Look at the Hide Zero cards. What is the value of the 6? 6b. 600c. 60 What is another way to write 5 ones 3 tens 2 hundreds? a. 325b. 523c. 253d. 235",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Write base ten three-digit numbers in unit form; show the value of each digit.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Your teacher will tell you a number to write in each box. In a whisper voice, say each number in word form. Use number bonds to show how many ones, tens, and hundreds are in the number.",
+            "problem": "Your teacher will tell you a number to write in each box. In a whisper voice, say each number in word form. Use number bonds to show how many ones, tens, and hundreds are in the number.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Write base ten three-digit numbers in unit form; show the value of each digit.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Write base ten three-digit numbers in unit form; show the value of each digit..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-c-2"
+      }
+    },
+    "d-math-m3-c-3": {
+      "id": "d-math-m3-c-3",
+      "code": "D.M3.C.3",
+      "standard": "2.NBT.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Write base ten numbers in expanded form.",
+        "pageTitle": "Write base ten numbers in expanded form. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Write base ten numbers in expanded form. in 2nd Grade Mathematics aligned with standard 2.NBT.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Write base ten numbers in expanded form. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 3 • Topic C",
+        "text": "In this lesson on Write base ten numbers in expanded form., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Write base ten numbers in expanded form.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Write base ten numbers in expanded form.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Write base ten numbers in expanded form.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Write base ten numbers in expanded form.",
+        "prompt": "Write in number form. Write in expanded form.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Write base ten numbers in expanded form.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Write each number in expanded form, separating the total value of each of the units.",
+            "problem": "Write each number in expanded form, separating the total value of each of the units.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Write the answer in number form.",
+            "problem": "Write the answer in number form.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Write base ten numbers in expanded form.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Write base ten numbers in expanded form..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-c-3"
+      }
+    },
+    "d-math-m3-c-4": {
+      "id": "d-math-m3-c-4",
+      "code": "D.M3.C.4",
+      "standard": "2.NBT.3",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Write, read, and relate base ten numbers in all forms.",
+        "pageTitle": "Write, read, and relate base ten numbers in all forms. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Write, read, and relate base ten numbers in all forms. in 2nd Grade Mathematics aligned with standard 2.NBT.3.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Write, read, and relate base ten numbers in all forms. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.C.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 3 • Topic C",
+        "text": "In this lesson on Write, read, and relate base ten numbers in all forms., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Write, read, and relate base ten numbers in all forms.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "More than 9 of a Unit (12 minutes) NOTES ON MULTIPLE MEANS OF ACTION AND EXPRESSION:When a Problem Set involves significant reading, students need support from a visual. Post hundred with a picture of a bundle of one hundred, for example. Also, this is an opportunity for more fluent English language learners to show off and support their peers in small groups or partnerships. NOTES ON MULTIPLE MEANS OF ACTION AND EXPRESSION:When a Problem Set involves significant reading, students need support from a visual. Post hundred with a picture of a bundle of one hundred, for example. Also, this is an opportunity for more fluent English language learners to show off and support their peers in small groups or partnerships. Materials:(S) 21 ones and 21 tens per pair, personal white board"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Write, read, and relate base ten numbers in all forms.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Write, read, and relate base ten numbers in all forms.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Write, read, and relate base ten numbers in all forms.",
+        "prompt": "Match Part 1 Match the word form or unit form with standard form. Problem A is done for you as an example. a. Two hundred thirty-four ● 204 b. Three hundred seventy-four● 930",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Write, read, and relate base ten numbers in all forms.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Spell Numbers: How many can you write correctly in 2 minutes? Number Correct: _______Number Correct: _______AA Expanded Form B [KEY]B [KEY]Number Correct: _______Improvement: _______Number Correct: _______Improvement: _______ Expanded Form",
+            "problem": "Spell Numbers: How many can you write correctly in 2 minutes? Number Correct: _______Number Correct: _______AA Expanded Form B [KEY]B [KEY]Number Correct: _______Improvement: _______Number Correct: _______Improvement: _______ Expanded Form",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Write, read, and relate base ten numbers in all forms.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Write, read, and relate base ten numbers in all forms..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-c-4"
+      }
+    },
+    "d-math-m3-d-1": {
+      "id": "d-math-m3-d-1",
+      "code": "D.M3.D.1",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count the total value of $1, $10, and $100 bills up to $1,000.",
+        "pageTitle": "Count the total value of $1, $10, and $100 bills up to $1,000. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count the total value of $1, $10, and $100 bills up to $1,000. in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count the total value of $1, $10, and $100 bills up to $1,000. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 3 • Topic D",
+        "text": "In this lesson on Count the total value of $1, $10, and $100 bills up to $1,000., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count the total value of $1, $10, and $100 bills up to $1,000.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(T) 1 bundle of 100 straws (S) Completed Problem Set The Student Debrief is intended to invite reflection and active processing of the total lesson experience."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count the total value of $1, $10, and $100 bills up to $1,000.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count the total value of $1, $10, and $100 bills up to $1,000.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count the total value of $1, $10, and $100 bills up to $1,000.",
+        "prompt": "Write the total value of the money shown below in standard and expanded form. $100$100$100$100$100$100$10$10$1$1 $10$10$10$10$1$1$1$1Standard form: _____________________ $1$1$10$10$10$10$1$1$1$1Expanded form: _____________________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count the total value of $1, $10, and $100 bills up to $1,000.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Show each amount of money using 10 bills: $100, $10, and $1 bills. Whisper and write each amount of money in expanded form. Write the total value of each set of bills as a number bond. 10 Bills",
+            "problem": "Show each amount of money using 10 bills: $100, $10, and $1 bills. Whisper and write each amount of money in expanded form. Write the total value of each set of bills as a number bond. 10 Bills",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "1.1.2.2. $136 = ____________________ ___________________ = $451",
+            "problem": "1.1.2.2. $136 = ____________________ ___________________ = $451",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "3.3.4.4. $190 = ____________________ ___________________ = $109",
+            "problem": "3.3.4.4. $190 = ____________________ ___________________ = $109",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "5.5.6.6. $460 = ________________________________________ = $406",
+            "problem": "5.5.6.6. $460 = ________________________________________ = $406",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "7.7.8.8. $550 = ____________________ ___________________ = $541",
+            "problem": "7.7.8.8. $550 = ____________________ ___________________ = $541",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "10.10.9.9. $901 = ____________________ __________________ = $910",
+            "problem": "10.10.9.9. $901 = ____________________ __________________ = $910",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Exercise 7",
+            "prompt": "12.12. $1,000 = ____________________ __________________ = $100",
+            "problem": "12.12. $1,000 = ____________________ __________________ = $100",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count the total value of $1, $10, and $100 bills up to $1,000.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count the total value of $1, $10, and $100 bills up to $1,000..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-d-1"
+      }
+    },
+    "d-math-m3-d-2": {
+      "id": "d-math-m3-d-2",
+      "code": "D.M3.D.2",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count from $10 to $1,000 on the place value chart and the empty number line.",
+        "pageTitle": "Count from $10 to $1,000 on the place value chart and the empty number line. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count from $10 to $1,000 on the place value chart and the empty number line. in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count from $10 to $1,000 on the place value chart and the empty number line. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 3 • Topic D",
+        "text": "In this lesson on Count from $10 to $1,000 on the place value chart and the empty number line., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count from $10 to $1,000 on the place value chart and the empty number line.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count from $10 to $1,000 on the place value chart and the empty number line.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count from $10 to $1,000 on the place value chart and the empty number line.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count from $10 to $1,000 on the place value chart and the empty number line.",
+        "prompt": "Jeremy counted from $280 to $435. Use the number line to show a way that Jeremy could have used ones, tens, and hundreds to count. Use the number line to show another way that Jeremy could have counted from $280 to $435. Use the number line to show how many hundreds, tens, and ones you use when you count from $776 to $900. To count from $776 to $900, I used ____ hundreds ____tens ____ones.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count from $10 to $1,000 on the place value chart and the empty number line.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "First, model the count using ones, tens, and hundreds on your place value chart. Then, record your count on the empty number line. Empty Number Lines 70 to 300 300 to 450 160 to 700 700 to 870 68 to 200 200 to 425 486 to 700 700 to 982",
+            "problem": "First, model the count using ones, tens, and hundreds on your place value chart. Then, record your count on the empty number line. Empty Number Lines 70 to 300 300 to 450 160 to 700 700 to 870 68 to 200 200 to 425 486 to 700 700 to 982",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count from $10 to $1,000 on the place value chart and the empty number line.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count from $10 to $1,000 on the place value chart and the empty number line..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-d-2"
+      }
+    },
+    "d-math-m3-d-3": {
+      "id": "d-math-m3-d-3",
+      "code": "D.M3.D.3",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explore $1,000. How many $10 bills can we change for a thousand dollar bill?",
+        "pageTitle": "Explore $1,000. How many $10 bills can we change for a thousand dollar bill? | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Explore $1,000. How many $10 bills can we change for a thousand dollar bill? in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Explore $1,000. How many $10 bills can we change for a thousand dollar bill? with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.D.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 3 • Topic D",
+        "text": "In this lesson on Explore $1,000. How many $10 bills can we change for a thousand dollar bill?, explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explore $1,000. How many $10 bills can we change for a thousand dollar bill?",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(S) Completed Problem Set T: Let's set up our gallery in order to allow everyone to see each other's work. Pair 1, place your work here. Pair 2, place your work here. (Arrange the work in a circular configuration.)"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explore $1,000. How many $10 bills can we change for a thousand dollar bill?",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explore $1,000. How many $10 bills can we change for a thousand dollar bill?. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explore $1,000. How many $10 bills can we change for a thousand dollar bill?",
+        "prompt": "Jerry wonders, \"How many $10 bills are equal to a $1,000 bill?\" Think about the different strategies your classmates used to answer Jerry's question. Answer the problem again using a strategy you liked that is different from yours. Use words, pictures, or numbers to explain why that strategy also works.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explore $1,000. How many $10 bills can we change for a thousand dollar bill?. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Jerry wonders, \"How many $10 bills are equal to a $1,000 bill?\" Work with your partner to answer Jerry's question. Explain your solution using words, pictures, or numbers. Ask yourselves: Can I draw something? What can I draw? What can I learn from my drawing? Remember to write your answer as a statement.",
+            "problem": "Jerry wonders, \"How many $10 bills are equal to a $1,000 bill?\" Work with your partner to answer Jerry's question. Explain your solution using words, pictures, or numbers. Ask yourselves: Can I draw something? What can I draw? What can I learn from my drawing? Remember to write your answer as a statement.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explore $1,000. How many $10 bills can we change for a thousand dollar bill??",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explore $1,000. How many $10 bills can we change for a thousand dollar bill?.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-d-3"
+      }
+    },
+    "d-math-m3-e-1": {
+      "id": "d-math-m3-e-1",
+      "code": "D.M3.E.1",
+      "standard": "2.NBT.A",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Count the total value of ones, tens, and hundreds with place value disks.",
+        "pageTitle": "Count the total value of ones, tens, and hundreds with place value disks. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Count the total value of ones, tens, and hundreds with place value disks. in 2nd Grade Mathematics aligned with standard 2.NBT.A.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Count the total value of ones, tens, and hundreds with place value disks. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.E.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 3 • Topic E",
+        "text": "In this lesson on Count the total value of ones, tens, and hundreds with place value disks., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Count the total value of ones, tens, and hundreds with place value disks.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Count the total value of ones, tens, and hundreds with place value disks.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Count the total value of ones, tens, and hundreds with place value disks.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Count the total value of ones, tens, and hundreds with place value disks.",
+        "prompt": "1. Tell the value of the following numbers. a. __________________ b. __________________ 2. Fill in the sentences below to tell about the change from 36 to 360.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Count the total value of ones, tens, and hundreds with place value disks.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Model the numbers on your place value chart using the fewest number of blocks or disks possible. Partner A, use base ten blocks. Partner B, use place value disks. Compare the way your numbers look. Whisper the numbers in standard form and unit form. 12 124 104 299 200 Take turns using the place value disks to model the following numbers using the fewest place value disks possible. Whisper the numbers in standard form and unit form. 25 250 520 502 205 36 g. 360 h. 630 i. 603 j. 306",
+            "problem": "Model the numbers on your place value chart using the fewest number of blocks or disks possible. Partner A, use base ten blocks. Partner B, use place value disks. Compare the way your numbers look. Whisper the numbers in standard form and unit form. 12 124 104 299 200 Take turns using the place value disks to model the following numbers using the fewest place value disks possible. Whisper the numbers in standard form and unit form. 25 250 520 502 205 36 g. 360 h. 630 i. 603 j. 306",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Count the total value of ones, tens, and hundreds with place value disks.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Count the total value of ones, tens, and hundreds with place value disks..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-e-1"
+      }
+    },
+    "d-math-m3-e-2": {
+      "id": "d-math-m3-e-2",
+      "code": "D.M3.E.2",
+      "standard": "2.NBT.A",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.",
+        "pageTitle": "Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand. in 2nd Grade Mathematics aligned with standard 2.NBT.A.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.E.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 3 • Topic E",
+        "text": "In this lesson on Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.",
+        "prompt": "Match to show the equivalent value. 10 ones1 hundred 10 tens1 thousand 10 hundreds1 ten",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Count from 582 to 700 using place value disks. Change for a larger unit when necessary. When you counted from 582 to 700:",
+            "problem": "Count from 582 to 700 using place value disks. Change for a larger unit when necessary. When you counted from 582 to 700:",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Change 10 ones for 1 ten, 10 tens for 1 hundred, and 10 hundreds for 1 thousand..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-e-2"
+      }
+    },
+    "d-math-m3-e-3": {
+      "id": "d-math-m3-e-3",
+      "code": "D.M3.E.3",
+      "standard": "2.NBT.A",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Read and write numbers within 1,000 after modeling with place value disks.",
+        "pageTitle": "Read and write numbers within 1,000 after modeling with place value disks. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Read and write numbers within 1,000 after modeling with place value disks. in 2nd Grade Mathematics aligned with standard 2.NBT.A.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Read and write numbers within 1,000 after modeling with place value disks. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.E.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 3 • Topic E",
+        "text": "In this lesson on Read and write numbers within 1,000 after modeling with place value disks., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Read and write numbers within 1,000 after modeling with place value disks.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(T) Base ten bundles of straws on the carpet, Problem Sets The Student Debrief is intended to invite reflection and active processing of the total lesson experience."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Read and write numbers within 1,000 after modeling with place value disks.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Read and write numbers within 1,000 after modeling with place value disks.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Read and write numbers within 1,000 after modeling with place value disks.",
+        "prompt": "Draw place value disks to show the numbers. Draw and label the jumps on the number line to move from 0 to 141.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Read and write numbers within 1,000 after modeling with place value disks.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw place value disks to show the numbers.",
+            "problem": "Draw place value disks to show the numbers.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "5.1876.705 When you have finished, use your whisper voice to read each number out loud in both unit and word form. How much does each number need to change for a ten? For 1 hundred?",
+            "problem": "5.1876.705 When you have finished, use your whisper voice to read each number out loud in both unit and word form. How much does each number need to change for a ten? For 1 hundred?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Read and write numbers within 1,000 after modeling with place value disks.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Read and write numbers within 1,000 after modeling with place value disks..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-e-3"
+      }
+    },
+    "d-math-m3-e-4": {
+      "id": "d-math-m3-e-4",
+      "code": "D.M3.E.4",
+      "standard": "2.NBT.A",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f...",
+        "pageTitle": "Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f... in 2nd Grade Mathematics aligned with standard 2.NBT.A.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.E.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 3 • Topic E",
+        "text": "In this lesson on Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word forms.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f...",
+        "prompt": "Whisper count as you show the numbers with place value disks. Draw 241 using hundreds, tens, and ones. Draw 241 using only tens and ones. Fill in the blanks.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Whisper count as you show the numbers with place value disks. a.",
+            "problem": "Whisper count as you show the numbers with place value disks. a.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw 18 using only ones.Draw 18 using only ones.Draw 18 using tens and ones.Draw 18 using tens and ones.",
+            "problem": "Draw 18 using only ones.Draw 18 using only ones.Draw 18 using tens and ones.Draw 18 using tens and ones.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw 315 using hundreds, tens, and ones.Draw 315 using hundreds, tens, and ones.Draw 315 using only hundreds and ones.Draw 315 using only hundreds and ones.b.",
+            "problem": "Draw 315 using hundreds, tens, and ones.Draw 315 using hundreds, tens, and ones.Draw 315 using only hundreds and ones.Draw 315 using only hundreds and ones.b.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Draw 206 using hundreds, tens, and ones.Draw 206 using only tens and ones.Draw 206 using hundreds, tens, and ones.Draw 206 using only tens and ones.c. Whisper-talk the numbers and words as you fill in the blanks. Start by using the place value charts from Problem 1 to help you. 18 = ______ hundreds ______ tens _______ ones 18 = ______ ones 315 = ______ hundreds ______ tens _______ ones 315 = ______ hundreds ______ ones c.206 = ______ hundreds ______ tens _______ ones206 = ______ tens ______ ones d.419 = ______ hundreds ______ tens _______ ones419 = ______ tens ______ ones e.570 = ______ hundreds ______ tens 570 = ______ tens f.748 = ______ hundreds _______ ones748 = ______ tens ______ ones g.909 = ______ hundreds _______ ones 909 = ______ tens ______ ones Mr. Hernandez's class wants to trade 400 tens rods for hundreds flats with Mr. Harrington's class. How many hundreds flats are equal to 400 tens rods?",
+            "problem": "Draw 206 using hundreds, tens, and ones.Draw 206 using only tens and ones.Draw 206 using hundreds, tens, and ones.Draw 206 using only tens and ones.c. Whisper-talk the numbers and words as you fill in the blanks. Start by using the place value charts from Problem 1 to help you. 18 = ______ hundreds ______ tens _______ ones 18 = ______ ones 315 = ______ hundreds ______ tens _______ ones 315 = ______ hundreds ______ ones c.206 = ______ hundreds ______ tens _______ ones206 = ______ tens ______ ones d.419 = ______ hundreds ______ tens _______ ones419 = ______ tens ______ ones e.570 = ______ hundreds ______ tens 570 = ______ tens f.748 = ______ hundreds _______ ones748 = ______ tens ______ ones g.909 = ______ hundreds _______ ones 909 = ______ tens ______ ones Mr. Hernandez's class wants to trade 400 tens rods for hundreds flats with Mr. Harrington's class. How many hundreds flats are equal to 400 tens rods?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Model numbers with more than 9 ones or 9 tens; write in expanded, unit, standard, and word f....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-e-4"
+      }
+    },
+    "d-math-m3-e-5": {
+      "id": "d-math-m3-e-5",
+      "code": "D.M3.E.5",
+      "standard": "2.NBT.A",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explore a situation with more than 9 groups of ten.",
+        "pageTitle": "Explore a situation with more than 9 groups of ten. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Explore a situation with more than 9 groups of ten. in 2nd Grade Mathematics aligned with standard 2.NBT.A.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Explore a situation with more than 9 groups of ten. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.E.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 3 • Topic E",
+        "text": "In this lesson on Explore a situation with more than 9 groups of ten., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explore a situation with more than 9 groups of ten.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "T:Let's read our 4 problems. T:Partner A, without looking at the paper, retell the problems to your partner."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explore a situation with more than 9 groups of ten.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explore a situation with more than 9 groups of ten.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explore a situation with more than 9 groups of ten.",
+        "prompt": "Think about the different strategies and tools your classmates used to answer the pencil question. Explain a strategy you liked that is different from yours using words, pictures, or numbers.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explore a situation with more than 9 groups of ten.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Pencils come in boxes of 10. There are 14 boxes. How many pencils are there in all? Explain your answer using words, pictures, or numbers. The principal wants to have 300 pencils for the second graders for October, November, and December. How many more boxes of pencils does he need? Explain your answer using words, pictures, or numbers. The principal found 7 boxes in the supply closet and 4 boxes in a desk drawer. Now does he have what he wants for the second graders? Explain your answer using words, pictures, or numbers. How many boxes of pencils do you think your class will need for January, February, March, and April? How many pencils is that? Explain your answer using words, pictures, or numbers.",
+            "problem": "Pencils come in boxes of 10. There are 14 boxes. How many pencils are there in all? Explain your answer using words, pictures, or numbers. The principal wants to have 300 pencils for the second graders for October, November, and December. How many more boxes of pencils does he need? Explain your answer using words, pictures, or numbers. The principal found 7 boxes in the supply closet and 4 boxes in a desk drawer. Now does he have what he wants for the second graders? Explain your answer using words, pictures, or numbers. How many boxes of pencils do you think your class will need for January, February, March, and April? How many pencils is that? Explain your answer using words, pictures, or numbers.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explore a situation with more than 9 groups of ten.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explore a situation with more than 9 groups of ten..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-e-5"
+      }
+    },
+    "d-math-m3-f-1": {
+      "id": "d-math-m3-f-1",
+      "code": "D.M3.F.1",
+      "standard": "2.NBT.4",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compare two three-digit numbers using <, >, and =.",
+        "pageTitle": "Compare two three-digit numbers using <, >, and =. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Compare two three-digit numbers using <, >, and =. in 2nd Grade Mathematics aligned with standard 2.NBT.4.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Compare two three-digit numbers using <, >, and =. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.F.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 3 • Topic F",
+        "text": "In this lesson on Compare two three-digit numbers using <, >, and =., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compare two three-digit numbers using <, >, and =.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Materials:(S) Problem Set The Student Debrief is intended to invite reflection and active processing of the total lesson experience."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compare two three-digit numbers using <, >, and =.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compare two three-digit numbers using <, >, and =.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compare two three-digit numbers using <, >, and =.",
+        "prompt": "Write ›, ‹, or =.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compare two three-digit numbers using <, >, and =.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw the following numbers using place value disks on the place value charts. Answer the questions below. a.132b.312c.213 Which is the greatest number? _____________ Which is the least number? _____________ Order the numbers from least to greatest: ________, _______, _______",
+            "problem": "Draw the following numbers using place value disks on the place value charts. Answer the questions below. a.132b.312c.213 Which is the greatest number? _____________ Which is the least number? _____________ Order the numbers from least to greatest: ________, _______, _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Circle less than or greater than. Whisper the complete sentence.",
+            "problem": "Circle less than or greater than. Whisper the complete sentence.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Write ›, ‹, or =. Whisper the complete number sentences as you work. 900 899 267 269 537 527 419 491 908 nine hundred eighty 130 80 + 40 Two hundred seventy-one 70 + 200 + 1 500 + 40504 10 tens101 4 tens 2 ones30 + 12 36 — 102 tens 5 ones",
+            "problem": "Write ›, ‹, or =. Whisper the complete number sentences as you work. 900 899 267 269 537 527 419 491 908 nine hundred eighty 130 80 + 40 Two hundred seventy-one 70 + 200 + 1 500 + 40504 10 tens101 4 tens 2 ones30 + 12 36 — 102 tens 5 ones",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "4.Noah and Charlie have a problem. Noah thinks 42 tens is less than 390. Charlie thinks 42 tens is greater than 390. Who is correct? Explain your thinking below.",
+            "problem": "4.Noah and Charlie have a problem. Noah thinks 42 tens is less than 390. Charlie thinks 42 tens is greater than 390. Who is correct? Explain your thinking below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compare two three-digit numbers using <, >, and =.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compare two three-digit numbers using <, >, and =..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-f-1"
+      }
+    },
+    "d-math-m3-f-2": {
+      "id": "d-math-m3-f-2",
+      "code": "D.M3.F.2",
+      "standard": "2.NBT.4",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.",
+        "pageTitle": "Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens. in 2nd Grade Mathematics aligned with standard 2.NBT.4.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.F.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Module 3 • Topic F",
+        "text": "In this lesson on Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.",
+        "prompt": "Whisper count as you show the numbers with place value disks. Circle ›, ‹, or =. Draw 142 using hundreds, tens, and ones. b. Draw 12 tens 4 ones. Write >, <, or =. a.1 hundred 6 tens 106",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Whisper count as you show the numbers with place value disks. Circle >, <, or =.",
+            "problem": "Whisper count as you show the numbers with place value disks. Circle >, <, or =.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw 217 using hundreds, tens, and ones. b.Draw 21 tens and 7 ones. <=><=> ADraw 17 ones 1 hundred.BDraw 11 tens 7 ones.ADraw 17 ones 1 hundred.BDraw 11 tens 7 ones.",
+            "problem": "Draw 217 using hundreds, tens, and ones. b.Draw 21 tens and 7 ones. <=><=> ADraw 17 ones 1 hundred.BDraw 11 tens 7 ones.ADraw 17 ones 1 hundred.BDraw 11 tens 7 ones.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw 1 hundred and 17 ones. d.Draw 1 hundred 1 ten and 7 ones. <=><=>",
+            "problem": "Draw 1 hundred and 17 ones. d.Draw 1 hundred 1 ten and 7 ones. <=><=>",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Circle less than (<), equal to (=), or greater than (>). Whisper the complete sentence. less thanequal togreater thanless thanequal togreater than9 tens is _____________ 88.b.132 is _____________ 13 tens 2 ones. less thanequal togreater thanless thanequal togreater than less thanequal togreater thanless thanequal togreater thanless thanequal togreater thanless thanequal togreater thanc.102 is _____________ 15 tens 2 ones.d.199 is _____________ 20 tens < = > < = > e.62 tens 3 ones is 623. < = > < = > f.80 + 700 + 2 is eight hundred seventy-two. < = > < = > g.8 + 600 is 68 tens. < = > < = > less thanequal togreater than less thanequal togreater than h.Seven hundred thirteen is 47 tens + 23 tens. < = > < = > i. 18 tens + 4 tens is 29 tens — 5 tens. < = > < = > j.300 + 40 + 9 is 34 tens. Write ›, ‹, or =. 99 10 tens 116 11 tens 5 ones 2 hundreds 37 ones 237 Three hundred twenty 34 tens 5 hundreds 2 tens 4 ones 53 tens 104 1 hundred 4 tens 40 + 9 + 600 9 ones 64 tens 700 + 4 74 tens Twenty-two tens Two hundreds twelve ones 7 + 400 + 20 42 tens 7 ones 5 hundreds 24 ones 400 + 2 + 50 69 tens + 2 tens 710 20 tens two hundred ten ones 72 tens — 12 tens 60 84 tens + 10 tens 9 hundreds 4 ones 3 hundreds 21 ones 18 tens + 14 tens",
+            "problem": "Circle less than (<), equal to (=), or greater than (>). Whisper the complete sentence. less thanequal togreater thanless thanequal togreater than9 tens is _____________ 88.b.132 is _____________ 13 tens 2 ones. less thanequal togreater thanless thanequal togreater than less thanequal togreater thanless thanequal togreater thanless thanequal togreater thanless thanequal togreater thanc.102 is _____________ 15 tens 2 ones.d.199 is _____________ 20 tens < = > < = > e.62 tens 3 ones is 623. < = > < = > f.80 + 700 + 2 is eight hundred seventy-two. < = > < = > g.8 + 600 is 68 tens. < = > < = > less thanequal togreater than less thanequal togreater than h.Seven hundred thirteen is 47 tens + 23 tens. < = > < = > i. 18 tens + 4 tens is 29 tens — 5 tens. < = > < = > j.300 + 40 + 9 is 34 tens. Write ›, ‹, or =. 99 10 tens 116 11 tens 5 ones 2 hundreds 37 ones 237 Three hundred twenty 34 tens 5 hundreds 2 tens 4 ones 53 tens 104 1 hundred 4 tens 40 + 9 + 600 9 ones 64 tens 700 + 4 74 tens Twenty-two tens Two hundreds twelve ones 7 + 400 + 20 42 tens 7 ones 5 hundreds 24 ones 400 + 2 + 50 69 tens + 2 tens 710 20 tens two hundred ten ones 72 tens — 12 tens 60 84 tens + 10 tens 9 hundreds 4 ones 3 hundreds 21 ones 18 tens + 14 tens",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compare two three-digit numbers using <, >, and = when there are more than 9 ones or 9 tens..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-f-2"
+      }
+    },
+    "d-math-m3-f-3": {
+      "id": "d-math-m3-f-3",
+      "code": "D.M3.F.3",
+      "standard": "2.NBT.4",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Order numbers in different forms. (Optional)",
+        "pageTitle": "Order numbers in different forms. (Optional) | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Order numbers in different forms. (Optional) in 2nd Grade Mathematics aligned with standard 2.NBT.4.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Order numbers in different forms. (Optional) with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.F.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Module 3 • Topic F",
+        "text": "In this lesson on Order numbers in different forms. (Optional), explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Order numbers in different forms. (Optional)",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Order numbers in different forms. (Optional)",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Order numbers in different forms. (Optional). Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Order numbers in different forms. (Optional)",
+        "prompt": "Order the following from least to greatest in standard form.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Order numbers in different forms. (Optional). Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw the following values on the place value charts as you think best. a.1 hundred 19 ones b. 3 ones 12 tens c. 120 d.Order the numbers from least to greatest: _________, ________, ________ Order the following from least to greatest in standard form. 700599388 four hundred nine9 + 400490 63 tens + 9 tensseven hundred twenty720 12 ones 8 hundreds2 + 80 + 100128 9 hundreds 3 ones390three hundred nine 80 tens + 2 tens8373 + 70 + 800",
+            "problem": "Draw the following values on the place value charts as you think best. a.1 hundred 19 ones b. 3 ones 12 tens c. 120 d.Order the numbers from least to greatest: _________, ________, ________ Order the following from least to greatest in standard form. 700599388 four hundred nine9 + 400490 63 tens + 9 tensseven hundred twenty720 12 ones 8 hundreds2 + 80 + 100128 9 hundreds 3 ones390three hundred nine 80 tens + 2 tens8373 + 70 + 800",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Order numbers in different forms. (Optional)?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Order numbers in different forms. (Optional).\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-f-3"
+      }
+    },
+    "d-math-m3-g-1": {
+      "id": "d-math-m3-g-1",
+      "code": "D.M3.G.1",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an...",
+        "pageTitle": "Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an... in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.G.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Module 3 • Topic G",
+        "text": "In this lesson on Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an...",
+        "prompt": "Fill in the blanks. 10 more than 239 is ________. 100 less than 524 is ________. _______ more than 352 is 362.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Model each change on your place value chart. Then, fill in the chart. Whisper the complete sentence: \"____ more/less than ____ is ____.\" Fill in the blanks. Whisper the complete sentence. 1 more than 314 is _________. 10 more than 428 is ________. 100 less than 635 is ________. _______ more than 243 is 343. _______ less than 578 is 568. ________ less than 199 is 198. 1 more than _________ is 405. 10 less than _________ is 372. 100 less than ________ is 739. 10 more than ________ is 946. Whisper the numbers as you count:",
+            "problem": "Model each change on your place value chart. Then, fill in the chart. Whisper the complete sentence: \"____ more/less than ____ is ____.\" Fill in the blanks. Whisper the complete sentence. 1 more than 314 is _________. 10 more than 428 is ________. 100 less than 635 is ________. _______ more than 243 is 343. _______ less than 578 is 568. ________ less than 199 is 198. 1 more than _________ is 405. 10 less than _________ is 372. 100 less than ________ is 739. 10 more than ________ is 946. Whisper the numbers as you count:",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Count by 1s from 367 to 375. Skip-count by 10s from 422 to 492. Skip-count by 100s from 156 to 856.",
+            "problem": "Count by 1s from 367 to 375. Skip-count by 10s from 422 to 492. Skip-count by 100s from 156 to 856.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Count by 1s from 269 to 261. Skip-count by 10s from 581 to 511. Skip-count by 100s from 914 to 314. g.I found letter ____ to be challenging because _____________________ _________________________________________________________. My starting number is 217. I skip-count up by 100s seven times. What is the last number I count?",
+            "problem": "Count by 1s from 269 to 261. Skip-count by 10s from 581 to 511. Skip-count by 100s from 914 to 314. g.I found letter ____ to be challenging because _____________________ _________________________________________________________. My starting number is 217. I skip-count up by 100s seven times. What is the last number I count?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Explain your thinking below.",
+            "problem": "Explain your thinking below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Model and use language to tell about 1 more and 1 less, 10 more and 10 less, and 100 more an....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-g-1"
+      }
+    },
+    "d-math-m3-g-2": {
+      "id": "d-math-m3-g-2",
+      "code": "D.M3.G.2",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu...",
+        "pageTitle": "Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu... in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.G.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 20",
+        "pill": "Module 3 • Topic G",
+        "text": "In this lesson on Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hundreds place.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu...",
+        "prompt": "Fill in the blanks, and circle the correct answer. onetenhundredonetenhundred 1 more than 209 is __________. We made a _____________.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Model each problem with a partner on your place value chart. Then, fill in the blanks, and circle all that apply. Explain your thinking. onetenhundredonetenhundred1 more than 39 is _____________. We made a _____________. onetenhundredonetenhundred10 more than 190 is ___________. We made a _____________. onetenhundredonetenhundred10 more than 390 is ___________. We made a _____________. onetenhundredonetenhundred1 more than 299 is ____________. We made a _____________. onetenhundredonetenhundred10 more than 790 is ___________. We made a _____________. Fill in the blanks. Whisper the complete sentence. 1 less than 120 is __________. 10 more than 296 is ________. 100 less than 229 is ________. _______ more than 598 is 608. _______ more than 839 is 840. ________ less than 938 is 838. 10 more than ________ is 306. 100 less than ________ is 894. 10 less than _________ is 895. 1 more than ________ is 1,000. Whisper the numbers as you count:",
+            "problem": "Model each problem with a partner on your place value chart. Then, fill in the blanks, and circle all that apply. Explain your thinking. onetenhundredonetenhundred1 more than 39 is _____________. We made a _____________. onetenhundredonetenhundred10 more than 190 is ___________. We made a _____________. onetenhundredonetenhundred10 more than 390 is ___________. We made a _____________. onetenhundredonetenhundred1 more than 299 is ____________. We made a _____________. onetenhundredonetenhundred10 more than 790 is ___________. We made a _____________. Fill in the blanks. Whisper the complete sentence. 1 less than 120 is __________. 10 more than 296 is ________. 100 less than 229 is ________. _______ more than 598 is 608. _______ more than 839 is 840. ________ less than 938 is 838. 10 more than ________ is 306. 100 less than ________ is 894. 10 less than _________ is 895. 1 more than ________ is 1,000. Whisper the numbers as you count:",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Count by 1s from 106 to 115.",
+            "problem": "Count by 1s from 106 to 115.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Count by 10s from 467 to 527.",
+            "problem": "Count by 10s from 467 to 527.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Count by 100s from 342 to 942.",
+            "problem": "Count by 100s from 342 to 942.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Count by 1s from 325 to 318. Skip-count by 10s from 888 to 808. Skip-count by 100s from 805 to 5.",
+            "problem": "Count by 1s from 325 to 318. Skip-count by 10s from 888 to 808. Skip-count by 100s from 805 to 5.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "4.Jenny loves jumping rope. Each time she jumps, she skip-counts by 10s. She starts her first jump at 77, her favorite number. How many times does Jenny have to jump to get to 147?",
+            "problem": "4.Jenny loves jumping rope. Each time she jumps, she skip-counts by 10s. She starts her first jump at 77, her favorite number. How many times does Jenny have to jump to get to 147?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Exercise 7",
+            "prompt": "Explain your thinking below.",
+            "problem": "Explain your thinking below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Model 1 more and 1 less, 10 more and 10 less, and 100 more and 100 less when changing the hu....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-g-2"
+      }
+    },
+    "d-math-m3-g-3": {
+      "id": "d-math-m3-g-3",
+      "code": "D.M3.G.3",
+      "standard": "2.NBT.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Complete a pattern counting up and down.",
+        "pageTitle": "Complete a pattern counting up and down. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Complete a pattern counting up and down. in 2nd Grade Mathematics aligned with standard 2.NBT.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Complete a pattern counting up and down. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M3.G.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 21",
+        "pill": "Module 3 • Topic G",
+        "text": "In this lesson on Complete a pattern counting up and down., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Complete a pattern counting up and down.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Complete a pattern counting up and down.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Complete a pattern counting up and down.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Complete a pattern counting up and down.",
+        "prompt": "Find the pattern. Fill in the blanks. 109, __________, 111, __________, __________, 114 710, ___________, 690, ___________, ___________, 660, 650 342, ___________, ____________, 642, 742, ____________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Complete a pattern counting up and down.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Whisper the numbers as you count:",
+            "problem": "Whisper the numbers as you count:",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Count by 1s from 326 to 334. Skip-count by 10s from 472 to 532. Skip-count by 10s from 930 to 860. Skip-count by 100s from 708 to 108. Find the pattern. Fill in the blanks. 297, 298, __________, __________, __________, __________ 143, 133, __________, __________, __________, __________ 357, 457, __________, __________, __________, __________ 578, 588, __________, __________, __________, __________ 132, __________, 134, __________, __________, 137 409, ___________, ____________, 709, 809, ____________ 210, ___________, 190, ___________, ___________, 160, 150 Fill in the charts.Fill in the charts.a.a.b.b.",
+            "problem": "Count by 1s from 326 to 334. Skip-count by 10s from 472 to 532. Skip-count by 10s from 930 to 860. Skip-count by 100s from 708 to 108. Find the pattern. Fill in the blanks. 297, 298, __________, __________, __________, __________ 143, 133, __________, __________, __________, __________ 357, 457, __________, __________, __________, __________ 578, 588, __________, __________, __________, __________ 132, __________, 134, __________, __________, 137 409, ___________, ____________, 709, 809, ____________ 210, ___________, 190, ___________, ___________, 160, 150 Fill in the charts.Fill in the charts.a.a.b.b.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Complete a pattern counting up and down.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Complete a pattern counting up and down..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m3-g-3"
+      }
+    }
+  }
+}

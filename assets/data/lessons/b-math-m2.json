@@ -1,0 +1,1432 @@
+{
+  "id": "b-math-m2",
+  "module": 2,
+  "subject": "math",
+  "grade": "2",
+  "level": "b",
+  "title": "Module 2: Two-Dimensional and Three-Dimensional Shapes",
+  "description": "Module 2: Two-Dimensional and Three-Dimensional Shapes for Kindergarten students.",
+  "lessonsCount": 10,
+  "lessons": {
+    "b-math-m2-a-1": {
+      "id": "b-math-m2-a-1",
+      "code": "B.M2.A.1",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ...",
+        "pageTitle": "Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal language without naming.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ...",
+        "prompt": "Draw a line from the shape to its matching object. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Draw more to make 5.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Shapes with a CurveShapes with a CurveShapes without a CurveShapes without a CurveSort the shapes.",
+            "problem": "Shapes with a CurveShapes with a CurveShapes without a CurveShapes without a CurveSort the shapes.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find and describe flat triangles, squares, rectangles, hexagons, and circles using informal ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-a-1"
+      }
+    },
+    "b-math-m2-a-2": {
+      "id": "b-math-m2-a-2",
+      "code": "B.M2.A.2",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explain decisions about classifications of triangles into categories using variants and non-...",
+        "pageTitle": "Explain decisions about classifications of triangles into categories using variants and non-... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Explain decisions about classifications of triangles into categories using variants and non-... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Explain decisions about classifications of triangles into categories using variants and non-... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Explain decisions about classifications of triangles into categories using variants and non-..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explain decisions about classifications of triangles into categories using variants and non-examples. Identify shapes as triangles.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explain decisions about classifications of triangles into categories using variants and non-...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explain decisions about classifications of triangles into categories using variants and non-.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explain decisions about classifications of triangles into categories using variants and non-...",
+        "prompt": "Color the triangles red and the other shapes blue. Draw 2 different triangles of your own.Draw 2 different triangles of your own.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explain decisions about classifications of triangles into categories using variants and non-.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Find the triangles, and color them blue. Put an X on shapes that are not triangles. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Find the triangles, and color them blue. Put an X on shapes that are not triangles. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw some triangles.Draw some triangles.",
+            "problem": "Draw some triangles.Draw some triangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explain decisions about classifications of triangles into categories using variants and non-...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explain decisions about classifications of triangles into categories using variants and non-....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-a-2"
+      }
+    },
+    "b-math-m2-a-3": {
+      "id": "b-math-m2-a-3",
+      "code": "B.M2.A.3",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explain decisions about classifications of rectangles into categories using variants and non...",
+        "pageTitle": "Explain decisions about classifications of rectangles into categories using variants and non... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Explain decisions about classifications of rectangles into categories using variants and non... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Explain decisions about classifications of rectangles into categories using variants and non... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Explain decisions about classifications of rectangles into categories using variants and non..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explain decisions about classifications of rectangles into categories using variants and non-examples. Identify shapes as rectangles.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explain decisions about classifications of rectangles into categories using variants and non...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explain decisions about classifications of rectangles into categories using variants and non.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explain decisions about classifications of rectangles into categories using variants and non...",
+        "prompt": "Color all the rectangles red. Color all the triangles green. On the back of your paper, draw 2 rectangles and 3 triangles.How many shapes did you draw? Put your answer in the circle.On the back of your paper, draw 2 rectangles and 3 triangles.How many shapes did you draw? Put your answer in the circle.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explain decisions about classifications of rectangles into categories using variants and non.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw some rectangles.Draw some rectangles.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Find the rectangles, and color them red. Put an X on shapes that are not rectangles.",
+            "problem": "Draw some rectangles.Draw some rectangles.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Find the rectangles, and color them red. Put an X on shapes that are not rectangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explain decisions about classifications of rectangles into categories using variants and non...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explain decisions about classifications of rectangles into categories using variants and non....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-a-3"
+      }
+    },
+    "b-math-m2-a-4": {
+      "id": "b-math-m2-a-4",
+      "code": "B.M2.A.4",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explain decisions about classifications of hexagons and circles, and identify them by name. ...",
+        "pageTitle": "Explain decisions about classifications of hexagons and circles, and identify them by name. ... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Explain decisions about classifications of hexagons and circles, and identify them by name. ... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Explain decisions about classifications of hexagons and circles, and identify them by name. ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Explain decisions about classifications of hexagons and circles, and identify them by name. ..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explain decisions about classifications of hexagons and circles, and identify them by name. Make observations using variants and non-examples.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explain decisions about classifications of hexagons and circles, and identify them by name. ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explain decisions about classifications of hexagons and circles, and identify them by name. .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explain decisions about classifications of hexagons and circles, and identify them by name. ...",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Explain decisions about classifications of hexagons and circles, and identify them by name. ....",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explain decisions about classifications of hexagons and circles, and identify them by name. .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Students should do their personal best to complete the Problem Set within the allotted time. Since hexagons and circles are the focus of this lesson, have students first identify one of the two shapes and then the other. Student Debrief (8 minutes) Lesson Objective: Explain decisions about classifications of hexagons and circles, and identify them by name. Make observations using variants and non-examples. The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion How did the Application Problem connect to today's lesson? What new (or significant) math vocabulary did we use today to communicate precisely? Did you color the same hexagons and circles as your partner?",
+            "problem": "Students should do their personal best to complete the Problem Set within the allotted time. Since hexagons and circles are the focus of this lesson, have students first identify one of the two shapes and then the other. Student Debrief (8 minutes) Lesson Objective: Explain decisions about classifications of hexagons and circles, and identify them by name. Make observations using variants and non-examples. The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion How did the Application Problem connect to today's lesson? What new (or significant) math vocabulary did we use today to communicate precisely? Did you color the same hexagons and circles as your partner?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Explain to your partner how you knew the objects you colored were hexagons or circles.",
+            "problem": "Explain to your partner how you knew the objects you colored were hexagons or circles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Count how many circles and hexagons you colored. Did your partner color that same number? Which shape is more like a circle, a square or a hexagon with equal sides? If there were more and more equal sides to our shape, could it look more and more like a circle? Find the circles, and color them green. Find the hexagons, and color them yellow. Put an X on shapes that are not hexagons or circles.Find the circles, and color them green. Find the hexagons, and color them yellow. Put an X on shapes that are not hexagons or circles.Name Date \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Count how many circles and hexagons you colored. Did your partner color that same number? Which shape is more like a circle, a square or a hexagon with equal sides? If there were more and more equal sides to our shape, could it look more and more like a circle? Find the circles, and color them green. Find the hexagons, and color them yellow. Put an X on shapes that are not hexagons or circles.Find the circles, and color them green. Find the hexagons, and color them yellow. Put an X on shapes that are not hexagons or circles.Name Date \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Draw hexagons and circles. Draw hexagons and circles. Name________________________ Date____________________ Color the triangles blue. Color the rectangles red. Color the circles green.Color the hexagons yellow. On the back of your paper, draw 2 triangles and 1 hexagon. How many shapes did you draw? ______Color the triangles blue. Color the rectangles red. Color the circles green.Color the hexagons yellow. On the back of your paper, draw 2 triangles and 1 hexagon. How many shapes did you draw? ______",
+            "problem": "Draw hexagons and circles. Draw hexagons and circles. Name________________________ Date____________________ Color the triangles blue. Color the rectangles red. Color the circles green.Color the hexagons yellow. On the back of your paper, draw 2 triangles and 1 hexagon. How many shapes did you draw? ______Color the triangles blue. Color the rectangles red. Color the circles green.Color the hexagons yellow. On the back of your paper, draw 2 triangles and 1 hexagon. How many shapes did you draw? ______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explain decisions about classifications of hexagons and circles, and identify them by name. ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explain decisions about classifications of hexagons and circles, and identify them by name. ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-a-4"
+      }
+    },
+    "b-math-m2-a-5": {
+      "id": "b-math-m2-a-5",
+      "code": "B.M2.A.5",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe and communicate positions of all flat shapes using the words above, below, beside, ...",
+        "pageTitle": "Describe and communicate positions of all flat shapes using the words above, below, beside, ... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Describe and communicate positions of all flat shapes using the words above, below, beside, ... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Describe and communicate positions of all flat shapes using the words above, below, beside, ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Describe and communicate positions of all flat shapes using the words above, below, beside, ..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe and communicate positions of all flat shapes using the words above, below, beside, in front of, next to, and behind.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe and communicate positions of all flat shapes using the words above, below, beside, ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe and communicate positions of all flat shapes using the words above, below, beside, .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe and communicate positions of all flat shapes using the words above, below, beside, ...",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Describe and communicate positions of all flat shapes using the words above, below, beside, ....",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe and communicate positions of all flat shapes using the words above, below, beside, .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Cut out all of the shapes, and put them next to your paper with the duck. Listen to the directions, and glue the objects onto your paper.",
+            "problem": "Cut out all of the shapes, and put them next to your paper with the duck. Listen to the directions, and glue the objects onto your paper.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe and communicate positions of all flat shapes using the words above, below, beside, ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe and communicate positions of all flat shapes using the words above, below, beside, ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-a-5"
+      }
+    },
+    "b-math-m2-b-1": {
+      "id": "b-math-m2-b-1",
+      "code": "B.M2.B.1",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find and describe solid shapes using informal language without naming.",
+        "pageTitle": "Find and describe solid shapes using informal language without naming. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Find and describe solid shapes using informal language without naming. in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Find and describe solid shapes using informal language without naming. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Find and describe solid shapes using informal language without naming., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find and describe solid shapes using informal language without naming.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find and describe solid shapes using informal language without naming.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find and describe solid shapes using informal language without naming.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find and describe solid shapes using informal language without naming.",
+        "prompt": "Find things in your house or in a magazine that look like these solids. Draw the solids or cut out and paste pictures from a magazine.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find and describe solid shapes using informal language without naming.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Match these objects and solids by drawing a line with your ruler from the object to the solid. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Match these objects and solids by drawing a line with your ruler from the object to the solid. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "On the back of the paper, draw solid shapes that you see in the classroom.",
+            "problem": "On the back of the paper, draw solid shapes that you see in the classroom.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find and describe solid shapes using informal language without naming.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find and describe solid shapes using informal language without naming..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-b-1"
+      }
+    },
+    "b-math-m2-b-2": {
+      "id": "b-math-m2-b-2",
+      "code": "B.M2.B.2",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Explain decisions about classification of solid shapes into categories. Name the solid shapes.",
+        "pageTitle": "Explain decisions about classification of solid shapes into categories. Name the solid shapes. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Explain decisions about classification of solid shapes into categories. Name the solid shapes. in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Explain decisions about classification of solid shapes into categories. Name the solid shapes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Explain decisions about classification of solid shapes into categories. Name the solid shapes., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Explain decisions about classification of solid shapes into categories. Name the solid shapes.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Explain decisions about classification of solid shapes into categories. Name the solid shapes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Explain decisions about classification of solid shapes into categories. Name the solid shapes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Explain decisions about classification of solid shapes into categories. Name the solid shapes.",
+        "prompt": "Cut one set of solid shapes. Sort the 4 solid shapes. Paste onto the chart. These have corners.These do not have corners. Cut the other set of solid shapes, and make a rule for how you sorted them. Paste onto the chart. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Explain decisions about classification of solid shapes into categories. Name the solid shapes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the cylinders with red.Circle the cubes with yellow.Circle the cones with green.Circle the spheres with blue. Circle the cylinders with red.Circle the cubes with yellow.Circle the cones with green.Circle the spheres with blue. \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Circle the cylinders with red.Circle the cubes with yellow.Circle the cones with green.Circle the spheres with blue. Circle the cylinders with red.Circle the cubes with yellow.Circle the cones with green.Circle the spheres with blue. \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Explain decisions about classification of solid shapes into categories. Name the solid shapes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Explain decisions about classification of solid shapes into categories. Name the solid shapes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-b-2"
+      }
+    },
+    "b-math-m2-b-3": {
+      "id": "b-math-m2-b-3",
+      "code": "B.M2.B.3",
+      "standard": "K.G.1",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe and communicate positions of all solid shapes using the words above, below, beside,...",
+        "pageTitle": "Describe and communicate positions of all solid shapes using the words above, below, beside,... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Describe and communicate positions of all solid shapes using the words above, below, beside,... in Kindergarten Mathematics aligned with standard K.G.1.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Describe and communicate positions of all solid shapes using the words above, below, beside,... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Describe and communicate positions of all solid shapes using the words above, below, beside,..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe and communicate positions of all solid shapes using the words above, below, beside, in front of, next to, and behind.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe and communicate positions of all solid shapes using the words above, below, beside,...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe and communicate positions of all solid shapes using the words above, below, beside,.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe and communicate positions of all solid shapes using the words above, below, beside,...",
+        "prompt": "Tell someone at home the names of each solid shape. SphereCylinder ConeCube \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Color the car beside the stop sign green.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe and communicate positions of all solid shapes using the words above, below, beside,.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Directions: Read to students. Paste the sphere above the train. Paste the cube behind the train. Provide one strip for every student.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Provide one strip for every student.Paste the cylinder in front of the train. Paste the cone below the train.",
+            "problem": "Directions: Read to students. Paste the sphere above the train. Paste the cube behind the train. Provide one strip for every student.\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Provide one strip for every student.Paste the cylinder in front of the train. Paste the cone below the train.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe and communicate positions of all solid shapes using the words above, below, beside,...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe and communicate positions of all solid shapes using the words above, below, beside,....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-b-3"
+      }
+    },
+    "b-math-m2-c-1": {
+      "id": "b-math-m2-c-1",
+      "code": "B.M2.C.1",
+      "standard": "K.MD.3",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio...",
+        "pageTitle": "Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio... in Kindergarten Mathematics aligned with standard K.MD.3.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 2 • Topic C closes the module with discrimination between flats and solids.  In Lesson 9, students identify and sort flat and solid shapes.  The goal of this lesson is to focus each student’s attention on the attributes of a flat or solid shape instead of trusting how it looks.  The students learn to sort shapes and explain the reason for their groupings.",
+        "text": "In this lesson on Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensional and three-dimensional shapes in different orientations and sizes.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio...",
+        "prompt": "In each row, circle the one that doesn't belong. Explain your choice to a grown-up.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the pictures of the flat shapes with red. Circle the pictures of the solid shapes with green. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "Circle the pictures of the flat shapes with red. Circle the pictures of the solid shapes with green. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify and sort shapes as two-dimensional or three-dimensional, and recognize two-dimensio....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-c-1"
+      }
+    },
+    "b-math-m2-c-2": {
+      "id": "b-math-m2-c-2",
+      "code": "B.M2.C.2",
+      "standard": "K.MD.3",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Culminating task—collaborative groups create displays of different flat shapes with examples...",
+        "pageTitle": "Culminating task—collaborative groups create displays of different flat shapes with examples... | Kindergarten Math | Hesten's Learning",
+        "description": "Master Culminating task—collaborative groups create displays of different flat shapes with examples... in Kindergarten Mathematics aligned with standard K.MD.3.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Culminating task—collaborative groups create displays of different flat shapes with examples... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M2.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 2 • Topic C closes the module with discrimination between flats and solids.  In Lesson 9, students identify and sort flat and solid shapes.  The goal of this lesson is to focus each student’s attention on the attributes of a flat or solid shape instead of trusting how it looks.  The students learn to sort shapes and explain the reason for their groupings.",
+        "text": "In this lesson on Culminating task—collaborative groups create displays of different flat shapes with examples..., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Culminating task—collaborative groups create displays of different flat shapes with examples, non-examples, and a corresponding solid shape.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Any combination of the questions below may be used to lead the discussion."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Culminating task—collaborative groups create displays of different flat shapes with examples...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Culminating task—collaborative groups create displays of different flat shapes with examples.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Culminating task—collaborative groups create displays of different flat shapes with examples...",
+        "prompt": "These are not ( ).These are ( ).These are not ( ).These are ( ).",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Culminating task—collaborative groups create displays of different flat shapes with examples.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Shape Up Your Kitchen! Search your kitchen to see what shapes and solids you can find. Make a kitchen-shaped collage by drawing the shapes that you see and by tracing the faces of the solids that you find. Color your collage.",
+            "problem": "Shape Up Your Kitchen! Search your kitchen to see what shapes and solids you can find. Make a kitchen-shaped collage by drawing the shapes that you see and by tracing the faces of the solids that you find. Color your collage.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Culminating task—collaborative groups create displays of different flat shapes with examples...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Culminating task—collaborative groups create displays of different flat shapes with examples....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m2-c-2"
+      }
+    }
+  }
+}

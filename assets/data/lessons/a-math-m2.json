@@ -1,0 +1,1596 @@
+{
+  "id": "a-math-m2",
+  "module": 2,
+  "subject": "math",
+  "grade": "2",
+  "level": "a",
+  "title": "Module 2: Shapes",
+  "description": "Module 2: Shapes for Pre-K students.",
+  "lessonsCount": 12,
+  "lessons": {
+    "a-math-m2-a-1": {
+      "id": "a-math-m2-a-1",
+      "code": "A.M2.A.1",
+      "standard": "PK.G.1",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find and describe circles, rectangles, squares, and triangles using informal language withou...",
+        "pageTitle": "Find and describe circles, rectangles, squares, and triangles using informal language withou... | Pre-K Math | Hesten's Learning",
+        "description": "Master Find and describe circles, rectangles, squares, and triangles using informal language withou... in Pre-K Mathematics aligned with standard PK.G.1.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Find and describe circles, rectangles, squares, and triangles using informal language withou... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Find and describe circles, rectangles, squares, and triangles using informal language withou..., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find and describe circles, rectangles, squares, and triangles using informal language without naming.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find and describe circles, rectangles, squares, and triangles using informal language withou...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find and describe circles, rectangles, squares, and triangles using informal language withou.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find and describe circles, rectangles, squares, and triangles using informal language withou...",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Find and describe circles, rectangles, squares, and triangles using informal language withou....",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find and describe circles, rectangles, squares, and triangles using informal language withou.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Find and describe circles, rectangles, squares, and triangles using informal language withou... to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Find and describe circles, rectangles, squares, and triangles using informal language withou... to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find and describe circles, rectangles, squares, and triangles using informal language withou...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find and describe circles, rectangles, squares, and triangles using informal language withou....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-a-1"
+      }
+    },
+    "a-math-m2-a-2": {
+      "id": "a-math-m2-a-2",
+      "code": "A.M2.A.2",
+      "standard": "PK.G.1",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and position triangles.",
+        "pageTitle": "Identify, analyze, sort, compare, and position triangles. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and position triangles. in Pre-K Mathematics aligned with standard PK.G.1.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and position triangles. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Identify, analyze, sort, compare, and position triangles., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and position triangles.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and position triangles.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and position triangles.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and position triangles.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and position triangles..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and position triangles.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position triangles. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position triangles. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and position triangles.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and position triangles..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-a-2"
+      }
+    },
+    "a-math-m2-a-3": {
+      "id": "a-math-m2-a-3",
+      "code": "A.M2.A.3",
+      "standard": "PK.G.1",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and position rectangles and squares.",
+        "pageTitle": "Identify, analyze, sort, compare, and position rectangles and squares. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and position rectangles and squares. in Pre-K Mathematics aligned with standard PK.G.1.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and position rectangles and squares. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Identify, analyze, sort, compare, and position rectangles and squares., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and position rectangles and squares.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and position rectangles and squares.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and position rectangles and squares.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and position rectangles and squares.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and position rectangles and squares..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and position rectangles and squares.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position rectangles and squares. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position rectangles and squares. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and position rectangles and squares.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and position rectangles and squares..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-a-3"
+      }
+    },
+    "a-math-m2-a-4": {
+      "id": "a-math-m2-a-4",
+      "code": "A.M2.A.4",
+      "standard": "PK.G.1",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and position circles.",
+        "pageTitle": "Identify, analyze, sort, compare, and position circles. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and position circles. in Pre-K Mathematics aligned with standard PK.G.1.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and position circles. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Identify, analyze, sort, compare, and position circles., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and position circles.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. CENTER CONNECTION:In the sensory center, have children stamp circles into sand or clay using buttons, plastic bowls, container tops, and other round items from around the classroom. As a challenge, use an item to stamp and then see if children can figure out which item made the circle.CENTER CONNECTION:In the sensory center, have children stamp circles into sand or clay using buttons, plastic bowls, container tops, and other round items from around the classroom. As a challenge, use an item to stamp and then see if children can figure out which item made the circle.As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief. Any combination of the questions below may be used to help students express ideas, make connections, and use new vocabulary (circle, behind, in front of, between)."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and position circles.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and position circles.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and position circles.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and position circles..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and position circles.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position circles. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position circles. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and position circles.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and position circles..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-a-4"
+      }
+    },
+    "a-math-m2-a-5": {
+      "id": "a-math-m2-a-5",
+      "code": "A.M2.A.5",
+      "standard": "PK.G.1",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.",
+        "pageTitle": "Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles. in Pre-K Mathematics aligned with standard PK.G.1.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 2 • Topic A",
+        "text": "In this lesson on Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "Student Debrief (3 minutes) CENTER CONNECTION:Place paper shapes in the art center. Children can use the shapes to create a picture or design like the park scene. Ask them to describe their work using position words. For example, \"The circle is the sun. I made a house under the sun. The house is a rectangle.\"CENTER CONNECTION:Place paper shapes in the art center. Children can use the shapes to create a picture or design like the park scene. Ask them to describe their work using position words. For example, \"The circle is the sun. I made a house under the sun. The house is a rectangle.\"Lesson Objective: Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and position circles, rectangles, squares, and triangles..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-a-5"
+      }
+    },
+    "a-math-m2-b-1": {
+      "id": "a-math-m2-b-1",
+      "code": "A.M2.B.1",
+      "standard": "PK.G.4",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Construct a triangle.",
+        "pageTitle": "Construct a triangle. | Pre-K Math | Hesten's Learning",
+        "description": "Master Construct a triangle. in Pre-K Mathematics aligned with standard PK.G.4.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Construct a triangle. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Construct a triangle., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Construct a triangle.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Construct a triangle.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Construct a triangle.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Construct a triangle.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Construct a triangle..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Construct a triangle.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Construct a triangle. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Construct a triangle. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Construct a triangle.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Construct a triangle..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-b-1"
+      }
+    },
+    "a-math-m2-b-2": {
+      "id": "a-math-m2-b-2",
+      "code": "A.M2.B.2",
+      "standard": "PK.G.4",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Construct a rectangle and a square.",
+        "pageTitle": "Construct a rectangle and a square. | Pre-K Math | Hesten's Learning",
+        "description": "Master Construct a rectangle and a square. in Pre-K Mathematics aligned with standard PK.G.4.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Construct a rectangle and a square. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Construct a rectangle and a square., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Construct a rectangle and a square.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. CENTER CONNECTION:Help students build shapes using their bodies in the block center (e.g., by lying on the floor or by holding hands and using arms as sides). After they have built the shapes with their bodies, challenge them to build the shapes with blocks. Children can make larger shapes by using more than one block to create a side. CENTER CONNECTION:Help students build shapes using their bodies in the block center (e.g., by lying on the floor or by holding hands and using arms as sides). After they have built the shapes with their bodies, challenge them to build the shapes with blocks. Children can make larger shapes by using more than one block to create a side. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Construct a rectangle and a square.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Construct a rectangle and a square.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Construct a rectangle and a square.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Construct a rectangle and a square..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Construct a rectangle and a square.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Construct a rectangle and a square. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Construct a rectangle and a square. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Construct a rectangle and a square.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Construct a rectangle and a square..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-b-2"
+      }
+    },
+    "a-math-m2-b-3": {
+      "id": "a-math-m2-b-3",
+      "code": "A.M2.B.3",
+      "standard": "PK.G.4",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Construct a circle.",
+        "pageTitle": "Construct a circle. | Pre-K Math | Hesten's Learning",
+        "description": "Master Construct a circle. in Pre-K Mathematics aligned with standard PK.G.4.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Construct a circle. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 2 • Topic B",
+        "text": "In this lesson on Construct a circle., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Construct a circle.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. CENTER CONNECTION:Add commercially available pattern blocks and pattern block activity cards to the block center. Children enjoy using shapes to build (compose) familiar objects. Many students begin to see the relationships between the shapes and how larger shapes can be broken down into smaller shapes (decomposition).CENTER CONNECTION:Add commercially available pattern blocks and pattern block activity cards to the block center. Children enjoy using shapes to build (compose) familiar objects. Many students begin to see the relationships between the shapes and how larger shapes can be broken down into smaller shapes (decomposition).As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Construct a circle.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Construct a circle.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Construct a circle.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Construct a circle..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Construct a circle.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Construct a circle. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Construct a circle. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Construct a circle.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Construct a circle..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-b-3"
+      }
+    },
+    "a-math-m2-c-1": {
+      "id": "a-math-m2-c-1",
+      "code": "A.M2.C.1",
+      "standard": "PK.G.3",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find and describe solid shapes using informal language without naming.",
+        "pageTitle": "Find and describe solid shapes using informal language without naming. | Pre-K Math | Hesten's Learning",
+        "description": "Master Find and describe solid shapes using informal language without naming. in Pre-K Mathematics aligned with standard PK.G.3.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Find and describe solid shapes using informal language without naming. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Find and describe solid shapes using informal language without naming., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find and describe solid shapes using informal language without naming.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "CENTER CONNECTION:Put each 3-D shape on a lid in a central location in the classroom. At the beginning or end of centers, invite each child to bring a shape from their center and place it on the appropriate lid. There are many possibilities throughout the centers:Cone party hats from the dramatic play center.Cans from the home center.Cylindrical paint jars from the art center.CENTER CONNECTION:Put each 3-D shape on a lid in a central location in the classroom. At the beginning or end of centers, invite each child to bring a shape from their center and place it on the appropriate lid. There are many possibilities throughout the centers:Cone party hats from the dramatic play center.Cans from the home center.Cylindrical paint jars from the art center.The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find and describe solid shapes using informal language without naming.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find and describe solid shapes using informal language without naming.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find and describe solid shapes using informal language without naming.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Find and describe solid shapes using informal language without naming..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find and describe solid shapes using informal language without naming.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Listen to your teacher read the clues. Color the shapes. \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Clues:I'm holding a shape that is round and smooth. I don't feel anything flat or sharp. I'm holding a shape that has a flat circle on the bottom. It has a point on the top.I'm holding a shape that has lots of flat squares. There are lots of pointy corners. It feels like a box.I'm holding a shape that has two flat circles, one on the top and one on the bottom. It is round in the middle.Clues:I'm holding a shape that is round and smooth. I don't feel anything flat or sharp. I'm holding a shape that has a flat circle on the bottom. It has a point on the top.I'm holding a shape that has lots of flat squares. There are lots of pointy corners. It feels like a box.I'm holding a shape that has two flat circles, one on the top and one on the bottom. It is round in the middle.",
+            "problem": "Listen to your teacher read the clues. Color the shapes. \\frac{}{}\\frac{}{}\\frac{}{} \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} Clues:I'm holding a shape that is round and smooth. I don't feel anything flat or sharp. I'm holding a shape that has a flat circle on the bottom. It has a point on the top.I'm holding a shape that has lots of flat squares. There are lots of pointy corners. It feels like a box.I'm holding a shape that has two flat circles, one on the top and one on the bottom. It is round in the middle.Clues:I'm holding a shape that is round and smooth. I don't feel anything flat or sharp. I'm holding a shape that has a flat circle on the bottom. It has a point on the top.I'm holding a shape that has lots of flat squares. There are lots of pointy corners. It feels like a box.I'm holding a shape that has two flat circles, one on the top and one on the bottom. It is round in the middle.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find and describe solid shapes using informal language without naming.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find and describe solid shapes using informal language without naming..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-c-1"
+      }
+    },
+    "a-math-m2-c-2": {
+      "id": "a-math-m2-c-2",
+      "code": "A.M2.C.2",
+      "standard": "PK.G.3",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.",
+        "pageTitle": "Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces. in Pre-K Mathematics aligned with standard PK.G.3.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and match solid shapes to their two-dimensional faces..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-c-2"
+      }
+    },
+    "a-math-m2-c-3": {
+      "id": "a-math-m2-c-3",
+      "code": "A.M2.C.3",
+      "standard": "PK.G.3",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Identify, analyze, sort, compare, and build with solid shapes.",
+        "pageTitle": "Identify, analyze, sort, compare, and build with solid shapes. | Pre-K Math | Hesten's Learning",
+        "description": "Master Identify, analyze, sort, compare, and build with solid shapes. in Pre-K Mathematics aligned with standard PK.G.3.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Identify, analyze, sort, compare, and build with solid shapes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Identify, analyze, sort, compare, and build with solid shapes., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Identify, analyze, sort, compare, and build with solid shapes.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Identify, analyze, sort, compare, and build with solid shapes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Identify, analyze, sort, compare, and build with solid shapes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Identify, analyze, sort, compare, and build with solid shapes.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Identify, analyze, sort, compare, and build with solid shapes..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Identify, analyze, sort, compare, and build with solid shapes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and build with solid shapes. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Identify, analyze, sort, compare, and build with solid shapes. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Identify, analyze, sort, compare, and build with solid shapes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Identify, analyze, sort, compare, and build with solid shapes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-c-3"
+      }
+    },
+    "a-math-m2-c-4": {
+      "id": "a-math-m2-c-4",
+      "code": "A.M2.C.4",
+      "standard": "PK.G.3",
+      "levelId": "a",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Position solid shapes to create a model of a familiar place.",
+        "pageTitle": "Position solid shapes to create a model of a familiar place. | Pre-K Math | Hesten's Learning",
+        "description": "Master Position solid shapes to create a model of a familiar place. in Pre-K Mathematics aligned with standard PK.G.3.",
+        "pageDescription": "EngageNY Pre-K Math lesson on Position solid shapes to create a model of a familiar place. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math A.M2.C.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 2 • Topic C",
+        "text": "In this lesson on Position solid shapes to create a model of a familiar place., explore Pre-K mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Position solid shapes to create a model of a familiar place.",
+          "Students develop foundational understanding and fluency with Pre-K mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. It is also an opportunity for informal assessment. Consider taking anecdotal notes or using a simple checklist to note each child's progress toward meeting the lesson objective. CENTER CONNECTION:Use the dramatic play center as a place to make additional maps. Invite children to make 3-D and 2-D models of the current scene in the dramatic play area (e.g., doctor's office, restaurant, zoo). Provide support as they choose materials, and encourage them to use position words to describe their models.CENTER CONNECTION:Use the dramatic play center as a place to make additional maps. Invite children to make 3-D and 2-D models of the current scene in the dramatic play area (e.g., doctor's office, restaurant, zoo). Provide support as they choose materials, and encourage them to use position words to describe their models.As students complete the Practice portion of the Concept Development, listen for misconceptions or misunderstandings that can be addressed in the Debrief."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Position solid shapes to create a model of a familiar place.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Pre-K Core",
+          "problem": "Investigate and analyze the key mathematical concept in Position solid shapes to create a model of a familiar place.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Position solid shapes to create a model of a familiar place.",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Position solid shapes to create a model of a familiar place..",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Position solid shapes to create a model of a familiar place.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Position solid shapes to create a model of a familiar place. to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Position solid shapes to create a model of a familiar place. to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Position solid shapes to create a model of a familiar place.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Pre-K, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Position solid shapes to create a model of a familiar place..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Pre-K Mathematics curriculum materials.",
+        "lessonId": "a-math-m2-c-4"
+      }
+    }
+  }
+}

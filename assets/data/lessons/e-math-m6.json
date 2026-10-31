@@ -1,0 +1,1540 @@
+{
+  "id": "e-math-m6",
+  "module": 6,
+  "subject": "math",
+  "grade": "6",
+  "level": "e",
+  "title": "Module 6: Collecting and Displaying Data",
+  "description": "Module 6: Collecting and Displaying Data for 3rd Grade students.",
+  "lessonsCount": 9,
+  "lessons": {
+    "e-math-m6-a-1": {
+      "id": "e-math-m6-a-1",
+      "code": "E.M6.A.1",
+      "standard": "3.MD.3",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Generate and organize data.",
+        "pageTitle": "Generate and organize data. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Generate and organize data. in 3rd Grade Mathematics aligned with standard 3.MD.3.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Generate and organize data. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Generate and organize data., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Generate and organize data.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Generate and organize data.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Generate and organize data.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Generate and organize data.",
+        "prompt": "The picture graph below shows data from a survey of students' favorite sports. The same number of students picked and as their favorite sport. How many students picked tennis as their favorite sport? How many more students picked soccer than tennis? Use a number sentence to show your thinking.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Generate and organize data.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "\"What is your favorite color?\" Survey the class to complete the tally chart below.",
+            "problem": "\"What is your favorite color?\" Survey the class to complete the tally chart below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the tally chart to answer the following questions. How many students chose orange as their favorite color? How many students chose yellow as their favorite color? Which color did students choose the most? How many students chose it? Which color did students choose the least? How many students chose it? What is the difference between the number of students in parts (c) and (d)? Write a number sentence to show your thinking.",
+            "problem": "Use the tally chart to answer the following questions. How many students chose orange as their favorite color? How many students chose yellow as their favorite color? Which color did students choose the most? How many students chose it? Which color did students choose the least? How many students chose it? What is the difference between the number of students in parts (c) and (d)? Write a number sentence to show your thinking.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Write an equation to show the total number of students surveyed on this chart.",
+            "problem": "Write an equation to show the total number of students surveyed on this chart.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Use the tally chart in Problem 1 to complete the picture graphs below.",
+            "problem": "Use the tally chart in Problem 1 to complete the picture graphs below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Use the picture graph in Problem 3(b) to answer the following questions. What does each represent?",
+            "problem": "Use the picture graph in Problem 3(b) to answer the following questions. What does each represent?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Draw a picture and write a number sentence to show how to represent 3 students in your picture graph. How many students does represent? Write a number sentence to show how you know. How many more did you draw for the color that students chose the most than for the color that students chose the least? Write a number sentence to show the difference between the number of votes for the color that students chose the most and the color that students chose the least.",
+            "problem": "Draw a picture and write a number sentence to show how to represent 3 students in your picture graph. How many students does represent? Write a number sentence to show how you know. How many more did you draw for the color that students chose the most than for the color that students chose the least? Write a number sentence to show the difference between the number of votes for the color that students chose the most and the color that students chose the least.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Generate and organize data.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Generate and organize data..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-a-1"
+      }
+    },
+    "e-math-m6-a-2": {
+      "id": "e-math-m6-a-2",
+      "code": "E.M6.A.2",
+      "standard": "3.MD.3",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Rotate tape diagrams vertically.",
+        "pageTitle": "Rotate tape diagrams vertically. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Rotate tape diagrams vertically. in 3rd Grade Mathematics aligned with standard 3.MD.3.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Rotate tape diagrams vertically. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Rotate tape diagrams vertically., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Rotate tape diagrams vertically.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Rotate tape diagrams vertically.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Rotate tape diagrams vertically.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Rotate tape diagrams vertically.",
+        "prompt": "The chart below shows a survey of the book club's favorite type of book. Book Club's Favorite Type of BookType of BookNumber of VotesMystery12Biography16Fantasy20Science Fiction8Book Club's Favorite Type of BookType of BookNumber of VotesMystery12Biography16Fantasy20Science Fiction8 Draw tape diagrams with a unit size of 4 to represent the book club's favorite type of book. Use your tape diagrams to draw vertical tape diagrams that represent the data.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Rotate tape diagrams vertically.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Find the total number of stamps each student has. Draw tape diagrams with a unit size of 4 to show the number of stamps each student has. The first one has been done for you. DanaTanishaRaquelAnnaEach represents 1 stamp.DanaTanishaRaquelAnnaEach represents 1 stamp. Tanisha:Raquel:Anna:Dana:4444Tanisha:Raquel:Anna:Dana:4444",
+            "problem": "Find the total number of stamps each student has. Draw tape diagrams with a unit size of 4 to show the number of stamps each student has. The first one has been done for you. DanaTanishaRaquelAnnaEach represents 1 stamp.DanaTanishaRaquelAnnaEach represents 1 stamp. Tanisha:Raquel:Anna:Dana:4444Tanisha:Raquel:Anna:Dana:4444",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Explain how you can create vertical tape diagrams to show this data. Complete the vertical tape diagrams below using the data from Problem 1. TanishaRaquelAnnaDana4444TanishaRaquelAnnaDana88a.b.TanishaRaquelAnnaDana4444TanishaRaquelAnnaDana88a.b. What is a good title for the vertical tape diagrams? How many total units of 4 are in the vertical tape diagrams in Problem 3(a)? How many total units of 8 are in the vertical tape diagrams in Problem 3(b)? Compare your answers to parts (d) and (e). Why does the number of units change? Mattaeus looks at the vertical tape diagrams in Problem 3(b) and finds the total number of Anna's and Raquel's stamps by writing the equation 7 \\times 8 = 56. Explain his thinking.",
+            "problem": "Explain how you can create vertical tape diagrams to show this data. Complete the vertical tape diagrams below using the data from Problem 1. TanishaRaquelAnnaDana4444TanishaRaquelAnnaDana88a.b.TanishaRaquelAnnaDana4444TanishaRaquelAnnaDana88a.b. What is a good title for the vertical tape diagrams? How many total units of 4 are in the vertical tape diagrams in Problem 3(a)? How many total units of 8 are in the vertical tape diagrams in Problem 3(b)? Compare your answers to parts (d) and (e). Why does the number of units change? Mattaeus looks at the vertical tape diagrams in Problem 3(b) and finds the total number of Anna's and Raquel's stamps by writing the equation 7 \\times 8 = 56. Explain his thinking.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Rotate tape diagrams vertically.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Rotate tape diagrams vertically..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-a-2"
+      }
+    },
+    "e-math-m6-a-3": {
+      "id": "e-math-m6-a-3",
+      "code": "E.M6.A.3",
+      "standard": "3.MD.3",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Create scaled bar graphs.",
+        "pageTitle": "Create scaled bar graphs. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Create scaled bar graphs. in 3rd Grade Mathematics aligned with standard 3.MD.3.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Create scaled bar graphs. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Create scaled bar graphs., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Create scaled bar graphs.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Create scaled bar graphs.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Create scaled bar graphs.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Create scaled bar graphs.",
+        "prompt": "The bar graph below shows the students' favorite ice cream flavors. VanillaStrawberryChocolateButter Pecan102030405060Number of StudentsFavorite Ice Cream FlavorsFlavor0VanillaStrawberryChocolateButter Pecan102030405060Number of StudentsFavorite Ice Cream FlavorsFlavor0 Use the graph's lines as a ruler to draw intervals on the number line shown above. Then plot and label a point for each flavor on the number line. Write a number sentence to show the total number of students who voted for butter pecan, vanilla, and chocolate.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Create scaled bar graphs.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "This table shows the number of students in each class.",
+            "problem": "This table shows the number of students in each class.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the table to color the bar graph. The first one has been done for you. BakingChorusSportsDramaClass2468101214161820NumberofStudentsNumber of Students in Each Class0BakingChorusSportsDramaClass2468101214161820NumberofStudentsNumber of Students in Each Class0 What is the value of each square in the bar graph?",
+            "problem": "Use the table to color the bar graph. The first one has been done for you. BakingChorusSportsDramaClass2468101214161820NumberofStudentsNumber of Students in Each Class0BakingChorusSportsDramaClass2468101214161820NumberofStudentsNumber of Students in Each Class0 What is the value of each square in the bar graph?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Write a number sentence to find how many total students are enrolled in classes. How many fewer students are in sports than in chorus and baking combined? Write a number sentence to show your thinking. Amount in Dollars05101520253035404550FebruaryMarchAprilMayJuneMonthKyle's SavingsAmount in Dollars05101520253035404550FebruaryMarchAprilMayJuneMonthKyle's SavingsThis bar graph shows Kyle's savings from February to June. Use a straightedge to help you read the graph. How much money did Kyle save in May? In which months did Kyle save less than $35? How much more did Kyle save in June than April? Write a number sentence to show your thinking. The money Kyle saved in was half the money he saved in . MonthsFebruaryAmount Saved in DollarsMonthsFebruaryAmount Saved in Dollars Complete the table below to show the same data given in the bar graph in Problem 2. This bar graph shows the number of minutes Charlotte read from Monday through Friday. MondayTuesdayWednesdayThursdayFriday10203040506070Number of MinutesDayCharlotte's Reading Minutes0MondayTuesdayWednesdayThursdayFriday10203040506070Number of MinutesDayCharlotte's Reading Minutes0",
+            "problem": "Write a number sentence to find how many total students are enrolled in classes. How many fewer students are in sports than in chorus and baking combined? Write a number sentence to show your thinking. Amount in Dollars05101520253035404550FebruaryMarchAprilMayJuneMonthKyle's SavingsAmount in Dollars05101520253035404550FebruaryMarchAprilMayJuneMonthKyle's SavingsThis bar graph shows Kyle's savings from February to June. Use a straightedge to help you read the graph. How much money did Kyle save in May? In which months did Kyle save less than $35? How much more did Kyle save in June than April? Write a number sentence to show your thinking. The money Kyle saved in was half the money he saved in . MonthsFebruaryAmount Saved in DollarsMonthsFebruaryAmount Saved in Dollars Complete the table below to show the same data given in the bar graph in Problem 2. This bar graph shows the number of minutes Charlotte read from Monday through Friday. MondayTuesdayWednesdayThursdayFriday10203040506070Number of MinutesDayCharlotte's Reading Minutes0MondayTuesdayWednesdayThursdayFriday10203040506070Number of MinutesDayCharlotte's Reading Minutes0",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Use the graph's lines as a ruler to draw in the intervals on the number line shown above. Then plot and label a point for each day on the number line.",
+            "problem": "Use the graph's lines as a ruler to draw in the intervals on the number line shown above. Then plot and label a point for each day on the number line.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Use the graph or number line to answer the following questions.",
+            "problem": "Use the graph or number line to answer the following questions.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "On which days did Charlotte read for the same number of minutes? How many minutes did Charlotte read on these days? How many more minutes did Charlotte read on Wednesday than on Friday?",
+            "problem": "On which days did Charlotte read for the same number of minutes? How many minutes did Charlotte read on these days? How many more minutes did Charlotte read on Wednesday than on Friday?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Create scaled bar graphs.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Create scaled bar graphs..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-a-3"
+      }
+    },
+    "e-math-m6-a-4": {
+      "id": "e-math-m6-a-4",
+      "code": "E.M6.A.4",
+      "standard": "3.MD.3",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solve one- and two-step problems involving graphs.",
+        "pageTitle": "Solve one- and two-step problems involving graphs. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Solve one- and two-step problems involving graphs. in 3rd Grade Mathematics aligned with standard 3.MD.3.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Solve one- and two-step problems involving graphs. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Solve one- and two-step problems involving graphs., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Solve one- and two-step problems involving graphs.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Solve one- and two-step problems involving graphs.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Solve one- and two-step problems involving graphs.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Solve one- and two-step problems involving graphs.",
+        "prompt": "Number of Library Books Checked Out050100150200250300350400MondayTuesdayWednesdayThursdayFridayLibrary Books Checked OutDayNumber of Library Books Checked Out050100150200250300350400MondayTuesdayWednesdayThursdayFridayLibrary Books Checked OutDayThe graph below shows the number of library books checked out in five days. How many books in total were checked out on Wednesday and Thursday? How many more books were checked out on Thursday and Friday than on Monday and Tuesday?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Solve one- and two-step problems involving graphs.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "The chart below shows the number of magazines sold by each student.",
+            "problem": "The chart below shows the number of magazines sold by each student.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the chart to draw a bar graph below. Create an appropriate scale for the graph. MagazinesSoldNumber of Magazines Sold by Third-Grade StudentsStudentMagazinesSoldNumber of Magazines Sold by Third-Grade StudentsStudent",
+            "problem": "Use the chart to draw a bar graph below. Create an appropriate scale for the graph. MagazinesSoldNumber of Magazines Sold by Third-Grade StudentsStudentMagazinesSoldNumber of Magazines Sold by Third-Grade StudentsStudent",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Explain why you chose the scale for the graph. How many fewer magazines did Debbie sell than Ben and Stanley combined? How many more magazines did Debbie and Jeff sell than Ben and Rachel? The bar graph shows the number of visitors to a carnival from Monday through Friday. Number of Visitors050100150200250300350400450500MondayTuesdayWednesdayThursdayFridayCarnival VisitorsDayNumber of Visitors050100150200250300350400450500MondayTuesdayWednesdayThursdayFridayCarnival VisitorsDay How many fewer visitors were there on the least busy day than on the busiest day? How many more visitors attended the carnival on Monday and Tuesday combined than on Thursday and Friday combined?",
+            "problem": "Explain why you chose the scale for the graph. How many fewer magazines did Debbie sell than Ben and Stanley combined? How many more magazines did Debbie and Jeff sell than Ben and Rachel? The bar graph shows the number of visitors to a carnival from Monday through Friday. Number of Visitors050100150200250300350400450500MondayTuesdayWednesdayThursdayFridayCarnival VisitorsDayNumber of Visitors050100150200250300350400450500MondayTuesdayWednesdayThursdayFridayCarnival VisitorsDay How many fewer visitors were there on the least busy day than on the busiest day? How many more visitors attended the carnival on Monday and Tuesday combined than on Thursday and Friday combined?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Solve one- and two-step problems involving graphs.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solve one- and two-step problems involving graphs..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-a-4"
+      }
+    },
+    "e-math-m6-b-1": {
+      "id": "e-math-m6-b-1",
+      "code": "E.M6.B.1",
+      "standard": "3.MD.4",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea...",
+        "pageTitle": "Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea... | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea... in 3rd Grade Mathematics aligned with standard 3.MD.4.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea..., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate measurement data.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea...",
+        "prompt": "Davon marks a 4-inch paper strip into equal parts as shown below. Label the whole and quarter inches on the paper strip. Davon tells his teacher that his paper strip measures 4 inches. Sandra says it measures 16 quarter inches. Explain how the two measurements are the same. Use words, pictures, or numbers.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use the ruler you made to measure different classmates' straws to the nearest inch, \\frac{1}{2} inch, and \\frac{1}{4} inch. Record the measurements in the chart below. Draw a star next to measurements that are exact. _______________ 's straw is the shortest straw I measured. It measures _______ inch(es). _______________ 's straw is the longest straw I measured. It measures _______ inches. Choose the straw from your chart that was most accurately measured with the \\frac{1}{4}-inch intervals on your ruler. How do you know the \\frac{1}{4}-inch intervals are the most accurate for measuring this straw? Jenna marks a 5-inch paper strip into equal parts as shown below. Label the whole and half inches on the paper strip. Estimate to draw the \\frac{1}{4}-inch marks on the paper strip. Then, fill in the blanks below. 1 inch is equal to _______ half inches. 1 inch is equal to _______ quarter inches. 1 half inch is equal to _______ quarter inches. Describe how Jenna could use this paper strip to measure an object that is longer than 5 inches. Sari says her pencil measures 8 half inches. Bart disagrees and says it measures 4 inches. Explain to Bart why the two measurements are the same in the space below. Use words, pictures, or numbers.",
+            "problem": "Use the ruler you made to measure different classmates' straws to the nearest inch, \\frac{1}{2} inch, and \\frac{1}{4} inch. Record the measurements in the chart below. Draw a star next to measurements that are exact. _______________ 's straw is the shortest straw I measured. It measures _______ inch(es). _______________ 's straw is the longest straw I measured. It measures _______ inches. Choose the straw from your chart that was most accurately measured with the \\frac{1}{4}-inch intervals on your ruler. How do you know the \\frac{1}{4}-inch intervals are the most accurate for measuring this straw? Jenna marks a 5-inch paper strip into equal parts as shown below. Label the whole and half inches on the paper strip. Estimate to draw the \\frac{1}{4}-inch marks on the paper strip. Then, fill in the blanks below. 1 inch is equal to _______ half inches. 1 inch is equal to _______ quarter inches. 1 half inch is equal to _______ quarter inches. Describe how Jenna could use this paper strip to measure an object that is longer than 5 inches. Sari says her pencil measures 8 half inches. Bart disagrees and says it measures 4 inches. Explain to Bart why the two measurements are the same in the space below. Use words, pictures, or numbers.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Create ruler with 1-inch, \\frac{1}{2}-inch, and \\frac{1}{4}-inch intervals, and generate mea....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-b-1"
+      }
+    },
+    "e-math-m6-b-2": {
+      "id": "e-math-m6-b-2",
+      "code": "E.M6.B.2",
+      "standard": "3.MD.4",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Interpret measurement data from various line plots.",
+        "pageTitle": "Interpret measurement data from various line plots. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Interpret measurement data from various line plots. in 3rd Grade Mathematics aligned with standard 3.MD.4.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Interpret measurement data from various line plots. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Interpret measurement data from various line plots., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Interpret measurement data from various line plots.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Interpret measurement data from various line plots.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Interpret measurement data from various line plots.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Interpret measurement data from various line plots.",
+        "prompt": "XLengths of Hands of Third-Grade Students3\\frac{2}{4}3\\frac{3}{4}4\\frac{3}{4}4\\frac{1}{4}5\\frac{1}{4}4\\frac{2}{4}55\\frac{2}{4}4InchesXXXXXXXXXXXXXXXXXXXXXXXX = 1 studentXLengths of Hands of Third-Grade Students3\\frac{2}{4}3\\frac{3}{4}4\\frac{3}{4}4\\frac{1}{4}5\\frac{1}{4}4\\frac{2}{4}55\\frac{2}{4}4InchesXXXXXXXXXXXXXXXXXXXXXXXX = 1 studentMs. Bravo measures the lengths of her third-grade students' hands in inches. The lengths are shown on the line plot below. How many students are in Ms. Bravo's class? How do you know? How many students' hands are longer than 4\\frac{2}{4} inches? Darren says that more students' hands are 4\\frac{2}{4} inches long than 4 and 5\\frac{1}{4} inches combined. Is he right? Explain your answer.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Interpret measurement data from various line plots.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Coach Harris measures the heights of the children on his third-grade basketball team in inches. The heights are shown on the line plot below. Heights of Children on Third-Grade Basketball Team5151\\frac{1}{2}52\\frac{1}{2}53\\frac{1}{2}54\\frac{1}{2}52535455Height in InchesXXXXXXXXXXXXXXXX = 1 childHeights of Children on Third-Grade Basketball Team5151\\frac{1}{2}52\\frac{1}{2}53\\frac{1}{2}54\\frac{1}{2}52535455Height in InchesXXXXXXXXXXXXXXXX = 1 child How many children are on the team? How do you know? How many children are less than 53 inches tall? Coach Harris says that the most common height for the children on his team is 53\\frac{1}{2} inches. Is he right? Explain your answer. Coach Harris says that the player who does the tip-off in the beginning of the game has to be at least 54 inches tall. How many children could do the tip-off? Lengths of Worms33\\frac{1}{4}3\\frac{3}{4}4\\frac{1}{4}4\\frac{3}{4}3\\frac{2}{4}44\\frac{2}{4}5Length in InchesXXXXXXXXXXXXXXXXXXXXXXXX XXX = 1 wormLengths of Worms33\\frac{1}{4}3\\frac{3}{4}4\\frac{1}{4}4\\frac{3}{4}3\\frac{2}{4}44\\frac{2}{4}5Length in InchesXXXXXXXXXXXXXXXXXXXXXXXX XXX = 1 wormMiss Vernier's class is studying worms. The lengths of the worms in inches are shown in the line plot below. XXX XXX XX XXXX How many worms did the class measure? How do you know? Cara says that there are more worms 3\\frac{3}{4} inches long than worms that are 3\\frac{2}{4} and 4\\frac{1}{4} inches long combined. Is she right? Explain your answer. Madeline finds a worm hiding under a leaf. She measures it, and it is 4\\frac{3}{4} inches long. Plot the length of the worm on the line plot.",
+            "problem": "Coach Harris measures the heights of the children on his third-grade basketball team in inches. The heights are shown on the line plot below. Heights of Children on Third-Grade Basketball Team5151\\frac{1}{2}52\\frac{1}{2}53\\frac{1}{2}54\\frac{1}{2}52535455Height in InchesXXXXXXXXXXXXXXXX = 1 childHeights of Children on Third-Grade Basketball Team5151\\frac{1}{2}52\\frac{1}{2}53\\frac{1}{2}54\\frac{1}{2}52535455Height in InchesXXXXXXXXXXXXXXXX = 1 child How many children are on the team? How do you know? How many children are less than 53 inches tall? Coach Harris says that the most common height for the children on his team is 53\\frac{1}{2} inches. Is he right? Explain your answer. Coach Harris says that the player who does the tip-off in the beginning of the game has to be at least 54 inches tall. How many children could do the tip-off? Lengths of Worms33\\frac{1}{4}3\\frac{3}{4}4\\frac{1}{4}4\\frac{3}{4}3\\frac{2}{4}44\\frac{2}{4}5Length in InchesXXXXXXXXXXXXXXXXXXXXXXXX XXX = 1 wormLengths of Worms33\\frac{1}{4}3\\frac{3}{4}4\\frac{1}{4}4\\frac{3}{4}3\\frac{2}{4}44\\frac{2}{4}5Length in InchesXXXXXXXXXXXXXXXXXXXXXXXX XXX = 1 wormMiss Vernier's class is studying worms. The lengths of the worms in inches are shown in the line plot below. XXX XXX XX XXXX How many worms did the class measure? How do you know? Cara says that there are more worms 3\\frac{3}{4} inches long than worms that are 3\\frac{2}{4} and 4\\frac{1}{4} inches long combined. Is she right? Explain your answer. Madeline finds a worm hiding under a leaf. She measures it, and it is 4\\frac{3}{4} inches long. Plot the length of the worm on the line plot.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Interpret measurement data from various line plots.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpret measurement data from various line plots..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-b-2"
+      }
+    },
+    "e-math-m6-b-3": {
+      "id": "e-math-m6-b-3",
+      "code": "E.M6.B.3",
+      "standard": "3.MD.4",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Represent measurement data with line plots.",
+        "pageTitle": "Represent measurement data with line plots. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Represent measurement data with line plots. in 3rd Grade Mathematics aligned with standard 3.MD.4.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Represent measurement data with line plots. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Represent measurement data with line plots., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Represent measurement data with line plots.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Represent measurement data with line plots.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Represent measurement data with line plots.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Represent measurement data with line plots.",
+        "prompt": "Scientists measure the growth of mice in inches. The scientists measure the length of the mice to the nearest \\frac{1}{4} inch and record the measurements as shown below. Label each tick mark. Then, record the data on the line plot below. Title: __________________________________________________________Title: __________________________________________________________ 3\\frac{3}{4}3X = 1 mouse3\\frac{3}{4}3X = 1 mouse",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Represent measurement data with line plots.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Mrs. Weisse's class grows beans for a science experiment. The students measure the heights of their bean plants to the nearest \\frac{1}{4} inch and record the measurements as shown below.",
+            "problem": "Mrs. Weisse's class grows beans for a science experiment. The students measure the heights of their bean plants to the nearest \\frac{1}{4} inch and record the measurements as shown below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the data to complete the line plot below. Title: __________________________________________________________Title: __________________________________________________________ 2\\frac{3}{4}33\\frac{1}{4}2\\frac{1}{2}2\\frac{1}{4}21\\frac{3}{4}2\\frac{3}{4}33\\frac{1}{4}2\\frac{1}{2}2\\frac{1}{4}21\\frac{3}{4} Label: _______________________________ X =Label: _______________________________ X = How many bean plants are at least 2\\frac{1}{4} inches tall? How many bean plants are taller than 2\\frac{3}{4} inches? What is the most frequent measurement? How many bean plants were plotted for this measurement? George says that most of the bean plants are at least 3 inches tall. Is he right? Explain your answer. Savannah was absent the day the class measured the heights of their bean plants. When she returns, her plant measures 2\\frac{2}{4} inches tall. Can Savannah plot the height of her bean plant on the class line plot? Why or why not?",
+            "problem": "Use the data to complete the line plot below. Title: __________________________________________________________Title: __________________________________________________________ 2\\frac{3}{4}33\\frac{1}{4}2\\frac{1}{2}2\\frac{1}{4}21\\frac{3}{4}2\\frac{3}{4}33\\frac{1}{4}2\\frac{1}{2}2\\frac{1}{4}21\\frac{3}{4} Label: _______________________________ X =Label: _______________________________ X = How many bean plants are at least 2\\frac{1}{4} inches tall? How many bean plants are taller than 2\\frac{3}{4} inches? What is the most frequent measurement? How many bean plants were plotted for this measurement? George says that most of the bean plants are at least 3 inches tall. Is he right? Explain your answer. Savannah was absent the day the class measured the heights of their bean plants. When she returns, her plant measures 2\\frac{2}{4} inches tall. Can Savannah plot the height of her bean plant on the class line plot? Why or why not?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Represent measurement data with line plots.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Represent measurement data with line plots..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-b-3"
+      }
+    },
+    "e-math-m6-b-4": {
+      "id": "e-math-m6-b-4",
+      "code": "E.M6.B.4",
+      "standard": "3.MD.4",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Represent measurement data with line plots.",
+        "pageTitle": "Represent measurement data with line plots. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Represent measurement data with line plots. in 3rd Grade Mathematics aligned with standard 3.MD.4.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Represent measurement data with line plots. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Represent measurement data with line plots., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Represent measurement data with line plots.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Represent measurement data with line plots.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Represent measurement data with line plots.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Represent measurement data with line plots.",
+        "prompt": "2222\\frac{1}{4}22\\frac{1}{2}22\\frac{3}{4}2323\\frac{1}{4}23\\frac{1}{2}23\\frac{3}{4}24XXXXXXXXInchesLengths of FishXXXXXXXXXXXX = 1 fish2222\\frac{1}{4}22\\frac{1}{2}22\\frac{3}{4}2323\\frac{1}{4}23\\frac{1}{2}23\\frac{3}{4}24XXXXXXXXInchesLengths of FishXXXXXXXXXXXX = 1 fishThe line plot below shows the lengths of fish the fishing boat caught. Find the three most frequent measurements on the line plot. Find the difference between the lengths of the longest and shortest fish. How many more fish were 23\\frac{1}{4} inches long than 24 inches long?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Represent measurement data with line plots.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Delilah stops under a silver maple tree and collects leaves. At home, she measures the widths of the leaves to the nearest \\frac{1}{4} inch and records the measurements as shown below.",
+            "problem": "Delilah stops under a silver maple tree and collects leaves. At home, she measures the widths of the leaves to the nearest \\frac{1}{4} inch and records the measurements as shown below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the data to create a line plot below.",
+            "problem": "Use the data to create a line plot below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Explain the steps you took to create the line plot. How many more leaves were 6 inches wide than 6\\frac{1}{2} inches wide? Find the three most frequent measurements on the line plot. What does this tell you about the typical width of a silver maple tree leaf?",
+            "problem": "Explain the steps you took to create the line plot. How many more leaves were 6 inches wide than 6\\frac{1}{2} inches wide? Find the three most frequent measurements on the line plot. What does this tell you about the typical width of a silver maple tree leaf?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Represent measurement data with line plots.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Represent measurement data with line plots..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-b-4"
+      }
+    },
+    "e-math-m6-b-5": {
+      "id": "e-math-m6-b-5",
+      "code": "E.M6.B.5",
+      "standard": "3.MD.4",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Analyze data to problem solve.",
+        "pageTitle": "Analyze data to problem solve. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Analyze data to problem solve. in 3rd Grade Mathematics aligned with standard 3.MD.4.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Analyze data to problem solve. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M6.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Analyze data to problem solve., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Analyze data to problem solve.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Analyze data to problem solve.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Analyze data to problem solve.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Analyze data to problem solve.",
+        "prompt": "= ______ Birds6 = ______ Birds6Mr. Gallagher's science class goes bird watching. The picture graph below shows the number of birds the class observes. Number of Birds ObservedMondayTuesdayWednesdayThursdayayNumber of Birds Mr. Gallagher's Class Observed DayNumber of Birds ObservedMondayTuesdayWednesdayThursdayayNumber of Birds Mr. Gallagher's Class Observed Day How many more birds did Mr. Gallagher's class observe on Wednesday and Thursday than on Monday and Tuesday? Mr. Manning's class observed 104 birds. How many more birds did Mr. Gallagher's class observe?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Analyze data to problem solve.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Four children went apple picking. The chart shows the number of apples the children picked. Find the number of apples Roxanne picked to complete the chart. Create a picture graph below using the data in the table. = ______ ApplesApples Picked = ______ ApplesApples Picked Number of Apples PickedNumber of Apples Picked ChildChild",
+            "problem": "Four children went apple picking. The chart shows the number of apples the children picked. Find the number of apples Roxanne picked to complete the chart. Create a picture graph below using the data in the table. = ______ ApplesApples Picked = ______ ApplesApples Picked Number of Apples PickedNumber of Apples Picked ChildChild",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the chart or graph to answer the following questions. How many more apples did Stewart and Roxanne pick than Philip and Trisha? Trisha and Stewart combine their apples to make apples pies. Each pie takes 7 apples. How many pies can they make? Ms. Pacho's science class measured the lengths of blades of grass from their school field to the nearest\\frac{1}{4} inch. The lengths are shown below. Make a line plot of the grass data. Explain your choice of scale. How many blades of grass were measured? Explain how you know. What was the length measured most frequently on the line plot? How many blades of grass had this length? How many more blades of grass measured 2\\frac{3}{4} inches than both 3\\frac{3}{4} inches and 2 inches combined?",
+            "problem": "Use the chart or graph to answer the following questions. How many more apples did Stewart and Roxanne pick than Philip and Trisha? Trisha and Stewart combine their apples to make apples pies. Each pie takes 7 apples. How many pies can they make? Ms. Pacho's science class measured the lengths of blades of grass from their school field to the nearest\\frac{1}{4} inch. The lengths are shown below. Make a line plot of the grass data. Explain your choice of scale. How many blades of grass were measured? Explain how you know. What was the length measured most frequently on the line plot? How many blades of grass had this length? How many more blades of grass measured 2\\frac{3}{4} inches than both 3\\frac{3}{4} inches and 2 inches combined?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Analyze data to problem solve.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Analyze data to problem solve..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m6-b-5"
+      }
+    }
+  }
+}

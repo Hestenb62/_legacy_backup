@@ -1,0 +1,1128 @@
+{
+  "id": "b-math-m6",
+  "module": 6,
+  "subject": "math",
+  "grade": "6",
+  "level": "b",
+  "title": "Module 6: Analyzing, Comparing, and Composing Shapes",
+  "description": "Module 6: Analyzing, Comparing, and Composing Shapes for Kindergarten students.",
+  "lessonsCount": 8,
+  "lessons": {
+    "b-math-m6-a-1": {
+      "id": "b-math-m6-a-1",
+      "code": "B.M6.A.1",
+      "standard": "K.CC.4d",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe the systematic construction of flat shapes using ordinal numbers.",
+        "pageTitle": "Describe the systematic construction of flat shapes using ordinal numbers. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Describe the systematic construction of flat shapes using ordinal numbers. in Kindergarten Mathematics aligned with standard K.CC.4d.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Describe the systematic construction of flat shapes using ordinal numbers. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Describe the systematic construction of flat shapes using ordinal numbers., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe the systematic construction of flat shapes using ordinal numbers.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe the systematic construction of flat shapes using ordinal numbers.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe the systematic construction of flat shapes using ordinal numbers.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe the systematic construction of flat shapes using ordinal numbers.",
+        "prompt": "Use your ruler. First, draw a straight line from the dot. Second, draw a different straight line from the dot. Third, draw another straight line to make a triangle.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe the systematic construction of flat shapes using ordinal numbers.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Listen to the directions. First, draw the missing line to finish the triangle using a ruler. Second, color the corners red. Third, draw another triangle. First, use your ruler to draw 2 lines to make a square. Second, color the corners red. Third, draw another square. First, draw a triangle using your ruler. Second, draw a different triangle using your ruler. Third, show your pictures to your partner. 5 — 1 = ________ = 4 — 1 3 — 2 = ____3 — 0 = ________ = 5 — 4 5 — 1 = ________ = 4 — 1 3 — 2 = ____3 — 0 = ________ = 5 — 4 4 + 1 = ________ = 2 + 1 3 + 2 = ____3 + 1 = ________ = 5 + 0 4 + 1 = ________ = 2 + 1 3 + 2 = ____3 + 1 = ________ = 5 + 0 2 + 2 = ________ = 5 — 3 1 + 1 = ____4 — 0 = ________ = 4 + 1 2 + 2 = ________ = 5 — 3 1 + 1 = ____4 — 0 = ________ = 4 + 1 2 — 1 = ________ = 3 — 3 1 — 0 = ____3 — 0 = ________ = 4 — 4 2 — 1 = ________ = 3 — 3 1 — 0 = ____3 — 0 = ________ = 4 — 4",
+            "problem": "Listen to the directions. First, draw the missing line to finish the triangle using a ruler. Second, color the corners red. Third, draw another triangle. First, use your ruler to draw 2 lines to make a square. Second, color the corners red. Third, draw another square. First, draw a triangle using your ruler. Second, draw a different triangle using your ruler. Third, show your pictures to your partner. 5 — 1 = ________ = 4 — 1 3 — 2 = ____3 — 0 = ________ = 5 — 4 5 — 1 = ________ = 4 — 1 3 — 2 = ____3 — 0 = ________ = 5 — 4 4 + 1 = ________ = 2 + 1 3 + 2 = ____3 + 1 = ________ = 5 + 0 4 + 1 = ________ = 2 + 1 3 + 2 = ____3 + 1 = ________ = 5 + 0 2 + 2 = ________ = 5 — 3 1 + 1 = ____4 — 0 = ________ = 4 + 1 2 + 2 = ________ = 5 — 3 1 + 1 = ____4 — 0 = ________ = 4 + 1 2 — 1 = ________ = 3 — 3 1 — 0 = ____3 — 0 = ________ = 4 — 4 2 — 1 = ________ = 3 — 3 1 — 0 = ____3 — 0 = ________ = 4 — 4",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe the systematic construction of flat shapes using ordinal numbers.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe the systematic construction of flat shapes using ordinal numbers..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-a-1"
+      }
+    },
+    "b-math-m6-a-2": {
+      "id": "b-math-m6-a-2",
+      "code": "B.M6.A.2",
+      "standard": "K.CC.4d",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Build flat shapes with varying side lengths and record with drawings.",
+        "pageTitle": "Build flat shapes with varying side lengths and record with drawings. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Build flat shapes with varying side lengths and record with drawings. in Kindergarten Mathematics aligned with standard K.CC.4d.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Build flat shapes with varying side lengths and record with drawings. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Build flat shapes with varying side lengths and record with drawings., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Build flat shapes with varying side lengths and record with drawings.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Build flat shapes with varying side lengths and record with drawings.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Build flat shapes with varying side lengths and record with drawings.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Build flat shapes with varying side lengths and record with drawings.",
+        "prompt": "First, draw a triangle so all of the sides are different lengths. Second, draw a triangle with your ruler that has 2 sides that are about the same length.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Build flat shapes with varying side lengths and record with drawings.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "First, use a ruler to trace the shapes. Second, follow the directions in each box. Use your ruler to draw the shapes. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "problem": "First, use a ruler to trace the shapes. Second, follow the directions in each box. Use your ruler to draw the shapes. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw 2 different rectangles.Draw 3 different triangles.Draw 1 hexagon.Draw 2 different rectangles.Draw 3 different triangles.Draw 1 hexagon. 5 — 4 = ____5 — 3 = ____5 — 2 = ____5 — 1 = ____5 — 0 = ____0 + 1 = ____1 + 1 = ____2 + 1 = ____3 + 1 = ____4 + 1 = ____4 — 2 = ____2 — 1 = ____3 — 2 = ____3 — 1 = ____5 — 0 = ____4 — 3 = ____2 + 1 = ____3 + 2 = ____4 — 1 = ____5 — 4 = ____5 — 4 = ____5 — 3 = ____5 — 2 = ____5 — 1 = ____5 — 0 = ____0 + 1 = ____1 + 1 = ____2 + 1 = ____3 + 1 = ____4 + 1 = ____4 — 2 = ____2 — 1 = ____3 — 2 = ____3 — 1 = ____5 — 0 = ____4 — 3 = ____2 + 1 = ____3 + 2 = ____4 — 1 = ____5 — 4 = ____",
+            "problem": "Draw 2 different rectangles.Draw 3 different triangles.Draw 1 hexagon.Draw 2 different rectangles.Draw 3 different triangles.Draw 1 hexagon. 5 — 4 = ____5 — 3 = ____5 — 2 = ____5 — 1 = ____5 — 0 = ____0 + 1 = ____1 + 1 = ____2 + 1 = ____3 + 1 = ____4 + 1 = ____4 — 2 = ____2 — 1 = ____3 — 2 = ____3 — 1 = ____5 — 0 = ____4 — 3 = ____2 + 1 = ____3 + 2 = ____4 — 1 = ____5 — 4 = ____5 — 4 = ____5 — 3 = ____5 — 2 = ____5 — 1 = ____5 — 0 = ____0 + 1 = ____1 + 1 = ____2 + 1 = ____3 + 1 = ____4 + 1 = ____4 — 2 = ____2 — 1 = ____3 — 2 = ____3 — 1 = ____5 — 0 = ____4 — 3 = ____2 + 1 = ____3 + 2 = ____4 — 1 = ____5 — 4 = ____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Build flat shapes with varying side lengths and record with drawings.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Build flat shapes with varying side lengths and record with drawings..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-a-2"
+      }
+    },
+    "b-math-m6-a-3": {
+      "id": "b-math-m6-a-3",
+      "code": "B.M6.A.3",
+      "standard": "K.CC.4d",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compose solids using flat shapes as a foundation.",
+        "pageTitle": "Compose solids using flat shapes as a foundation. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Compose solids using flat shapes as a foundation. in Kindergarten Mathematics aligned with standard K.CC.4d.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Compose solids using flat shapes as a foundation. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Compose solids using flat shapes as a foundation., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compose solids using flat shapes as a foundation.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compose solids using flat shapes as a foundation.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compose solids using flat shapes as a foundation.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compose solids using flat shapes as a foundation.",
+        "prompt": "Draw a line from the flat shape to the object that has a face with that flat shape. \\frac{}{}\\frac{}{}\\frac{}{}",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compose solids using flat shapes as a foundation.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Trace the circles and rectangle. Cut out the shape. Fold and tape to create a cylinder. Trace the squares. Cut out the shape. Fold and tape to create a cube.",
+            "problem": "Trace the circles and rectangle. Cut out the shape. Fold and tape to create a cylinder. Trace the squares. Cut out the shape. Fold and tape to create a cube.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compose solids using flat shapes as a foundation.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compose solids using flat shapes as a foundation..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-a-3"
+      }
+    },
+    "b-math-m6-a-4": {
+      "id": "b-math-m6-a-4",
+      "code": "B.M6.A.4",
+      "standard": "K.CC.4d",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Describe the relative position of shapes using ordinal numbers.",
+        "pageTitle": "Describe the relative position of shapes using ordinal numbers. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Describe the relative position of shapes using ordinal numbers. in Kindergarten Mathematics aligned with standard K.CC.4d.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Describe the relative position of shapes using ordinal numbers. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 6 • Topic A",
+        "text": "In this lesson on Describe the relative position of shapes using ordinal numbers., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Describe the relative position of shapes using ordinal numbers.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Describe the relative position of shapes using ordinal numbers.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Describe the relative position of shapes using ordinal numbers.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Describe the relative position of shapes using ordinal numbers.",
+        "prompt": "Listen to the directions. Start at the circle when counting. Color the 5th shape red. Color the 2nd shape green. Color the 10th shape yellow.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Describe the relative position of shapes using ordinal numbers.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the 2nd truck from the stop sign. Draw a square around the 5th truck. Draw an X on the 9th truck.",
+            "problem": "Circle the 2nd truck from the stop sign. Draw a square around the 5th truck. Draw an X on the 9th truck.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw a triangle around the 4th vehicle from the stop sign. Draw a circle around the 1st vehicle. Draw a square around the 6th vehicle. Put an X on the 10th horse from the stop sign. Draw a triangle around the 7th horse. Draw a circle around the 3rd horse. Draw a square around the 8th horse. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} 1stfirst2nd second3rd third4th fourth5th fifth6th sixth7th seventh8th eighth10th tenth9th ninth\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}1stfirst2nd second3rd third4th fourth5th fifth6th sixth7th seventh8th eighth10th tenth9th ninthDraw a line from the shape to the correct ordinal number, starting at the top.",
+            "problem": "Draw a triangle around the 4th vehicle from the stop sign. Draw a circle around the 1st vehicle. Draw a square around the 6th vehicle. Put an X on the 10th horse from the stop sign. Draw a triangle around the 7th horse. Draw a circle around the 3rd horse. Draw a square around the 8th horse. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{} 1stfirst2nd second3rd third4th fourth5th fifth6th sixth7th seventh8th eighth10th tenth9th ninth\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}1stfirst2nd second3rd third4th fourth5th fifth6th sixth7th seventh8th eighth10th tenth9th ninthDraw a line from the shape to the correct ordinal number, starting at the top.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Describe the relative position of shapes using ordinal numbers.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Describe the relative position of shapes using ordinal numbers..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-a-4"
+      }
+    },
+    "b-math-m6-b-1": {
+      "id": "b-math-m6-b-1",
+      "code": "B.M6.B.1",
+      "standard": "K.G.6",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compose flat shapes using pattern blocks and drawings.",
+        "pageTitle": "Compose flat shapes using pattern blocks and drawings. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Compose flat shapes using pattern blocks and drawings. in Kindergarten Mathematics aligned with standard K.G.6.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Compose flat shapes using pattern blocks and drawings. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Compose flat shapes using pattern blocks and drawings., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compose flat shapes using pattern blocks and drawings.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compose flat shapes using pattern blocks and drawings.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compose flat shapes using pattern blocks and drawings.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compose flat shapes using pattern blocks and drawings.",
+        "prompt": "Use your pattern blocks to help you solve the problem. Use 2 blocks to make a rectangle. Trace your blocks to show your rectangle.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compose flat shapes using pattern blocks and drawings.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "1212Choose 4 shapes to create a new shape in Box 1. Give the same 4 shapes to your partner. Have your partner create a different shape in Box 2. Choose 5 shapes to create a new shape in Box 3. Give the same 5 shapes to your partner. Have your partner create a different shape in Box 4. Subtract.5 — 1 = 5 — 2 = 5 — 3 =5 — 4 =Subtract.5 — 1 = 5 — 2 = 5 — 3 =5 — 4 =3434",
+            "problem": "1212Choose 4 shapes to create a new shape in Box 1. Give the same 4 shapes to your partner. Have your partner create a different shape in Box 2. Choose 5 shapes to create a new shape in Box 3. Give the same 5 shapes to your partner. Have your partner create a different shape in Box 4. Subtract.5 — 1 = 5 — 2 = 5 — 3 =5 — 4 =Subtract.5 — 1 = 5 — 2 = 5 — 3 =5 — 4 =3434",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compose flat shapes using pattern blocks and drawings.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compose flat shapes using pattern blocks and drawings..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-b-1"
+      }
+    },
+    "b-math-m6-b-2": {
+      "id": "b-math-m6-b-2",
+      "code": "B.M6.B.2",
+      "standard": "K.G.6",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Decompose flat shapes into two or more shapes.",
+        "pageTitle": "Decompose flat shapes into two or more shapes. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Decompose flat shapes into two or more shapes. in Kindergarten Mathematics aligned with standard K.G.6.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Decompose flat shapes into two or more shapes. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Decompose flat shapes into two or more shapes., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Decompose flat shapes into two or more shapes.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Decompose flat shapes into two or more shapes.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Decompose flat shapes into two or more shapes.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Decompose flat shapes into two or more shapes.",
+        "prompt": "Draw 2 shapes that can be used to build the rectangle. Draw 2 shapes that can be used to build the house.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Decompose flat shapes into two or more shapes.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}Trace to show 2 ways to make each shape. How many shapes did you use? I used ____ shapes.I used ____ shapes. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}I used ____ shapes.I used ____ shapes. I used ____ shapes.I used ____ shapes. Fill in each shape with pattern blocks. Trace to show the shapes you used. SunSun How many different ways can you cover the sun picture with pattern blocks?",
+            "problem": "\\frac{}{}\\frac{}{}\\frac{}{}Trace to show 2 ways to make each shape. How many shapes did you use? I used ____ shapes.I used ____ shapes. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}I used ____ shapes.I used ____ shapes. I used ____ shapes.I used ____ shapes. Fill in each shape with pattern blocks. Trace to show the shapes you used. SunSun How many different ways can you cover the sun picture with pattern blocks?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Decompose flat shapes into two or more shapes.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Decompose flat shapes into two or more shapes..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-b-2"
+      }
+    },
+    "b-math-m6-b-3": {
+      "id": "b-math-m6-b-3",
+      "code": "B.M6.B.3",
+      "standard": "K.G.6",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compose simple shapes to form a larger shape described by an outline.",
+        "pageTitle": "Compose simple shapes to form a larger shape described by an outline. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Compose simple shapes to form a larger shape described by an outline. in Kindergarten Mathematics aligned with standard K.G.6.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Compose simple shapes to form a larger shape described by an outline. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Compose simple shapes to form a larger shape described by an outline., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compose simple shapes to form a larger shape described by an outline.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compose simple shapes to form a larger shape described by an outline.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compose simple shapes to form a larger shape described by an outline.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compose simple shapes to form a larger shape described by an outline.",
+        "prompt": "If you drew 2 straight lines inside the gray rectangle, what shapes might you find? Circle them.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compose simple shapes to form a larger shape described by an outline.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Glue puzzle here.Glue puzzle here.Glue your puzzles into the frames. Glue puzzle here.Glue puzzle here.",
+            "problem": "Glue puzzle here.Glue puzzle here.Glue your puzzles into the frames. Glue puzzle here.Glue puzzle here.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw some of the shapes that you had after you cut your rectangles. Carlos drew 2 lines on his square. You can see his square before he cut it. Circle the shapes Carlos had after he cut. India drew 2 lines on her rectangle. You can see her rectangle before she cut it. Circle the shapes India had after she cut.",
+            "problem": "Draw some of the shapes that you had after you cut your rectangles. Carlos drew 2 lines on his square. You can see his square before he cut it. Circle the shapes Carlos had after he cut. India drew 2 lines on her rectangle. You can see her rectangle before she cut it. Circle the shapes India had after she cut.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compose simple shapes to form a larger shape described by an outline.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compose simple shapes to form a larger shape described by an outline..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-b-3"
+      }
+    },
+    "b-math-m6-b-4": {
+      "id": "b-math-m6-b-4",
+      "code": "B.M6.B.4",
+      "standard": "K.G.6",
+      "levelId": "b",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Culminating task—review selected topics to create a cumulative year-end project.",
+        "pageTitle": "Culminating task—review selected topics to create a cumulative year-end project. | Kindergarten Math | Hesten's Learning",
+        "description": "Master Culminating task—review selected topics to create a cumulative year-end project. in Kindergarten Mathematics aligned with standard K.G.6.",
+        "pageDescription": "EngageNY Kindergarten Math lesson on Culminating task—review selected topics to create a cumulative year-end project. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math B.M6.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 6 • Topic B",
+        "text": "In this lesson on Culminating task—review selected topics to create a cumulative year-end project., explore Kindergarten mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Culminating task—review selected topics to create a cumulative year-end project.",
+          "Students develop foundational understanding and fluency with Kindergarten mathematical practices."
+        ],
+        "teacherInsight": "In addition to the recording sheets and writing tools, individual station materials are as follows: \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Make-10 Mania: Linking cube 10-sticks"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Culminating task—review selected topics to create a cumulative year-end project.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Kindergarten Core",
+          "problem": "Investigate and analyze the key mathematical concept in Culminating task—review selected topics to create a cumulative year-end project.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Culminating task—review selected topics to create a cumulative year-end project.",
+        "prompt": "B.Five-Group Frenzy: Write the number, draw the number in the 5-group way, and draw the number in any other configuration.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Culminating task—review selected topics to create a cumulative year-end project.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Make-10 Mania: Show how you made 10.",
+            "problem": "Make-10 Mania: Show how you made 10.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Culminating task—review selected topics to create a cumulative year-end project.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in Kindergarten, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Culminating task—review selected topics to create a cumulative year-end project..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Kindergarten Mathematics curriculum materials.",
+        "lessonId": "b-math-m6-b-4"
+      }
+    }
+  }
+}

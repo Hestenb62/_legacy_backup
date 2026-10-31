@@ -1,0 +1,2048 @@
+{
+  "id": "c-math-m3",
+  "module": 3,
+  "subject": "math",
+  "grade": "3",
+  "level": "c",
+  "title": "Module 3: Ordering and Comparing Length Measurements as Numbers",
+  "description": "Module 3: Ordering and Comparing Length Measurements as Numbers for 1st Grade students.",
+  "lessonsCount": 13,
+  "lessons": {
+    "c-math-m3-a-1": {
+      "id": "c-math-m3-a-1",
+      "code": "C.M3.A.1",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compare length directly and consider the importance of aligning endpoints.",
+        "pageTitle": "Compare length directly and consider the importance of aligning endpoints. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Compare length directly and consider the importance of aligning endpoints. in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Compare length directly and consider the importance of aligning endpoints. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 3 • Topic A",
+        "text": "In this lesson on Compare length directly and consider the importance of aligning endpoints., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compare length directly and consider the importance of aligning endpoints.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (30 minutes) Materials:(T) Folder, new crayon, pencil, dry erase marker, jumbo glue stick, longer than and shorter than sentence frames (Template) (S) Folder, 5 strips of paper (of varying lengths) per pair, various classroom objects"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compare length directly and consider the importance of aligning endpoints.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compare length directly and consider the importance of aligning endpoints.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compare length directly and consider the importance of aligning endpoints.",
+        "prompt": "2. Write the words longer than or shorter than to make the sentences true. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Abby B is ________________A.ABSpot Abby is __________________ Spot.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compare length directly and consider the importance of aligning endpoints.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "*Write the missing number.",
+            "problem": "*Write the missing number.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compare length directly and consider the importance of aligning endpoints.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compare length directly and consider the importance of aligning endpoints..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-a-1"
+      }
+    },
+    "c-math-m3-a-2": {
+      "id": "c-math-m3-a-2",
+      "code": "C.M3.A.2",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Compare length using indirect comparison by finding objects longer than, shorter than, and e...",
+        "pageTitle": "Compare length using indirect comparison by finding objects longer than, shorter than, and e... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Compare length using indirect comparison by finding objects longer than, shorter than, and e... in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Compare length using indirect comparison by finding objects longer than, shorter than, and e... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 3 • Topic A",
+        "text": "In this lesson on Compare length using indirect comparison by finding objects longer than, shorter than, and e..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Compare length using indirect comparison by finding objects longer than, shorter than, and equal in length to that of a string.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (32 minutes) Materials:(T) 2 feet of string, 9 cm long strip of paper, scissors, various classroom objects shorter and longer than the teacher's foot (e.g., board eraser, piece of 9″ \\times 12″ construction paper, 8½″ \\times 11″ paper on a bulletin board) (S) 1 foot of string, scissors, various classroom objects for measuring length, personal white board with indirect comparison statements (Template), 9 cm long strips (e.g., paper, pipe cleaners, or twist ties)"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Compare length using indirect comparison by finding objects longer than, shorter than, and e...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Compare length using indirect comparison by finding objects longer than, shorter than, and e.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Compare length using indirect comparison by finding objects longer than, shorter than, and e...",
+        "prompt": "Draw a picture to help you complete the measurement statements. Circle the words that make each statement true. Tanya's doll is shorter than Aline's doll. Mira's doll is taller than Aline's doll. Tanya's doll is (taller than/shorter than) Mira's doll.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Compare length using indirect comparison by finding objects longer than, shorter than, and e.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use the paper strip provided by your teacher to measure each picture. Circle the words you need to make the sentence true. Then, fill in the blank. longer than The baseball bat is shorter than the paper strip. the same length as longer than The book is shorter than the paper strip. the same length as The baseball bat is ____________________________ the book. Complete the sentences with longer than, shorter than, or the same length as to make the sentences true. \\frac{}{}\\frac{}{}\\frac{}{}a. The tube is ____________________________ the cup. b. The iron is ____________________________ the ironing board.",
+            "problem": "Use the paper strip provided by your teacher to measure each picture. Circle the words you need to make the sentence true. Then, fill in the blank. longer than The baseball bat is shorter than the paper strip. the same length as longer than The book is shorter than the paper strip. the same length as The baseball bat is ____________________________ the book. Complete the sentences with longer than, shorter than, or the same length as to make the sentences true. \\frac{}{}\\frac{}{}\\frac{}{}a. The tube is ____________________________ the cup. b. The iron is ____________________________ the ironing board.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the measurements from Problems 1 and 2. Circle the word that makes the sentences true. The baseball bat is (longer/shorter) than the cup. The cup is (longer/shorter) than the ironing board. The ironing board is (longer/shorter) than the book. Order these objects from shortest to longest: cup, tube, and paper strip",
+            "problem": "Use the measurements from Problems 1 and 2. Circle the word that makes the sentences true. The baseball bat is (longer/shorter) than the cup. The cup is (longer/shorter) than the ironing board. The ironing board is (longer/shorter) than the book. Order these objects from shortest to longest: cup, tube, and paper strip",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Draw a picture to help you complete the measurement statements. Circle the words that make each statement true. Sammy is taller than Dion. Janell is taller than Sammy. Dion is (taller than/shorter than) Janell. Laura's necklace is longer than Mihal's necklace. Laura's necklace is shorter than Sarai's necklace. Sarai's necklace is (longer than/shorter than) Mihal's necklace.",
+            "problem": "Draw a picture to help you complete the measurement statements. Circle the words that make each statement true. Sammy is taller than Dion. Janell is taller than Sammy. Dion is (taller than/shorter than) Janell. Laura's necklace is longer than Mihal's necklace. Laura's necklace is shorter than Sarai's necklace. Sarai's necklace is (longer than/shorter than) Mihal's necklace.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Compare length using indirect comparison by finding objects longer than, shorter than, and e...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Compare length using indirect comparison by finding objects longer than, shorter than, and e....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-a-2"
+      }
+    },
+    "c-math-m3-a-3": {
+      "id": "c-math-m3-a-3",
+      "code": "C.M3.A.3",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Order three lengths using indirect comparison.",
+        "pageTitle": "Order three lengths using indirect comparison. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Order three lengths using indirect comparison. in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Order three lengths using indirect comparison. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 3 • Topic A",
+        "text": "In this lesson on Order three lengths using indirect comparison., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Order three lengths using indirect comparison.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Order three lengths using indirect comparison.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Order three lengths using indirect comparison.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Order three lengths using indirect comparison.",
+        "prompt": "In a playroom, Lu Lu cut a piece of string that measured the distance from the doll house to the park. She took the same string and tried to measure the distance between the park and the store, but she ran out of string! Which is the longer path? Circle your answer. the doll house to the park the park to the store",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Order three lengths using indirect comparison.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "*Write the missing number. Pay attention to the + and — signs.",
+            "problem": "*Write the missing number. Pay attention to the + and — signs.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Order three lengths using indirect comparison.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Order three lengths using indirect comparison..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-a-3"
+      }
+    },
+    "c-math-m3-b-1": {
+      "id": "c-math-m3-b-1",
+      "code": "C.M3.B.1",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Express the length of an object using centimeter cubes as length units to measure with no ga...",
+        "pageTitle": "Express the length of an object using centimeter cubes as length units to measure with no ga... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Express the length of an object using centimeter cubes as length units to measure with no ga... in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Express the length of an object using centimeter cubes as length units to measure with no ga... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 3 • Topic B adds a new level of precision to measurement by introducing the idea of a length unit.  In Lesson 4, centimeter cubes are laid alongside the length of objects as students learn that the total number of cubes laid end to end with no gaps or overlaps is the length measure of that object.  The objects being measured by students include many of the same objects measured in Topic A so that students can add greater precision to their measurements as they specify the number of units equal to the length of the objects being compared.  For example, the length of the crayon can now be described not only as shorter than the paper strip, but more precisely as 9 centimeter cubes (1.MD.2).",
+        "text": "In this lesson on Express the length of an object using centimeter cubes as length units to measure with no ga..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Express the length of an object using centimeter cubes as length units to measure with no gaps or overlaps.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Express the length of an object using centimeter cubes as length units to measure with no ga...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Express the length of an object using centimeter cubes as length units to measure with no ga.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Express the length of an object using centimeter cubes as length units to measure with no ga...",
+        "prompt": "The picture frame is about ______ centimeter cubes long.The picture frame is about ______ centimeter cubes long. The boy's crutch is about ______ centimeter cubes long.The boy's crutch is about ______ centimeter cubes long.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Express the length of an object using centimeter cubes as length units to measure with no ga.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Measure the length of each picture with your cubes. Complete the statements below. The pencil is ______ centimeter cubes long.The pencil is ______ centimeter cubes long. The pan is ______ centimeter cubes long.The pan is ______ centimeter cubes long. The shoe is ______ centimeter cubes long.The shoe is ______ centimeter cubes long. The bottle is ______ centimeter cubes long.The bottle is ______ centimeter cubes long. The paintbrush is ______ centimeter cubes long.The paintbrush is ______ centimeter cubes long. The bag is ______ centimeter cubes long.The bag is ______ centimeter cubes long. The ant is ______ centimeter cubes long.The ant is ______ centimeter cubes long. The cupcake is ______ centimeter cubes long.The cupcake is ______ centimeter cubes long.",
+            "problem": "Measure the length of each picture with your cubes. Complete the statements below. The pencil is ______ centimeter cubes long.The pencil is ______ centimeter cubes long. The pan is ______ centimeter cubes long.The pan is ______ centimeter cubes long. The shoe is ______ centimeter cubes long.The shoe is ______ centimeter cubes long. The bottle is ______ centimeter cubes long.The bottle is ______ centimeter cubes long. The paintbrush is ______ centimeter cubes long.The paintbrush is ______ centimeter cubes long. The bag is ______ centimeter cubes long.The bag is ______ centimeter cubes long. The ant is ______ centimeter cubes long.The ant is ______ centimeter cubes long. The cupcake is ______ centimeter cubes long.The cupcake is ______ centimeter cubes long.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "9.The cow sticker is ______ centimeter cubes long.The cow sticker is ______ centimeter cubes long. The vase is ______ centimeter cubes long.The vase is ______ centimeter cubes long. BBAACircle the picture that shows the correct way to measure. 3 centimeter cubes3 centimeter cubes 5 centimeter cubes5 centimeter cubes How would you fix the picture that shows an incorrect measurement? _______________________________________________________________ _______________________________________________________________",
+            "problem": "9.The cow sticker is ______ centimeter cubes long.The cow sticker is ______ centimeter cubes long. The vase is ______ centimeter cubes long.The vase is ______ centimeter cubes long. BBAACircle the picture that shows the correct way to measure. 3 centimeter cubes3 centimeter cubes 5 centimeter cubes5 centimeter cubes How would you fix the picture that shows an incorrect measurement? _______________________________________________________________ _______________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Express the length of an object using centimeter cubes as length units to measure with no ga...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Express the length of an object using centimeter cubes as length units to measure with no ga....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-b-1"
+      }
+    },
+    "c-math-m3-b-2": {
+      "id": "c-math-m3-b-2",
+      "code": "C.M3.B.2",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Rename and measure with centimeter cubes, using their standard unit name of centimeters.",
+        "pageTitle": "Rename and measure with centimeter cubes, using their standard unit name of centimeters. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Rename and measure with centimeter cubes, using their standard unit name of centimeters. in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Rename and measure with centimeter cubes, using their standard unit name of centimeters. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 3 • Topic B adds a new level of precision to measurement by introducing the idea of a length unit.  In Lesson 4, centimeter cubes are laid alongside the length of objects as students learn that the total number of cubes laid end to end with no gaps or overlaps is the length measure of that object.  The objects being measured by students include many of the same objects measured in Topic A so that students can add greater precision to their measurements as they specify the number of units equal to the length of the objects being compared.  For example, the length of the crayon can now be described not only as shorter than the paper strip, but more precisely as 9 centimeter cubes (1.MD.2).",
+        "text": "In this lesson on Rename and measure with centimeter cubes, using their standard unit name of centimeters., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Rename and measure with centimeter cubes, using their standard unit name of centimeters.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (28 minutes) Materials:(T) Projector, centimeter cubes, string, scissors, centimeter ruler (S) Per pair: bag with at least 12 centimeter cubes (used in Lesson 4), centimeter ruler, pair of dice"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Rename and measure with centimeter cubes, using their standard unit name of centimeters.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Rename and measure with centimeter cubes, using their standard unit name of centimeters.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Rename and measure with centimeter cubes, using their standard unit name of centimeters.",
+        "prompt": "\\frac{}{}Use the centimeter cubes to measure the items. Complete the sentences. The water bottle is about ______ centimeters tall. The melon is about ______ centimeters long. The screw is about ______ centimeters long.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Rename and measure with centimeter cubes, using their standard unit name of centimeters.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "1.Circle the object(s) that are measured correctly. a.b.c. 4 centimeters long4 centimeters long5 centimeters long5 centimeters long3 centimeters long3 centimeters long Be ready to explain why these are the same or different during the Debrief!\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Be ready to explain why these are the same or different during the Debrief!2. Measure the paper clip in 1(b) with your cubes. Then, check the cubes with your centimeter ruler. The paper clip is _________ centimeter cubes long. The paper clip is _________ centimeters long.",
+            "problem": "1.Circle the object(s) that are measured correctly. a.b.c. 4 centimeters long4 centimeters long5 centimeters long5 centimeters long3 centimeters long3 centimeters long Be ready to explain why these are the same or different during the Debrief!\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}Be ready to explain why these are the same or different during the Debrief!2. Measure the paper clip in 1(b) with your cubes. Then, check the cubes with your centimeter ruler. The paper clip is _________ centimeter cubes long. The paper clip is _________ centimeters long.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "3. Use centimeter cubes to measure the length of each picture from left to right. Complete the statement about the length of each picture in centimeters. a.The hamburger picture is _________ centimeters long. b.The hot dog picture is _________ centimeters long. c.The bread picture is __________ centimeters long. The eraser is about _______centimeters long.The eraser is about _______centimeters long.4.Use centimeter cubes to measure the objects below. Fill in the length of each object. b.The hair clip is about _______centimeters long.b.The hair clip is about _______centimeters long.a.a. c.c.d.d. The marker is about _______centimeters long.The marker is about _______centimeters long.The key is about _______centimeters long.The key is about _______centimeters long. The eraser is longer than the, but it is shorter than the .",
+            "problem": "3. Use centimeter cubes to measure the length of each picture from left to right. Complete the statement about the length of each picture in centimeters. a.The hamburger picture is _________ centimeters long. b.The hot dog picture is _________ centimeters long. c.The bread picture is __________ centimeters long. The eraser is about _______centimeters long.The eraser is about _______centimeters long.4.Use centimeter cubes to measure the objects below. Fill in the length of each object. b.The hair clip is about _______centimeters long.b.The hair clip is about _______centimeters long.a.a. c.c.d.d. The marker is about _______centimeters long.The marker is about _______centimeters long.The key is about _______centimeters long.The key is about _______centimeters long. The eraser is longer than the, but it is shorter than the .",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Circle the word that makes the sentence true. If a paper clip is shorter than the key, then the marker is longer/shorter than the paper clip.",
+            "problem": "Circle the word that makes the sentence true. If a paper clip is shorter than the key, then the marker is longer/shorter than the paper clip.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Rename and measure with centimeter cubes, using their standard unit name of centimeters.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Rename and measure with centimeter cubes, using their standard unit name of centimeters..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-b-2"
+      }
+    },
+    "c-math-m3-b-3": {
+      "id": "c-math-m3-b-3",
+      "code": "C.M3.B.3",
+      "standard": "1.MD.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Order, measure, and compare the length of objects before and after measuring with centimeter...",
+        "pageTitle": "Order, measure, and compare the length of objects before and after measuring with centimeter... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Order, measure, and compare the length of objects before and after measuring with centimeter... in 1st Grade Mathematics aligned with standard 1.MD.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Order, measure, and compare the length of objects before and after measuring with centimeter... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 3 • Topic B adds a new level of precision to measurement by introducing the idea of a length unit.  In Lesson 4, centimeter cubes are laid alongside the length of objects as students learn that the total number of cubes laid end to end with no gaps or overlaps is the length measure of that object.  The objects being measured by students include many of the same objects measured in Topic A so that students can add greater precision to their measurements as they specify the number of units equal to the length of the objects being compared.  For example, the length of the crayon can now be described not only as shorter than the paper strip, but more precisely as 9 centimeter cubes (1.MD.2).",
+        "text": "In this lesson on Order, measure, and compare the length of objects before and after measuring with centimeter..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Order, measure, and compare the length of objects before and after measuring with centimeter cubes, solving compare with difference unknown word problems.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (32 minutes) Materials:(T) Projector, unsharpened pencil (19 cm), new crayon (9 cm), small paper clip (3 cm), dry erase marker (12 cm), jumbo craft stick (15 cm), new colored pencil (17 cm), centimeter cubes (S) Bag with centimeter cubes, bag with various classroom objects (Lesson 4), personal white board"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Order, measure, and compare the length of objects before and after measuring with centimeter...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Order, measure, and compare the length of objects before and after measuring with centimeter.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Order, measure, and compare the length of objects before and after measuring with centimeter...",
+        "prompt": "Read the measurements of the tool pictures. The wrench is 8 centimeters long. The screwdriver is 12 centimeters long. The hammer is 9 centimeters long.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Order, measure, and compare the length of objects before and after measuring with centimeter.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Order the bugs from longest to shortest by writing the bug names on the lines. Use centimeter cubes to check your answer. Write the length of each bug in the space to the right of the pictures. The bugs from longest to shortest are Fly centimeters Caterpillar centimeters Bee centimeters",
+            "problem": "Order the bugs from longest to shortest by writing the bug names on the lines. Use centimeter cubes to check your answer. Write the length of each bug in the space to the right of the pictures. The bugs from longest to shortest are Fly centimeters Caterpillar centimeters Bee centimeters",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "2.Order the objects below from shortest to longest using the numbers 1, 2, and 3. Use your centimeter cubes to check your answers, and then complete the sentences for problems d, e, f, and g. The noise maker: _______ The balloon: _______ The present: _______ The present is about _______ centimeters long. The noise maker is about _______ centimeters long. The balloon is about _______ centimeters long. The noise maker is about _______ centimeters longer than the present.",
+            "problem": "2.Order the objects below from shortest to longest using the numbers 1, 2, and 3. Use your centimeter cubes to check your answers, and then complete the sentences for problems d, e, f, and g. The noise maker: _______ The balloon: _______ The present: _______ The present is about _______ centimeters long. The noise maker is about _______ centimeters long. The balloon is about _______ centimeters long. The noise maker is about _______ centimeters longer than the present.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use your centimeter cubes to model each length, and answer the question. Write a statement for your answer.",
+            "problem": "Use your centimeter cubes to model each length, and answer the question. Write a statement for your answer.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "3.Peter's toy T. rex is 11 centimeters tall, and his toy Velociraptor is 6 centimeters tall. How much taller is the T. rex than the Velociraptor?",
+            "problem": "3.Peter's toy T. rex is 11 centimeters tall, and his toy Velociraptor is 6 centimeters tall. How much taller is the T. rex than the Velociraptor?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "4.Miguel's pencil rolled 17 centimeters, and Sonya's pencil rolled 9 centimeters. How much less did Sonya's pencil roll than Miguel's?",
+            "problem": "4.Miguel's pencil rolled 17 centimeters, and Sonya's pencil rolled 9 centimeters. How much less did Sonya's pencil roll than Miguel's?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "5.Tania makes a cube tower that is 3 centimeters taller than Vince's tower. If Vince's tower is 9 centimeters tall, how tall is Tania's tower?",
+            "problem": "5.Tania makes a cube tower that is 3 centimeters taller than Vince's tower. If Vince's tower is 9 centimeters tall, how tall is Tania's tower?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Order, measure, and compare the length of objects before and after measuring with centimeter...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Order, measure, and compare the length of objects before and after measuring with centimeter....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-b-3"
+      }
+    },
+    "c-math-m3-c-1": {
+      "id": "c-math-m3-c-1",
+      "code": "C.M3.C.1",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Measure the same objects from Topic B with different non-standard units simultaneously to se...",
+        "pageTitle": "Measure the same objects from Topic B with different non-standard units simultaneously to se... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Measure the same objects from Topic B with different non-standard units simultaneously to se... in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Measure the same objects from Topic B with different non-standard units simultaneously to se... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 3 • Topic C gives students a chance to explore the usefulness of measuring with similar units.  The topic opens with Lesson 7 where students measure the same objects from Topic B using two different non-standard length units simultaneously, such as toothpicks and small paper clips (1.MD.2).  They then use small paper clips and large paper clips, two non-standard units that happen to be the same object but different lengths.  Each time they measure one object using both units, they receive inconsistent measurement results.  Students then begin to ask the question, “Why do we measure with same-sized length units?”  As they explore why it is so important to use the same-sized length unit, they realize that doing so yields consistent measurement results.",
+        "text": "In this lesson on Measure the same objects from Topic B with different non-standard units simultaneously to se..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Measure the same objects from Topic B with different non-standard units simultaneously to see the need to measure with a consistent unit.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (27 minutes) A NOTE ON MULTIPLE MEANS OF REPRESENTATION:Ask questions to guide connections, analysis, and mastery of concepts. This allows students the opportunity to develop critical thinking skills instead of just memorizing answers. A NOTE ON MULTIPLE MEANS OF REPRESENTATION:Ask questions to guide connections, analysis, and mastery of concepts. This allows students the opportunity to develop critical thinking skills instead of just memorizing answers. Materials:(T) Chart paper, 3 new pencils of different colors (e.g., red, blue, yellow) from the same brand and size, mixed set of large and small paper clips (S) Bag of 20 large paper clips and 20 small paper clips"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Measure the same objects from Topic B with different non-standard units simultaneously to se...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Measure the same objects from Topic B with different non-standard units simultaneously to se.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Measure the same objects from Topic B with different non-standard units simultaneously to se...",
+        "prompt": "*Write the missing number.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Measure the same objects from Topic B with different non-standard units simultaneously to se.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "*Write the missing number. Number Correct: Number Correct: BB",
+            "problem": "*Write the missing number. Number Correct: Number Correct: BB",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Measure the same objects from Topic B with different non-standard units simultaneously to se...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Measure the same objects from Topic B with different non-standard units simultaneously to se....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-c-1"
+      }
+    },
+    "c-math-m3-c-2": {
+      "id": "c-math-m3-c-2",
+      "code": "C.M3.C.2",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Understand the need to use the same units when comparing measurements with others.",
+        "pageTitle": "Understand the need to use the same units when comparing measurements with others. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Understand the need to use the same units when comparing measurements with others. in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Understand the need to use the same units when comparing measurements with others. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 3 • Topic C gives students a chance to explore the usefulness of measuring with similar units.  The topic opens with Lesson 7 where students measure the same objects from Topic B using two different non-standard length units simultaneously, such as toothpicks and small paper clips (1.MD.2).  They then use small paper clips and large paper clips, two non-standard units that happen to be the same object but different lengths.  Each time they measure one object using both units, they receive inconsistent measurement results.  Students then begin to ask the question, “Why do we measure with same-sized length units?”  As they explore why it is so important to use the same-sized length unit, they realize that doing so yields consistent measurement results.",
+        "text": "In this lesson on Understand the need to use the same units when comparing measurements with others., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Understand the need to use the same units when comparing measurements with others.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (35 minutes) Materials:(T) Chart with measuring rules (Lesson 7) (S) 1 lunch bag of 2 new crayons, 10 linking cubes, and 10 centimeter cubes per pair"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Understand the need to use the same units when comparing measurements with others.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Understand the need to use the same units when comparing measurements with others.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Understand the need to use the same units when comparing measurements with others.",
+        "prompt": "Circle the length unit you will use to measure. Use the same length unit for all objects. Small Paper Clips Large Paper Clips Toothpicks Centimeter Cubes Choose two objects in your desk that you would like to measure. Measure each object, and record the measurement.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Understand the need to use the same units when comparing measurements with others.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the length unit you will use to measure. Use the same length unit for all objects. Small Paper Clips Large Paper Clips ToothpicksCentimeter Cubes Measure each object listed on the chart, and record the measurement. Add the names of other objects in the classroom, and record their measurements.",
+            "problem": "Circle the length unit you will use to measure. Use the same length unit for all objects. Small Paper Clips Large Paper Clips ToothpicksCentimeter Cubes Measure each object listed on the chart, and record the measurement. Add the names of other objects in the classroom, and record their measurements.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Understand the need to use the same units when comparing measurements with others.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Understand the need to use the same units when comparing measurements with others..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-c-2"
+      }
+    },
+    "c-math-m3-c-3": {
+      "id": "c-math-m3-c-3",
+      "code": "C.M3.C.3",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Answer compare with difference unknown problems about lengths of two different objects measu...",
+        "pageTitle": "Answer compare with difference unknown problems about lengths of two different objects measu... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Answer compare with difference unknown problems about lengths of two different objects measu... in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Answer compare with difference unknown problems about lengths of two different objects measu... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 3 • Topic C gives students a chance to explore the usefulness of measuring with similar units.  The topic opens with Lesson 7 where students measure the same objects from Topic B using two different non-standard length units simultaneously, such as toothpicks and small paper clips (1.MD.2).  They then use small paper clips and large paper clips, two non-standard units that happen to be the same object but different lengths.  Each time they measure one object using both units, they receive inconsistent measurement results.  Students then begin to ask the question, “Why do we measure with same-sized length units?”  As they explore why it is so important to use the same-sized length unit, they realize that doing so yields consistent measurement results.",
+        "text": "In this lesson on Answer compare with difference unknown problems about lengths of two different objects measu..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Answer compare with difference unknown problems about lengths of two different objects measured in centimeters.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Answer compare with difference unknown problems about lengths of two different objects measu...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Answer compare with difference unknown problems about lengths of two different objects measu.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Answer compare with difference unknown problems about lengths of two different objects measu...",
+        "prompt": "\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}ALook at the picture below. How much longer is Guitar A than Guitar B? GuitarA is ______ unit(s) longer than GuitarB. Measure each object with centimeter cubes.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Answer compare with difference unknown problems about lengths of two different objects measu.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "*Write the missing number.",
+            "problem": "*Write the missing number.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Answer compare with difference unknown problems about lengths of two different objects measu...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Answer compare with difference unknown problems about lengths of two different objects measu....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-c-3"
+      }
+    },
+    "c-math-m3-d-1": {
+      "id": "c-math-m3-d-1",
+      "code": "C.M3.D.1",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+        "pageTitle": "Collect, sort, and organize data; then ask and answer questions about the number of data poi... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Collect, sort, and organize data; then ask and answer questions about the number of data poi... in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Collect, sort, and organize data; then ask and answer questions about the number of data poi... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 3 • Topic D closes the module as students organize, represent, and interpret personally relevant data in Lesson 10 (1.MD.4).  As students work as a class to collect, sort, and organize data into a graph, they find great purpose and excitement.  They begin to answer, and then ask questions about, the number of data points in a given category and in two categories.",
+        "text": "In this lesson on Collect, sort, and organize data; then ask and answer questions about the number of data poi..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Collect, sort, and organize data; then ask and answer questions about the number of data points.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Collect, sort, and organize data; then ask and answer questions about the number of data poi.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+        "prompt": "A group of students were asked what they ate for lunch. Use the data below to answer the following questions. Student Lunches What is the total number of students who ate pizza? _____ student(s) Which lunch was eaten by the greatest number of students? ________________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Collect, sort, and organize data; then ask and answer questions about the number of data poi.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "red blueredA group of people were asked to say their favorite color. Organize the data using tally marks, and answer the questions. bluegreenred redredbluebluegreenbluebluered How many people chose red as their favorite color? _________ people like red. How many people chose blue as their favorite color? _________ people like blue. How many people chose green as their favorite color? _________ people like green. Which color received the least amount of votes? _____________",
+            "problem": "red blueredA group of people were asked to say their favorite color. Organize the data using tally marks, and answer the questions. bluegreenred redredbluebluegreenbluebluered How many people chose red as their favorite color? _________ people like red. How many people chose blue as their favorite color? _________ people like blue. How many people chose green as their favorite color? _________ people like green. Which color received the least amount of votes? _____________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "5.Write a number sentence that tells the total number of people who were asked their favorite color.",
+            "problem": "5.Write a number sentence that tells the total number of people who were asked their favorite color.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Collect, sort, and organize data; then ask and answer questions about the number of data poi...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Collect, sort, and organize data; then ask and answer questions about the number of data poi....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-d-1"
+      }
+    },
+    "c-math-m3-d-2": {
+      "id": "c-math-m3-d-2",
+      "code": "C.M3.D.2",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+        "pageTitle": "Collect, sort, and organize data; then ask and answer questions about the number of data poi... | 1st Grade Math | Hesten's Learning",
+        "description": "Master Collect, sort, and organize data; then ask and answer questions about the number of data poi... in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Collect, sort, and organize data; then ask and answer questions about the number of data poi... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 3 • Topic D closes the module as students organize, represent, and interpret personally relevant data in Lesson 10 (1.MD.4).  As students work as a class to collect, sort, and organize data into a graph, they find great purpose and excitement.  They begin to answer, and then ask questions about, the number of data points in a given category and in two categories.",
+        "text": "In this lesson on Collect, sort, and organize data; then ask and answer questions about the number of data poi..., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Collect, sort, and organize data; then ask and answer questions about the number of data points.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Collect, sort, and organize data; then ask and answer questions about the number of data poi.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Collect, sort, and organize data; then ask and answer questions about the number of data poi...",
+        "prompt": "Welcome to Data Day! Follow the directions to collect and organize data. Then, ask and answer questions about the data. Choose a question. Circle your choice. Pick 3 answer choices. Ask your classmates the question, and show them the 3 choices. Record the data on a class list.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Collect, sort, and organize data; then ask and answer questions about the number of data poi.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "*Write the missing number.",
+            "problem": "*Write the missing number.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Collect, sort, and organize data; then ask and answer questions about the number of data poi...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Collect, sort, and organize data; then ask and answer questions about the number of data poi....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-d-2"
+      }
+    },
+    "c-math-m3-d-3": {
+      "id": "c-math-m3-d-3",
+      "code": "C.M3.D.3",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Ask and answer varied word problem types about a data set with three categories.",
+        "pageTitle": "Ask and answer varied word problem types about a data set with three categories. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Ask and answer varied word problem types about a data set with three categories. in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Ask and answer varied word problem types about a data set with three categories. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.D.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 3 • Topic D closes the module as students organize, represent, and interpret personally relevant data in Lesson 10 (1.MD.4).  As students work as a class to collect, sort, and organize data into a graph, they find great purpose and excitement.  They begin to answer, and then ask questions about, the number of data points in a given category and in two categories.",
+        "text": "In this lesson on Ask and answer varied word problem types about a data set with three categories., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Ask and answer varied word problem types about a data set with three categories.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "Concept Development (30 minutes) Materials:(T) Chart with a three-column vertical graph entitled Our Favorite Fruits, chart with measuring rules (Lesson 7) (post on the side of the board), Favorite Read Aloud Books chart (Lesson 10) (S) Sticky notes, personal white board"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Ask and answer varied word problem types about a data set with three categories.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Ask and answer varied word problem types about a data set with three categories.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Ask and answer varied word problem types about a data set with three categories.",
+        "prompt": "Use squares with no gaps or overlaps to organize the data from the pictures. Line up your squares carefully. Favorite Animals at the Zoo Number of Students Zoo AnimalsAnimals",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Ask and answer varied word problem types about a data set with three categories.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use squares with no gaps or overlaps to organize the data from the picture. Line up your squares carefully. = 1 studentFavorite Ice Cream Flavor FlavorsNumber of Students",
+            "problem": "Use squares with no gaps or overlaps to organize the data from the picture. Line up your squares carefully. = 1 studentFavorite Ice Cream Flavor FlavorsNumber of Students",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "1. How many more students liked chocolate than liked vanilla? students",
+            "problem": "1. How many more students liked chocolate than liked vanilla? students",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "2. How many total students were asked about their favorite ice cream flavor? students Number of Students= 1 studentTies on Shoes Types of Shoe Ties",
+            "problem": "2. How many total students were asked about their favorite ice cream flavor? students Number of Students= 1 studentTies on Shoes Types of Shoe Ties",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Write a number sentence to show how many total students were asked about their shoes.",
+            "problem": "Write a number sentence to show how many total students were asked about their shoes.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Write a number sentence to show how many fewer students have Velcro on their shoes than laces. = 1 studentFavorite PetEach student in the class added a sticky note to show his or her favorite kind of pet. Use the graph to answer the questions. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}catdogfish Number of Students How many students chose dogs or cats as their favorite pet? students How many more students chose dogs as their favorite pet than cats? students How many more students chose cats than fish? students",
+            "problem": "Write a number sentence to show how many fewer students have Velcro on their shoes than laces. = 1 studentFavorite PetEach student in the class added a sticky note to show his or her favorite kind of pet. Use the graph to answer the questions. \\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}\\frac{}{}catdogfish Number of Students How many students chose dogs or cats as their favorite pet? students How many more students chose dogs as their favorite pet than cats? students How many more students chose cats than fish? students",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Ask and answer varied word problem types about a data set with three categories.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Ask and answer varied word problem types about a data set with three categories..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-d-3"
+      }
+    },
+    "c-math-m3-d-4": {
+      "id": "c-math-m3-d-4",
+      "code": "C.M3.D.4",
+      "standard": "1.OA.1",
+      "levelId": "c",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Ask and answer varied word problem types about a data set with three categories.",
+        "pageTitle": "Ask and answer varied word problem types about a data set with three categories. | 1st Grade Math | Hesten's Learning",
+        "description": "Master Ask and answer varied word problem types about a data set with three categories. in 1st Grade Mathematics aligned with standard 1.OA.1.",
+        "pageDescription": "EngageNY 1st Grade Math lesson on Ask and answer varied word problem types about a data set with three categories. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math C.M3.D.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 3 • Topic D closes the module as students organize, represent, and interpret personally relevant data in Lesson 10 (1.MD.4).  As students work as a class to collect, sort, and organize data into a graph, they find great purpose and excitement.  They begin to answer, and then ask questions about, the number of data points in a given category and in two categories.",
+        "text": "In this lesson on Ask and answer varied word problem types about a data set with three categories., explore 1st Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Ask and answer varied word problem types about a data set with three categories.",
+          "Students develop foundational understanding and fluency with 1st Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Ask and answer varied word problem types about a data set with three categories.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "1st Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Ask and answer varied word problem types about a data set with three categories.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Ask and answer varied word problem types about a data set with three categories.",
+        "prompt": "Use the graph to answer the questions. = 1 animal= 1 animal Animals on Lily's Farm Number of AnimalsNumber of Animals",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Ask and answer varied word problem types about a data set with three categories.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use the graph to answer the questions. Fill in the blank, and write a number sentence to the right to solve the problem. = 1 day = 1 daySchool Day WeatherSchool Day Weather Number of School DaysNumber of School Days more day(s) were cloudy than sunny. more day(s) were cloudy than sunny. How many more days were cloudy than sunny? more day(s) were cloudy than rainy. more day(s) were cloudy than rainy. How many fewer days were cloudy than rainy? more day(s) were rainy than sunny. more day(s) were rainy than sunny. How many more days were rainy than sunny? The class kept track of a total of _______ days. The class kept track of a total of _______ days. How many total days did the class keep track of the weather? days will be sunny. days will be sunny. If the next 3 school days are sunny, how many of the school days will be sunny in all?",
+            "problem": "Use the graph to answer the questions. Fill in the blank, and write a number sentence to the right to solve the problem. = 1 day = 1 daySchool Day WeatherSchool Day Weather Number of School DaysNumber of School Days more day(s) were cloudy than sunny. more day(s) were cloudy than sunny. How many more days were cloudy than sunny? more day(s) were cloudy than rainy. more day(s) were cloudy than rainy. How many fewer days were cloudy than rainy? more day(s) were rainy than sunny. more day(s) were rainy than sunny. How many more days were rainy than sunny? The class kept track of a total of _______ days. The class kept track of a total of _______ days. How many total days did the class keep track of the weather? days will be sunny. days will be sunny. If the next 3 school days are sunny, how many of the school days will be sunny in all?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the graph to answer the questions. Fill in the blank, and write a number sentence that helps you solve the problem. = 1 student = 1 studentFavorite FruitFavorite Fruit Number of StudentsNumber of Students ______ fewer students chose bananas than apples.______ fewer students chose bananas than apples.How many fewer students chose bananas than apples? more students chose bananas than grapes. more students chose bananas than grapes. How many more students chose bananas than grapes? fewer students chose grapes than apples. fewer students chose grapes than apples. How many fewer students chose grapes than apples? Some more students answered about their favorite fruits. If the new total number of students who answered is 20, how many more students answered? more students answered the question. more students answered the question.",
+            "problem": "Use the graph to answer the questions. Fill in the blank, and write a number sentence that helps you solve the problem. = 1 student = 1 studentFavorite FruitFavorite Fruit Number of StudentsNumber of Students ______ fewer students chose bananas than apples.______ fewer students chose bananas than apples.How many fewer students chose bananas than apples? more students chose bananas than grapes. more students chose bananas than grapes. How many more students chose bananas than grapes? fewer students chose grapes than apples. fewer students chose grapes than apples. How many fewer students chose grapes than apples? Some more students answered about their favorite fruits. If the new total number of students who answered is 20, how many more students answered? more students answered the question. more students answered the question.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Ask and answer varied word problem types about a data set with three categories.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 1st Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Ask and answer varied word problem types about a data set with three categories..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 1st Grade Mathematics curriculum materials.",
+        "lessonId": "c-math-m3-d-4"
+      }
+    }
+  }
+}

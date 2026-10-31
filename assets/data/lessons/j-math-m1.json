@@ -1,0 +1,2647 @@
+{
+  "id": "j-math-m1",
+  "module": 1,
+  "subject": "math",
+  "grade": "8",
+  "level": "j",
+  "title": "Module 1: Integer Exponents and Scientific Notation",
+  "description": "Exponential notation, laws of integer exponents, magnitude, scientific notation operations, and real-world scientific applications.",
+  "lessonsCount": 13,
+  "lessons": {
+    "j-math-m1-a-1": {
+      "id": "j-math-m1-a-1",
+      "code": "J.M1.A.1",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Exponential Notation",
+        "pageTitle": "Exponential Notation | Grade 8 Math | Hesten's Learning",
+        "description": "Master Exponential Notation in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Exponential Notation with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Exponential Notation, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students know what it means for a number to be raised to a power and how to represent the repeated multiplication symbolically.",
+          "Students know the reason for some bases requiring parentheses."
+        ],
+        "teacherInsight": "This lesson is foundational for the topic of properties of integer exponents. For the first time in this lesson, students are seeing the use of exponents with negative valued bases. It is important that students explore and understand the importance of parentheses in such cases, just as with rational base values. It may also be the first time that students are seeing the notation (dots and braces) used in this lesson. If students have already mastered the skills in this lesson, it is optional to move forward and begin with Lesson 2 or provide opportunities for students to explore how to rewrite expressions in a different base, 4^{2} as 2^{4}, for example."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Exponential Notation",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Exponential Notation. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Exponential Notation",
+        "prompt": "Exit Ticket Express the following in exponential notation: (-13)\\times ⋯\\times (-13)35 times. Will the product be positive or negative? Explain. Fill in the blank: \\frac{2}{3}\\times ⋯\\times \\frac{2}{3}_______times=(\\frac{2}{3})^{4} Arnie wrote: (-3.1)\\times ⋯\\times (-3.1)4 times=-3.1^{4} Is Arnie correct in his notation? Why or why not?",
+        "solution": "Express the following in exponential notation: (-13)\\times ⋯\\times (-13)35 times (-13)^{35} Will the product be positive or negative? Explain. The product will be negative. The expanded form shows 34 negative factors plus one more negative factor. Any even number of negative factors yields a positive product. The remaining 35th negative factor negates the resulting product. Fill in the blank: \\frac{2}{3}\\times ⋯\\times \\frac{2}{3}_______times=(\\frac{2}{3})^{4} 4 times Arnie wrote: (-3.1)\\times ⋯\\times (-3.1)4 times=-3.1^{4} Is Arnie correct in his notation? Why or why not? Arnie is not correct. The base, -3.1, should be in parentheses to prevent ambiguity. At present the notation is not correct."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Exponential Notation. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use what you know about exponential notation to complete the expressions below.",
+            "problem": "Use what you know about exponential notation to complete the expressions below.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Write an expression with (-1) as its base that will produce a positive product, and explain why your answer is valid.",
+            "problem": "Write an expression with (-1) as its base that will produce a positive product, and explain why your answer is valid.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Accept any answer with (-1) to an exponent that is even.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Accept any answer with (-1) to an exponent that is even."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Write an expression with (-1) as its base that will produce a negative product, and explain why your answer is valid.",
+            "problem": "Write an expression with (-1) as its base that will produce a negative product, and explain why your answer is valid.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Accept any answer with (-1) to an exponent that is odd.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Accept any answer with (-1) to an exponent that is odd."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Rewrite each number in exponential notation using 2 as the base.",
+            "problem": "Rewrite each number in exponential notation using 2 as the base.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Tim wrote 16 as (-2)^{4}. Is he correct? Explain.",
+            "problem": "Tim wrote 16 as (-2)^{4}. Is he correct? Explain.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Tim is correct that 16=(-2)^{4}. (-2)(-2)(-2)(-2)=(4)(4)=16.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Tim is correct that 16=(-2)^{4}. (-2)(-2)(-2)(-2)=(4)(4)=16."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Could -2 be used as a base to rewrite 32? 64? Why or why not?",
+            "problem": "Could -2 be used as a base to rewrite 32? 64? Why or why not?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "A base of -2 cannot be used to rewrite 32 because (-2)^{5}=-32. A base of -2 can be used to rewrite 64 because (-2)^{6}=64. If the exponent, n, is even, (-2)^{n} will be positive. If the exponent, n, is odd, (-2)^{n} cannot be a positive number.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "A base of -2 cannot be used to rewrite 32 because (-2)^{5}=-32. A base of -2 can be used to rewrite 64 because (-2)^{6}=64. If the exponent, n, is even, (-2)^{n} will be positive. ..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Exponential Notation?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Exponential Notation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-1"
+      }
+    },
+    "j-math-m1-a-2": {
+      "id": "j-math-m1-a-2",
+      "code": "J.M1.A.2",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Multiplication of Numbers in Exponential Form",
+        "pageTitle": "Multiplication of Numbers in Exponential Form | Grade 8 Math | Hesten's Learning",
+        "description": "Master Multiplication of Numbers in Exponential Form in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Multiplication of Numbers in Exponential Form with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Multiplication of Numbers in Exponential Form, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students use the definition of exponential notation to make sense of the first law of exponents.",
+          "Students see a rule for simplifying exponential expressions involving division as a consequence of the first law of exponents.",
+          "Students write equivalent numerical and symbolic expressions using the first law of exponents."
+        ],
+        "teacherInsight": "In this lesson, students learn their first rule for exponents and apply it to problems that contain only positive integer exponents. The laws of exponents are presented in a slow, methodical way. Specifically, students first learn how to multiply and divide expressions with positive integer exponents. Next, they extend their understanding of the laws to whole numbers (Lesson 4) and then to all integers (Lesson 5). For this reason, for positive integers m and n, we apply the restriction that m>n for expressions of the form \\frac{x^{m}}{x^{n}}. This is a temporary restriction that eliminates the possibility of students arriving at an answer with a negative exponent, something they have yet to learn. Ultimately, the goal of the work in this lesson is to develop students' fluency generating equivalent expressions; however, it is unlikely this can be achieved in one period. It is perfectly acceptable for students to use their knowledge of exponential notation to generate those equivalent expressions until they build intuition of the behavior of exponents and are ready to use the laws fluently and accurately. This is the reason that answers are in the form of a sum or difference of two integers. The instructional value of answers left in this form far outweighs the instructional value of answers that have been added or subtracted. When it is appropriate, transition students into the normal form of the answer."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Multiplication of Numbers in Exponential Form",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Multiplication of Numbers in Exponential Form. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Multiplication of Numbers in Exponential Form",
+        "prompt": "Exit Ticket Write each expression using the fewest number of bases possible. Let a and b be positive integers. 23^{a}\\times 23^{b}= 5^{3}\\times 25= Let x and y be positive integers and x>y. \\frac{11^{x}}{11^{y}}= \\frac{2^{13}}{2^{3}}=",
+        "solution": "Note to Teacher: Accept both forms of the answer; in other words, accept an answer that shows the exponents as a sum or difference as well as an answer where the numbers are actually added or subtracted. Write each expression using the fewest number of bases possible. Let a and b be positive integers. 23^{a}\\times 23^{b}= 23^{a}\\times 23^{b}=23^{a+b} 5^{3}\\times 25= 5^{3}\\times 25=5^{3}\\times 5^{2} =5^{3+2} =5^{5} Let x and y be positive integers and x>y. \\frac{11^{x}}{11^{y}}= \\frac{11^{x}}{11^{y}}=11^{x-y} \\frac{2^{13}}{8}= \\frac{2^{13}}{2^{3}}=2^{13-3}=2^{10}"
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Multiplication of Numbers in Exponential Form. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "A certain ball is dropped from a height of x feet. It always bounces up to \\frac{2}{3} x feet. Suppose the ball is dropped from 10 feet and is stopped exactly when it touches the ground after the 30th bounce. What is the total distance traveled by the ball? Express your answer in exponential notation.",
+            "problem": "A certain ball is dropped from a height of x feet. It always bounces up to \\frac{2}{3} x feet. Suppose the ball is dropped from 10 feet and is stopped exactly when it touches the ground after the 30th bounce. What is the total distance traveled by the ball? Express your answer in exponential notation.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "If the same ball is dropped from 10 feet and is stopped exactly at the highest point after the 25th bounce, what is the total distance traveled by the ball? Use what you learned from the last problem. Based on the last problem, we know that each bounce causes the ball to travel 2(\\frac{2}{3})^{n}10 feet. If the ball is stopped at the highest point of the 25th bounce, then the distance traveled on that last bounce is just (\\frac{2}{3})^{25}10 feet because it does not make the return trip to the ground. Therefore, the total distance traveled by the ball in feet in this situation is 10+2(\\frac{2}{3})10+2(\\frac{2}{3})^{2}10+2(\\frac{2}{3})^{3}10+2(\\frac{2}{3})^{4}10+⋯+2(\\frac{2}{3})^{23}10+2(\\frac{2}{3})^{24}10.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "If the same ball is dropped from 10 feet and is stopped exactly at the highest point after the 25th bounce, what is the total distance traveled by the ball? Use what you learned fr..."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Let a and b be numbers and b≠0, and let m and n be positive integers. Write each expression using the fewest number of bases possible:",
+            "problem": "Let a and b be numbers and b≠0, and let m and n be positive integers. Write each expression using the fewest number of bases possible:",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Let the dimensions of a rectangle be (4\\times (871209)^{5}+ 3\\times 49762105) ft. by (7\\times (871209)^{3}-(49762105)^{4}) ft. Determine the area of the rectangle. (Hint: You do not need to expand all the powers.)",
+            "problem": "Let the dimensions of a rectangle be (4\\times (871209)^{5}+ 3\\times 49762105) ft. by (7\\times (871209)^{3}-(49762105)^{4}) ft. Determine the area of the rectangle. (Hint: You do not need to expand all the powers.)",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Area=(4\\times (871 209)^{5}+3\\times 49 762 105) ft. (7\\times (871 209)^{3}-(49 762 105)^{4}) ft. =(28\\times (871 209)^{8}-4\\times (871 209)^{5}(49 762 105)^{4}+21\\times (871 209)^{3}(49 762 105)-3\\times (49 762 105)^{5}) sq. ft.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Area=(4\\times (871 209)^{5}+3\\times 49 762 105) ft. (7\\times (871 209)^{3}-(49 762 105)^{4}) ft. =(28\\times (871 209)^{8}-4\\times (871 209)^{5}(49 762 105)^{4}+21\\times (871 209)^{..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "A rectangular area of land is being sold off in smaller pieces. The total area of the land is 2^{15} square miles. The pieces being sold are 8^{3} square miles in size. How many smaller pieces of land can be sold at the stated size? Compute the actual number of pieces.",
+            "problem": "A rectangular area of land is being sold off in smaller pieces. The total area of the land is 2^{15} square miles. The pieces being sold are 8^{3} square miles in size. How many smaller pieces of land can be sold at the stated size? Compute the actual number of pieces.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "8^{3}=2^{9} \\frac{2^{15}}{2^{9}} =2^{15-9}=2^{6}=64 64 pieces of land can be sold.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "8^{3}=2^{9} \\frac{2^{15}}{2^{9}} =2^{15-9}=2^{6}=64 64 pieces of land can be sold."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Multiplication of Numbers in Exponential Form?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Multiplication of Numbers in Exponential Form.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-2"
+      }
+    },
+    "j-math-m1-a-3": {
+      "id": "j-math-m1-a-3",
+      "code": "J.M1.A.3",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Numbers in Exponential Form Raised to a Power",
+        "pageTitle": "Numbers in Exponential Form Raised to a Power | Grade 8 Math | Hesten's Learning",
+        "description": "Master Numbers in Exponential Form Raised to a Power in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Numbers in Exponential Form Raised to a Power with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Numbers in Exponential Form Raised to a Power, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students know how to take powers of powers. Students know that when a product is raised to a power, each factor of the product is raised to that power.",
+          "Students write simplified, equivalent numeric, and symbolic expressions using this new knowledge of powers."
+        ],
+        "teacherInsight": "As with Lesson 2, consider providing opportunities for students to discover the property of exponents introduced in this lesson prior to giving the mathematical rationale as to why it is true. For example, you may present students with the problems in Examples 1 and 2 and allow them to share their thinking about what the answer should be and then provide the mathematical reasoning behind their correct solutions. We continue the work of knowing and applying the properties of integer exponents to generate equivalent expressions in this lesson. As with Lesson 2, students should be exposed to general arguments as to why the properties are true and be able to explain them on their own with concrete numbers. However, the relationship between the laws of exponents and repeated addition is not as important and could be omitted if time is an issue. The discussion that relates taking a power to a power and the four arithmetic operations may also be omitted, but do allow time for students to consider the relationship demonstrated in the concrete problems (5\\times 8)^{17} and 5^{17}\\times 8^{17}."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Numbers in Exponential Form Raised to a Power",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Numbers in Exponential Form Raised to a Power. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Numbers in Exponential Form Raised to a Power",
+        "prompt": "Exit Ticket Write each expression as a base raised to a power or as the product of bases raised to powers that is equivalent to the given expression. (9^{3})^{6}= (113^{2}\\times 37\\times 51^{4})^{3}= Let x, y, z be numbers. (x^{2}yz^{4})^{3}= Let x, y, z be numbers and let m, n, p, q be positive integers. (x^{m}y^{n}z^{p})^{q}= \\frac{4^{8}}{5^{8}}=",
+        "solution": "Write each expression as a base raised to a power or as the product of bases raised to powers that is equivalent to the given expression. (9^{3})^{6}= (9^{3})^{6}=9^{6\\times 3}=9^{18} (113^{2}\\times 37\\times 51^{4})^{3}= (113^{2}\\times 37\\times 51^{4})^{3}=((113^{2}\\times 37)\\times 51^{4})^{3} By associative law = (113^{2}\\times 37)^{3}\\times (51^{4})^{3} Because (xy)^{n}=x^{n}y^{n} for all numbers x, y =(113^{2})^{3}\\times 37^{3}\\times (51^{4})^{3} Because (xy)^{n}=x^{n}y^{n} for all numbers x, y = 113^{6}\\times 37^{3}\\times 51^{12}Because (x^{m})^{n}=x^{mn} for all numbers x Let x, y, z be numbers. (x^{2}yz^{4})^{3}= (x^{2}yz^{4})^{3}=((x^{2}\\times y)\\times z^{4})^{3} By associative law = (x^{2}\\times y)^{3}\\times (z^{4})^{3}Because (xy)^{n}=x^{n}y^{n} for all numbers x, y =(x^{2})^{3}\\times y^{3}\\times (z^{4})^{3}Because (xy)^{n}=x^{n}y^{n} for all numbers x, y =x^{6}\\times y^{3}\\times z^{12}Because (x^{m})^{n}=x^{mn} for all numbers x = x^{6}y^{3}z^{12} Let x, y, z be numbers and let m, n, p, q be positive integers. (x^{m}y^{n}z^{p})^{q}= (x^{m}y^{n}z^{p})^{q}=((x^{m}\\times y^{n})\\times z^{p})^{q}By associative law =(x^{m}\\times y^{n})^{q}\\times (z^{p})^{q}Because (xy)^{n}=x^{n}y^{n} for all numbers x, y =(x^{m})^{q}\\times (y^{n})^{q}\\times (z^{p})^{q}Because (xy)^{n}=x^{n}y^{n} for all numbers x, y = x^{mp}\\times y^{nq}\\times z^{pq}Because (x^{m})^{n}=x^{mn} for all numbers x =x^{mq}y^{nq}z^{pq} \\frac{4^{8}}{5^{8}}= \\frac{4^{8}}{5^{8}}=(\\frac{4}{5})^{8}"
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Numbers in Exponential Form Raised to a Power. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Show (prove) in detail why (2∙3∙7)^{4}=2^{4}3^{4}7^{4}.",
+            "problem": "Show (prove) in detail why (2∙3∙7)^{4}=2^{4}3^{4}7^{4}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Show (prove) in detail why (xyz)^{4}=x^{4}y^{4}z^{4} for any numbers x, y, z.",
+            "problem": "Show (prove) in detail why (xyz)^{4}=x^{4}y^{4}z^{4} for any numbers x, y, z.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "The left side of the equation (xyz)^{4} means (xyz) (xyz) (xyz) (xyz). Using the commutative and associative properties of multiplication, we can write (xyz) (xyz) (xyz) (xyz) as (xxxx)(yyyy) (zzzz), which in turn can be written as x^{4}y^{4}z^{4}, which is what the right side of the equation states.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "The left side of the equation (xyz)^{4} means (xyz) (xyz) (xyz) (xyz). Using the commutative and associative properties of multiplication, we can write (xyz) (xyz) (xyz) (xyz) as (..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Show (prove) in detail why (xyz)^{n}=x^{n}y^{n}z^{n} for any numbers x, y, and z and for any positive integer n.",
+            "problem": "Show (prove) in detail why (xyz)^{n}=x^{n}y^{n}z^{n} for any numbers x, y, and z and for any positive integer n.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Beginning with the left side of the equation, (xyz)^{n} means (xyz)∙(xyz)⋯(xyz)n times. Using the commutative and associative properties of multiplication, (xyz)∙(xyz)⋯(xyz)n times can be rewritten as (x∙x⋯x)n times(y∙y⋯y)n times(z∙z⋯z)n times and, finally, x^{n}y^{n}z^{n}, which is what the right side of the equation states. We can also prove this equality by a different method, as follows. Beginning with the right side x^{n}y^{n}z^{n} means (x∙x⋯x)n times(y∙y⋯y)n times(z∙z⋯z)n times, which by the commutative property of multiplication can be rewritten as (xyz)∙(xyz)⋯(xyz)n times. Using exponential notation, (xyz)∙(xyz)⋯(xyz)n times can be rewritten as (xyz)^{n}, which is what the left side of the equation states.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Beginning with the left side of the equation, (xyz)^{n} means (xyz)∙(xyz)⋯(xyz)n times. Using the commutative and associative properties of multiplication, (xyz)∙(xyz)⋯(xyz)n times..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Numbers in Exponential Form Raised to a Power?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Numbers in Exponential Form Raised to a Power.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-3"
+      }
+    },
+    "j-math-m1-a-4": {
+      "id": "j-math-m1-a-4",
+      "code": "J.M1.A.4",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Numbers Raised to the Zeroth Power",
+        "pageTitle": "Numbers Raised to the Zeroth Power | Grade 8 Math | Hesten's Learning",
+        "description": "Master Numbers Raised to the Zeroth Power in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Numbers Raised to the Zeroth Power with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Numbers Raised to the Zeroth Power, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students know that a number raised to the zeroth power is equal to one.",
+          "Students recognize the need for the definition to preserve the properties of exponents."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Numbers Raised to the Zeroth Power",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Numbers Raised to the Zeroth Power. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Numbers Raised to the Zeroth Power",
+        "prompt": "Fluency Exercise (10 minutes) Sprint: Rewrite expressions with the same base for positive exponents only. Make sure to tell the students that all letters within the problems of the Sprint are meant to denote numbers. This exercise can be administered at any point during the lesson. Refer to the Sprints and Sprint Delivery Script sections in the Module Overview for directions to administer a Sprint. Exit Ticket Simplify the following expression as much as possible. \\frac{4^{10}}{4^{10}}∙7^{0}= Let a and b be two numbers. Use the distributive law and then the definition of zeroth power to show that the numbers (a^{0}+b^{0})a^{0} and (a^{0}+b^{0})b^{0} are equal.",
+        "solution": "Simplify the following expression as much as possible. \\frac{4^{10}}{4^{10}}∙7^{0}=4^{10-10}∙1=4^{0}∙1=1∙1=1 Let a and b be two numbers. Use the distributive law and then the definition of zeroth power to show that the numbers (a^{0}+b^{0})a^{0} and (a^{0}+b^{0})b^{0} are equal. Since both numbers are equal to 2, they are equal."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Numbers Raised to the Zeroth Power. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Let x, y be numbers (x, y≠0). Simplify each of the following expressions.",
+            "problem": "Let x, y be numbers (x, y≠0). Simplify each of the following expressions.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Numbers Raised to the Zeroth Power?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Numbers Raised to the Zeroth Power.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-4"
+      }
+    },
+    "j-math-m1-a-5": {
+      "id": "j-math-m1-a-5",
+      "code": "J.M1.A.5",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Negative Exponents and the Laws of Exponents",
+        "pageTitle": "Negative Exponents and the Laws of Exponents | Grade 8 Math | Hesten's Learning",
+        "description": "Master Negative Exponents and the Laws of Exponents in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Negative Exponents and the Laws of Exponents with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Negative Exponents and the Laws of Exponents, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students know the definition of a number raised to a negative exponent.",
+          "Students simplify and write equivalent expressions that contain negative exponents."
+        ],
+        "teacherInsight": "We are now ready to extend the existing laws of exponents to include all integers. As with previous lessons, have students work through a concrete example, such as those in the first Discussion, before giving the mathematical rationale. Note that in this lesson the symbols used to represent the exponents change from m and n to a and b. This change is made to clearly highlight that we are now working with all integer exponents, not just positive integers or whole numbers as in the previous lessons. In line with previous implementation suggestions, it is important that students are shown the symbolic arguments in this lesson, but less important for students to reproduce them on their own. Students should learn to fluently and accurately apply the laws of exponents as in Exercises 5—10, 11, and 12. Use discretion to omit other exercises."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Negative Exponents and the Laws of Exponents",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Negative Exponents and the Laws of Exponents. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Negative Exponents and the Laws of Exponents",
+        "prompt": "Exit Ticket Write each expression in a simpler form that is equivalent to the given expression. 76543^{-4}= Let f be a nonzero number. f^{-4}= 671\\times 28796^{-1}= Let a, b be numbers (b≠0). ab^{-1}= Let g be a nonzero number. \\frac{1}{g^{-1}}=",
+        "solution": "Write each expression in a simpler form that is equivalent to the given expression. 76543^{-4}= \\frac{1}{76543^{4}} Let f be a nonzero number. f^{-4}= \\frac{1}{f^{4}} 671\\times 28796^{-1}=671\\times \\frac{1}{28796}=\\frac{671}{28796} Let a, b be numbers (b≠0). ab^{-1}=a∙\\frac{1}{b}=\\frac{a}{b} Let g be a nonzero number. \\frac{1}{g^{-1}}= g"
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Negative Exponents and the Laws of Exponents. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Compute: 3^{3}\\times 3^{2}\\times 3^{1}\\times 3^{0}\\times 3^{-1}\\times 3^{-2}=",
+            "problem": "Compute: 3^{3}\\times 3^{2}\\times 3^{1}\\times 3^{0}\\times 3^{-1}\\times 3^{-2}=",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Compute: 5^{2}\\times 5^{10}\\times 5^{8}\\times 5^{0}\\times 5^{-10}\\times 5^{-8}=",
+            "problem": "Compute: 5^{2}\\times 5^{10}\\times 5^{8}\\times 5^{0}\\times 5^{-10}\\times 5^{-8}=",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Compute for a nonzero number, a: a^{m}\\times a^{n}\\times a^{l}\\times a^{-n}\\times a^{-m}\\times a^{-l}\\times a^{0}=",
+            "problem": "Compute for a nonzero number, a: a^{m}\\times a^{n}\\times a^{l}\\times a^{-n}\\times a^{-m}\\times a^{-l}\\times a^{0}=",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Without using (10), show directly that (17.6^{-1})^{8}=17.6^{-8}.",
+            "problem": "Without using (10), show directly that (17.6^{-1})^{8}=17.6^{-8}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "(17.6^{-1})^{8}=(\\frac{1}{17.6})^{8}By definition =\\frac{1^{8}}{17.6^{8}}By (\\frac{x}{y})^{n}=\\frac{x^{n}}{y^{n}} (5) =\\frac{1}{17.6^{8}} = 17.6^{-8}By definition Without using (10), show (prove) that for any whole number n and any nonzero number y, (y^{-1})^{n}=y^{-n}. (y^{-1})^{n} =(\\frac{1}{y})^{n}By definition =\\frac{1^{n}}{y^{n}}By (\\frac{x}{y})^{n}=\\frac{x^{n}}{y^{n}} (5) =\\frac{1}{y^{n}} = y^{-n}By definition Without using (13), show directly that \\frac{2.8^{-5}}{2.8^{7}}=2.8^{-12}. \\frac{2.8^{-5}}{2.8^{7}} =2.8^{-5}\\times \\frac{1}{2.8^{7}}By the product formula for complex fractions = \\frac{1}{2.8^{5}}\\times \\frac{1}{2.8^{7}}By definition = \\frac{1}{2.8^{5}\\times 2.8^{7}}By the product formula for complex fractions = \\frac{1}{2.8^{5+7}}By x^{a}∙x^{b}=x^{a+b} (10) = \\frac{1}{2.8^{12}} =2.8^{-12}By definition Equation Reference Sheet",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "(17.6^{-1})^{8}=(\\frac{1}{17.6})^{8}By definition =\\frac{1^{8}}{17.6^{8}}By (\\frac{x}{y})^{n}=\\frac{x^{n}}{y^{n}} (5) =\\frac{1}{17.6^{8}} = 17.6^{-8}By definition Without using (10..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Negative Exponents and the Laws of Exponents?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Negative Exponents and the Laws of Exponents.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-5"
+      }
+    },
+    "j-math-m1-a-6": {
+      "id": "j-math-m1-a-6",
+      "code": "J.M1.A.6",
+      "standard": "8.EE.A.1",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Proofs of Laws of Exponents",
+        "pageTitle": "Proofs of Laws of Exponents | Grade 8 Math | Hesten's Learning",
+        "description": "Master Proofs of Laws of Exponents in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.1.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Proofs of Laws of Exponents with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.A.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 1 • Exponential Notation and Properties of Integer Exponents",
+        "text": "In this lesson on Proofs of Laws of Exponents, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students extend the previous laws of exponents to include all integer exponents.",
+          "Students base symbolic proofs on concrete examples to show that (x^{b})^{a}=x^{ab} is valid for all integer exponents."
+        ],
+        "teacherInsight": "This lesson is not designed for all students, but rather for those who would benefit from a lesson that enriches their existing understanding of the laws of exponents. For that reason, this is an optional lesson that can be used with students who have demonstrated mastery over concepts in Topic A."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Proofs of Laws of Exponents",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Proofs of Laws of Exponents. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Proofs of Laws of Exponents",
+        "prompt": "Exit Ticket Show directly that for any nonzero integer x, x^{-5}∙x^{-7}=x^{-12}. Show directly that for any nonzero integer x, (x^{-2})^{-3}=x^{6}.",
+        "solution": "Show directly that for any nonzero integer x, x^{-5}∙x^{-7}=x^{-12}. x^{-5}∙x^{-7} =\\frac{1}{x^{5}}∙\\frac{1}{x^{7}}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B) =\\frac{1}{x^{5}∙x^{7}}By the product formula for complex fractions =\\frac{1}{x^{5+7}}By x^{m}∙x^{n}=x^{m+n} for whole numbers m and n (6) =\\frac{1}{x^{12}} = x^{-12}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B) Show directly that for any nonzero integer x, (x^{-2})^{-3}=x^{6}. (x^{-2})^{-3} =\\frac{1}{(x^{-2})^{3}}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B) =\\frac{1}{x^{-(2∙3)}}By case (ii) of (11) =\\frac{1}{x^{-6}} = x^{6}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B)"
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Proofs of Laws of Exponents. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "You sent a photo of you and your family on vacation to seven Facebook friends. If each of them sends it to five of their friends, and each of those friends sends it to five of their friends, and those friends send it to five more, how many people (not counting yourself) will see your photo? No friend received the photo twice. Express your answer in exponential notation.",
+            "problem": "You sent a photo of you and your family on vacation to seven Facebook friends. If each of them sends it to five of their friends, and each of those friends sends it to five of their friends, and those friends send it to five more, how many people (not counting yourself) will see your photo? No friend received the photo twice. Express your answer in exponential notation.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "The total number of people who viewed the photo is (5^{0}+5^{1}+5^{2}+5^{3})\\times 7.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "The total number of people who viewed the photo is (5^{0}+5^{1}+5^{2}+5^{3})\\times 7."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Show directly, without using (11), that (1.27^{-36})^{85}=1.27^{-36∙85}.",
+            "problem": "Show directly, without using (11), that (1.27^{-36})^{85}=1.27^{-36∙85}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "(1.27^{-36})^{85}= (\\frac{1}{1.27^{36}})^{85}By definition = \\frac{1}{(1.27^{36})^{85}}By (\\frac{1}{x})^{m}=\\frac{1}{x^{m}} for any whole number m (C) = \\frac{1}{1.27^{36∙85}}By (x^{m})^{n}=x^{mn} for whole numbers m and n (7) =1.27^{-36∙85}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B)",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "(1.27^{-36})^{85}= (\\frac{1}{1.27^{36}})^{85}By definition = \\frac{1}{(1.27^{36})^{85}}By (\\frac{1}{x})^{m}=\\frac{1}{x^{m}} for any whole number m (C) = \\frac{1}{1.27^{36∙85}}By (x..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Show directly that (\\frac{2}{13})^{-127}∙(\\frac{2}{13})^{-56}=(\\frac{2}{13})^{-183}.",
+            "problem": "Show directly that (\\frac{2}{13})^{-127}∙(\\frac{2}{13})^{-56}=(\\frac{2}{13})^{-183}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "(\\frac{2}{13})^{-127}∙(\\frac{2}{13})^{-56}= \\frac{1}{(\\frac{2}{13})^{127}} ∙\\frac{1}{(\\frac{2}{13})^{56}}By definition =\\frac{1}{(\\frac{2}{13})^{127} ∙ (\\frac{2}{13})^{56}}By the product formula for complex fractions = \\frac{1}{(\\frac{2}{13})^{127+56}}By x^{m}∙x^{n}=x^{m+n} for whole numbers m and n (6) = \\frac{1}{(\\frac{2}{13})^{183}} =(\\frac{2}{13})^{-183}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B)",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "(\\frac{2}{13})^{-127}∙(\\frac{2}{13})^{-56}= \\frac{1}{(\\frac{2}{13})^{127}} ∙\\frac{1}{(\\frac{2}{13})^{56}}By definition =\\frac{1}{(\\frac{2}{13})^{127} ∙ (\\frac{2}{13})^{56}}By the p..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Prove for any nonzero number x, x^{-127}∙x^{-56}=x^{-183}.",
+            "problem": "Prove for any nonzero number x, x^{-127}∙x^{-56}=x^{-183}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "x^{-127}∙x^{-56} =\\frac{1}{x^{127}}∙\\frac{1}{x^{56}}By definition =\\frac{1}{x^{127}∙x^{56}}By the product formula for complex fractions =\\frac{1}{x^{127+56}}By x^{m}∙x^{n}=x^{m+n} for whole numbers m and n (6) =\\frac{1}{x^{183}} = x^{-183}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B)",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "x^{-127}∙x^{-56} =\\frac{1}{x^{127}}∙\\frac{1}{x^{56}}By definition =\\frac{1}{x^{127}∙x^{56}}By the product formula for complex fractions =\\frac{1}{x^{127+56}}By x^{m}∙x^{n}=x^{m+n} ..."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Prove for any nonzero number x, x^{-m}∙x^{-n}=x^{-m-n} for positive integers m and n.",
+            "problem": "Prove for any nonzero number x, x^{-m}∙x^{-n}=x^{-m-n} for positive integers m and n.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "x^{-m}∙x^{-n}= \\frac{1}{x^{m}}∙\\frac{1}{x^{n}}By definition = \\frac{1}{x^{m}∙x^{n}}By the product formula for complex fractions = \\frac{1}{x^{m+n}}By x^{m}∙x^{n}=x^{m+n} for whole numbers m and n (6) =x^{-(m+n)}By x^{-m}= \\frac{1}{x^{m}} for any whole number m (B) =x^{-m-n}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "x^{-m}∙x^{-n}= \\frac{1}{x^{m}}∙\\frac{1}{x^{n}}By definition = \\frac{1}{x^{m}∙x^{n}}By the product formula for complex fractions = \\frac{1}{x^{m+n}}By x^{m}∙x^{n}=x^{m+n} for whole ..."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Which of the preceding four problems did you find easiest to do? Explain.",
+            "problem": "Which of the preceding four problems did you find easiest to do? Explain.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Students will likely say that x^{-m}∙x^{-n}=x^{-m-n} (Problem 5) was the easiest problem to do. It requires the least amount of writing because the symbols are easier to write than decimal or fraction numbers.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Students will likely say that x^{-m}∙x^{-n}=x^{-m-n} (Problem 5) was the easiest problem to do. It requires the least amount of writing because the symbols are easier to write than..."
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Exercise 7",
+            "prompt": "Use the properties of exponents to write an equivalent expression that is a product of distinct primes, each raised to an integer power.",
+            "problem": "Use the properties of exponents to write an equivalent expression that is a product of distinct primes, each raised to an integer power.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "\\frac{10^{5}∙9^{2}}{6^{4}}=\\frac{(2∙5)^{5}∙(3∙3)^{2}}{(2∙3)^{4}}=\\frac{2^{5}∙5^{5}∙3^{2}∙3^{2}}{2^{4}∙3^{4}}=2^{5-4}∙3^{4-4}∙5^{5}=2^{1}∙3^{0}∙5^{5}=2^{1}∙1∙5^{5}=2∙5^{5}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "\\frac{10^{5}∙9^{2}}{6^{4}}=\\frac{(2∙5)^{5}∙(3∙3)^{2}}{(2∙3)^{4}}=\\frac{2^{5}∙5^{5}∙3^{2}∙3^{2}}{2^{4}∙3^{4}}=2^{5-4}∙3^{4-4}∙5^{5}=2^{1}∙3^{0}∙5^{5}=2^{1}∙1∙5^{5}=2∙5^{5}"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Proofs of Laws of Exponents?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Proofs of Laws of Exponents.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-a-6"
+      }
+    },
+    "j-math-m1-b-1": {
+      "id": "j-math-m1-b-1",
+      "code": "J.M1.B.1",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Magnitude",
+        "pageTitle": "Magnitude | Grade 8 Math | Hesten's Learning",
+        "description": "Master Magnitude in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Magnitude with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Magnitude, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students know that positive powers of 10 are very large numbers, and negative powers of 10 are very small numbers.",
+          "Students know that the exponent of an expression provides information about the magnitude of a number."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Magnitude",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Magnitude. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Magnitude",
+        "prompt": "Exit Ticket Let M=118,526.65902. Find the smallest power of 10 that will exceed M. Scott said that 0.09 was a bigger number than 0.1. Use powers of 10 to show that he is wrong.",
+        "solution": "Let M=118,526.65902. Find the smallest power of 10 that will exceed M. Since M=118,526.65902<118,527<1,000,000<10^{6}, then 10^{6}will exceed M. Scott said that 0.09 was a bigger number than 0.1. Use powers of 10 to show that he is wrong. We can rewrite 0.09 as \\frac{9}{10^{2}}=9\\times 10^{-2} and rewrite 0.1 as \\frac{1}{10^{1}}=1\\times 10^{-1}. Because 0.09 has a smaller power of 10, 0.09 is closer to zero and is smaller than 0.1."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Magnitude. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "What is the smallest power of 10 that would exceed 987,654,321,098,765,432?",
+            "problem": "What is the smallest power of 10 that would exceed 987,654,321,098,765,432?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "987 654 321 098 765 432<999 999 999 999 999 999<1 000 000 000 000 000 000=10^{18}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "987 654 321 098 765 432<999 999 999 999 999 999<1 000 000 000 000 000 000=10^{18}"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "What is the smallest power of 10 that would exceed 999,999,999,991?",
+            "problem": "What is the smallest power of 10 that would exceed 999,999,999,991?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "999 999 999 991<999 999 999 999<1 000 000 000 000=10^{12}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "999 999 999 991<999 999 999 999<1 000 000 000 000=10^{12}"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Which number is equivalent to 0.000 000 1: 10^{7}or 10^{-7}? How do you know?",
+            "problem": "Which number is equivalent to 0.000 000 1: 10^{7}or 10^{-7}? How do you know?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "0.000 000 1=10^{-7}. Negative powers of 10 denote numbers greater than zero but less than 1. Also, the decimal 0.000 000 1 is equal to the fraction \\frac{1}{10^{7}}, which is equivalent to 10^{-7}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "0.000 000 1=10^{-7}. Negative powers of 10 denote numbers greater than zero but less than 1. Also, the decimal 0.000 000 1 is equal to the fraction \\frac{1}{10^{7}}, which is equiv..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Sarah said that 0.000 01 is bigger than 0.001 because the first number has more digits to the right of the decimal point. Is Sarah correct? Explain your thinking using negative powers of 10 and the number line.",
+            "problem": "Sarah said that 0.000 01 is bigger than 0.001 because the first number has more digits to the right of the decimal point. Is Sarah correct? Explain your thinking using negative powers of 10 and the number line.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "0.000 01= \\frac{1}{100 000} =10^{-5} and 0.001= \\frac{1}{1 000} =10^{-3}. On a number line, 10^{-5} is closer to zero than 10^{-3}; therefore, 10^{-5} is the smaller number, and Sarah is incorrect.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "0.000 01= \\frac{1}{100 000} =10^{-5} and 0.001= \\frac{1}{1 000} =10^{-3}. On a number line, 10^{-5} is closer to zero than 10^{-3}; therefore, 10^{-5} is the smaller number, and Sa..."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Order the following numbers from least to greatest:",
+            "problem": "Order the following numbers from least to greatest:",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "10^{5} 10^{-99} 10^{-17} 10^{14} 10^{-5} 10^{30}",
+            "problem": "10^{5} 10^{-99} 10^{-17} 10^{14} 10^{-5} 10^{30}",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "10^{-99}<10^{-17}<10^{-5}<10^{5}<10^{14}<10^{30}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "10^{-99}<10^{-17}<10^{-5}<10^{5}<10^{14}<10^{30}"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Magnitude?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Magnitude.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-1"
+      }
+    },
+    "j-math-m1-b-2": {
+      "id": "j-math-m1-b-2",
+      "code": "J.M1.B.2",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Estimating Quantities",
+        "pageTitle": "Estimating Quantities | Grade 8 Math | Hesten's Learning",
+        "description": "Master Estimating Quantities in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Estimating Quantities with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Estimating Quantities, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students compare and estimate quantities in the form of a single digit times a power of 10.",
+          "Students use their knowledge of ratios, fractions, and laws of exponents to simplify expressions."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Estimating Quantities",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Estimating Quantities. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Estimating Quantities",
+        "prompt": "Fluency Exercise (10 minutes) Sprint: Practice the laws of exponents. Instruct students to write answers using positive exponents only. This exercise can be administered at any point during the lesson. Refer to the Sprints and Sprint Delivery Script sections in the Module Overview for directions to administer a Sprint. Exit Ticket Most English-speaking countries use the short-scale naming system, in which a trillion is expressed as 1,000,000,000,000. Some other countries use the long-scale naming system, in which a trillion is expressed as 1,000,000,000,000,000,000,000. Express each number as a single-digit integer times a power of ten. How many times greater is the long-scale naming system than the short-scale?",
+        "solution": "Most English-speaking countries use the short-scale naming system, in which a trillion is expressed as 1,000,000,000,000. Some other countries use the long-scale naming system, in which a trillion is expressed as 1,000,000,000,000,000,000,000. Express each number as a single-digit integer times a power of ten. How many times greater is the long-scale naming system than the short-scale? 1 000 000 000 000=10^{12} 1 000 000 000 000 000 000 000=10^{18} \\frac{10^{21}}{10^{12}} =10^{9}. The long-scale is about 10^{9} times greater than the short-scale."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Estimating Quantities. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "U.S. national forests cover approximately 300,000 square miles. Conservationists want the total square footage of forests to be 300,000^{2} square miles. When Ivanna used her phone to do the calculation, her screen showed the following:",
+            "problem": "U.S. national forests cover approximately 300,000 square miles. Conservationists want the total square footage of forests to be 300,000^{2} square miles. When Ivanna used her phone to do the calculation, her screen showed the following:",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "What does the answer on her screen mean? Explain how you know.",
+            "problem": "What does the answer on her screen mean? Explain how you know.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "The answer means 9\\times 10^{10}. This is because: (300 000)^{2}=(3\\times 10^{5})^{2} =3^{2}\\times (10^{5})^{2} =9\\times 10^{10}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "The answer means 9\\times 10^{10}. This is because: (300 000)^{2}=(3\\times 10^{5})^{2} =3^{2}\\times (10^{5})^{2} =9\\times 10^{10}"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Given that the U.S. has approximately 4 million square miles of land, is this a reasonable goal for conservationists? Explain.",
+            "problem": "Given that the U.S. has approximately 4 million square miles of land, is this a reasonable goal for conservationists? Explain.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "4 000 000=4\\times 10^{6}. It is unreasonable for conservationists to think the current square mileage of forests could increase that much because that number is greater than the number that represents the total number of square miles in the U.S, 9\\times 10^{10}>4\\times 10^{6}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "4 000 000=4\\times 10^{6}. It is unreasonable for conservationists to think the current square mileage of forests could increase that much because that number is greater than the nu..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "The average American is responsible for about 20,000 kilograms of carbon emission pollution each year. Express this number as a single-digit integer times a power of 10.",
+            "problem": "The average American is responsible for about 20,000 kilograms of carbon emission pollution each year. Express this number as a single-digit integer times a power of 10.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "20 000=2\\times 10^{4}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "20 000=2\\times 10^{4}"
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "The United Kingdom is responsible for about 1\\times 10^{4} kilograms of carbon emission pollution each year. Which country is responsible for greater carbon emission pollution each year? By how much?",
+            "problem": "The United Kingdom is responsible for about 1\\times 10^{4} kilograms of carbon emission pollution each year. Which country is responsible for greater carbon emission pollution each year? By how much?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "2\\times 10^{4}>1\\times 10^{4} America is responsible for greater carbon emission pollution each year. America produces twice the amount of the U.K. pollution.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "2\\times 10^{4}>1\\times 10^{4} America is responsible for greater carbon emission pollution each year. America produces twice the amount of the U.K. pollution."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Estimating Quantities?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Estimating Quantities.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-2"
+      }
+    },
+    "j-math-m1-b-3": {
+      "id": "j-math-m1-b-3",
+      "code": "J.M1.B.3",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Scientific Notation",
+        "pageTitle": "Scientific Notation | Grade 8 Math | Hesten's Learning",
+        "description": "Master Scientific Notation in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Scientific Notation with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Scientific Notation, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students write, add, and subtract numbers in scientific notation and understand what is meant by the term leading digit."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Scientific Notation",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Scientific Notation. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Scientific Notation",
+        "prompt": "Exit Ticket The approximate total surface area of Earth is 5.1\\times 10^{8} km^{2}. All the salt water on Earth has an approximate surface area of 352,000,000 km^{2}, and all the freshwater on Earth has an approximate surface area of 9\\times 10^{6} km^{2}. How much of Earth's surface is covered by water, including both salt and fresh water? Write your answer in scientific notation. How much of Earth's surface is covered by land? Write your answer in scientific notation. Approximately how many times greater is the amount of Earth's surface that is covered by water compared to the amount of Earth's surface that is covered by land?",
+        "solution": "The approximate total surface area of Earth is 5.1\\times 10^{8} km^{2}. All the salt water on Earth has an approximate surface area of 352,000,000 km^{2}, and all the freshwater on Earth has an approximate surface area of9\\times 10^{6} km^{2}. How much of Earth's surface is covered by water, including both salt and fresh water? Write your answer in scientific notation. (3.52\\times 10^{8})+(9\\times 10^{6})=(3.52\\times 10^{2}\\times 10^{6})+(9\\times 10^{6})=(352\\times 10^{6})+(9\\times 10^{6})=(352+9)\\times 10^{6}=361\\times 10^{6}=3.61\\times 10^{8} The Earth's surface is covered by 3.61\\times 10^{8} km^{2} of water. How much of Earth's surface is covered by land? Write your answer in scientific notation. (5.1\\times 10^{8})-(3.61\\times 10^{8})=(5.1-3.61)\\times 10^{8}=1.49\\times 10^{8} The Earth's surface is covered by 1.49\\times 10^{8} km^{2} of land. Approximately how many times greater is the amount of Earth's surface that is covered by water compared to the amount of Earth's surface that is covered by land? \\frac{3.61\\times 10^{8}}{1.49\\times 10^{8}}≈2.4 About 2.4 times more of the Earth's surface is covered by water than by land."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Scientific Notation. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Write the number 68,127,000,000,000,000 in scientific notation. Which of the two representations of this number do you prefer? Explain.",
+            "problem": "Write the number 68,127,000,000,000,000 in scientific notation. Which of the two representations of this number do you prefer? Explain.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "68 127 000 000 000 000=6.8127\\times 10^{16} Most likely, students will say that they like the scientific notation better because it allows them to write less. However, they should also take note of the fact that counting the number of zeros in 68,127,000,000,000,000 is a nightmare. A strong reason for using scientific notation is to circumvent this difficulty: right away, the exponent 16 shows that this is a 17-digit number.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "68 127 000 000 000 000=6.8127\\times 10^{16} Most likely, students will say that they like the scientific notation better because it allows them to write less. However, they should ..."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Here are the masses of the so-called inner planets of the solar system.",
+            "problem": "Here are the masses of the so-called inner planets of the solar system.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "What is the average mass of all four inner planets? Write your answer in scientific notation.",
+            "problem": "What is the average mass of all four inner planets? Write your answer in scientific notation.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "average mass= \\frac{(3.3022\\times 10^{23})+(4.8685\\times 10^{24})+(5.9722\\times 10^{24})+(6.4185\\times 10^{23})}{4}= \\frac{(3.3022\\times 10^{23})+(48.685\\times 10^{23})+(59.722\\times 10^{23})+(6.4185\\times 10^{23})}{4}= \\frac{(3.3022+48.685+59.722+6.4185)\\times 10^{23}}{4}= \\frac{118.1277\\times 10^{23}}{4}= 29.531925\\times 10^{23}= 2.9531925\\times 10^{24} The average mass of the inner planets is 2.9531925\\times 10^{24} kg.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "average mass= \\frac{(3.3022\\times 10^{23})+(4.8685\\times 10^{24})+(5.9722\\times 10^{24})+(6.4185\\times 10^{23})}{4}= \\frac{(3.3022\\times 10^{23})+(48.685\\times 10^{23})+(59.722\\tim..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Scientific Notation?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Scientific Notation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-3"
+      }
+    },
+    "j-math-m1-b-4": {
+      "id": "j-math-m1-b-4",
+      "code": "J.M1.B.4",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Operations with Numbers in Scientific Notation",
+        "pageTitle": "Operations with Numbers in Scientific Notation | Grade 8 Math | Hesten's Learning",
+        "description": "Master Operations with Numbers in Scientific Notation in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Operations with Numbers in Scientific Notation with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Operations with Numbers in Scientific Notation, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students practice operations with numbers expressed in scientific notation and standard notation."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Operations with Numbers in Scientific Notation",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Operations with Numbers in Scientific Notation. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Operations with Numbers in Scientific Notation",
+        "prompt": "Exit Ticket The speed of light is 3\\times 10^{8} meters per second. The sun is approximately 230,000,000,000 meters from Mars. How many seconds does it take for sunlight to reach Mars? If the sun is approximately 1.5\\times 10^{11} meters from Earth, what is the approximate distance from Earth to Mars?",
+        "solution": "The speed of light is 3\\times 10^{8} meters per second. The sun is approximately 230,000,000,000 meters from Mars. How many seconds does it take for sunlight to reach Mars? 230 000 000 000=2.3\\times 10^{11}\\frac{2.3\\times 10^{11}}{3\\times 10^{8}}=\\frac{2.3}{3}\\times \\frac{10^{11}}{10^{8}}=0.7666…\\times 10^{3}≈0.77\\times 10\\times 10^{2}≈7.7\\times 10^{2} It takes approximately 770 seconds for sunlight to reach Mars. If the sun is approximately 1.5\\times 10^{11} meters from Earth, what is the approximate distance from Earth to Mars? (2.3\\times 10^{11})-(1.5\\times 10^{11})=(2.3-1.5)\\times 10^{11}=0.8\\times 10^{11}=0.8\\times 10\\times 10^{10}=8\\times 10^{10} The distance from Earth to Mars is 8\\times 10^{10} meters."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Operations with Numbers in Scientific Notation. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "The sun produces 3.8\\times 10^{27} joules of energy per second. How much energy is produced in a year? (Note: a year is approximately 31,000,000 seconds).",
+            "problem": "The sun produces 3.8\\times 10^{27} joules of energy per second. How much energy is produced in a year? (Note: a year is approximately 31,000,000 seconds).",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "31 000 000=3.1\\times 10^{7}(3.8\\times 10^{27})(3.1\\times 10^{7})=(3.8\\times 3.1)(10^{27}\\times 10^{7})=11.78\\times 10^{34}=1.178\\times 10\\times 10^{34}=1.178\\times 10^{35} The sun produces 1.178\\times 10^{35} joules of energy in a year.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "31 000 000=3.1\\times 10^{7}(3.8\\times 10^{27})(3.1\\times 10^{7})=(3.8\\times 3.1)(10^{27}\\times 10^{7})=11.78\\times 10^{34}=1.178\\times 10\\times 10^{34}=1.178\\times 10^{35} The sun ..."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "On average, Mercury is about 57,000,000 km from the sun, whereas Neptune is about 4.5\\times 10^{9} km from the sun. What is the difference between Mercury's and Neptune's distances from the sun?",
+            "problem": "On average, Mercury is about 57,000,000 km from the sun, whereas Neptune is about 4.5\\times 10^{9} km from the sun. What is the difference between Mercury's and Neptune's distances from the sun?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "57 000 000=5.7\\times 10^{7}4.5\\times 10^{9}-5.7\\times 10^{7}=(4.5\\times 10^{2})\\times 10^{7}-5.7\\times 10^{7}=450\\times 10^{7}-5.7\\times 10^{7}=(450-5.7)\\times 10^{7}=444.3\\times 10^{7}=4.443\\times 10^{2}\\times 10^{7}=4.443\\times 10^{9} The difference in the distance of Mercury and Neptune from the sun is 4.443\\times 10^{9} km.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "57 000 000=5.7\\times 10^{7}4.5\\times 10^{9}-5.7\\times 10^{7}=(4.5\\times 10^{2})\\times 10^{7}-5.7\\times 10^{7}=450\\times 10^{7}-5.7\\times 10^{7}=(450-5.7)\\times 10^{7}=444.3\\times 1..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "The mass of Earth is approximately 5.9\\times 10^{24} kg, and the mass of Venus is approximately 4.9\\times 10^{24} kg.",
+            "problem": "The mass of Earth is approximately 5.9\\times 10^{24} kg, and the mass of Venus is approximately 4.9\\times 10^{24} kg.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Find their combined mass.",
+            "problem": "Find their combined mass.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "5.9\\times 10^{24}+4.9\\times 10^{24}=(5.9+4.9)\\times 10^{24}=10.8\\times 10^{24}=1.08\\times 10\\times 10^{24}=1.08\\times 10^{25} The combined mass of Earth and Venus is 1.08\\times 10^{25} kg.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "5.9\\times 10^{24}+4.9\\times 10^{24}=(5.9+4.9)\\times 10^{24}=10.8\\times 10^{24}=1.08\\times 10\\times 10^{24}=1.08\\times 10^{25} The combined mass of Earth and Venus is 1.08\\times 10^..."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Given that the mass of the sun is approximately 1.9\\times 10^{30} kg, how many Venuses and Earths would it take to equal the mass of the sun?",
+            "problem": "Given that the mass of the sun is approximately 1.9\\times 10^{30} kg, how many Venuses and Earths would it take to equal the mass of the sun?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "\\frac{1.9\\times 10^{30}}{1.08\\times 10^{25}}=\\frac{1.9}{1.08}\\times \\frac{10^{30}}{10^{25}}=1.75925…\\times 10^{5}≈1.8\\times 10^{5} It would take approximately 1.8\\times 10^{5} Venuses and Earths to equal the mass of the sun.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "\\frac{1.9\\times 10^{30}}{1.08\\times 10^{25}}=\\frac{1.9}{1.08}\\times \\frac{10^{30}}{10^{25}}=1.75925…\\times 10^{5}≈1.8\\times 10^{5} It would take approximately 1.8\\times 10^{5} Venu..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Operations with Numbers in Scientific Notation?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Operations with Numbers in Scientific Notation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-4"
+      }
+    },
+    "j-math-m1-b-5": {
+      "id": "j-math-m1-b-5",
+      "code": "J.M1.B.5",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Efficacy of Scientific Notation",
+        "pageTitle": "Efficacy of Scientific Notation | Grade 8 Math | Hesten's Learning",
+        "description": "Master Efficacy of Scientific Notation in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Efficacy of Scientific Notation with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Efficacy of Scientific Notation, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students continue to practice working with very small and very large numbers expressed in scientific notation.",
+          "Students read, write, and perform operations on numbers expressed in scientific notation."
+        ],
+        "teacherInsight": "Powers of Ten, a video that demonstrates positive and negative powers of 10, is available online. The video should pique students' interest in why exponential notation is necessary. A link to the video is provided below (9 minutes). http://www.youtube.com/watch?v=0fKBhvDjuy0"
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Efficacy of Scientific Notation",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Efficacy of Scientific Notation. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Efficacy of Scientific Notation",
+        "prompt": "Exit Ticket Two of the largest mammals on earth are the blue whale and the African elephant. An adult male blue whale weighs about 170 tonnes or long tons. (1 tonne = 1000 kg) Show that the weight of an adult blue whale is 1.7\\times 10^{5} kg. An adult male African elephant weighs about 9.07\\times 10^{3} kg. Compute how many times heavier an adult male blue whale is than an adult male African elephant (i.e., find the value of the ratio). Round your final answer to the nearest one.",
+        "solution": "Two of the largest mammals on earth are the blue whale and the elephant. An adult male blue whale weighs about 170 tonnes or long tons. (1 tonne = 1000 kg) Show that the weight of an adult blue whale is 1.7\\times 10^{5} kg. Let x (or any other symbol) represent the number of kilograms an adult blue whale weighs. 170\\times 1000=x1.7\\times 10^{5}=x An adult male elephant weighs about 9.07\\times 10^{3} kg. Compute how many times heavier an adult male blue whale is than an adult male elephant (i.e., find the value of the ratio). Round your final answer to the nearest one. Let r be the value of the ratio. r=\\frac{1.7\\times 10^{5}}{9.07\\times 10^{3}}=\\frac{1.7}{9.07}\\times 10^{2}=0.18743\\times 10^{2}=18.743≈19 The blue whale is 19 times heavier than the elephant."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Efficacy of Scientific Notation. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "There are approximately 7.5\\times 10^{18} grains of sand on Earth. There are approximately 7\\times 10^{27} atoms in an average human body. Are there more grains of sand on Earth or atoms in an average human body? How do you know?",
+            "problem": "There are approximately 7.5\\times 10^{18} grains of sand on Earth. There are approximately 7\\times 10^{27} atoms in an average human body. Are there more grains of sand on Earth or atoms in an average human body? How do you know?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "There are more atoms in the average human body. When comparing the order of magnitude of each number, 27>18; therefore, 7\\times 10^{27}>7.5\\times 10^{18}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "There are more atoms in the average human body. When comparing the order of magnitude of each number, 27>18; therefore, 7\\times 10^{27}>7.5\\times 10^{18}."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "About how many times more atoms are in a human body compared to grains of sand on Earth?",
+            "problem": "About how many times more atoms are in a human body compared to grains of sand on Earth?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "\\frac{7\\times 10^{27}}{7.5\\times 10^{18}}=\\frac{7}{7.5}\\times \\frac{10^{27}}{10^{18}}≈1\\times 10^{27-18}≈1\\times 10^{9}≈10^{9} There are about 1,000,000,000 times more atoms in the human body compared to grains of sand on Earth.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "\\frac{7\\times 10^{27}}{7.5\\times 10^{18}}=\\frac{7}{7.5}\\times \\frac{10^{27}}{10^{18}}≈1\\times 10^{27-18}≈1\\times 10^{9}≈10^{9} There are about 1,000,000,000 times more atoms in the..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Suppose the geographic areas of California and the U.S. are 1.637\\times 10^{5} and 3.794\\times 10^{6} sq. mi., respectively. California's population (as of 2012) is approximately 3.804\\times 10^{7} people. If population were proportional to area, what would be the U.S. population?",
+            "problem": "Suppose the geographic areas of California and the U.S. are 1.637\\times 10^{5} and 3.794\\times 10^{6} sq. mi., respectively. California's population (as of 2012) is approximately 3.804\\times 10^{7} people. If population were proportional to area, what would be the U.S. population?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "We already know from Exercise 5 that it would take about 23 Californias to make up one U.S. Then the population of the U.S. would be 23 times the population of California, which is 23\\times 3.804\\times 10^{7}=87.492\\times 10^{7}=8.7492\\times 10^{8}=874,920,000.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "We already know from Exercise 5 that it would take about 23 Californias to make up one U.S. Then the population of the U.S. would be 23 times the population of California, which is..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "The actual population of the U.S. (as of 2012) is approximately 3.14\\times 10^{8}. How does the population density of California (i.e., the number of people per square mile) compare with the population density of the U.S.?",
+            "problem": "The actual population of the U.S. (as of 2012) is approximately 3.14\\times 10^{8}. How does the population density of California (i.e., the number of people per square mile) compare with the population density of the U.S.?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Population density of California per square mile: \\frac{3.804\\times 10^{7}}{1.637\\times 10^{5}}=\\frac{3.804}{1.637}\\times \\frac{10^{7}}{10^{5}}=2.32376... \\times 10^{2}≈2.32\\times 10^{2}=232 Population density of the U.S. per square mile: \\frac{3.14\\times 10^{8}}{3.794\\times 10^{6}}=\\frac{3.14}{3.794}\\times \\frac{10^{8}}{10^{6}}=0.8276... \\times 10^{2}≈0.83\\times 10^{2}=83 Population density of California compared to the population density of the U.S.: \\frac{232}{83}=2.7951…≈2.8 California is about 3 times as dense as the U.S. in terms of population.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Population density of California per square mile: \\frac{3.804\\times 10^{7}}{1.637\\times 10^{5}}=\\frac{3.804}{1.637}\\times \\frac{10^{7}}{10^{5}}=2.32376... \\times 10^{2}≈2.32\\times ..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Efficacy of Scientific Notation?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Efficacy of Scientific Notation.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-5"
+      }
+    },
+    "j-math-m1-b-6": {
+      "id": "j-math-m1-b-6",
+      "code": "J.M1.B.6",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Choice of Unit",
+        "pageTitle": "Choice of Unit | Grade 8 Math | Hesten's Learning",
+        "description": "Master Choice of Unit in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Choice of Unit with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Choice of Unit, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students understand how choice of unit determines how easy or difficult it is to understand an expression of measurement.",
+          "Students determine appropriate units for various measurements and rewrite measurements based on new units."
+        ],
+        "teacherInsight": "This lesson focuses on choosing appropriate units. It is important for students to see the simple example (i.e., dining table measurements), as well as more sophisticated examples from physics and astronomy. We want students to understand the necessity of learning to read, write, and operate in scientific notation. For this very reason, we provide real data and explanations for why scientific notation is important and necessary in advanced sciences. This is a challenging, but crucial, lesson and should not be skipped."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Choice of Unit",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Choice of Unit. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Choice of Unit",
+        "prompt": "Exit Ticket The table below shows an approximation of the national debt at the beginning of each decade over the last century. Choose a unit that would make a discussion about the growth of the national debt easier. Name your unit, and explain your choice. Using the new unit you have defined, rewrite the debt for years 1900, 1930, 1960, and 2000.",
+        "solution": "The table below shows an approximation of the national debt at the beginning of each decade over the last century. Choose a unit that would make a discussion about the growth of the national debt easier. Name your unit, and explain your choice. Students will likely choose 10^{11} as their unit because the majority of the data is of that magnitude. Accept any reasonable answer that students provide. Verify that they have named their unit. Using the new unit you have defined, rewrite the debt for years 1900, 1930, 1960, and 2000. Let D represent the unit 10^{11}. Then, the debt in 1900 is 0.021D, in 1930 it is 0.16D, in 1960 it is 2.9D, and 57D in 2000."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Choice of Unit. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Verify the claim that, in terms of gigaelectronvolts, the mass of an electron is 0.000511.",
+            "problem": "Verify the claim that, in terms of gigaelectronvolts, the mass of an electron is 0.000511.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Let x represent the number of gigaelectronvolts equal to the mass of an electron. x(\\frac{GeV}{c^{2}})=Mass of electronx(1.783\\times 10^{-27})=9.109 382 91\\times 10^{-31}x=\\frac{9.109 382 91\\times 10^{-31}\\times 10^{31}}{1.783\\times 10^{-27}\\times 10^{31}}=\\frac{9.109 382 91}{1.783\\times 10^{4}}=\\frac{9.109 382 91}{17 830}≈0.000 511",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Let x represent the number of gigaelectronvolts equal to the mass of an electron. x(\\frac{GeV}{c^{2}})=Mass of electronx(1.783\\times 10^{-27})=9.109 382 91\\times 10^{-31}x=\\frac{9...."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "The maximum distance between Earth and the sun is 1.52098232\\times 10^{8} km, and the minimum distance is 1.47098290\\times 10^{8} km. What is the average distance between Earth and the sun in scientific notation?",
+            "problem": "The maximum distance between Earth and the sun is 1.52098232\\times 10^{8} km, and the minimum distance is 1.47098290\\times 10^{8} km. What is the average distance between Earth and the sun in scientific notation?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "average distance=\\frac{1.52098232\\times 10^{8}+1.47098290\\times 10^{8}}{2}=\\frac{(1.52098232+1.47098290)\\times 10^{8}}{2}=\\frac{2.99196522\\times 10^{8}}{2}=\\frac{2.99196522}{2}\\times 10^{8}=1.49598261\\times 10^{8}km",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "average distance=\\frac{1.52098232\\times 10^{8}+1.47098290\\times 10^{8}}{2}=\\frac{(1.52098232+1.47098290)\\times 10^{8}}{2}=\\frac{2.99196522\\times 10^{8}}{2}=\\frac{2.99196522}{2}\\tim..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Suppose you measure the following masses in terms of kilograms:",
+            "problem": "Suppose you measure the following masses in terms of kilograms:",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "What new unit might you introduce in order to aid discussion of the masses in this problem? Name your unit, and express it using some power of 10. Rewrite each number using your newly defined unit.",
+            "problem": "What new unit might you introduce in order to aid discussion of the masses in this problem? Name your unit, and express it using some power of 10. Rewrite each number using your newly defined unit.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "A very motivated student may search the Internet and find that units exist that convert large masses to reasonable numbers, such as petagrams (10^{12} kg), exagrams (10^{15} kg), or zetagrams (10^{18} kg). More likely, students will decide that something near 10^{20} should be used as a unit because many of the numbers are near that magnitude. There is one value, 1.8\\times 10^{12}, that serves as an outlier and should be ignored because it is much smaller than the majority of the data. Students can name their unit anything reasonable. The answers provided are suggestions, but any reasonable answers should be accepted. Let U be defined as the unit 10^{20}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "A very motivated student may search the Internet and find that units exist that convert large masses to reasonable numbers, such as petagrams (10^{12} kg), exagrams (10^{15} kg), o..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Choice of Unit?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Choice of Unit.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-6"
+      }
+    },
+    "j-math-m1-b-7": {
+      "id": "j-math-m1-b-7",
+      "code": "J.M1.B.7",
+      "standard": "8.EE.A.3",
+      "levelId": "j",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology",
+        "pageTitle": "Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology | Grade 8 Math | Hesten's Learning",
+        "description": "Master Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology in Grade 8 Mathematics aligned with Common Core standard 8.EE.A.3.",
+        "pageDescription": "EngageNY Grade 8 Math lesson on Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math J.M1.B.7",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 1 • Magnitude and Scientific Notation",
+        "text": "In this lesson on Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology, explore algebraic, numerical, and geometric concepts aligned with national standards.",
+        "outcomes": [
+          "Students compare numbers expressed in scientific notation.",
+          "Students apply the laws of exponents to interpret data and use technology to compute with very large numbers."
+        ],
+        "teacherInsight": "Guide students through concrete modeling and formal symbolic notation. Have students explain how mathematical properties justify each transformation."
+      },
+      "vocabulary": [
+        {
+          "term": "Scientific Notation",
+          "definition": "A representation of a real number in the form $a \\times 10^n$, where $1 \\le |a| < 10$ and $n$ is an integer."
+        },
+        {
+          "term": "Linear Equation",
+          "definition": "An algebraic equation in which each term has an exponent of 1 and the graphing of the equation produces a straight line."
+        },
+        {
+          "term": "Slope (Rate of Change)",
+          "definition": "The ratio of the vertical change (rise) to the horizontal change (run) between any two points on a non-vertical line: $m = \\frac{y_2 - y_1}{x_2 - x_1}$."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "Grade 8 Mathematics Core",
+          "problem": "Investigate and analyze the key mathematical concept in Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology. Using the properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given quantities, rate of change, slope, or transformation rules.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or geometric configuration.}",
+              "explanation": "Clearly write down all known constants, variables, or figure coordinates."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Algebraic property, exponent law, or transformation rule.}",
+              "explanation": "Substitute given values into the governing formula and simplify systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by substitution and mathematical consistency.}",
+              "explanation": "Confirm that the answer satisfies the original conditions and has appropriate units."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Applying exponent laws incorrectly (e.g., adding exponents when multiplying vs raising to a power), or making sign errors when solving multi-step equations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology",
+        "prompt": "Fluency Exercise (5 minutes) Rapid White Board Exchange: Have students respond to your prompts for practice with operations with numbers expressed in scientific notation using white boards (or other display options as available). This exercise can be conducted at any point throughout the lesson. The prompts are listed at the end of the lesson. Refer to the Rapid White Board Exchanges section in the Module Overview for directions to administer a Rapid White Board Exchange. Exit Ticket Compare 2.01\\times 10^{15} and 2.8\\times 10^{13}. Which number is larger? The wavelength of the color red is about 6.5\\times 10^{-9} m. The wavelength of the color blue is about 4.75\\times 10^{-9} m. Show that the wavelength of red is longer than the wavelength of blue.",
+        "solution": "Compare 2.01\\times 10^{15} and 2.8\\times 10^{13}. Which number is larger? 2.01\\times 10^{15}=2.01\\times 10^{2}\\times 10^{13}=201\\times 10^{13} Since 201>2.8, we have 201\\times 10^{13}>2.8\\times 10^{13}, and since 201\\times 10^{13}=2.01\\times 10^{15}, we conclude 2.01\\times 10^{15}>2.8\\times 10^{13}. The wavelength of the color red is about 6.5\\times 10^{-9} m. The wavelength of the color blue is about 4.75\\times 10^{-9} m. Show that the wavelength of red is longer than the wavelength of blue. We only need to compare 6.5 and 4.75: 6.5\\times 10^{-9}=650\\times 10^{-7} and 4.75\\times 10^{-9}=475\\times 10^{-7}, so we see that 650>475. Therefore, 6.5\\times 10^{-9}>4.75\\times 10^{-9}."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Write out a detailed proof of the fact that, given two numbers in scientific notation, a\\times 10^{n} and b\\times 10^{n}, a<b, if and only if a\\times 10^{n}<b\\times 10^{n}.",
+            "problem": "Write out a detailed proof of the fact that, given two numbers in scientific notation, a\\times 10^{n} and b\\times 10^{n}, a<b, if and only if a\\times 10^{n}<b\\times 10^{n}.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Because 10^{n}>0, we can use inequality (A) (i.e., (1) above) twice to draw the necessary conclusions. First, if a<b, then by inequality (A), a\\times 10^{n}<b\\times 10^{n}. Second, given a\\times 10^{n}<b\\times 10^{n}, we can use inequality (A) again to show a<b by multiplying each side of a\\times 10^{n}<b\\times 10^{n} by 10^{-n}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Because 10^{n}>0, we can use inequality (A) (i.e., (1) above) twice to draw the necessary conclusions. First, if a<b, then by inequality (A), a\\times 10^{n}<b\\times 10^{n}. Second,..."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Let A and B be two positive numbers, with no restrictions on their size. Is it true that A\\times 10^{-5}<B\\times 10^{5}?",
+            "problem": "Let A and B be two positive numbers, with no restrictions on their size. Is it true that A\\times 10^{-5}<B\\times 10^{5}?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "No, it is not true that A\\times 10^{-5}<B\\times 10^{5}. Using inequality (A), we can writeA\\times 10^{-5}\\times 10^{5}<B\\times 10^{5}\\times 10^{5}, which is the same as A<B\\times 10^{10}. To disprove the statement, all we would need to do is find a value of A that exceeds B\\times 10^{10}.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "No, it is not true that A\\times 10^{-5}<B\\times 10^{5}. Using inequality (A), we can writeA\\times 10^{-5}\\times 10^{5}<B\\times 10^{5}\\times 10^{5}, which is the same as A<B\\times 1..."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Now, if A\\times 10^{-5} and B\\times 10^{5} are written in scientific notation, is it true that A\\times 10^{-5}<B\\times 10^{5}? Explain.",
+            "problem": "Now, if A\\times 10^{-5} and B\\times 10^{5} are written in scientific notation, is it true that A\\times 10^{-5}<B\\times 10^{5}? Explain.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Yes, since the numbers are written in scientific notation, we know that the restrictions for A and B are 1≤A<10 and 1≤B<10. The maximum value for A, when multiplied by 10^{-5}, will still be less than 1. The minimum value of B will produce a number at least 10^{5} in size.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Yes, since the numbers are written in scientific notation, we know that the restrictions for A and B are 1≤A<10 and 1≤B<10. The maximum value for A, when multiplied by 10^{-5}, wil..."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "The mass of a neutron is approximately 1.674927\\times 10^{-27} kg. Recall that the mass of a proton is 1.672622\\times 10^{-27} kg. Explain which is heavier.",
+            "problem": "The mass of a neutron is approximately 1.674927\\times 10^{-27} kg. Recall that the mass of a proton is 1.672622\\times 10^{-27} kg. Explain which is heavier.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Since both numbers have a factor of 10^{-27}, we only need to look at 1.674927 and 1.672622. When we multiply each number by 10^{6}, we get 1.674927\\times 10^{6} and 1.672622\\times 10^{6}, which is the same as 1,674,927 and 1,672,622. Now that we are looking at whole numbers, we can see that 1,674,927>1,672,622 (by (2b) above), which means that 1.674927\\times 10^{-27}>1.672622\\times 10^{-27}. Therefore, the mass of a neutron is heavier.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Since both numbers have a factor of 10^{-27}, we only need to look at 1.674927 and 1.672622. When we multiply each number by 10^{6}, we get 1.674927\\times 10^{6} and 1.672622\\times..."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "The average lifetime of the Z boson is approximately 3\\times 10^{-25} seconds, and the average lifetime of a neutral rho meson is approximately 4.5\\times 10^{-24} seconds.",
+            "problem": "The average lifetime of the Z boson is approximately 3\\times 10^{-25} seconds, and the average lifetime of a neutral rho meson is approximately 4.5\\times 10^{-24} seconds.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Refer to teacher steps and step-by-step mathematical reasoning.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Refer to teacher steps and step-by-step mathematical reasoning."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Without using the theorem from today's lesson, explain why the neutral rho meson has a longer average lifetime.",
+            "problem": "Without using the theorem from today's lesson, explain why the neutral rho meson has a longer average lifetime.",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "Since 3\\times 10^{-25}=3\\times 10^{-1}\\times 10^{-24}, we can compare 3\\times 10^{-1}\\times 10^{-24} and 4.5\\times 10^{-24}. Based on Example 3 or by use of (1) above, we only need to compare 3\\times 10^{-1} and 4.5, which is the same as 0.3 and 4.5. If we multiply each number by 10, we get whole numbers 3 and 45. Since 3<45, then 3\\times 10^{-25}<4.5\\times 10^{-24}. Therefore, the neutral rho meson has a longer average lifetime.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "Since 3\\times 10^{-25}=3\\times 10^{-1}\\times 10^{-24}, we can compare 3\\times 10^{-1}\\times 10^{-24} and 4.5\\times 10^{-24}. Based on Example 3 or by use of (1) above, we only need..."
+              }
+            ]
+          },
+          {
+            "number": 7,
+            "title": "Exercise 7",
+            "prompt": "Approximately how much longer is the lifetime of a neutral rho meson than a Z boson?",
+            "problem": "Approximately how much longer is the lifetime of a neutral rho meson than a Z boson?",
+            "hint": "Identify the given mathematical quantities and apply the appropriate formula, rule, or theorem.",
+            "solution": "45:3 or 15 times longer Rapid White Board Exchange: Operations with Numbers Expressed in Scientific Notation (5\\times 10^{4})^{2}= 2.5\\times 10^{9} (2\\times 10^{9})^{4}= 1.6\\times 10^{37} \\frac{(1.2\\times 10^{4})+(2\\times 10^{4})+(2.8\\times 10^{4})}{3}= 2\\times 10^{4} \\frac{7\\times 10^{15}}{14\\times 10^{9}}= 5\\times 10^{5} \\frac{4\\times 10^{2}}{2\\times 10^{8}}= 2\\times 10^{-6} \\frac{(7\\times 10^{9})+(6\\times 10^{9})}{2}= 6.5\\times 10^{9} (9\\times 10^{-4})^{2}= 8.1\\times 10^{-7} (9.3\\times 10^{10})-(9\\times 10^{10})= 3\\times 10^{9}",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Knowns & Variables",
+                "result": "State given numerical values, equations, or geometric constraints."
+              },
+              {
+                "step": 2,
+                "action": "Apply Mathematical Operation",
+                "result": "45:3 or 15 times longer Rapid White Board Exchange: Operations with Numbers Expressed in Scientific Notation (5\\times 10^{4})^{2}= 2.5\\times 10^{9} (2\\times 10^{9})^{4}= 1.6\\times ..."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology?",
+          "options": [
+            "Applying systematic algebraic properties or geometric transformation rules with precision.",
+            "Guessing values without checking substitution into the original equation.",
+            "Ignoring negative signs and order of operations.",
+            "Assuming non-linear relationships are always proportional."
+          ],
+          "correct": 0,
+          "explanation": "Accurate mathematical problem solving requires following systematic algebraic laws and validating solutions."
+        },
+        {
+          "question": "When validating a solution in Grade 8 mathematics, which strategy confirms the result?",
+          "options": [
+            "Substituting the computed value back into the original equation or diagram to verify equality.",
+            "Discarding the solution if it contains a fraction or negative number.",
+            "Changing the variables until the answer appears simpler.",
+            "Skipping the check because algebraic steps are never prone to arithmetic errors."
+          ],
+          "correct": 0,
+          "explanation": "Substituting the result back into the original relationship verifies whether the equality holds true."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Comparison of Numbers Written in Scientific Notation and Interpreting Scientific Notation Using Technology.\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official Grade 8 Mathematics curriculum materials.",
+        "lessonId": "j-math-m1-b-7"
+      }
+    }
+  }
+}

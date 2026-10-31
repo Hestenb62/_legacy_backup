@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.29.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 10-12 Math Lessons & Worksheet Rendering Hotfix';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Complete EngageNY Grade 12 Precalculus Buildout: 111 Lessons Across Modules 1–5 with Complex Transformations, Matrices, Vectors, Trigonometry, and Probability Worksheets';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.34.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Complete P-12 Mathematics Curriculum Milestone Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal P-12 Mathematics Buildout: 1,772 Lessons Across 76 Modules (Levels A through N) with Streamlined Problem Set Worksheets and Digital Scratchpads';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,75 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the <strong>Complete Grade 12 Precalculus 111-Lesson Curriculum Buildout</strong> across Modules 1–5, featuring complex number transformations, vectors, matrix algebra, 3D computer graphics projection matrices, rational and inverse functions, trigonometry, and probability decision analysis with streamlined worksheet integration.
+                Version <?= htmlspecialchars($siteVersion) ?> achieves a historic milestone: the <strong>Complete P-12 Mathematics Curriculum Buildout</strong> delivering 1,772 authentic lessons across 76 modules spanning Pre-Kindergarten (Level A) through Grade 12 Precalculus (Level N), all featuring streamlined worksheet-first problem sets, digital auto-saving scratchpads, and 1-click printing.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(234, 88, 12, 0.15); color: #c2410c;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Complete P-12 Mathematics Curriculum Milestone (v2.34.0):</strong> Comprehensive conversion and universal deployment of authentic EngageNY / Eureka Math materials across all 13 grade levels (76 modules, 1,772 lessons):
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Elementary &amp; Early Childhood Buildout Complete:</strong> Grade 3 (Level E, 7 modules, 152 lessons), Grade 2 (Level D, 8 modules, 149 lessons), Grade 1 (Level C, 6 modules, 153 lessons), Kindergarten (Level B, 6 modules, 152 lessons), and Pre-K (Level A, 5 modules, 146 lessons).</li>
+                            <li><strong>Full Spectrum P-12:</strong> Pre-K through Grade 12 (Levels A through N) fully unified with modular datasets, dynamic module outlines, interactive problem sets, and individual lesson query routing.</li>
+                            <li><strong>Worksheet-First Focus:</strong> Eliminated distracting research links to present pure, distraction-free problem sets with auto-saving textareas (`localStorage`), expandable teacher solution keys, and 1-click printing (blank worksheet or student solved work).</li>
+                            <li><strong>Universal Standards &amp; Search Integration:</strong> All 1,772 lessons registered in <code>curriculum-engageny-math.json</code> and <code>lessons.json</code>, enabling instant cross-grade search and progress tracking.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(34, 197, 94, 0.15); color: #15803d;">
+                        <i class="fas fa-divide"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 4 Mathematics Complete 153-Lesson Buildout (v2.33.0):</strong> Comprehensive conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 7 Modules Built Out:</strong> Module 1 (Place Value &amp; Addition/Subtraction Algorithms, 19 lessons), Module 2 (Metric Conversions &amp; Problem Solving, 5 lessons), Module 3 (Multi-Digit Multiplication &amp; Division, 38 lessons), Module 4 (Angle Measure &amp; Plane Figures, 16 lessons), Module 5 (Fraction Equivalence &amp; Operations, 41 lessons), Module 6 (Decimal Fractions, 16 lessons), and Module 7 (Measurement with Multiplication, 18 lessons).</li>
+                            <li><strong>Streamlined Worksheet-First UI:</strong> Focused on authentic problem sets with digital student scratchpads, expandable teacher solution keys, and 1-click browser printing (blank or solved work).</li>
+                            <li><strong>Universal Registries &amp; Level F Integration:</strong> All 153 lessons registered in <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and native single-lesson query routing in <code>levels/f.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-cubes"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 5 Mathematics Complete 149-Lesson Buildout (v2.32.0):</strong> Comprehensive conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 6 Modules Built Out:</strong> Module 1 (Place Value &amp; Decimal Fractions, 16 lessons), Module 2 (Multi-Digit Operations &amp; Decimals, 29 lessons), Module 3 (Addition &amp; Subtraction of Fractions, 16 lessons), Module 4 (Multiplication &amp; Division of Fractions, 33 lessons), Module 5 (Volume &amp; Area, 21 lessons), and Module 6 (Coordinate Plane Problem Solving, 34 lessons).</li>
+                            <li><strong>Streamlined Worksheet-First UI:</strong> Focused on authentic problem sets with digital student scratchpads, expandable teacher solution keys, and 1-click browser printing (blank or solved work).</li>
+                            <li><strong>Universal Registries &amp; Level G Integration:</strong> All 149 lessons registered in <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and native single-lesson query routing in <code>levels/g.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(139, 92, 246, 0.15); color: #7c3aed;">
+                        <i class="fas fa-shapes"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 6 Mathematics Complete 143-Lesson Buildout (v2.31.0):</strong> Comprehensive conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 6 Modules Built Out:</strong> Module 1 (Ratios &amp; Unit Rates, 29 lessons), Module 2 (Arithmetic Operations &amp; Division of Fractions, 19 lessons), Module 3 (Rational Numbers &amp; Coordinate Plane, 19 lessons), Module 4 (Expressions &amp; Equations, 34 lessons), Module 5 (Area, Surface Area &amp; Volume, 20 lessons), and Module 6 (Statistics &amp; Distributions, 22 lessons).</li>
+                            <li><strong>Streamlined Worksheet-First UI:</strong> Focused on authentic problem sets with digital student scratchpads, expandable teacher solution keys, and 1-click browser printing (blank or solved work).</li>
+                            <li><strong>Universal Registries &amp; Level H Integration:</strong> All 143 lessons registered in <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and native single-lesson query routing in <code>levels/h.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(217, 70, 239, 0.15); color: #c026d3;">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 8 Mathematics Complete 122-Lesson Buildout (v2.30.0):</strong> Comprehensive conversion of authentic EngageNY / Eureka Math materials into modular JSON datasets:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 7 Modules Built Out:</strong> Module 1 (Integer Exponents &amp; Scientific Notation, 13 lessons), Module 2 (The Concept of Congruence, 16 lessons), Module 3 (Similarity, 14 lessons), Module 4 (Linear Equations, 31 lessons), Module 5 (Examples of Functions from Geometry, 11 lessons), Module 6 (Linear Functions, 14 lessons), and Module 7 (Introduction to Irrational Numbers Using Geometry, 23 lessons).</li>
+                            <li><strong>Streamlined Worksheet-First UI:</strong> Direct on-page problem sets with digital student scratchpads, expandable teacher solution keys, and 1-click browser printing (blank or solved work).</li>
+                            <li><strong>Universal Registries &amp; Level J Integration:</strong> All 122 lessons registered in <code>assets/data/lessons.json</code>, <code>curriculum-engageny-math.json</code>, and native single-lesson query routing in <code>levels/j.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(236, 72, 153, 0.15); color: #db2777;">
                         <i class="fas fa-infinity"></i>

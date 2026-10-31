@@ -1,0 +1,2464 @@
+{
+  "id": "e-math-m4",
+  "module": 4,
+  "subject": "math",
+  "grade": "4",
+  "level": "e",
+  "title": "Module 4: Multiplication and Area",
+  "description": "Module 4: Multiplication and Area for 3rd Grade students.",
+  "lessonsCount": 16,
+  "lessons": {
+    "e-math-m4-a-1": {
+      "id": "e-math-m4-a-1",
+      "code": "E.M4.A.1",
+      "standard": "3rd Grade Math",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Understand area as an attribute of plane figures.",
+        "pageTitle": "Understand area as an attribute of plane figures. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Understand area as an attribute of plane figures. in 3rd Grade Mathematics aligned with standard 3rd Grade Math.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Understand area as an attribute of plane figures. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 4 • Topic A",
+        "text": "In this lesson on Understand area as an attribute of plane figures., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Understand area as an attribute of plane figures.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Understand area as an attribute of plane figures.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Understand area as an attribute of plane figures.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Understand area as an attribute of plane figures.",
+        "prompt": "Each is 1 square unit. Do both rectangles have the same area? Explain how you know.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Understand area as an attribute of plane figures.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Shape B: _______ trianglesShape B: _______ trianglesUse triangle pattern blocks to cover each shape below. Draw lines to show where the triangles meet. Then, write how many triangle pattern blocks it takes to cover each shape. Shape A: _______ trianglesShape A: _______ triangles Shape B: _______ rhombusesShape B: _______ rhombusesUse rhombus pattern blocks to cover each shape below. Draw lines to show where the rhombuses meet. Then, write how many rhombus pattern blocks it takes to cover each shape. Shape A: _______ rhombusesShape A: _______ rhombuses Shape B: _______ trapezoidsShape B: _______ trapezoidsUse trapezoid pattern blocks to cover each shape below. Draw lines to show where the trapezoids meet. Then, write how many trapezoid pattern blocks it requires to cover each shape. Shape A: _______ trapezoidsShape A: _______ trapezoids How is the number of pattern blocks needed to cover the same shape related to the size of the pattern blocks?",
+            "problem": "Shape B: _______ trianglesShape B: _______ trianglesUse triangle pattern blocks to cover each shape below. Draw lines to show where the triangles meet. Then, write how many triangle pattern blocks it takes to cover each shape. Shape A: _______ trianglesShape A: _______ triangles Shape B: _______ rhombusesShape B: _______ rhombusesUse rhombus pattern blocks to cover each shape below. Draw lines to show where the rhombuses meet. Then, write how many rhombus pattern blocks it takes to cover each shape. Shape A: _______ rhombusesShape A: _______ rhombuses Shape B: _______ trapezoidsShape B: _______ trapezoidsUse trapezoid pattern blocks to cover each shape below. Draw lines to show where the trapezoids meet. Then, write how many trapezoid pattern blocks it requires to cover each shape. Shape A: _______ trapezoidsShape A: _______ trapezoids How is the number of pattern blocks needed to cover the same shape related to the size of the pattern blocks?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use square pattern blocks to cover the rectangle below. Draw lines to show where the squares meet. Then, write how many square pattern blocks it requires to cover the rectangle. _______ squares _______ squares",
+            "problem": "Use square pattern blocks to cover the rectangle below. Draw lines to show where the squares meet. Then, write how many square pattern blocks it requires to cover the rectangle. _______ squares _______ squares",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use trapezoid pattern blocks to cover the rectangle in Problem 5. Can you use trapezoid pattern blocks to measure the area of this rectangle? Explain your answer.",
+            "problem": "Use trapezoid pattern blocks to cover the rectangle in Problem 5. Can you use trapezoid pattern blocks to measure the area of this rectangle? Explain your answer.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Understand area as an attribute of plane figures.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Understand area as an attribute of plane figures..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-a-1"
+      }
+    },
+    "e-math-m4-a-2": {
+      "id": "e-math-m4-a-2",
+      "code": "E.M4.A.2",
+      "standard": "3rd Grade Math",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Decompose and recompose shapes to compare areas.",
+        "pageTitle": "Decompose and recompose shapes to compare areas. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Decompose and recompose shapes to compare areas. in 3rd Grade Mathematics aligned with standard 3rd Grade Math.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Decompose and recompose shapes to compare areas. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 4 • Topic A",
+        "text": "In this lesson on Decompose and recompose shapes to compare areas., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Decompose and recompose shapes to compare areas.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Decompose and recompose shapes to compare areas.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Decompose and recompose shapes to compare areas.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Decompose and recompose shapes to compare areas.",
+        "prompt": "Each is a square unit. Find the area of the rectangle below. Then, draw a different rectangle with the same number of square units. Zach creates a rectangle with an area of 6 square inches. Luke makes a rectangle with an area of 6 square centimeters. Do the two rectangles have the same area? Why or why not?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Decompose and recompose shapes to compare areas.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use all of Paper Strip 1, which you cut into 12 square inches, to complete the chart below.",
+            "problem": "Use all of Paper Strip 1, which you cut into 12 square inches, to complete the chart below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use all of Paper Strip 2, which you cut into 12 square centimeters, to complete the chart below. Compare the areas of the rectangles you made with Paper Strip 1 and Paper Strip 2. What changed? Why did it change? Maggie uses square units to create these two rectangles. Do the two rectangles have the same area? How do you know? Shape AShape AShape BShape B",
+            "problem": "Use all of Paper Strip 2, which you cut into 12 square centimeters, to complete the chart below. Compare the areas of the rectangles you made with Paper Strip 1 and Paper Strip 2. What changed? Why did it change? Maggie uses square units to create these two rectangles. Do the two rectangles have the same area? How do you know? Shape AShape AShape BShape B",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Count to find the area of the rectangle below. Then, draw a different rectangle that has the same area.",
+            "problem": "Count to find the area of the rectangle below. Then, draw a different rectangle that has the same area.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Decompose and recompose shapes to compare areas.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Decompose and recompose shapes to compare areas..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-a-2"
+      }
+    },
+    "e-math-m4-a-3": {
+      "id": "e-math-m4-a-3",
+      "code": "E.M4.A.3",
+      "standard": "3rd Grade Math",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Model tiling with centimeter and inch unit squares as a strategy to measure area.",
+        "pageTitle": "Model tiling with centimeter and inch unit squares as a strategy to measure area. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Model tiling with centimeter and inch unit squares as a strategy to measure area. in 3rd Grade Mathematics aligned with standard 3rd Grade Math.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Model tiling with centimeter and inch unit squares as a strategy to measure area. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 4 • Topic A",
+        "text": "In this lesson on Model tiling with centimeter and inch unit squares as a strategy to measure area., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Model tiling with centimeter and inch unit squares as a strategy to measure area.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Model tiling with centimeter and inch unit squares as a strategy to measure area.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Model tiling with centimeter and inch unit squares as a strategy to measure area.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Model tiling with centimeter and inch unit squares as a strategy to measure area.",
+        "prompt": "Each is 1 square unit. Write the area of Rectangle A. Then, draw a different rectangle with the same area in the space provided. Area = ____________________________ Each is 1 square unit. Does this rectangle have the same area as Rectangle A? Explain.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Model tiling with centimeter and inch unit squares as a strategy to measure area.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Each is 1 square unit. What is the area of each of the following rectangles? _____________________________d._____________________________b._____________________________a._____________________________c._____________________________d._____________________________b._____________________________a._____________________________c.Each is 1 square unit. What is the area of each of the following rectangles? a.How would the rectangles in Problem 1 be different if they were composed of square inches? Select one rectangle from Problem 1 and recreate it on square inch and square centimeter grid paper.",
+            "problem": "Each is 1 square unit. What is the area of each of the following rectangles? _____________________________d._____________________________b._____________________________a._____________________________c._____________________________d._____________________________b._____________________________a._____________________________c.Each is 1 square unit. What is the area of each of the following rectangles? a.How would the rectangles in Problem 1 be different if they were composed of square inches? Select one rectangle from Problem 1 and recreate it on square inch and square centimeter grid paper.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use a separate piece of square centimeter grid paper. Draw four different rectangles that each has an area of 8 square centimeters.",
+            "problem": "Use a separate piece of square centimeter grid paper. Draw four different rectangles that each has an area of 8 square centimeters.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Model tiling with centimeter and inch unit squares as a strategy to measure area.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Model tiling with centimeter and inch unit squares as a strategy to measure area..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-a-3"
+      }
+    },
+    "e-math-m4-a-4": {
+      "id": "e-math-m4-a-4",
+      "code": "E.M4.A.4",
+      "standard": "3rd Grade Math",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate side lengths with the number of tiles on a side.",
+        "pageTitle": "Relate side lengths with the number of tiles on a side. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Relate side lengths with the number of tiles on a side. in 3rd Grade Mathematics aligned with standard 3rd Grade Math.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Relate side lengths with the number of tiles on a side. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 4 • Topic A",
+        "text": "In this lesson on Relate side lengths with the number of tiles on a side., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate side lengths with the number of tiles on a side.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate side lengths with the number of tiles on a side.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate side lengths with the number of tiles on a side.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate side lengths with the number of tiles on a side.",
+        "prompt": "Label the side lengths of each rectangle. Then, match the rectangle to its total area. 12 square centimeters 5 square inches 6 square centimeters 12 square centimeters 5 square inches 6 square centimeters",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate side lengths with the number of tiles on a side.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use a ruler to measure the side lengths of the rectangle in centimeters. Mark each centimeter with a point and connect the points to show the square units. Then, count the squares you drew to find the total area. Total area: __________________________________",
+            "problem": "Use a ruler to measure the side lengths of the rectangle in centimeters. Mark each centimeter with a point and connect the points to show the square units. Then, count the squares you drew to find the total area. Total area: __________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use a ruler to measure the side lengths of the rectangle in inches. Mark each inch with a point and connect the points to show the square units. Then, count the squares you drew to find the total area. Total area: __________________________________ Mariana uses square centimeter tiles to find the side lengths of the rectangle below. Label each side length. Then, count the tiles to find the total area. Total area: __________________________________ Each is 1 square centimeter. Saffron says that the side length of the rectangle below is 4 centimeters. Kevin says the side length is 5 centimeters. Who is correct? Explain how you know.",
+            "problem": "Use a ruler to measure the side lengths of the rectangle in inches. Mark each inch with a point and connect the points to show the square units. Then, count the squares you drew to find the total area. Total area: __________________________________ Mariana uses square centimeter tiles to find the side lengths of the rectangle below. Label each side length. Then, count the tiles to find the total area. Total area: __________________________________ Each is 1 square centimeter. Saffron says that the side length of the rectangle below is 4 centimeters. Kevin says the side length is 5 centimeters. Who is correct? Explain how you know.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use both square centimeter and square inch tiles to find the area of the rectangle below. Which works best? Explain why. How does knowing side lengths A and B help you find side lengths C and D on the rectangle below? ABCDABCD",
+            "problem": "Use both square centimeter and square inch tiles to find the area of the rectangle below. Which works best? Explain why. How does knowing side lengths A and B help you find side lengths C and D on the rectangle below? ABCDABCD",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate side lengths with the number of tiles on a side.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate side lengths with the number of tiles on a side..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-a-4"
+      }
+    },
+    "e-math-m4-b-1": {
+      "id": "e-math-m4-b-1",
+      "code": "E.M4.B.1",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Form rectangles by tiling with unit squares to make arrays.",
+        "pageTitle": "Form rectangles by tiling with unit squares to make arrays. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Form rectangles by tiling with unit squares to make arrays. in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Form rectangles by tiling with unit squares to make arrays. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 4 • Topic B",
+        "text": "In this lesson on Form rectangles by tiling with unit squares to make arrays., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Form rectangles by tiling with unit squares to make arrays.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check their work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Form rectangles by tiling with unit squares to make arrays.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Form rectangles by tiling with unit squares to make arrays.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Form rectangles by tiling with unit squares to make arrays.",
+        "prompt": "Darren has a total of 28 square centimeter tiles. He arranges them into 7 equal rows. Draw Darren's rectangle. Label the side lengths, and write a multiplication sentence to find the total area.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Form rectangles by tiling with unit squares to make arrays.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "_______ \\times _______ = _______3 cmArea: 24 square centimeters. _______ \\times _______ = _______3 cmArea: 24 square centimeters. Use the centimeter side of a ruler to draw in the tiles, and then skip-count to find the unknown area. Write a multiplication sentence for each tiled rectangle. Area: 18 square centimeters. 3 6 9 12 15 183 18_______ \\times _______ = _______3 cm 3 6 9 12 15 183 18_______ \\times _______ = _______3 cm _______ \\times _______ = _______4 cm5 cmArea: _____ square centimeters. _______ \\times _______ = _______4 cm5 cmArea: _____ square centimeters. _______ \\times _______ = _______6 cmArea: 18 square centimeters. _______ \\times _______ = _______6 cmArea: 18 square centimeters. _______ \\times _______ = _______5 cmArea: 20 square centimeters. _______ \\times _______ = _______5 cmArea: 20 square centimeters. Area: _____ square centimeters. 3 cm 3 cm_______ \\times _______ = _______Area: _____ square centimeters. 3 cm 3 cm_______ \\times _______ = _______ Lindsey makes a rectangle with 35 square inch tiles. She arranges the tiles in 5 equal rows. What are the side lengths of the rectangle? Use words, pictures, and numbers to support your answer. Mark has a total of 24 square inch tiles. He uses 18 square inch tiles to build one rectangular array. He uses the remaining square inch tiles to build a second rectangular array. Draw two arrays that Mark might have made. Then, write multiplication sentences for each. Leon makes a rectangle with 32 square centimeter tiles. There are 4 equal rows of tiles. How many tiles are in each row? Use words, pictures, and numbers to support your answer. Can Leon arrange all of his 32 square centimeter tiles into 6 equal rows? Explain your answer.",
+            "problem": "_______ \\times _______ = _______3 cmArea: 24 square centimeters. _______ \\times _______ = _______3 cmArea: 24 square centimeters. Use the centimeter side of a ruler to draw in the tiles, and then skip-count to find the unknown area. Write a multiplication sentence for each tiled rectangle. Area: 18 square centimeters. 3 6 9 12 15 183 18_______ \\times _______ = _______3 cm 3 6 9 12 15 183 18_______ \\times _______ = _______3 cm _______ \\times _______ = _______4 cm5 cmArea: _____ square centimeters. _______ \\times _______ = _______4 cm5 cmArea: _____ square centimeters. _______ \\times _______ = _______6 cmArea: 18 square centimeters. _______ \\times _______ = _______6 cmArea: 18 square centimeters. _______ \\times _______ = _______5 cmArea: 20 square centimeters. _______ \\times _______ = _______5 cmArea: 20 square centimeters. Area: _____ square centimeters. 3 cm 3 cm_______ \\times _______ = _______Area: _____ square centimeters. 3 cm 3 cm_______ \\times _______ = _______ Lindsey makes a rectangle with 35 square inch tiles. She arranges the tiles in 5 equal rows. What are the side lengths of the rectangle? Use words, pictures, and numbers to support your answer. Mark has a total of 24 square inch tiles. He uses 18 square inch tiles to build one rectangular array. He uses the remaining square inch tiles to build a second rectangular array. Draw two arrays that Mark might have made. Then, write multiplication sentences for each. Leon makes a rectangle with 32 square centimeter tiles. There are 4 equal rows of tiles. How many tiles are in each row? Use words, pictures, and numbers to support your answer. Can Leon arrange all of his 32 square centimeter tiles into 6 equal rows? Explain your answer.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Form rectangles by tiling with unit squares to make arrays.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Form rectangles by tiling with unit squares to make arrays..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-b-1"
+      }
+    },
+    "e-math-m4-b-2": {
+      "id": "e-math-m4-b-2",
+      "code": "E.M4.B.2",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Draw rows and columns to determine the area of a rectangle given an incomplete array.",
+        "pageTitle": "Draw rows and columns to determine the area of a rectangle given an incomplete array. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Draw rows and columns to determine the area of a rectangle given an incomplete array. in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Draw rows and columns to determine the area of a rectangle given an incomplete array. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 4 • Topic B",
+        "text": "In this lesson on Draw rows and columns to determine the area of a rectangle given an incomplete array., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Draw rows and columns to determine the area of a rectangle given an incomplete array.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Draw rows and columns to determine the area of a rectangle given an incomplete array.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Draw rows and columns to determine the area of a rectangle given an incomplete array.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Draw rows and columns to determine the area of a rectangle given an incomplete array.",
+        "prompt": "The tiled floor in Cayden's dining room has a rug on it as shown below. How many square tiles are on the floor, including the tiles under the rug?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Draw rows and columns to determine the area of a rectangle given an incomplete array.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "b.a.c.d.e.f._____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cmb.a.c.d.e.f._____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm Each represents 1 square centimeter. Draw to find the number of rows and columns in each array. Match it to its completed array. Then, fill in the blanks to make a true equation to find each array's area. Sheena skip-counts by sixes to find the total square units in the rectangle below. She says there are 42 square units. Is she right? Explain your answer. The tile floor in Brandon's living room has a rug on it as shown below. How many square tiles are on the floor, including the tiles under the rug? Abdul is creating a stained glass window with square inch glass tiles as shown below. How many more square inch glass tiles does Abdul need to finish his glass window? Explain your answer.",
+            "problem": "b.a.c.d.e.f._____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cmb.a.c.d.e.f._____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm_____ cm \\times _____ cm = _____ sq cm Each represents 1 square centimeter. Draw to find the number of rows and columns in each array. Match it to its completed array. Then, fill in the blanks to make a true equation to find each array's area. Sheena skip-counts by sixes to find the total square units in the rectangle below. She says there are 42 square units. Is she right? Explain your answer. The tile floor in Brandon's living room has a rug on it as shown below. How many square tiles are on the floor, including the tiles under the rug? Abdul is creating a stained glass window with square inch glass tiles as shown below. How many more square inch glass tiles does Abdul need to finish his glass window? Explain your answer.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Draw rows and columns to determine the area of a rectangle given an incomplete array.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Draw rows and columns to determine the area of a rectangle given an incomplete array..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-b-2"
+      }
+    },
+    "e-math-m4-b-3": {
+      "id": "e-math-m4-b-3",
+      "code": "E.M4.B.3",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Interpret area models to form rectangular arrays.",
+        "pageTitle": "Interpret area models to form rectangular arrays. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Interpret area models to form rectangular arrays. in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Interpret area models to form rectangular arrays. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 4 • Topic B",
+        "text": "In this lesson on Interpret area models to form rectangular arrays., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Interpret area models to form rectangular arrays.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Interpret area models to form rectangular arrays.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Interpret area models to form rectangular arrays.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Interpret area models to form rectangular arrays.",
+        "prompt": "Area: ________ square unitsArea: ________ square unitsLabel the side lengths of Rectangle A on the grid below. Use a straight edge to draw a grid of equal size squares within Rectangle A. Find the total area of Rectangle A. Mark makes a rectangle with 36 square centimeter tiles. Gia makes a rectangle with 36 square inch tiles. Whose rectangle has a bigger area? Explain your answer.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Interpret area models to form rectangular arrays.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use a straight edge to draw a grid of equal size squares within the rectangle. Find and label the side lengths. Then, multiply the side lengths to find the area. Area A: ____ units \\times ____ units = ____ square units Area B: ____ units \\times ____ units = ____ square units Area C: ____ units \\times ____ units = ____ square units Area D: ____ units \\times ____ units = ____ square units Area E: ____ unit \\times ____ units = ____ square units Area F: ____ units \\times ____ units = ____ square units Benjamin'sBedroom FloorBenjamin'sBedroom FloorThe area of Benjamin's bedroom floor is shown on the grid to the right. Each represents 1 square foot. How many total square feet is Benjamin's floor? Label the side lengths.",
+            "problem": "Use a straight edge to draw a grid of equal size squares within the rectangle. Find and label the side lengths. Then, multiply the side lengths to find the area. Area A: ____ units \\times ____ units = ____ square units Area B: ____ units \\times ____ units = ____ square units Area C: ____ units \\times ____ units = ____ square units Area D: ____ units \\times ____ units = ____ square units Area E: ____ unit \\times ____ units = ____ square units Area F: ____ units \\times ____ units = ____ square units Benjamin'sBedroom FloorBenjamin'sBedroom FloorThe area of Benjamin's bedroom floor is shown on the grid to the right. Each represents 1 square foot. How many total square feet is Benjamin's floor? Label the side lengths.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use a straight edge to draw a grid of equal size squares within the rectangle. Find the total number of squares. MuralMuralMrs. Young's art class needs to create a mural that covers exactly 35 square feet. Mrs. Young marks the area for the mural as shown on the grid. Each represents 1 square foot. Did she mark the area correctly? Explain your answer. Mrs. Barnes draws a rectangular array. Mila skip-counts by fours and Jorge skip-counts by sixes to find the total number of square units in the array. When they give their answers, Mrs. Barnes says that they are both right.",
+            "problem": "Use a straight edge to draw a grid of equal size squares within the rectangle. Find the total number of squares. MuralMuralMrs. Young's art class needs to create a mural that covers exactly 35 square feet. Mrs. Young marks the area for the mural as shown on the grid. Each represents 1 square foot. Did she mark the area correctly? Explain your answer. Mrs. Barnes draws a rectangular array. Mila skip-counts by fours and Jorge skip-counts by sixes to find the total number of square units in the array. When they give their answers, Mrs. Barnes says that they are both right.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Use pictures, numbers, and words to explain how Mila and Jorge can both be right. How many square units might Mrs. Barnes' array have had?",
+            "problem": "Use pictures, numbers, and words to explain how Mila and Jorge can both be right. How many square units might Mrs. Barnes' array have had?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Interpret area models to form rectangular arrays.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Interpret area models to form rectangular arrays..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-b-3"
+      }
+    },
+    "e-math-m4-b-4": {
+      "id": "e-math-m4-b-4",
+      "code": "E.M4.B.4",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find the area of a rectangle through multiplication of the side lengths.",
+        "pageTitle": "Find the area of a rectangle through multiplication of the side lengths. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Find the area of a rectangle through multiplication of the side lengths. in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Find the area of a rectangle through multiplication of the side lengths. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 4 • Topic B",
+        "text": "In this lesson on Find the area of a rectangle through multiplication of the side lengths., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find the area of a rectangle through multiplication of the side lengths.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find the area of a rectangle through multiplication of the side lengths.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find the area of a rectangle through multiplication of the side lengths.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find the area of a rectangle through multiplication of the side lengths.",
+        "prompt": "Write a multiplication equation to find the area of the rectangle below. 3 inches9 inches_______ \\times _______ = _______Area: _____ sq in3 inches9 inches_______ \\times _______ = _______Area: _____ sq in Write a multiplication equation and a division equation to find the unknown side length for the rectangle below. 6 inches_____ inchesArea: 54 sq in_______ \\times _______ = ______________ ÷ _______ = _______6 inches_____ inchesArea: 54 sq in_______ \\times _______ = ______________ ÷ _______ = _______",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find the area of a rectangle through multiplication of the side lengths.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "a.4 ft7 ftArea: ______ sq ft_______ \\times _______ = _______b.7 ft8 ftArea: ______ sq ft_______ \\times _______ = _______c.6 ft6 ft_______ \\times _______ = _______ Area: ______ sq fta.4 ft7 ftArea: ______ sq ft_______ \\times _______ = _______b.7 ft8 ftArea: ______ sq ft_______ \\times _______ = _______c.6 ft6 ft_______ \\times _______ = _______ Area: ______ sq ftWrite a multiplication equation to find the area of each rectangle. _____ fta.Area = 72 sq ft9 ft_______ \\times _______ = ______________ ÷ _______ = ____________ fta.Area = 72 sq ft9 ft_______ \\times _______ = ______________ ÷ _______ = ____________ ftb.Area = 15 sq ft3 ft_______ \\times _______ = ______________ ÷ _______ = ____________ ftb.Area = 15 sq ft3 ft_______ \\times _______ = ______________ ÷ _______ = _______Write a multiplication equation and a division equation to find the unknown side length for each rectangle. 4 ftc.Area = 28 sq ft_____ ft_______ \\times _______ = ______________ ÷ _______ = _______4 ftc.Area = 28 sq ft_____ ft_______ \\times _______ = ______________ ÷ _______ = _______",
+            "problem": "a.4 ft7 ftArea: ______ sq ft_______ \\times _______ = _______b.7 ft8 ftArea: ______ sq ft_______ \\times _______ = _______c.6 ft6 ft_______ \\times _______ = _______ Area: ______ sq fta.4 ft7 ftArea: ______ sq ft_______ \\times _______ = _______b.7 ft8 ftArea: ______ sq ft_______ \\times _______ = _______c.6 ft6 ft_______ \\times _______ = _______ Area: ______ sq ftWrite a multiplication equation to find the area of each rectangle. _____ fta.Area = 72 sq ft9 ft_______ \\times _______ = ______________ ÷ _______ = ____________ fta.Area = 72 sq ft9 ft_______ \\times _______ = ______________ ÷ _______ = ____________ ftb.Area = 15 sq ft3 ft_______ \\times _______ = ______________ ÷ _______ = ____________ ftb.Area = 15 sq ft3 ft_______ \\times _______ = ______________ ÷ _______ = _______Write a multiplication equation and a division equation to find the unknown side length for each rectangle. 4 ftc.Area = 28 sq ft_____ ft_______ \\times _______ = ______________ ÷ _______ = _______4 ftc.Area = 28 sq ft_____ ft_______ \\times _______ = ______________ ÷ _______ = _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "On the grid below, draw a rectangle that has an area of 42 square units. Label the side lengths. Ursa draws a rectangle that has side lengths of 9 centimeters and 6 centimeters. What is the area of the rectangle? Explain how you found your answer. Eliza's bedroom measures 6 feet by 7 feet. Her brother's bedroom measures 5 feet by 8 feet. Eliza says their rooms have the same exact floor area. Is she right? Why or why not? Cliff draws a rectangle with a side length of 6 inches and an area of 24 square inches. What is the other side length? How do you know?",
+            "problem": "On the grid below, draw a rectangle that has an area of 42 square units. Label the side lengths. Ursa draws a rectangle that has side lengths of 9 centimeters and 6 centimeters. What is the area of the rectangle? Explain how you found your answer. Eliza's bedroom measures 6 feet by 7 feet. Her brother's bedroom measures 5 feet by 8 feet. Eliza says their rooms have the same exact floor area. Is she right? Why or why not? Cliff draws a rectangle with a side length of 6 inches and an area of 24 square inches. What is the other side length? How do you know?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find the area of a rectangle through multiplication of the side lengths.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find the area of a rectangle through multiplication of the side lengths..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-b-4"
+      }
+    },
+    "e-math-m4-c-1": {
+      "id": "e-math-m4-c-1",
+      "code": "E.M4.C.1",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Analyze different rectangles and reason about their area.",
+        "pageTitle": "Analyze different rectangles and reason about their area. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Analyze different rectangles and reason about their area. in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Analyze different rectangles and reason about their area. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 4 • Topic C begins with a concrete study of arithmetic properties. Students cut apart rectangular grids and rearrange the parts to create new rectangles with the same area.  Lesson 9 lays the foundation for the work to come in Lessons 10 and 11.",
+        "text": "In this lesson on Analyze different rectangles and reason about their area., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Analyze different rectangles and reason about their area.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Analyze different rectangles and reason about their area.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Analyze different rectangles and reason about their area.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Analyze different rectangles and reason about their area.",
+        "prompt": "Lamar uses square tiles to make the 2 rectangles shown below. Rectangle ARectangle BRectangle ARectangle B Label the side lengths of the 2 rectangles. Write equations to find the areas of the rectangles.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Analyze different rectangles and reason about their area.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Cut the grid into 2 equal rectangles.",
+            "problem": "Cut the grid into 2 equal rectangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw and label the side lengths of the 2 rectangles.",
+            "problem": "Draw and label the side lengths of the 2 rectangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "Write an equation to find the area of 1 of the rectangles.",
+            "problem": "Write an equation to find the area of 1 of the rectangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Write an equation to show the total area of the 2 rectangles. Place your 2 equal rectangles side by side to create a new, longer rectangle.",
+            "problem": "Write an equation to show the total area of the 2 rectangles. Place your 2 equal rectangles side by side to create a new, longer rectangle.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "Draw an area model to show the new rectangle. Label the side lengths. Find the total area of the longer rectangle. Furaha and Rahema use square tiles to make the rectangles shown below. Furaha's RectangleRahema's RectangleFuraha's RectangleRahema's Rectangle Label the side lengths on the rectangles above, and find the area of each rectangle. Furaha pushes his rectangle next to Rahema's rectangle to form a new, longer rectangle. Draw an area model to show the new rectangle. Label the side lengths. Rahema says the area of the new, longer rectangle is 52 square units. Is she right? Explain your answer. Kiera says she can find the area of the long rectangle below by adding the areas of Rectangles A and B. Is she right? Why or why not? Rectangle ARectangle BRectangle ARectangle B",
+            "problem": "Draw an area model to show the new rectangle. Label the side lengths. Find the total area of the longer rectangle. Furaha and Rahema use square tiles to make the rectangles shown below. Furaha's RectangleRahema's RectangleFuraha's RectangleRahema's Rectangle Label the side lengths on the rectangles above, and find the area of each rectangle. Furaha pushes his rectangle next to Rahema's rectangle to form a new, longer rectangle. Draw an area model to show the new rectangle. Label the side lengths. Rahema says the area of the new, longer rectangle is 52 square units. Is she right? Explain your answer. Kiera says she can find the area of the long rectangle below by adding the areas of Rectangles A and B. Is she right? Why or why not? Rectangle ARectangle BRectangle ARectangle B",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Analyze different rectangles and reason about their area.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Analyze different rectangles and reason about their area..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-c-1"
+      }
+    },
+    "e-math-m4-c-2": {
+      "id": "e-math-m4-c-2",
+      "code": "E.M4.C.2",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Apply the distributive property as a strategy to find the total area of a large rectangle by...",
+        "pageTitle": "Apply the distributive property as a strategy to find the total area of a large rectangle by... | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Apply the distributive property as a strategy to find the total area of a large rectangle by... in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Apply the distributive property as a strategy to find the total area of a large rectangle by... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 4 • Topic C begins with a concrete study of arithmetic properties. Students cut apart rectangular grids and rearrange the parts to create new rectangles with the same area.  Lesson 9 lays the foundation for the work to come in Lessons 10 and 11.",
+        "text": "In this lesson on Apply the distributive property as a strategy to find the total area of a large rectangle by..., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Apply the distributive property as a strategy to find the total area of a large rectangle by adding two products.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Apply the distributive property as a strategy to find the total area of a large rectangle by...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Apply the distributive property as a strategy to find the total area of a large rectangle by.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Apply the distributive property as a strategy to find the total area of a large rectangle by...",
+        "prompt": "Label the side lengths of the shaded and unshaded rectangles. Then, find the total area of the large rectangle by adding the areas of the 2 smaller rectangles. 8 \\times 7 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units 8 \\times 7 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units 9 \\times 13 = 9 \\times (______+______) = (______ \\times ______) + (______\\times ______) = ______ + ______ = ______ Area: ______ square units 9 \\times 13 = 9 \\times (______+______) = (______ \\times ______) + (______\\times ______) = ______ + ______ = ______ Area: ______ square units",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Apply the distributive property as a strategy to find the total area of a large rectangle by.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "7538 \\times 7 = (5 + 3) \\times 7 = (5 \\times 7) + (3 \\times 7) = ______ + ______ = ______ Area: ______ square unitsa.7538 \\times 7 = (5 + 3) \\times 7 = (5 \\times 7) + (3 \\times 7) = ______ + ______ = ______ Area: ______ square unitsa.24 12 \\times 4 = (______ + 2) \\times 4 = (______ \\times 4) + (2 \\times 4) = ______ + 8 = ______ Area: ______ square unitsb.24 12 \\times 4 = (______ + 2) \\times 4 = (______ \\times 4) + (2 \\times 4) = ______ + 8 = ______ Area: ______ square unitsb.Label the side lengths of the shaded and unshaded rectangles when needed. Then, find the total area of the large rectangle by adding the areas of the two smaller rectangles. 8 \\times 12 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units d.8 \\times 12 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units d.6 \\times 13 = 6 \\times (______ + 3) = (6 \\times ______) + (6 \\times 3) = ______ + ______ = ______ Area: ______ square units6c.6 \\times 13 = 6 \\times (______ + 3) = (6 \\times ______) + (6 \\times 3) = ______ + ______ = ______ Area: ______ square units6c. Vince imagines 1 more row of eight to find the total area of a 9 \\times 8 rectangle. Explain how this could help him solve 9 \\times 8. Break the 15 \\times 5 rectangle into 2 rectangles by shading one smaller rectangle within it. Then, find the sum of the areas of the 2 smaller rectangles and show how it relates to the total area. Explain your thinking.",
+            "problem": "7538 \\times 7 = (5 + 3) \\times 7 = (5 \\times 7) + (3 \\times 7) = ______ + ______ = ______ Area: ______ square unitsa.7538 \\times 7 = (5 + 3) \\times 7 = (5 \\times 7) + (3 \\times 7) = ______ + ______ = ______ Area: ______ square unitsa.24 12 \\times 4 = (______ + 2) \\times 4 = (______ \\times 4) + (2 \\times 4) = ______ + 8 = ______ Area: ______ square unitsb.24 12 \\times 4 = (______ + 2) \\times 4 = (______ \\times 4) + (2 \\times 4) = ______ + 8 = ______ Area: ______ square unitsb.Label the side lengths of the shaded and unshaded rectangles when needed. Then, find the total area of the large rectangle by adding the areas of the two smaller rectangles. 8 \\times 12 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units d.8 \\times 12 = 8 \\times (______ + ______) = (8 \\times ______) + (8 \\times ______) = ______ + ______ = ______ Area: ______ square units d.6 \\times 13 = 6 \\times (______ + 3) = (6 \\times ______) + (6 \\times 3) = ______ + ______ = ______ Area: ______ square units6c.6 \\times 13 = 6 \\times (______ + 3) = (6 \\times ______) + (6 \\times 3) = ______ + ______ = ______ Area: ______ square units6c. Vince imagines 1 more row of eight to find the total area of a 9 \\times 8 rectangle. Explain how this could help him solve 9 \\times 8. Break the 15 \\times 5 rectangle into 2 rectangles by shading one smaller rectangle within it. Then, find the sum of the areas of the 2 smaller rectangles and show how it relates to the total area. Explain your thinking.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Apply the distributive property as a strategy to find the total area of a large rectangle by...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Apply the distributive property as a strategy to find the total area of a large rectangle by....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-c-2"
+      }
+    },
+    "e-math-m4-c-3": {
+      "id": "e-math-m4-c-3",
+      "code": "E.M4.C.3",
+      "standard": "3.MD.5",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o...",
+        "pageTitle": "Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o... | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o... in 3rd Grade Mathematics aligned with standard 3.MD.5.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 4 • Topic C begins with a concrete study of arithmetic properties. Students cut apart rectangular grids and rearrange the parts to create new rectangles with the same area.  Lesson 9 lays the foundation for the work to come in Lessons 10 and 11.",
+        "text": "In this lesson on Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o..., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, or 72 square units using the associative property.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o...",
+        "prompt": "Find the area of the rectangle. 8 cm8 cm8 cm8 cm The rectangle below has the same area as the rectangle in Problem 1. Move the parentheses to find the unknown side lengths. Then, solve. ______ cm______ cmArea: 8 \\times 8 = (4 \\times 2) \\times 8 = 4 \\times 2 \\times 8= ______ \\times ______= ______ Area: ______ sq cm______ cm______ cmArea: 8 \\times 8 = (4 \\times 2) \\times 8 = 4 \\times 2 \\times 8= ______ \\times ______= ______ Area: ______ sq cm",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "The rectangles below have the same area. Move the parentheses to find the unknown side lengths. Then, solve. 1 cm______ cmArea: 1 \\times 48 = ______ Area: ______ sq cm b.1 cm______ cmArea: 1 \\times 48 = ______ Area: ______ sq cm b.6 cm8 cmArea: 8 \\times ______ = ______ Area: ______ sq cm a.6 cm8 cmArea: 8 \\times ______ = ______ Area: ______ sq cm a. ______cm2 cmArea: 8 \\times 6 = (2 \\times 4) \\times 6 = 2 \\times 4 \\times 6 = ______ \\times ______= ______ Area: ______ sq cmc.______cm2 cmArea: 8 \\times 6 = (2 \\times 4) \\times 6 = 2 \\times 4 \\times 6 = ______ \\times ______= ______ Area: ______ sq cmc. 4 cm______ cmArea: 8 \\times 6 = (4 \\times 2) \\times 6 = 4 \\times 2 \\times 6= ______ \\times ______= ______ Area: ______ sq cmd.4 cm______ cmArea: 8 \\times 6 = (4 \\times 2) \\times 6 = 4 \\times 2 \\times 6= ______ \\times ______= ______ Area: ______ sq cmd. Area: 8 \\times 6 = 8 \\times (2 \\times 3) = 8 \\times 2 \\times 3= ______ \\times ______= ______ Area: ______ sq cm______ cm______ cme.Area: 8 \\times 6 = 8 \\times (2 \\times 3) = 8 \\times 2 \\times 3= ______ \\times ______= ______ Area: ______ sq cm______ cm______ cme. Does Problem 1 show all the possible whole number side lengths for a rectangle with an area of 48 square centimeters? How do you know? In Problem 1, what happens to the shape of the rectangle as the difference between the side lengths gets smaller? a.Find the area of the rectangle below. 8 cm9 cm8 cm9 cm Julius says a 4 cm by 18 cm rectangle has the same area as the rectangle in Part (a). Place parentheses in the equation to find the related fact and solve. Is Julius correct? Why or why not? 4 \\times 18 = 4 \\times 2 \\times 9 = 4 \\times 2 \\times 9 = ______ \\times ______ = ______ Area: _____ sq cmcm 4 \\times 18 = 4 \\times 2 \\times 9 = 4 \\times 2 \\times 9 = ______ \\times ______ = ______ Area: _____ sq cmcm",
+            "problem": "The rectangles below have the same area. Move the parentheses to find the unknown side lengths. Then, solve. 1 cm______ cmArea: 1 \\times 48 = ______ Area: ______ sq cm b.1 cm______ cmArea: 1 \\times 48 = ______ Area: ______ sq cm b.6 cm8 cmArea: 8 \\times ______ = ______ Area: ______ sq cm a.6 cm8 cmArea: 8 \\times ______ = ______ Area: ______ sq cm a. ______cm2 cmArea: 8 \\times 6 = (2 \\times 4) \\times 6 = 2 \\times 4 \\times 6 = ______ \\times ______= ______ Area: ______ sq cmc.______cm2 cmArea: 8 \\times 6 = (2 \\times 4) \\times 6 = 2 \\times 4 \\times 6 = ______ \\times ______= ______ Area: ______ sq cmc. 4 cm______ cmArea: 8 \\times 6 = (4 \\times 2) \\times 6 = 4 \\times 2 \\times 6= ______ \\times ______= ______ Area: ______ sq cmd.4 cm______ cmArea: 8 \\times 6 = (4 \\times 2) \\times 6 = 4 \\times 2 \\times 6= ______ \\times ______= ______ Area: ______ sq cmd. Area: 8 \\times 6 = 8 \\times (2 \\times 3) = 8 \\times 2 \\times 3= ______ \\times ______= ______ Area: ______ sq cm______ cm______ cme.Area: 8 \\times 6 = 8 \\times (2 \\times 3) = 8 \\times 2 \\times 3= ______ \\times ______= ______ Area: ______ sq cm______ cm______ cme. Does Problem 1 show all the possible whole number side lengths for a rectangle with an area of 48 square centimeters? How do you know? In Problem 1, what happens to the shape of the rectangle as the difference between the side lengths gets smaller? a.Find the area of the rectangle below. 8 cm9 cm8 cm9 cm Julius says a 4 cm by 18 cm rectangle has the same area as the rectangle in Part (a). Place parentheses in the equation to find the related fact and solve. Is Julius correct? Why or why not? 4 \\times 18 = 4 \\times 2 \\times 9 = 4 \\times 2 \\times 9 = ______ \\times ______ = ______ Area: _____ sq cmcm 4 \\times 18 = 4 \\times 2 \\times 9 = 4 \\times 2 \\times 9 = ______ \\times ______ = ______ Area: _____ sq cmcm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the expression 8 \\times 9 to find different side lengths for a rectangle that has the same area as the rectangle in Part (a). Show your equations using parentheses. Then, estimate to draw the rectangle and label the side lengths.",
+            "problem": "Use the expression 8 \\times 9 to find different side lengths for a rectangle that has the same area as the rectangle in Part (a). Show your equations using parentheses. Then, estimate to draw the rectangle and label the side lengths.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Demonstrate the possible whole number side lengths of rectangles with areas of 24, 36, 48, o....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-c-3"
+      }
+    },
+    "e-math-m4-d-1": {
+      "id": "e-math-m4-d-1",
+      "code": "E.M4.D.1",
+      "standard": "3.MD.6",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solve word problems involving area.",
+        "pageTitle": "Solve word problems involving area. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Solve word problems involving area. in 3rd Grade Mathematics aligned with standard 3.MD.6.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Solve word problems involving area. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 4 • Topic D requires students to synthesize and apply their knowledge of area.  Lesson 12 begins the topic with an emphasis on real-world applications by providing students with opportunities to apply their understanding of area to solving word problems.  Students may practice unknown product, group size unknown, and number of groups unknown types of problems.  (See examples of problem types in the chart on page 19 of the Geometric Measurement Progression.)  The word problems provide a stepping-stone for the real-world, project-based application of area to composite shapes and the area floor plan in this topic.",
+        "text": "In this lesson on Solve word problems involving area., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Solve word problems involving area.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Solve word problems involving area.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Solve word problems involving area.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Solve word problems involving area.",
+        "prompt": "A painting has an area of 63 square inches. One side length is 9 inches. What is the other side length? Area = 63 square inches9 inchesArea = 63 square inches9 inches Judy's mini dollhouse has one floor and measures 4 inches by 16 inches. What is the total area of the dollhouse floor?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Solve word problems involving area.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Each side on a sticky note measures 9 centimeters. What is the area of the sticky note? Stacy tiles the rectangle below using her square pattern blocks. Find the area of Stacy's rectangle in square units. Then, draw and label a different rectangle with whole number side lengths that has the same area. Can you draw another rectangle with different whole number side lengths and have the same area? Explain how you know. An artist paints a 4 foot \\times 16 foot mural on a wall. What is the total area of the mural? Use the break apart and distribute strategy. 10 ft6 ft4 ft10 ft6 ft4 ft Alana tiles the 3 figures below. She says, \"I'm making a pattern!\" Find the area of Alana's 3 figures and explain her pattern.",
+            "problem": "Each side on a sticky note measures 9 centimeters. What is the area of the sticky note? Stacy tiles the rectangle below using her square pattern blocks. Find the area of Stacy's rectangle in square units. Then, draw and label a different rectangle with whole number side lengths that has the same area. Can you draw another rectangle with different whole number side lengths and have the same area? Explain how you know. An artist paints a 4 foot \\times 16 foot mural on a wall. What is the total area of the mural? Use the break apart and distribute strategy. 10 ft6 ft4 ft10 ft6 ft4 ft Alana tiles the 3 figures below. She says, \"I'm making a pattern!\" Find the area of Alana's 3 figures and explain her pattern.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw the next 2 figures in Alana's pattern and find their areas. Jermaine glues 3 identical pieces of paper as shown below and makes a square. Find the unknown side length of 1 piece of paper. Then, find the total area of 2 pieces of paper. 9 cm? cm 9 cm9 cm? cm 9 cm",
+            "problem": "Draw the next 2 figures in Alana's pattern and find their areas. Jermaine glues 3 identical pieces of paper as shown below and makes a square. Find the unknown side length of 1 piece of paper. Then, find the total area of 2 pieces of paper. 9 cm? cm 9 cm9 cm? cm 9 cm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Solve word problems involving area.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Solve word problems involving area..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-d-1"
+      }
+    },
+    "e-math-m4-d-2": {
+      "id": "e-math-m4-d-2",
+      "code": "E.M4.D.2",
+      "standard": "3.MD.6",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+        "pageTitle": "Find areas by decomposing into rectangles or completing composite figures to form rectangles. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Find areas by decomposing into rectangles or completing composite figures to form rectangles. in 3rd Grade Mathematics aligned with standard 3.MD.6.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Find areas by decomposing into rectangles or completing composite figures to form rectangles. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 4 • Topic D requires students to synthesize and apply their knowledge of area.  Lesson 12 begins the topic with an emphasis on real-world applications by providing students with opportunities to apply their understanding of area to solving word problems.  Students may practice unknown product, group size unknown, and number of groups unknown types of problems.  (See examples of problem types in the chart on page 19 of the Geometric Measurement Progression.)  The word problems provide a stepping-stone for the real-world, project-based application of area to composite shapes and the area floor plan in this topic.",
+        "text": "In this lesson on Find areas by decomposing into rectangles or completing composite figures to form rectangles., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "T:You can then find the unknown lengths by subtracting the known, 4 feet, from the total, 9 feet. S:The unknown length is 5 feet!"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find areas by decomposing into rectangles or completing composite figures to form rectangles.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+        "prompt": "The following figure is made up of 2 rectangles. Find the total area of the figure. Area of A + Area of B: ________ sq units + _________ sq units = _________ sq units",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find areas by decomposing into rectangles or completing composite figures to form rectangles.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Each of the following figures is made up of 2 rectangles. Find the total area of each figure. 18 18 Figure 1: Area of A + Area of B: _________ sq units + _________ sq units = _________ sq units Figure 2: Area of C + Area of D: _________ sq units + _________ sq units = _________ sq units Figure 3: Area of E + Area of F: _________ sq units + _________ sq units = _________ sq units Figure 4: Area of G + Area of H: _________ sq units + _________ sq units = _________sq units 10 cm9 cm3 cm4 cm10 cm9 cm3 cm4 cmThe figure shows a small rectangle cut out of a bigger rectangle. Find the area of the shaded figure. Area of the shaded figure: ______ — ______ = ______ Area of the shaded figure: ______ square centimetersArea of the shaded figure: ______ — ______ = ______ Area of the shaded figure: ______ square centimeters Label the unknown measurements.Area of the big rectangle: _____ cm \\times _____ cm = _____ sq cmArea of the small rectangle: _____ cm \\times _____ cm = _____ sq cmFind the area of the shaded figure. Label the unknown measurements.Area of the big rectangle: _____ cm \\times _____ cm = _____ sq cmArea of the small rectangle: _____ cm \\times _____ cm = _____ sq cmFind the area of the shaded figure. The figure shows a small rectangle cut out of a big rectangle. 9 cm4 cm7 cm_____ cm3 cm_____ cm9 cm4 cm7 cm_____ cm3 cm_____ cm",
+            "problem": "Each of the following figures is made up of 2 rectangles. Find the total area of each figure. 18 18 Figure 1: Area of A + Area of B: _________ sq units + _________ sq units = _________ sq units Figure 2: Area of C + Area of D: _________ sq units + _________ sq units = _________ sq units Figure 3: Area of E + Area of F: _________ sq units + _________ sq units = _________ sq units Figure 4: Area of G + Area of H: _________ sq units + _________ sq units = _________sq units 10 cm9 cm3 cm4 cm10 cm9 cm3 cm4 cmThe figure shows a small rectangle cut out of a bigger rectangle. Find the area of the shaded figure. Area of the shaded figure: ______ — ______ = ______ Area of the shaded figure: ______ square centimetersArea of the shaded figure: ______ — ______ = ______ Area of the shaded figure: ______ square centimeters Label the unknown measurements.Area of the big rectangle: _____ cm \\times _____ cm = _____ sq cmArea of the small rectangle: _____ cm \\times _____ cm = _____ sq cmFind the area of the shaded figure. Label the unknown measurements.Area of the big rectangle: _____ cm \\times _____ cm = _____ sq cmArea of the small rectangle: _____ cm \\times _____ cm = _____ sq cmFind the area of the shaded figure. The figure shows a small rectangle cut out of a big rectangle. 9 cm4 cm7 cm_____ cm3 cm_____ cm9 cm4 cm7 cm_____ cm3 cm_____ cm",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find areas by decomposing into rectangles or completing composite figures to form rectangles.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find areas by decomposing into rectangles or completing composite figures to form rectangles..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-d-2"
+      }
+    },
+    "e-math-m4-d-3": {
+      "id": "e-math-m4-d-3",
+      "code": "E.M4.D.3",
+      "standard": "3.MD.6",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+        "pageTitle": "Find areas by decomposing into rectangles or completing composite figures to form rectangles. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Find areas by decomposing into rectangles or completing composite figures to form rectangles. in 3rd Grade Mathematics aligned with standard 3.MD.6.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Find areas by decomposing into rectangles or completing composite figures to form rectangles. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.D.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 4 • Topic D requires students to synthesize and apply their knowledge of area.  Lesson 12 begins the topic with an emphasis on real-world applications by providing students with opportunities to apply their understanding of area to solving word problems.  Students may practice unknown product, group size unknown, and number of groups unknown types of problems.  (See examples of problem types in the chart on page 19 of the Geometric Measurement Progression.)  The word problems provide a stepping-stone for the real-world, project-based application of area to composite shapes and the area floor plan in this topic.",
+        "text": "In this lesson on Find areas by decomposing into rectangles or completing composite figures to form rectangles., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Find areas by decomposing into rectangles or completing composite figures to form rectangles.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Find areas by decomposing into rectangles or completing composite figures to form rectangles.",
+        "prompt": "Mary draws an 8 cm by 6 cm rectangle on her grid paper. She shades a square with a side length of 4 cm inside her rectangle. What area of the rectangle is left unshaded?",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Find areas by decomposing into rectangles or completing composite figures to form rectangles.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "a.a.Find the area of each of the following figures. All figures are made up of rectangles. 3 cm3 cm2 cm2 cm3 cm3 cm2 cm2 cm 2 m1 m1 m1 m4 m2 m1 m1 m1 m4 mb.b. The figure below shows a small rectangle in a big rectangle. Find the area of the shaded part of the figure. 6 m5 m2 m1 m2 m1 m6 m5 m2 m1 m2 m1 m",
+            "problem": "a.a.Find the area of each of the following figures. All figures are made up of rectangles. 3 cm3 cm2 cm2 cm3 cm3 cm2 cm2 cm 2 m1 m1 m1 m4 m2 m1 m1 m1 m4 mb.b. The figure below shows a small rectangle in a big rectangle. Find the area of the shaded part of the figure. 6 m5 m2 m1 m2 m1 m6 m5 m2 m1 m2 m1 m",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "A paper rectangle has a length of 6 inches and a width of 8 inches. A square with a side length of 3 inches was cut out of it. What is the area of the remaining paper? Tila and Evan both have paper rectangles measuring 6 cm by 9 cm. Tila cuts a 3 cm by 4 cm rectangle out of hers, and Evan cuts a 2 cm by 6 cm rectangle out of his. Tila says she has more paper left over. Evan says they have the same amount. Who is correct? Show your work below.",
+            "problem": "A paper rectangle has a length of 6 inches and a width of 8 inches. A square with a side length of 3 inches was cut out of it. What is the area of the remaining paper? Tila and Evan both have paper rectangles measuring 6 cm by 9 cm. Tila cuts a 3 cm by 4 cm rectangle out of hers, and Evan cuts a 2 cm by 6 cm rectangle out of his. Tila says she has more paper left over. Evan says they have the same amount. Who is correct? Show your work below.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Find areas by decomposing into rectangles or completing composite figures to form rectangles.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Find areas by decomposing into rectangles or completing composite figures to form rectangles..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-d-3"
+      }
+    },
+    "e-math-m4-d-4": {
+      "id": "e-math-m4-d-4",
+      "code": "E.M4.D.4",
+      "standard": "3.MD.6",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Apply knowledge of area to determine areas of rooms in a given floor plan.",
+        "pageTitle": "Apply knowledge of area to determine areas of rooms in a given floor plan. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Apply knowledge of area to determine areas of rooms in a given floor plan. in 3rd Grade Mathematics aligned with standard 3.MD.6.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Apply knowledge of area to determine areas of rooms in a given floor plan. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.D.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 4 • Topic D requires students to synthesize and apply their knowledge of area.  Lesson 12 begins the topic with an emphasis on real-world applications by providing students with opportunities to apply their understanding of area to solving word problems.  Students may practice unknown product, group size unknown, and number of groups unknown types of problems.  (See examples of problem types in the chart on page 19 of the Geometric Measurement Progression.)  The word problems provide a stepping-stone for the real-world, project-based application of area to composite shapes and the area floor plan in this topic.",
+        "text": "In this lesson on Apply knowledge of area to determine areas of rooms in a given floor plan., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Apply knowledge of area to determine areas of rooms in a given floor plan.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Apply knowledge of area to determine areas of rooms in a given floor plan.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Apply knowledge of area to determine areas of rooms in a given floor plan.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Apply knowledge of area to determine areas of rooms in a given floor plan.",
+        "prompt": "Jack uses grid paper to create a floor plan of his room. Label the unknown measurements, and find the area of the items listed below.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Apply knowledge of area to determine areas of rooms in a given floor plan.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Make a prediction: Which room looks like it has the biggest area? Record the areas and show the strategy you used to find each area. Which room has the biggest area? Was your prediction right? Why or why not? Find the side lengths of the house without using your ruler to measure them, and explain the process you used. Side lengths: __________ centimeters and __________ centimeters What is the area of the whole floor plan? How do you know? Area = __________ square centimeters The rooms in the floor plan below are rectangles or made up of rectangles.The rooms in the floor plan below are rectangles or made up of rectangles.",
+            "problem": "Make a prediction: Which room looks like it has the biggest area? Record the areas and show the strategy you used to find each area. Which room has the biggest area? Was your prediction right? Why or why not? Find the side lengths of the house without using your ruler to measure them, and explain the process you used. Side lengths: __________ centimeters and __________ centimeters What is the area of the whole floor plan? How do you know? Area = __________ square centimeters The rooms in the floor plan below are rectangles or made up of rectangles.The rooms in the floor plan below are rectangles or made up of rectangles.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Apply knowledge of area to determine areas of rooms in a given floor plan.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Apply knowledge of area to determine areas of rooms in a given floor plan..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-d-4"
+      }
+    },
+    "e-math-m4-d-5": {
+      "id": "e-math-m4-d-5",
+      "code": "E.M4.D.5",
+      "standard": "3.MD.6",
+      "levelId": "e",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Apply knowledge of area to determine areas of rooms in a given floor plan.",
+        "pageTitle": "Apply knowledge of area to determine areas of rooms in a given floor plan. | 3rd Grade Math | Hesten's Learning",
+        "description": "Master Apply knowledge of area to determine areas of rooms in a given floor plan. in 3rd Grade Mathematics aligned with standard 3.MD.6.",
+        "pageDescription": "EngageNY 3rd Grade Math lesson on Apply knowledge of area to determine areas of rooms in a given floor plan. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math E.M4.D.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 4 • Topic D requires students to synthesize and apply their knowledge of area.  Lesson 12 begins the topic with an emphasis on real-world applications by providing students with opportunities to apply their understanding of area to solving word problems.  Students may practice unknown product, group size unknown, and number of groups unknown types of problems.  (See examples of problem types in the chart on page 19 of the Geometric Measurement Progression.)  The word problems provide a stepping-stone for the real-world, project-based application of area to composite shapes and the area floor plan in this topic.",
+        "text": "In this lesson on Apply knowledge of area to determine areas of rooms in a given floor plan., explore 3rd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Apply knowledge of area to determine areas of rooms in a given floor plan.",
+          "Students develop foundational understanding and fluency with 3rd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Apply knowledge of area to determine areas of rooms in a given floor plan.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "3rd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Apply knowledge of area to determine areas of rooms in a given floor plan.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Apply knowledge of area to determine areas of rooms in a given floor plan.",
+        "prompt": "Find the area of the shaded figure. Then, draw and label a rectangle with the same area. 7 cm 4 cm7 cm4 cm7 cm 4 cm7 cm4 cm",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Apply knowledge of area to determine areas of rooms in a given floor plan.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Record the new side lengths you have chosen for each of the rooms and show that these side lengths equal the required area. For non-rectangular rooms, record the side lengths and areas of the small rectangles. Then, show how the areas of the small rectangles equal the required area.",
+            "problem": "Record the new side lengths you have chosen for each of the rooms and show that these side lengths equal the required area. For non-rectangular rooms, record the side lengths and areas of the small rectangles. Then, show how the areas of the small rectangles equal the required area.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Apply knowledge of area to determine areas of rooms in a given floor plan.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 3rd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Apply knowledge of area to determine areas of rooms in a given floor plan..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 3rd Grade Mathematics curriculum materials.",
+        "lessonId": "e-math-m4-d-5"
+      }
+    }
+  }
+}

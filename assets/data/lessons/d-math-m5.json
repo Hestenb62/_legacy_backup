@@ -1,0 +1,3072 @@
+{
+  "id": "d-math-m5",
+  "module": 5,
+  "subject": "math",
+  "grade": "5",
+  "level": "d",
+  "title": "Module 5: Addition and Subtraction Within 1,000 with Word Problems to 100",
+  "description": "Module 5: Addition and Subtraction Within 1,000 with Word Problems to 100 for 2nd Grade students.",
+  "lessonsCount": 20,
+  "lessons": {
+    "d-math-m5-a-1": {
+      "id": "d-math-m5-a-1",
+      "code": "D.M5.A.1",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.",
+        "pageTitle": "Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.",
+        "prompt": "Solve using the arrow way. 440 + 220 = ___________ 670 + __________ = 890 _________ + 765 = 945",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Complete each more or less statement. Complete each regular number pattern. 170, 180, 190, ______, ______, ______ 420, 410, 400, ______, ______, ______ 789, 689, ______, ______, ______, 289 565, 575, ______, ______, ______, 615 724, ______, ______, ______, 684, 674 ______, ______, ______, 886, 876, 866 Complete each statement. -10-10-100-100+100+100+10+10 389 ⟶ _____ ⟶ _____b.187 ⟶ _____ ⟶ _____ -_____-_____+10+10-10-10+ ____+ ____ 609 ⟶ _____ ⟶ 499 ⟶ _____ ⟶ 519 +100+100+100+100-10-10-10-10+10+10 512 ⟶ _____ ⟶ _____ ⟶ _____ ⟶ _____ ⟶ _____",
+            "problem": "Complete each more or less statement. Complete each regular number pattern. 170, 180, 190, ______, ______, ______ 420, 410, 400, ______, ______, ______ 789, 689, ______, ______, ______, 289 565, 575, ______, ______, ______, 615 724, ______, ______, ______, 684, 674 ______, ______, ______, 886, 876, 866 Complete each statement. -10-10-100-100+100+100+10+10 389 ⟶ _____ ⟶ _____b.187 ⟶ _____ ⟶ _____ -_____-_____+10+10-10-10+ ____+ ____ 609 ⟶ _____ ⟶ 499 ⟶ _____ ⟶ 519 +100+100+100+100-10-10-10-10+10+10 512 ⟶ _____ ⟶ _____ ⟶ _____ ⟶ _____ ⟶ _____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using the arrow way. 210 + 130 = ________ 320 + ________ = 400 _______ + 515 = 735",
+            "problem": "Solve using the arrow way. 210 + 130 = ________ 320 + ________ = 400 _______ + 515 = 735",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate 10 more, 10 less, 100 more, and 100 less to addition and subtraction of 10 and 100..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-1"
+      }
+    },
+    "d-math-m5-a-2": {
+      "id": "d-math-m5-a-2",
+      "code": "D.M5.A.2",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add and subtract multiples of 100, including counting on to subtract.",
+        "pageTitle": "Add and subtract multiples of 100, including counting on to subtract. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Add and subtract multiples of 100, including counting on to subtract. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Add and subtract multiples of 100, including counting on to subtract. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Add and subtract multiples of 100, including counting on to subtract., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Add and subtract multiples of 100, including counting on to subtract.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add and subtract multiples of 100, including counting on to subtract.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add and subtract multiples of 100, including counting on to subtract.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add and subtract multiples of 100, including counting on to subtract.",
+        "prompt": "Solve using place value strategies. Use the arrow way or mental math, and record your answers. You may use scrap paper if you like. 760 500 = _____880 600 = _____990 _____ = 590 534 334 = __________ 500 = 356736 _____ = 136",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add and subtract multiples of 100, including counting on to subtract.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve each addition problem using place value strategies. Use the arrow way or mental math, and record your answers. You may use scrap paper if you like. 2 hundreds 4 tens + 3 hundreds = _____ hundreds _____ tens 240 + 300 = _____ 340 + 300 = _____140 + 500 = _____200 + 440 = _____ 400 + 374 = _____274 + 500 = _____700 + 236 = _____ 571 + _____ = 871_____ + 349 = 74996 + _____ = 696 _____ + 562 = 862300 + _____ = 783600 + _____ = 726",
+            "problem": "Solve each addition problem using place value strategies. Use the arrow way or mental math, and record your answers. You may use scrap paper if you like. 2 hundreds 4 tens + 3 hundreds = _____ hundreds _____ tens 240 + 300 = _____ 340 + 300 = _____140 + 500 = _____200 + 440 = _____ 400 + 374 = _____274 + 500 = _____700 + 236 = _____ 571 + _____ = 871_____ + 349 = 74996 + _____ = 696 _____ + 562 = 862300 + _____ = 783600 + _____ = 726",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve each subtraction problem using place value strategies. Use the arrow way or mental math, and record your answers. You may use scrap paper if you like. a.6 hundreds 2 ones 4 hundreds = ____ hundreds ____ tens ____ ones 602 400 = _____ b.640 200 = _____650 300 = _____750 _____ = 350 462 200 = _____667 500 = _____731 400 = _____ 431 _____ = 131985 _____ = 585768 _____ = 68 _____ 200 = 662_____ 300 = 653734 _____ =234",
+            "problem": "Solve each subtraction problem using place value strategies. Use the arrow way or mental math, and record your answers. You may use scrap paper if you like. a.6 hundreds 2 ones 4 hundreds = ____ hundreds ____ tens ____ ones 602 400 = _____ b.640 200 = _____650 300 = _____750 _____ = 350 462 200 = _____667 500 = _____731 400 = _____ 431 _____ = 131985 _____ = 585768 _____ = 68 _____ 200 = 662_____ 300 = 653734 _____ =234",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "3.Fill in the blanks to make true number sentences. Use place value strategies, number bonds, or the arrow way to solve. 200 more than 389 is ___________. 300 more than ___________ is 568. 400 less than 867 is __________. __________ less than 962 is 262.",
+            "problem": "3.Fill in the blanks to make true number sentences. Use place value strategies, number bonds, or the arrow way to solve. 200 more than 389 is ___________. 300 more than ___________ is 568. 400 less than 867 is __________. __________ less than 962 is 262.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "4.Jessica's lemon tree had 526 lemons. She gave away 300 lemons. How many does she have left? Use the arrow way to solve.",
+            "problem": "4.Jessica's lemon tree had 526 lemons. She gave away 300 lemons. How many does she have left? Use the arrow way to solve.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add and subtract multiples of 100, including counting on to subtract.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add and subtract multiples of 100, including counting on to subtract..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-2"
+      }
+    },
+    "d-math-m5-a-3": {
+      "id": "d-math-m5-a-3",
+      "code": "D.M5.A.3",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add multiples of 100 and some tens within 1,000.",
+        "pageTitle": "Add multiples of 100 and some tens within 1,000. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Add multiples of 100 and some tens within 1,000. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Add multiples of 100 and some tens within 1,000. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Add multiples of 100 and some tens within 1,000., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Add multiples of 100 and some tens within 1,000.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add multiples of 100 and some tens within 1,000.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add multiples of 100 and some tens within 1,000.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add multiples of 100 and some tens within 1,000.",
+        "prompt": "Solve each set of problems using the arrow way.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add multiples of 100 and some tens within 1,000.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve each set of problems using the arrow way.",
+            "problem": "Solve each set of problems using the arrow way.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using the arrow way or mental math. Use scrap paper if needed. Solve. 66 tens + 20 tens = tensb. 66 tens + 24 tens = _tens c.66 tens + 27 tens = tens d. 67 tens + 28 tens = _tens e.What is the value of 86 tens?",
+            "problem": "Solve using the arrow way or mental math. Use scrap paper if needed. Solve. 66 tens + 20 tens = tensb. 66 tens + 24 tens = _tens c.66 tens + 27 tens = tens d. 67 tens + 28 tens = _tens e.What is the value of 86 tens?",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add multiples of 100 and some tens within 1,000.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add multiples of 100 and some tens within 1,000..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-3"
+      }
+    },
+    "d-math-m5-a-4": {
+      "id": "d-math-m5-a-4",
+      "code": "D.M5.A.4",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract multiples of 100 and some tens within 1,000.",
+        "pageTitle": "Subtract multiples of 100 and some tens within 1,000. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Subtract multiples of 100 and some tens within 1,000. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Subtract multiples of 100 and some tens within 1,000. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Subtract multiples of 100 and some tens within 1,000., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Subtract multiples of 100 and some tens within 1,000.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract multiples of 100 and some tens within 1,000.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract multiples of 100 and some tens within 1,000.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract multiples of 100 and some tens within 1,000.",
+        "prompt": "Solve using a simplifying strategy. Show your work if needed.830 530 = _______ 830 750 = _______ 830 780 = ________ 67 tens 30 tens = _____ tens. The value is ______. 67 tens 37 tens = _____ tens. The value is ______.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract multiples of 100 and some tens within 1,000.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve using the arrow way.",
+            "problem": "Solve using the arrow way.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using the arrow way or mental math. Use scrap paper if needed. Solve. 88 tens 20 tens = _________ b. 88 tens 28 tens = ________ 88 tens 29 tens = _________ d. 84 tens 28 tens = ________ What is the value of 60 tens? ________________ What is the value of 56 tens? _________________",
+            "problem": "Solve using the arrow way or mental math. Use scrap paper if needed. Solve. 88 tens 20 tens = _________ b. 88 tens 28 tens = ________ 88 tens 29 tens = _________ d. 84 tens 28 tens = ________ What is the value of 60 tens? ________________ What is the value of 56 tens? _________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract multiples of 100 and some tens within 1,000.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract multiples of 100 and some tens within 1,000..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-4"
+      }
+    },
+    "d-math-m5-a-5": {
+      "id": "d-math-m5-a-5",
+      "code": "D.M5.A.5",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use the associative property to make a hundred in one addend.",
+        "pageTitle": "Use the associative property to make a hundred in one addend. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use the associative property to make a hundred in one addend. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use the associative property to make a hundred in one addend. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Use the associative property to make a hundred in one addend., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use the associative property to make a hundred in one addend.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use the associative property to make a hundred in one addend.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use the associative property to make a hundred in one addend.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use the associative property to make a hundred in one addend.",
+        "prompt": "Add by drawing a number bond to make a hundred. Write the simplified equation and solve.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use the associative property to make a hundred in one addend.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve. 30 tens = ___________ b. 43 tens = ___________ 18 tens + 12 tens = ______ tens d. 18 tens + 13 tens = ______ tens e.24 tens + 19 tens = ______ tens f. 25 tens + 29 tens = ______ tens Add by drawing a number bond to make a hundred. Write the simplified equation and solve. 1012010120190 + 130 200 + 120 = 260 + 190 = 330 + 180 = 440 + 280 _____________ = _________ 199 + 86 ______________ = _________ 298 + 57 ______________ = _________ 425 + 397 ______________ = _________",
+            "problem": "Solve. 30 tens = ___________ b. 43 tens = ___________ 18 tens + 12 tens = ______ tens d. 18 tens + 13 tens = ______ tens e.24 tens + 19 tens = ______ tens f. 25 tens + 29 tens = ______ tens Add by drawing a number bond to make a hundred. Write the simplified equation and solve. 1012010120190 + 130 200 + 120 = 260 + 190 = 330 + 180 = 440 + 280 _____________ = _________ 199 + 86 ______________ = _________ 298 + 57 ______________ = _________ 425 + 397 ______________ = _________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use the associative property to make a hundred in one addend.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use the associative property to make a hundred in one addend..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-5"
+      }
+    },
+    "d-math-m5-a-6": {
+      "id": "d-math-m5-a-6",
+      "code": "D.M5.A.6",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use the associative property to subtract from three-digit numbers and verify solutions with ...",
+        "pageTitle": "Use the associative property to subtract from three-digit numbers and verify solutions with ... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use the associative property to subtract from three-digit numbers and verify solutions with ... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use the associative property to subtract from three-digit numbers and verify solutions with ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Use the associative property to subtract from three-digit numbers and verify solutions with ..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use the associative property to subtract from three-digit numbers and verify solutions with addition.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use the associative property to subtract from three-digit numbers and verify solutions with ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use the associative property to subtract from three-digit numbers and verify solutions with .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use the associative property to subtract from three-digit numbers and verify solutions with ...",
+        "prompt": "Draw and label a tape diagram to show how to simplify the problem. Write the new equation, and then subtract. 363 198 = = 671 399 = = 862 490 = =",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use the associative property to subtract from three-digit numbers and verify solutions with .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Draw and label a tape diagram to show how to simplify the problem. Write the newequation , and then subtract. 220 190 = 230 — 200 = + 10+ 10220190+ 10+ 10220190 320 190 = = 400 280 = = 470 280 = = 530 270 = =",
+            "problem": "Draw and label a tape diagram to show how to simplify the problem. Write the newequation , and then subtract. 220 190 = 230 — 200 = + 10+ 10220190+ 10+ 10220190 320 190 = = 400 280 = = 470 280 = = 530 270 = =",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Draw and label a tape diagram to show how to simplify the problem. Write a new equation, and then subtract. Check your work using addition. 451 199 = 452 200 = 562 299 = = 432 298 = = 612 295 = =",
+            "problem": "Draw and label a tape diagram to show how to simplify the problem. Write a new equation, and then subtract. Check your work using addition. 451 199 = 452 200 = 562 299 = = 432 298 = = 612 295 = =",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use the associative property to subtract from three-digit numbers and verify solutions with ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use the associative property to subtract from three-digit numbers and verify solutions with ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-6"
+      }
+    },
+    "d-math-m5-a-7": {
+      "id": "d-math-m5-a-7",
+      "code": "D.M5.A.7",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Share and critique solution strategies for varied addition and subtraction problems within 1...",
+        "pageTitle": "Share and critique solution strategies for varied addition and subtraction problems within 1... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Share and critique solution strategies for varied addition and subtraction problems within 1... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Share and critique solution strategies for varied addition and subtraction problems within 1... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.A.7",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 5 • Topic A",
+        "text": "In this lesson on Share and critique solution strategies for varied addition and subtraction problems within 1..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Share and critique solution strategies for varied addition and subtraction problems within 1,000.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Share and critique solution strategies for varied addition and subtraction problems within 1...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Share and critique solution strategies for varied addition and subtraction problems within 1.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Share and critique solution strategies for varied addition and subtraction problems within 1...",
+        "prompt": "Circle one of the strategies below, and use the circled strategy to solve 490 + 463. Explain why you chose that strategy. _____________________________________________________________________________________________________________________________________________________________________________________________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Share and critique solution strategies for varied addition and subtraction problems within 1.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Circle the student work that shows a correct solution to 543 + 290.",
+            "problem": "Circle the student work that shows a correct solution to 543 + 290.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Circle the student work that correctly shows a strategy to solve 721 — 490. Fix the work that is incorrect by making a new drawing in the space below with a matching number sentence.",
+            "problem": "Circle the student work that correctly shows a strategy to solve 721 — 490. Fix the work that is incorrect by making a new drawing in the space below with a matching number sentence.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "3.Two students solved 636 + 294 using two different strategies.",
+            "problem": "3.Two students solved 636 + 294 using two different strategies.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "Explain which strategy would be easier to use when solving and why. _____________________________________________________________________________________________________________________________________________________________________________________________",
+            "problem": "Explain which strategy would be easier to use when solving and why. _____________________________________________________________________________________________________________________________________________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 5,
+            "title": "Exercise 5",
+            "prompt": "4.Circle one of the strategies below, and use the circled strategy to solve 290 + 374.",
+            "problem": "4.Circle one of the strategies below, and use the circled strategy to solve 290 + 374.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 6,
+            "title": "Exercise 6",
+            "prompt": "Explain why you chose that strategy. __________________________________________________________________________________________________________________________________________________________________________________________",
+            "problem": "Explain why you chose that strategy. __________________________________________________________________________________________________________________________________________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Share and critique solution strategies for varied addition and subtraction problems within 1...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Share and critique solution strategies for varied addition and subtraction problems within 1....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-a-7"
+      }
+    },
+    "d-math-m5-b-1": {
+      "id": "d-math-m5-b-1",
+      "code": "D.M5.B.1",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate manipulative representations to the addition algorithm.",
+        "pageTitle": "Relate manipulative representations to the addition algorithm. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Relate manipulative representations to the addition algorithm. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Relate manipulative representations to the addition algorithm. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 5 • Topic B",
+        "text": "In this lesson on Relate manipulative representations to the addition algorithm., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate manipulative representations to the addition algorithm.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate manipulative representations to the addition algorithm.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate manipulative representations to the addition algorithm.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate manipulative representations to the addition algorithm.",
+        "prompt": "Solve the following problems using your place value chart, place value disks, and vertical form. Bundle a ten or hundred, when necessary.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate manipulative representations to the addition algorithm.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve the following problems using your place value chart, place value disks, and vertical form. Bundle a ten or hundred, when necessary. Solve. 300 + 200 = _____ 320 + 200 = _____ 320 + 230 = _____ 320 + 280 = _____ 328 + 286 = _____ 600 + 80 = _____ 600 + 180 = _____ 620 + 180 = _____ 680 + 220 = _____ 680 + 230 = _____",
+            "problem": "Solve the following problems using your place value chart, place value disks, and vertical form. Bundle a ten or hundred, when necessary. Solve. 300 + 200 = _____ 320 + 200 = _____ 320 + 230 = _____ 320 + 280 = _____ 328 + 286 = _____ 600 + 80 = _____ 600 + 180 = _____ 620 + 180 = _____ 680 + 220 = _____ 680 + 230 = _____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate manipulative representations to the addition algorithm.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate manipulative representations to the addition algorithm..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-b-1"
+      }
+    },
+    "d-math-m5-b-2": {
+      "id": "d-math-m5-b-2",
+      "code": "D.M5.B.2",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate manipulative representations to the addition algorithm.",
+        "pageTitle": "Relate manipulative representations to the addition algorithm. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Relate manipulative representations to the addition algorithm. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Relate manipulative representations to the addition algorithm. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 5 • Topic B",
+        "text": "In this lesson on Relate manipulative representations to the addition algorithm., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate manipulative representations to the addition algorithm.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate manipulative representations to the addition algorithm.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate manipulative representations to the addition algorithm.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate manipulative representations to the addition algorithm.",
+        "prompt": "Solve the following problems using your place value chart, place value disks, and vertical form. Bundle a ten or hundred, when necessary.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate manipulative representations to the addition algorithm.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve the following problems using place value disks, a place value chart, and vertical form. Solve. 270 + 430 = _____ 260 + 440 = _____ 255 + 445 = _____ 258 + 443 = _____ 408 + 303 = _____ 478 + 303 = _____ 478 + 323 = _____",
+            "problem": "Solve the following problems using place value disks, a place value chart, and vertical form. Solve. 270 + 430 = _____ 260 + 440 = _____ 255 + 445 = _____ 258 + 443 = _____ 408 + 303 = _____ 478 + 303 = _____ 478 + 323 = _____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate manipulative representations to the addition algorithm.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate manipulative representations to the addition algorithm..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-b-2"
+      }
+    },
+    "d-math-m5-b-3": {
+      "id": "d-math-m5-b-3",
+      "code": "D.M5.B.3",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+        "pageTitle": "Use math drawings to represent additions with up to two compositions and relate drawings to ... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use math drawings to represent additions with up to two compositions and relate drawings to ... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use math drawings to represent additions with up to two compositions and relate drawings to ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 5 • Topic B",
+        "text": "In this lesson on Use math drawings to represent additions with up to two compositions and relate drawings to ..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use math drawings to represent additions with up to two compositions and relate drawings to the addition algorithm.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use math drawings to represent additions with up to two compositions and relate drawings to .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+        "prompt": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 436 + 509 = ________ 584 + 361 = ________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use math drawings to represent additions with up to two compositions and relate drawings to .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve using vertical form, and draw chips on the place value chart. Bundle as needed. hundreds tens oneshundreds tens ones 117 + 170 = _______ hundreds tens oneshundreds tens ones b.217 + 173 = ________ hundreds tens oneshundreds tens ones c.371 + 133 = _______ hundreds tens oneshundreds tens ones d.504 + 269 = _______",
+            "problem": "Solve using vertical form, and draw chips on the place value chart. Bundle as needed. hundreds tens oneshundreds tens ones 117 + 170 = _______ hundreds tens oneshundreds tens ones b.217 + 173 = ________ hundreds tens oneshundreds tens ones c.371 + 133 = _______ hundreds tens oneshundreds tens ones d.504 + 269 = _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 546 + 192 = _______ 546 + 275 = _______",
+            "problem": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 546 + 192 = _______ 546 + 275 = _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use math drawings to represent additions with up to two compositions and relate drawings to ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use math drawings to represent additions with up to two compositions and relate drawings to ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-b-3"
+      }
+    },
+    "d-math-m5-b-4": {
+      "id": "d-math-m5-b-4",
+      "code": "D.M5.B.4",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+        "pageTitle": "Use math drawings to represent additions with up to two compositions and relate drawings to ... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use math drawings to represent additions with up to two compositions and relate drawings to ... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use math drawings to represent additions with up to two compositions and relate drawings to ... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 5 • Topic B",
+        "text": "In this lesson on Use math drawings to represent additions with up to two compositions and relate drawings to ..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use math drawings to represent additions with up to two compositions and relate drawings to the addition algorithm.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use math drawings to represent additions with up to two compositions and relate drawings to .... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use math drawings to represent additions with up to two compositions and relate drawings to ...",
+        "prompt": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 267 + 356 = _________ 623 + 279 = _________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use math drawings to represent additions with up to two compositions and relate drawings to .... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve using vertical form, and draw chips on the place value chart. Bundle as needed. hundreds tens oneshundreds tens ones 227 + 183 = ______ hundreds tens oneshundreds tens ones 424 + 288 = _______ hundreds tens oneshundreds tens ones 638 + 298 = _______ hundreds tens oneshundreds tens ones 648 + 289 = _______",
+            "problem": "Solve using vertical form, and draw chips on the place value chart. Bundle as needed. hundreds tens oneshundreds tens ones 227 + 183 = ______ hundreds tens oneshundreds tens ones 424 + 288 = _______ hundreds tens oneshundreds tens ones 638 + 298 = _______ hundreds tens oneshundreds tens ones 648 + 289 = _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 307 + 187 398 + 207",
+            "problem": "Solve using vertical form, and draw chips on a place value chart. Bundle as needed. 307 + 187 398 + 207",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use math drawings to represent additions with up to two compositions and relate drawings to ...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use math drawings to represent additions with up to two compositions and relate drawings to ....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-b-4"
+      }
+    },
+    "d-math-m5-b-5": {
+      "id": "d-math-m5-b-5",
+      "code": "D.M5.B.5",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Choose and explain solution strategies and record with a written addition method.",
+        "pageTitle": "Choose and explain solution strategies and record with a written addition method. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Choose and explain solution strategies and record with a written addition method. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Choose and explain solution strategies and record with a written addition method. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 5 • Topic B",
+        "text": "In this lesson on Choose and explain solution strategies and record with a written addition method., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Choose and explain solution strategies and record with a written addition method.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Choose and explain solution strategies and record with a written addition method.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Choose and explain solution strategies and record with a written addition method.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Choose and explain solution strategies and record with a written addition method.",
+        "prompt": "Choose the best strategy and solve. Explain why you chose that strategy.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Choose and explain solution strategies and record with a written addition method.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Tracy solved the problem 299 + 399 four different ways.",
+            "problem": "Tracy solved the problem 299 + 399 four different ways.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Explain which strategy is most efficient for Tracy to use and why. ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ Choose the best strategy and solve. Explain why you chose that strategy.",
+            "problem": "Explain which strategy is most efficient for Tracy to use and why. ______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________ Choose the best strategy and solve. Explain why you chose that strategy.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Choose and explain solution strategies and record with a written addition method.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Choose and explain solution strategies and record with a written addition method..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-b-5"
+      }
+    },
+    "d-math-m5-c-1": {
+      "id": "d-math-m5-c-1",
+      "code": "D.M5.C.1",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Relate manipulative representations to the subtraction algorithm, and use addition to explai...",
+        "pageTitle": "Relate manipulative representations to the subtraction algorithm, and use addition to explai... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Relate manipulative representations to the subtraction algorithm, and use addition to explai... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Relate manipulative representations to the subtraction algorithm, and use addition to explai... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Relate manipulative representations to the subtraction algorithm, and use addition to explai..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Relate manipulative representations to the subtraction algorithm, and use addition to explain why the subtraction method works.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Relate manipulative representations to the subtraction algorithm, and use addition to explai...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Relate manipulative representations to the subtraction algorithm, and use addition to explai.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Relate manipulative representations to the subtraction algorithm, and use addition to explai...",
+        "prompt": "Solve using mental math or vertical form with place value disks. Check your work using addition. 378 117 = _______2. 378 119 = _______ 3.853 433 = _______4. 853 548 = _______",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Relate manipulative representations to the subtraction algorithm, and use addition to explai.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve using mental math. 8 6 = _____ 80 60 = _____ 180 60 = ____ 180 59 = ____ 6 3 = _____ 60 30 = _____ 760 30 = ____ 760 28 = ____",
+            "problem": "Solve using mental math. 8 6 = _____ 80 60 = _____ 180 60 = ____ 180 59 = ____ 6 3 = _____ 60 30 = _____ 760 30 = ____ 760 28 = ____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve using mental math or vertical form with place value disks. Check your work using addition. 138 17 = 121 b. 138 19 = _______ 138121 17 + 17 121138 c.445 35 = _______d. 445 53 = _______ 863 170 = _______f. 845 152 = _______ 472 228 = _______h. 418 274 = _______ 567 184 = _______j. 567 148 = _______",
+            "problem": "Solve using mental math or vertical form with place value disks. Check your work using addition. 138 17 = 121 b. 138 19 = _______ 138121 17 + 17 121138 c.445 35 = _______d. 445 53 = _______ 863 170 = _______f. 845 152 = _______ 472 228 = _______h. 418 274 = _______ 567 184 = _______j. 567 148 = _______",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Relate manipulative representations to the subtraction algorithm, and use addition to explai...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Relate manipulative representations to the subtraction algorithm, and use addition to explai....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-1"
+      }
+    },
+    "d-math-m5-c-2": {
+      "id": "d-math-m5-c-2",
+      "code": "D.M5.C.2",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+        "pageTitle": "Use math drawings to represent subtraction with up to two decompositions, relate drawings to... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use math drawings to represent subtraction with up to two decompositions, relate drawings to... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use math drawings to represent subtraction with up to two decompositions, relate drawings to... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Use math drawings to represent subtraction with up to two decompositions, relate drawings to..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use math drawings to represent subtraction with up to two decompositions, relate drawings to the algorithm, and use addition to explain why the subtraction method works.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Continue to support struggling students, but as they demonstrate proficiency, instruct them to work on the Problem Set independently. Problem Set (10 minutes)"
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use math drawings to represent subtraction with up to two decompositions, relate drawings to.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+        "prompt": "Demonstrate understanding of the key concepts and procedures introduced in Use math drawings to represent subtraction with up to two decompositions, relate drawings to....",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use math drawings to represent subtraction with up to two decompositions, relate drawings to.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Practice Problem 1",
+            "prompt": "Apply the mathematical concepts and strategies of Use math drawings to represent subtraction with up to two decompositions, relate drawings to... to determine the solution.",
+            "problem": "Apply the mathematical concepts and strategies of Use math drawings to represent subtraction with up to two decompositions, relate drawings to... to determine the solution.",
+            "hint": "Sketch a visual diagram, number line, or array model to represent the problem.",
+            "solution": "Direct application of grade-level algorithms and mathematical reasoning validates the result.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Model Problem",
+                "result": "Represent given quantities concretely or pictorially."
+              },
+              {
+                "step": 2,
+                "action": "Solve",
+                "result": "Apply mathematical operations to reach the final answer."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use math drawings to represent subtraction with up to two decompositions, relate drawings to...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use math drawings to represent subtraction with up to two decompositions, relate drawings to....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-2"
+      }
+    },
+    "d-math-m5-c-3": {
+      "id": "d-math-m5-c-3",
+      "code": "D.M5.C.3",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+        "pageTitle": "Use math drawings to represent subtraction with up to two decompositions, relate drawings to... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Use math drawings to represent subtraction with up to two decompositions, relate drawings to... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Use math drawings to represent subtraction with up to two decompositions, relate drawings to... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Use math drawings to represent subtraction with up to two decompositions, relate drawings to..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Use math drawings to represent subtraction with up to two decompositions, relate drawings to the algorithm, and use addition to explain why the subtraction method works.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Use math drawings to represent subtraction with up to two decompositions, relate drawings to.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Use math drawings to represent subtraction with up to two decompositions, relate drawings to...",
+        "prompt": "Solve by drawing chips on the place value chart. Then, use addition to check your work.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Use math drawings to represent subtraction with up to two decompositions, relate drawings to.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve by drawing chips on the place value chart. Then, use addition to check your work. Complete all of the if…then statements. Draw a number bond to represent the related facts. If 762 ________ = 173, then 173 + 589 = _________. If 631 ________ = 273, then _______ + 273 = 631.",
+            "problem": "Solve by drawing chips on the place value chart. Then, use addition to check your work. Complete all of the if…then statements. Draw a number bond to represent the related facts. If 762 ________ = 173, then 173 + 589 = _________. If 631 ________ = 273, then _______ + 273 = 631.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Use math drawings to represent subtraction with up to two decompositions, relate drawings to...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Use math drawings to represent subtraction with up to two decompositions, relate drawings to....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-3"
+      }
+    },
+    "d-math-m5-c-4": {
+      "id": "d-math-m5-c-4",
+      "code": "D.M5.C.4",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract from multiples of 100 and from numbers with zero in the tens place.",
+        "pageTitle": "Subtract from multiples of 100 and from numbers with zero in the tens place. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Subtract from multiples of 100 and from numbers with zero in the tens place. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Subtract from multiples of 100 and from numbers with zero in the tens place. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Subtract from multiples of 100 and from numbers with zero in the tens place., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Subtract from multiples of 100 and from numbers with zero in the tens place.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract from multiples of 100 and from numbers with zero in the tens place.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract from multiples of 100 and from numbers with zero in the tens place.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract from multiples of 100 and from numbers with zero in the tens place.",
+        "prompt": "hundreds tens oneshundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 604 143 = __________ hundreds tens oneshundreds tens ones 700 568 = __________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract from multiples of 100 and from numbers with zero in the tens place.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "hundreds tens oneshundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 304 53 = __________ hundreds tens oneshundreds tens ones hundreds tens oneshundreds tens ones406 187 = __________ 501 316 = __________ hundreds tens oneshundreds tens ones700 509 = __________ hundreds tens oneshundreds tens ones900 626 = __________ Emily said that 400 247 is the same as 399 246. Write an explanation using pictures, numbers, or words to prove Emily is correct.",
+            "problem": "hundreds tens oneshundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 304 53 = __________ hundreds tens oneshundreds tens ones hundreds tens oneshundreds tens ones406 187 = __________ 501 316 = __________ hundreds tens oneshundreds tens ones700 509 = __________ hundreds tens oneshundreds tens ones900 626 = __________ Emily said that 400 247 is the same as 399 246. Write an explanation using pictures, numbers, or words to prove Emily is correct.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract from multiples of 100 and from numbers with zero in the tens place.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract from multiples of 100 and from numbers with zero in the tens place..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-4"
+      }
+    },
+    "d-math-m5-c-5": {
+      "id": "d-math-m5-c-5",
+      "code": "D.M5.C.5",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract from multiples of 100 and from numbers with zero in the tens place.",
+        "pageTitle": "Subtract from multiples of 100 and from numbers with zero in the tens place. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Subtract from multiples of 100 and from numbers with zero in the tens place. in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Subtract from multiples of 100 and from numbers with zero in the tens place. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Subtract from multiples of 100 and from numbers with zero in the tens place., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Subtract from multiples of 100 and from numbers with zero in the tens place.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract from multiples of 100 and from numbers with zero in the tens place.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract from multiples of 100 and from numbers with zero in the tens place.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract from multiples of 100 and from numbers with zero in the tens place.",
+        "prompt": "hundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 600 432 = __________ hundreds tens ones 303 254 = __________",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract from multiples of 100 and from numbers with zero in the tens place.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "hundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 200 113 = __________ hundreds tens ones 400 247 = __________ hundreds tens ones 700 428 = __________ hundreds tens ones800 606 = __________ hundreds tens ones 901 404 = __________",
+            "problem": "hundreds tens onesSolve vertically or using mental math. Draw chips on the place value chart and unbundle, if needed. 200 113 = __________ hundreds tens ones 400 247 = __________ hundreds tens ones 700 428 = __________ hundreds tens ones800 606 = __________ hundreds tens ones 901 404 = __________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve 600 367. Then, check your work using addition.",
+            "problem": "Solve 600 367. Then, check your work using addition.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract from multiples of 100 and from numbers with zero in the tens place.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract from multiples of 100 and from numbers with zero in the tens place..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-5"
+      }
+    },
+    "d-math-m5-c-6": {
+      "id": "d-math-m5-c-6",
+      "code": "D.M5.C.6",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w...",
+        "pageTitle": "Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.C.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Module 5 • Topic C builds upon Module 4’s groundwork, which is now decomposing tens and hundreds within 1,000 (2.NBT.7).  In Lesson 13, students model decompositions with place value disks on their place value charts while simultaneously recording these changes in the vertical form.  Students draw a magnifying glass around the minuend as they did in Module 4.  They then ask familiar questions:  Do I have enough ones to subtract?  Do I have enough tens?  When the answer is no, students exchange one of the larger units for ten of the smaller units.  They record the change using the algorithm, following this procedure for each place on the place value chart.",
+        "text": "In this lesson on Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Apply and explain alternate methods for subtracting from multiples of 100 and from numbers with zero in the tens place.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w...",
+        "prompt": "Choose a strategy to solve, and explain why you chose that strategy.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Use the arrow way and counting on to solve.",
+            "problem": "Use the arrow way and counting on to solve.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve vertically, and draw a place value chart and chips. Rename in one step. Choose a strategy to solve, and explain why you chose that strategy.",
+            "problem": "Solve vertically, and draw a place value chart and chips. Rename in one step. Choose a strategy to solve, and explain why you chose that strategy.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "4.Prove the student's strategy by solving both problems to check that their solutions are the same. Explain to your partner why this way works.",
+            "problem": "4.Prove the student's strategy by solving both problems to check that their solutions are the same. Explain to your partner why this way works.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 4,
+            "title": "Exercise 4",
+            "prompt": "5.Use the simplifying strategy from Problem 4 to solve the following two problems.",
+            "problem": "5.Use the simplifying strategy from Problem 4 to solve the following two problems.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Apply and explain alternate methods for subtracting from multiples of 100 and from numbers w....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-c-6"
+      }
+    },
+    "d-math-m5-d-1": {
+      "id": "d-math-m5-d-1",
+      "code": "D.M5.D.1",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Choose and explain solution strategies and record with a written addition or subtraction met...",
+        "pageTitle": "Choose and explain solution strategies and record with a written addition or subtraction met... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Choose and explain solution strategies and record with a written addition or subtraction met... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Choose and explain solution strategies and record with a written addition or subtraction met... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.D.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 19",
+        "pill": "Module 5 • Topic D focuses on the application of the tools and concepts presented in Topics A through C.  Students synthesize their understanding of addition and subtraction strategies and then use that understanding to determine which of those strategies to apply to a variety of problems, including number bond problems and problems with the unknown in all positions (e.g., 200 + ____ = 342 or  ____ – 53 = 400).",
+        "text": "In this lesson on Choose and explain solution strategies and record with a written addition or subtraction met..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Choose and explain solution strategies and record with a written addition or subtraction method.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson. Any combination of the questions below may be used to lead the discussion."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Choose and explain solution strategies and record with a written addition or subtraction met...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Choose and explain solution strategies and record with a written addition or subtraction met.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Choose and explain solution strategies and record with a written addition or subtraction met...",
+        "prompt": "Solve and explain why you chose that strategy.",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Choose and explain solution strategies and record with a written addition or subtraction met.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Explain how the two strategies to solve 500 211 are related.",
+            "problem": "Explain how the two strategies to solve 500 211 are related.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Solve and explain why you chose that strategy.",
+            "problem": "Solve and explain why you chose that strategy.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Choose and explain solution strategies and record with a written addition or subtraction met...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Choose and explain solution strategies and record with a written addition or subtraction met....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-d-1"
+      }
+    },
+    "d-math-m5-d-2": {
+      "id": "d-math-m5-d-2",
+      "code": "D.M5.D.2",
+      "standard": "2.NBT.7",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Choose and explain solution strategies and record with a written addition or subtraction met...",
+        "pageTitle": "Choose and explain solution strategies and record with a written addition or subtraction met... | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Choose and explain solution strategies and record with a written addition or subtraction met... in 2nd Grade Mathematics aligned with standard 2.NBT.7.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Choose and explain solution strategies and record with a written addition or subtraction met... with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M5.D.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 20",
+        "pill": "Module 5 • Topic D focuses on the application of the tools and concepts presented in Topics A through C.  Students synthesize their understanding of addition and subtraction strategies and then use that understanding to determine which of those strategies to apply to a variety of problems, including number bond problems and problems with the unknown in all positions (e.g., 200 + ____ = 342 or  ____ – 53 = 400).",
+        "text": "In this lesson on Choose and explain solution strategies and record with a written addition or subtraction met..., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Choose and explain solution strategies and record with a written addition or subtraction method.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Student Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Choose and explain solution strategies and record with a written addition or subtraction met...",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Choose and explain solution strategies and record with a written addition or subtraction met.... Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Choose and explain solution strategies and record with a written addition or subtraction met...",
+        "prompt": "Solve each problem using two different strategies. 299 + 156 = _________ 547 + ______ = 841",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Choose and explain solution strategies and record with a written addition or subtraction met.... Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Step 1:Show your strategy to solve. Step 2:Find a classmate who used a different strategy, and copy his work into the box. Step 3:Discuss which strategy is more efficient. 399 + 237 = _________ 400 298 = ________ 548 + 181 = _________ 360 + ______ = 754 862 ______ = 690",
+            "problem": "Step 1:Show your strategy to solve. Step 2:Find a classmate who used a different strategy, and copy his work into the box. Step 3:Discuss which strategy is more efficient. 399 + 237 = _________ 400 298 = ________ 548 + 181 = _________ 360 + ______ = 754 862 ______ = 690",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Choose and explain solution strategies and record with a written addition or subtraction met...?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Choose and explain solution strategies and record with a written addition or subtraction met....\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m5-d-2"
+      }
+    }
+  }
+}

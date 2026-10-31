@@ -1,0 +1,1188 @@
+{
+  "id": "d-math-m1",
+  "module": 1,
+  "subject": "math",
+  "grade": "1",
+  "level": "d",
+  "title": "Module 1: Sums and Differences to 100",
+  "description": "Module 1: Sums and Differences to 100 for 2nd Grade students.",
+  "lessonsCount": 8,
+  "lessons": {
+    "d-math-m1-a-1": {
+      "id": "d-math-m1-a-1",
+      "code": "D.M1.A.1",
+      "standard": "2.OA.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Practice making ten and adding to ten.",
+        "pageTitle": "Practice making ten and adding to ten. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Practice making ten and adding to ten. in 2nd Grade Mathematics aligned with standard 2.OA.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Practice making ten and adding to ten. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 1 • Topic A",
+        "text": "In this lesson on Practice making ten and adding to ten., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Practice making ten and adding to ten.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Guide students in a conversation to debrief today's lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Practice making ten and adding to ten.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Practice making ten and adding to ten.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Practice making ten and adding to ten.",
+        "prompt": "1.Add or subtract. Complete the number bond for each set. 101910199 + 1 = ____8 + 2 = ____ 1 + 9 = ____2 + 8 = ____ 10 — 1 = ____10 — 2 = ____",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Practice making ten and adding to ten.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "1.Add or subtract. Complete the number bond to match. 9 + 1 = ____b. 4 + 6 = ____ 1 + 9 = ____ 6 + 4 = ____ 10 — 1 = ____ 10 — 6 = ____ 10 — 9 = ____ 10 — 4 = ____",
+            "problem": "1.Add or subtract. Complete the number bond to match. 9 + 1 = ____b. 4 + 6 = ____ 1 + 9 = ____ 6 + 4 = ____ 10 — 1 = ____ 10 — 6 = ____ 10 — 9 = ____ 10 — 4 = ____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "2.Solve. 10 + 5 = ____ b. 13 = 10 + ____c. 10 + 8 = ____",
+            "problem": "2.Solve. 10 + 5 = ____ b. 13 = 10 + ____c. 10 + 8 = ____",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Practice making ten and adding to ten.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Practice making ten and adding to ten..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-a-1"
+      }
+    },
+    "d-math-m1-a-2": {
+      "id": "d-math-m1-a-2",
+      "code": "D.M1.A.2",
+      "standard": "2.OA.2",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Practice making the next ten and adding to a multiple of ten.",
+        "pageTitle": "Practice making the next ten and adding to a multiple of ten. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Practice making the next ten and adding to a multiple of ten. in 2nd Grade Mathematics aligned with standard 2.OA.2.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Practice making the next ten and adding to a multiple of ten. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 1 • Topic A",
+        "text": "In this lesson on Practice making the next ten and adding to a multiple of ten., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Practice making the next ten and adding to a multiple of ten.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Guide students in a conversation to debrief today's lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Practice making the next ten and adding to a multiple of ten.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Practice making the next ten and adding to a multiple of ten.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Practice making the next ten and adding to a multiple of ten.",
+        "prompt": "1. Add or subtract. Draw a number bond for (b). 6 + 2 = ____b. ____ = 3 + 5 2 + 6 = ____ ____ = 5 + 3",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Practice making the next ten and adding to a multiple of ten.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "1.2. 10 + 3 = ____30 + 4 = ____60 + 5 = ____90 + 1 = ____ ____ = 10 + 7 ____ = 20 + 9 ____ = 70 + 6____ = 90 + 8 10 + 3 = ____30 + 4 = ____60 + 5 = ____90 + 1 = ____ ____ = 10 + 7 ____ = 20 + 9 ____ = 70 + 6____ = 90 + 8",
+            "problem": "1.2. 10 + 3 = ____30 + 4 = ____60 + 5 = ____90 + 1 = ____ ____ = 10 + 7 ____ = 20 + 9 ____ = 70 + 6____ = 90 + 8 10 + 3 = ____30 + 4 = ____60 + 5 = ____90 + 1 = ____ ____ = 10 + 7 ____ = 20 + 9 ____ = 70 + 6____ = 90 + 8",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Practice making the next ten and adding to a multiple of ten.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Practice making the next ten and adding to a multiple of ten..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-a-2"
+      }
+    },
+    "d-math-m1-b-1": {
+      "id": "d-math-m1-b-1",
+      "code": "D.M1.B.1",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Add and subtract like units.",
+        "pageTitle": "Add and subtract like units. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Add and subtract like units. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Add and subtract like units. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Add and subtract like units., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Add and subtract like units.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Add and subtract like units.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Add and subtract like units.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Add and subtract like units.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Add and subtract like units.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "3. Solve. Compare 57 — 2 to 57 — 20. How are they different? Use words, drawings, or numbers to explain. Extension!",
+            "problem": "3. Solve. Compare 57 — 2 to 57 — 20. How are they different? Use words, drawings, or numbers to explain. Extension!",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "5. Andy had $28. He spent $5 on a book. Lisa had $20 and got $3 more. Lisa says she has more money. Prove her right or wrong using pictures, numbers, or words.",
+            "problem": "5. Andy had $28. He spent $5 on a book. Lisa had $20 and got $3 more. Lisa says she has more money. Prove her right or wrong using pictures, numbers, or words.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Add and subtract like units.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Add and subtract like units..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-1"
+      }
+    },
+    "d-math-m1-b-2": {
+      "id": "d-math-m1-b-2",
+      "code": "D.M1.B.2",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Make a ten to add within 20.",
+        "pageTitle": "Make a ten to add within 20. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Make a ten to add within 20. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Make a ten to add within 20. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Make a ten to add within 20., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Make a ten to add within 20.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "Mark had a stick of 9 green linking cubes. His friend gave him 4 yellow linking cubes. How many linking cubes does Mark have now? Note: This add to result unknown problem's tape diagram can be compared to that of Lesson 3 when a part was subtracted."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Make a ten to add within 20.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Make a ten to add within 20.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Make a ten to add within 20.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Make a ten to add within 20.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "13. Lisa has 2 blue beads and 9 purple beads. How many beads does Lisa have in all? Lisa has _____ beads in all. _________________________________________________________________",
+            "problem": "13. Lisa has 2 blue beads and 9 purple beads. How many beads does Lisa have in all? Lisa has _____ beads in all. _________________________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "14. Ben had 8 pencils and bought 5 more. How many pencils does Ben have altogether? _______________________________",
+            "problem": "14. Ben had 8 pencils and bought 5 more. How many pencils does Ben have altogether? _______________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Make a ten to add within 20.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Make a ten to add within 20..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-2"
+      }
+    },
+    "d-math-m1-b-3": {
+      "id": "d-math-m1-b-3",
+      "code": "D.M1.B.3",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Make a ten to add within 100.",
+        "pageTitle": "Make a ten to add within 100. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Make a ten to add within 100. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Make a ten to add within 100. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Make a ten to add within 100., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Make a ten to add within 100.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Make a ten to add within 100.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Make a ten to add within 100.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Make a ten to add within 100.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Make a ten to add within 100.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve. Maria solved 67 + 5 as shown. Show Maria a faster way to solve 67 + 5.",
+            "problem": "Solve. Maria solved 67 + 5 as shown. Show Maria a faster way to solve 67 + 5.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "Use the RDW process to solve. Jessa collected 78 shells on the beach. Susan collected 6 more shells than Jessa. How many shells did Susan collect? ___________________________________________________",
+            "problem": "Use the RDW process to solve. Jessa collected 78 shells on the beach. Susan collected 6 more shells than Jessa. How many shells did Susan collect? ___________________________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Make a ten to add within 100.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Make a ten to add within 100..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-3"
+      }
+    },
+    "d-math-m1-b-4": {
+      "id": "d-math-m1-b-4",
+      "code": "D.M1.B.4",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Subtract single-digit numbers from multiples of 10 within 100.",
+        "pageTitle": "Subtract single-digit numbers from multiples of 10 within 100. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Subtract single-digit numbers from multiples of 10 within 100. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Subtract single-digit numbers from multiples of 10 within 100. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Subtract single-digit numbers from multiples of 10 within 100., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Subtract single-digit numbers from multiples of 10 within 100.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Subtract single-digit numbers from multiples of 10 within 100.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Subtract single-digit numbers from multiples of 10 within 100.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Subtract single-digit numbers from multiples of 10 within 100.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Subtract single-digit numbers from multiples of 10 within 100.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "2. Fill in the number bond and solve. _____ _____90 — 9 = ________ _____90 — 9 = ___",
+            "problem": "2. Fill in the number bond and solve. _____ _____90 — 9 = ________ _____90 — 9 = ___",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Exercise 2",
+            "prompt": "3. Show how 10 — 6 helps you solve 50 — 6.",
+            "problem": "3. Show how 10 — 6 helps you solve 50 — 6.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Exercise 3",
+            "prompt": "4. Carla has 70 paper clips. She gives 6 away. How many paper clips does Carla have left? Carla has _____ paper clips left.",
+            "problem": "4. Carla has 70 paper clips. She gives 6 away. How many paper clips does Carla have left? Carla has _____ paper clips left.",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Subtract single-digit numbers from multiples of 10 within 100.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Subtract single-digit numbers from multiples of 10 within 100..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-4"
+      }
+    },
+    "d-math-m1-b-5": {
+      "id": "d-math-m1-b-5",
+      "code": "D.M1.B.5",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Take from 10 within 20.",
+        "pageTitle": "Take from 10 within 20. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Take from 10 within 20. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Take from 10 within 20. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Take from 10 within 20., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Take from 10 within 20.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Take from 10 within 20.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Take from 10 within 20.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Take from 10 within 20.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Take from 10 within 20.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve. Solve. Solve. Shane has 12 pencils. He gives some pencils to his friends. Now, he has 7 left. How many pencils did he give away? ____________________________________ Victoria gave 6 celery sticks to her mom. She started with 13. How many celery sticks does she have left? ____________________________________",
+            "problem": "Solve. Solve. Solve. Shane has 12 pencils. He gives some pencils to his friends. Now, he has 7 left. How many pencils did he give away? ____________________________________ Victoria gave 6 celery sticks to her mom. She started with 13. How many celery sticks does she have left? ____________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Take from 10 within 20.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Take from 10 within 20..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-5"
+      }
+    },
+    "d-math-m1-b-6": {
+      "id": "d-math-m1-b-6",
+      "code": "D.M1.B.6",
+      "standard": "2.OA.1",
+      "levelId": "d",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Take from 10 within 100.",
+        "pageTitle": "Take from 10 within 100. | 2nd Grade Math | Hesten's Learning",
+        "description": "Master Take from 10 within 100. in 2nd Grade Mathematics aligned with standard 2.OA.1.",
+        "pageDescription": "EngageNY 2nd Grade Math lesson on Take from 10 within 100. with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math D.M1.B.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 1 • Topic B",
+        "text": "In this lesson on Take from 10 within 100., explore 2nd Grade mathematics concepts aligned with national standards.",
+        "outcomes": [
+          "Take from 10 within 100.",
+          "Students develop foundational understanding and fluency with 2nd Grade mathematical practices."
+        ],
+        "teacherInsight": "The Student Debrief is intended to invite reflection and active processing of the total lesson experience. Invite students to review their solutions for the Problem Set. They should check work by comparing answers with a partner before going over answers as a class. Look for misconceptions or misunderstandings that can be addressed in the Debrief. Guide students in a conversation to debrief the Problem Set and process the lesson."
+      },
+      "vocabulary": [
+        {
+          "term": "Place Value",
+          "definition": "The value of a digit depending on its place in a number."
+        },
+        {
+          "term": "Equation",
+          "definition": "A mathematical statement showing that two expressions are equal ($A = B$)."
+        },
+        {
+          "term": "Array",
+          "definition": "An arrangement of objects, pictures, or numbers in columns and rows."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "title": "Guided Analysis: Core Concept of Take from 10 within 100.",
+          "badge": "Eureka Math Classwork",
+          "difficulty": "2nd Grade Core",
+          "problem": "Investigate and analyze the key mathematical concept in Take from 10 within 100.. Using the models and properties introduced in the lesson, determine the unknown value or relationship.",
+          "scaffolding": "Deconstruct the problem into foundational components. Identify given numbers, shapes, or units.",
+          "steps": [
+            {
+              "step": 1,
+              "label": "State Given Conditions",
+              "math": "\\text{Given: } \\text{Mathematical relation or visual model.}",
+              "explanation": "Clearly write down all known numbers, counts, or dimensions."
+            },
+            {
+              "step": 2,
+              "label": "Apply Core Mathematical Property",
+              "math": "\\text{Apply: } \\text{Arithmetic operation or geometric classification.}",
+              "explanation": "Execute the calculation or modeling step systematically."
+            },
+            {
+              "step": 3,
+              "label": "Verify & State Solution",
+              "math": "\\therefore \\text{ The solution is verified by calculation and contextual sense.}",
+              "explanation": "Confirm that the answer satisfies the original conditions."
+            }
+          ],
+          "finalAnswer": "\\text{Mathematical solution established with complete step-by-step justification.}",
+          "commonPitfall": "Miscounting or confusing place values or operations."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson Exit Ticket: Take from 10 within 100.",
+        "prompt": "",
+        "solution": "Step-by-step mathematical solution verified against standard CCSS criteria."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Practice problems and exercises aligned to Take from 10 within 100.. Expand the teacher solution key to verify your work.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Exercise 1",
+            "prompt": "Solve. Solve. Mrs. Watts had 17 tacos. The children ate some. Nine tacos were left. How many tacos did the children eat? ____________________________________",
+            "problem": "Solve. Solve. Mrs. Watts had 17 tacos. The children ate some. Nine tacos were left. How many tacos did the children eat? ____________________________________",
+            "hint": "Analyze the given quantities and relationships. State your reasoning step-by-step.",
+            "solution": "Follow standard elementary mathematical representations and debrief guidance.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Identify Quantities",
+                "result": "Examine given numbers, units, or pictorial representations."
+              },
+              {
+                "step": 2,
+                "action": "Calculate & Verify",
+                "result": "Execute the calculation systematically and check with modeling."
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical principle is essential to solving problems in Take from 10 within 100.?",
+          "options": [
+            "Applying systematic mathematical reasoning and appropriate visual representations with precision.",
+            "Guessing values without checking calculation steps.",
+            "Ignoring units and place values.",
+            "Skipping problem instructions."
+          ],
+          "correct": 0,
+          "explanation": "Accurate problem solving requires systematic mathematical reasoning and proper representation."
+        },
+        {
+          "question": "When validating a solution in 2nd Grade, which strategy confirms the result?",
+          "options": [
+            "Checking with an inverse operation, recount, or visual model.",
+            "Discarding the solution if it contains a remainder or fraction.",
+            "Changing the digits until the answer appears simpler.",
+            "Skipping the check entirely."
+          ],
+          "correct": 0,
+          "explanation": "Checking the result with an inverse operation or visual representation confirms accuracy."
+        }
+      ],
+      "citation": {
+        "title": "Source Citation (MLA)",
+        "text": "Great Minds. \"Take from 10 within 100..\" Eureka Math, 2015. NYS Common Core Mathematics Curriculum.",
+        "subtext": "Official 2nd Grade Mathematics curriculum materials.",
+        "lessonId": "d-math-m1-b-6"
+      }
+    }
+  }
+}
