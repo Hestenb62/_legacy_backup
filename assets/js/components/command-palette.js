@@ -158,15 +158,7 @@
       tags: ["math", "codex", "a-z", "dictionary", "definitions", "procedures", "formulas"]
     },
 
-    {
-      title: "Universal English Grammar Codex (A–Z)",
-      desc: "A-Z English grammar definitions, parts of speech, syntax rules, and clause mechanics.",
-      category: "Curriculum",
-      icon: "fa-spell-check",
-      iconClass: "ela-icon",
-      url: "/pages/grammar.php",
-      tags: ["grammar", "syntax", "codex", "a-z", "clauses", "punctuation", "parts of speech"]
-    },
+
 
     // --- PORTALS & HUBS ---
     {

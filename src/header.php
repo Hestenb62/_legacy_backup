@@ -48,7 +48,7 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.37.0');
+    define('HL_SITE_VERSION', 'v2.37.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
@@ -529,17 +529,7 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
 
 
 
-                                                <li>
-                                                    <a href="/pages/grammar.php" class="nav-mega-item" role="menuitem">
-                                                        <i class="fas fa-spell-check item-icon"
-                                                            style="color: #10b981;"></i>
-                                                        <div>
-                                                            <span class="item-title">English Grammar Codex</span>
-                                                            <span class="item-desc">A–Z Syntax, Rules, and Sentence
-                                                                Analysis</span>
-                                                        </div>
-                                                    </a>
-                                                </li>
+
 
                                                 <li>
                                                     <a href="/pages/word-search.php" class="nav-mega-item" role="menuitem">

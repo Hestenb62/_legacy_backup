@@ -299,7 +299,7 @@ if (!function_exists('getGradeCustomResources')) {
                         'title' => 'Grammar & Syntax Studio',
                         'badge' => 'Writing Skills',
                         'desc' => 'Practice verbs, tenses, adjectives, and subject-verb agreements.',
-                        'url' => '/pages/grammar.php',
+                        'url' => '/student/ela-grammar.php',
                         'icon' => 'fa-pen-fancy',
                         'color' => '#e11d48'
                     ]
@@ -419,7 +419,7 @@ if (!function_exists('getGradeCustomResources')) {
                         'title' => 'Grammar & Sentence Workshop',
                         'badge' => 'Essay Writing',
                         'desc' => 'Complex conjunctions, prepositional phrases, and multi-paragraph transition words.',
-                        'url' => '/pages/grammar.php',
+                        'url' => '/student/ela-grammar.php',
                         'icon' => 'fa-feather-alt',
                         'color' => '#e11d48'
                     ]
@@ -531,7 +531,7 @@ if (!function_exists('getGradeCustomResources')) {
                         'title' => 'Grammar & Syntax Studio',
                         'badge' => 'Clauses & Mechanics',
                         'desc' => 'Master independent vs. dependent clauses, semicolons, and persuasive rhetoric.',
-                        'url' => '/pages/grammar.php',
+                        'url' => '/student/ela-grammar.php',
                         'icon' => 'fa-feather-alt',
                         'color' => '#2563eb'
                     ],
@@ -719,7 +719,7 @@ if (!function_exists('getGradeCustomResources')) {
                         'title' => 'Grammar & Rhetoric Lab',
                         'badge' => 'Academic Style',
                         'desc' => 'MLA vs. APA comparative style matrix and advanced argumentation punctuation.',
-                        'url' => '/pages/grammar.php',
+                        'url' => '/student/ela-grammar.php',
                         'icon' => 'fa-pen-nib',
                         'color' => '#16a34a'
                     ]

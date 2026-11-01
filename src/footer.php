@@ -96,7 +96,7 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.37.0';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.37.1';
         $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 9 ELA Complete Milestone (153 Lessons)';
         $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 9 ELA Complete Milestone: All 4 Modules Built Out Across 153 Lessons with Standalone Digital Library Readings, Close-Reading Worksheets, and Argument/Research Writing Suites';
         ?>

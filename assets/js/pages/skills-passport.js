@@ -206,7 +206,7 @@
       desc: "Demonstrate command of the conventions of standard English grammar and usage when writing or speaking.",
       exemplar: "Identify coordinating conjunctions: **FANBOYS** (For, And, Nor, But, Or, Yet, So).",
       icon: "fa-spell-check",
-      lessonUrl: "/pages/grammar.php"
+      lessonUrl: "/student/ela-grammar.php"
     },
     {
       code: "ELA.RL.8.2",
