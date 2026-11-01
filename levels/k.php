@@ -427,5 +427,5 @@ $social_modules = [
 ];
 
 // Load the Master Template
-include '../src/level_template.php';
+include __DIR__ . '/../src/level_template.php';
 ?>

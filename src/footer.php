@@ -96,9 +96,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.36.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 9 ELA Module 2 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 9 ELA Module 2 Buildout: 46 Lessons Across Units 1–3 with Standalone Library Reading Pages for Poe, Dickinson, Sophocles, and Mosley, Close-Reading Worksheets, and Digital Scratchpads';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.37.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'October 2026 Grade 9 ELA Complete Milestone (153 Lessons)';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 9 ELA Complete Milestone: All 4 Modules Built Out Across 153 Lessons with Standalone Digital Library Readings, Close-Reading Worksheets, and Argument/Research Writing Suites';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +271,23 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> expands Grade 9 ELA with <strong>Module 2: Understanding Perspectives and Writing to Convince</strong>, adding 46 close-reading lessons across Units 1–3, with dedicated standalone library reading pages for Edgar Allan Poe (*The Tell-Tale Heart*), Emily Dickinson (*I felt a Funeral, in my Brain*), Sophocles (*Oedipus the King*), and Walter Mosley (*True Crime*), accompanied by interactive text-dependent worksheets and digital scratchpads.
+                Version <?= htmlspecialchars($siteVersion) ?> completes the entire <strong>Grade 9 English Language Arts Curriculum (153 Total Lessons)</strong>, completing Modules 1, 2, 3, and 4. This milestone brings full inquiry-driven research in Module 3 (<em>Animals in Translation</em>) and historical argument writing in Module 4 (<em>Sugar Changed the World</em> &amp; <em>Globalization</em>), supported by 10 dedicated standalone library reading pages, interactive close-reading worksheets, and auto-saving digital working areas.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 9 ELA Complete 153-Lesson Curriculum Milestone (v2.37.0):</strong> Comprehensive conversion and universal deployment of authentic EngageNY ELA materials across all 4 Grade 9 modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 4 Modules Built Out (153 Total Lessons):</strong> Module 1 (Reading Closely &amp; Character, 48 lessons), Module 2 (Perspectives &amp; Tragedy, 46 lessons), Module 3 (Inquiry &amp; Research Paper Drafting, 30 lessons), and Module 4 (Sugar Changed the World &amp; Argument Writing, 29 lessons).</li>
+                            <li><strong>10 Standalone Digital Library Reading Pages:</strong> Dedicated non-book reading views in <code>/library/?page=&lt;slug&gt;</code> with numbered paragraph anchor IDs, Web Speech read-aloud TTS, typography zoom, OpenDyslexic mode, and 1-click clean printing.</li>
+                            <li><strong>Authentic Close-Reading Worksheets &amp; Quick Writes:</strong> Formative text-dependent analysis questions, evidence-based inquiry tools, and synthesizing Quick Writes with auto-saving textareas (<code>localStorage</code>), expandable teacher keys, and 1-click printing.</li>
+                            <li><strong>Universal Catalogs Synchronized:</strong> All 153 lessons indexed in <code>curriculum-engageny-ela.json</code>, <code>lessons.json</code>, and Level K router in <code>levels/k.php</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
                         <i class="fas fa-feather-pointed"></i>

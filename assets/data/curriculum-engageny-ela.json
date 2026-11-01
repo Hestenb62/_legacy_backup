@@ -1871,6 +1871,398 @@
               ]
             }
           ]
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Researching to Deepen Understanding: Animals in Translation & Inquiry-Based Research",
+          "description": "An inquiry-driven research module focusing on Temple Grandin's groundbreaking work Animals in Translation. Students cultivate independent inquiry paths, conduct pre-searches, critically evaluate academic and media sources using the Area Evaluation Checklist, synthesize evidence across multiple perspectives, and compose a rigorous, evidence-based research paper with MLA documentation.",
+          "topics": [
+            {
+              "letter": "A",
+              "name": "Seed Text Analysis: Temple Grandin's Animals in Translation",
+              "skills": [
+                {
+                  "id": "k-ela-m3-a-1",
+                  "code": "K.ELA.M3.A.1",
+                  "name": "Temple Grandin - Lesson 1",
+                  "url": "/levels/k.php?k-ela-m3-a-1"
+                },
+                {
+                  "id": "k-ela-m3-a-2",
+                  "code": "K.ELA.M3.A.2",
+                  "name": "Temple Grandin - Lesson 2",
+                  "url": "/levels/k.php?k-ela-m3-a-2"
+                },
+                {
+                  "id": "k-ela-m3-a-3",
+                  "code": "K.ELA.M3.A.3",
+                  "name": "Temple Grandin - Lesson 3",
+                  "url": "/levels/k.php?k-ela-m3-a-3"
+                },
+                {
+                  "id": "k-ela-m3-a-4",
+                  "code": "K.ELA.M3.A.4",
+                  "name": "Temple Grandin - Lesson 4",
+                  "url": "/levels/k.php?k-ela-m3-a-4"
+                },
+                {
+                  "id": "k-ela-m3-a-5",
+                  "code": "K.ELA.M3.A.5",
+                  "name": "Temple Grandin - Lesson 5",
+                  "url": "/levels/k.php?k-ela-m3-a-5"
+                },
+                {
+                  "id": "k-ela-m3-a-6",
+                  "code": "K.ELA.M3.A.6",
+                  "name": "Temple Grandin - Lesson 6",
+                  "url": "/levels/k.php?k-ela-m3-a-6"
+                },
+                {
+                  "id": "k-ela-m3-a-7",
+                  "code": "K.ELA.M3.A.7",
+                  "name": "Temple Grandin - Lesson 7",
+                  "url": "/levels/k.php?k-ela-m3-a-7"
+                },
+                {
+                  "id": "k-ela-m3-a-8",
+                  "code": "K.ELA.M3.A.8",
+                  "name": "Temple Grandin - Lesson 8",
+                  "url": "/levels/k.php?k-ela-m3-a-8"
+                },
+                {
+                  "id": "k-ela-m3-a-9",
+                  "code": "K.ELA.M3.A.9",
+                  "name": "Temple Grandin - Lesson 9",
+                  "url": "/levels/k.php?k-ela-m3-a-9"
+                },
+                {
+                  "id": "k-ela-m3-a-10",
+                  "code": "K.ELA.M3.A.10",
+                  "name": "Temple Grandin - Lesson 10",
+                  "url": "/levels/k.php?k-ela-m3-a-10"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "name": "Inquiry-Based Research: Formulating Questions, Pre-Searching & Evaluating Sources",
+              "skills": [
+                {
+                  "id": "k-ela-m3-b-1",
+                  "code": "K.ELA.M3.B.1",
+                  "name": "Inquiry & Pre-Search - Lesson 1",
+                  "url": "/levels/k.php?k-ela-m3-b-1"
+                },
+                {
+                  "id": "k-ela-m3-b-2",
+                  "code": "K.ELA.M3.B.2",
+                  "name": "Inquiry & Pre-Search - Lesson 2",
+                  "url": "/levels/k.php?k-ela-m3-b-2"
+                },
+                {
+                  "id": "k-ela-m3-b-3",
+                  "code": "K.ELA.M3.B.3",
+                  "name": "Inquiry & Pre-Search - Lesson 3",
+                  "url": "/levels/k.php?k-ela-m3-b-3"
+                },
+                {
+                  "id": "k-ela-m3-b-4",
+                  "code": "K.ELA.M3.B.4",
+                  "name": "Inquiry & Pre-Search - Lesson 4",
+                  "url": "/levels/k.php?k-ela-m3-b-4"
+                },
+                {
+                  "id": "k-ela-m3-b-5",
+                  "code": "K.ELA.M3.B.5",
+                  "name": "Inquiry & Pre-Search - Lesson 5",
+                  "url": "/levels/k.php?k-ela-m3-b-5"
+                },
+                {
+                  "id": "k-ela-m3-b-6",
+                  "code": "K.ELA.M3.B.6",
+                  "name": "Inquiry & Pre-Search - Lesson 6",
+                  "url": "/levels/k.php?k-ela-m3-b-6"
+                },
+                {
+                  "id": "k-ela-m3-b-7",
+                  "code": "K.ELA.M3.B.7",
+                  "name": "Inquiry & Pre-Search - Lesson 7",
+                  "url": "/levels/k.php?k-ela-m3-b-7"
+                },
+                {
+                  "id": "k-ela-m3-b-8",
+                  "code": "K.ELA.M3.B.8",
+                  "name": "Inquiry & Pre-Search - Lesson 8",
+                  "url": "/levels/k.php?k-ela-m3-b-8"
+                },
+                {
+                  "id": "k-ela-m3-b-9",
+                  "code": "K.ELA.M3.B.9",
+                  "name": "Inquiry & Pre-Search - Lesson 9",
+                  "url": "/levels/k.php?k-ela-m3-b-9"
+                },
+                {
+                  "id": "k-ela-m3-b-10",
+                  "code": "K.ELA.M3.B.10",
+                  "name": "Inquiry & Pre-Search - Lesson 10",
+                  "url": "/levels/k.php?k-ela-m3-b-10"
+                },
+                {
+                  "id": "k-ela-m3-b-11",
+                  "code": "K.ELA.M3.B.11",
+                  "name": "Inquiry & Pre-Search - Lesson 11",
+                  "url": "/levels/k.php?k-ela-m3-b-11"
+                },
+                {
+                  "id": "k-ela-m3-b-12",
+                  "code": "K.ELA.M3.B.12",
+                  "name": "Inquiry & Pre-Search - Lesson 12",
+                  "url": "/levels/k.php?k-ela-m3-b-12"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "name": "Organizing Evidence & Synthesis: Drafting the Evidence-Based Research Paper",
+              "skills": [
+                {
+                  "id": "k-ela-m3-c-1",
+                  "code": "K.ELA.M3.C.1",
+                  "name": "Synthesis & Drafting - Lesson 1",
+                  "url": "/levels/k.php?k-ela-m3-c-1"
+                },
+                {
+                  "id": "k-ela-m3-c-2",
+                  "code": "K.ELA.M3.C.2",
+                  "name": "Synthesis & Drafting - Lesson 2",
+                  "url": "/levels/k.php?k-ela-m3-c-2"
+                },
+                {
+                  "id": "k-ela-m3-c-3",
+                  "code": "K.ELA.M3.C.3",
+                  "name": "Synthesis & Drafting - Lesson 3",
+                  "url": "/levels/k.php?k-ela-m3-c-3"
+                },
+                {
+                  "id": "k-ela-m3-c-4",
+                  "code": "K.ELA.M3.C.4",
+                  "name": "Synthesis & Drafting - Lesson 4",
+                  "url": "/levels/k.php?k-ela-m3-c-4"
+                },
+                {
+                  "id": "k-ela-m3-c-5",
+                  "code": "K.ELA.M3.C.5",
+                  "name": "Synthesis & Drafting - Lesson 5",
+                  "url": "/levels/k.php?k-ela-m3-c-5"
+                },
+                {
+                  "id": "k-ela-m3-c-6",
+                  "code": "K.ELA.M3.C.6",
+                  "name": "Synthesis & Drafting - Lesson 6",
+                  "url": "/levels/k.php?k-ela-m3-c-6"
+                },
+                {
+                  "id": "k-ela-m3-c-7",
+                  "code": "K.ELA.M3.C.7",
+                  "name": "Synthesis & Drafting - Lesson 7",
+                  "url": "/levels/k.php?k-ela-m3-c-7"
+                },
+                {
+                  "id": "k-ela-m3-c-8",
+                  "code": "K.ELA.M3.C.8",
+                  "name": "Synthesis & Drafting - Lesson 8",
+                  "url": "/levels/k.php?k-ela-m3-c-8"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Sugar Changed the World: Historical Argument & Global Trade",
+          "description": "In-depth investigation of global commerce, human migration, human rights, and industrial production through Marc Aronson and Marina Budhos' Sugar Changed the World alongside supplementary informational texts on modern globalization and the garment industry. Students trace how historical agricultural commodities reshaped world politics and ethics, evaluate competing perspectives on free trade and worker safety, and author a comprehensive evidence-based argument essay.",
+          "topics": [
+            {
+              "letter": "A",
+              "name": "Historical Argument, Global Trade & Human Rights: Sugar Changed the World",
+              "skills": [
+                {
+                  "id": "k-ela-m4-a-1",
+                  "code": "K.ELA.M4.A.1",
+                  "name": "Lesson 1: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-1"
+                },
+                {
+                  "id": "k-ela-m4-a-2",
+                  "code": "K.ELA.M4.A.2",
+                  "name": "Lesson 2: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-2"
+                },
+                {
+                  "id": "k-ela-m4-a-3",
+                  "code": "K.ELA.M4.A.3",
+                  "name": "Lesson 3: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-3"
+                },
+                {
+                  "id": "k-ela-m4-a-4",
+                  "code": "K.ELA.M4.A.4",
+                  "name": "Lesson 4: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-4"
+                },
+                {
+                  "id": "k-ela-m4-a-5",
+                  "code": "K.ELA.M4.A.5",
+                  "name": "Lesson 5: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-5"
+                },
+                {
+                  "id": "k-ela-m4-a-6",
+                  "code": "K.ELA.M4.A.6",
+                  "name": "Lesson 6: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-6"
+                },
+                {
+                  "id": "k-ela-m4-a-7",
+                  "code": "K.ELA.M4.A.7",
+                  "name": "Lesson 7: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-7"
+                },
+                {
+                  "id": "k-ela-m4-a-8",
+                  "code": "K.ELA.M4.A.8",
+                  "name": "Lesson 8: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-8"
+                },
+                {
+                  "id": "k-ela-m4-a-9",
+                  "code": "K.ELA.M4.A.9",
+                  "name": "Lesson 9: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-9"
+                },
+                {
+                  "id": "k-ela-m4-a-10",
+                  "code": "K.ELA.M4.A.10",
+                  "name": "Lesson 10: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-10"
+                },
+                {
+                  "id": "k-ela-m4-a-11",
+                  "code": "K.ELA.M4.A.11",
+                  "name": "Lesson 11: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-11"
+                },
+                {
+                  "id": "k-ela-m4-a-12",
+                  "code": "K.ELA.M4.A.12",
+                  "name": "Lesson 12: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-12"
+                },
+                {
+                  "id": "k-ela-m4-a-13",
+                  "code": "K.ELA.M4.A.13",
+                  "name": "Lesson 13: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-13"
+                },
+                {
+                  "id": "k-ela-m4-a-14",
+                  "code": "K.ELA.M4.A.14",
+                  "name": "Lesson 14: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-14"
+                },
+                {
+                  "id": "k-ela-m4-a-15",
+                  "code": "K.ELA.M4.A.15",
+                  "name": "Lesson 15: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-15"
+                },
+                {
+                  "id": "k-ela-m4-a-16",
+                  "code": "K.ELA.M4.A.16",
+                  "name": "Lesson 16: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-16"
+                },
+                {
+                  "id": "k-ela-m4-a-17",
+                  "code": "K.ELA.M4.A.17",
+                  "name": "Lesson 17: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-17"
+                },
+                {
+                  "id": "k-ela-m4-a-18",
+                  "code": "K.ELA.M4.A.18",
+                  "name": "Lesson 18: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-18"
+                },
+                {
+                  "id": "k-ela-m4-a-19",
+                  "code": "K.ELA.M4.A.19",
+                  "name": "Lesson 19: Globalization",
+                  "url": "/levels/k.php?k-ela-m4-a-19"
+                },
+                {
+                  "id": "k-ela-m4-a-20",
+                  "code": "K.ELA.M4.A.20",
+                  "name": "Lesson 20: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-20"
+                },
+                {
+                  "id": "k-ela-m4-a-21",
+                  "code": "K.ELA.M4.A.21",
+                  "name": "Lesson 21: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-21"
+                },
+                {
+                  "id": "k-ela-m4-a-22",
+                  "code": "K.ELA.M4.A.22",
+                  "name": "Lesson 22: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-22"
+                },
+                {
+                  "id": "k-ela-m4-a-23",
+                  "code": "K.ELA.M4.A.23",
+                  "name": "Lesson 23: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-23"
+                },
+                {
+                  "id": "k-ela-m4-a-24",
+                  "code": "K.ELA.M4.A.24",
+                  "name": "Lesson 24: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-24"
+                },
+                {
+                  "id": "k-ela-m4-a-25",
+                  "code": "K.ELA.M4.A.25",
+                  "name": "Lesson 25: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-25"
+                },
+                {
+                  "id": "k-ela-m4-a-26",
+                  "code": "K.ELA.M4.A.26",
+                  "name": "Lesson 26: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-26"
+                },
+                {
+                  "id": "k-ela-m4-a-27",
+                  "code": "K.ELA.M4.A.27",
+                  "name": "Lesson 27: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-27"
+                },
+                {
+                  "id": "k-ela-m4-a-28",
+                  "code": "K.ELA.M4.A.28",
+                  "name": "Lesson 28: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-28"
+                },
+                {
+                  "id": "k-ela-m4-a-29",
+                  "code": "K.ELA.M4.A.29",
+                  "name": "Lesson 29: Sugar Changed the World",
+                  "url": "/levels/k.php?k-ela-m4-a-29"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.36.0');
+    define('HL_SITE_VERSION', 'v2.37.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'October 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'October 2026 Grade 9 ELA Module 2 Release');
+    define('HL_SITE_VERSION_LABEL', 'October 2026 Grade 9 ELA Complete Milestone (153 Lessons)');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Grade 9 ELA Module 2 Buildout: 46 Lessons Across Units 1–3 with Standalone Library Reading Pages for Poe, Dickinson, Sophocles, and Mosley, Close-Reading Worksheets, and Digital Scratchpads');
+    define('HL_SITE_VERSION_SUMMARY', 'Grade 9 ELA Complete Milestone: All 4 Modules Built Out Across 153 Lessons with Standalone Digital Library Readings, Close-Reading Worksheets, and Argument/Research Writing Suites');
     }
 ?>
 <!DOCTYPE html>
