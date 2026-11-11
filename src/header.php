@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.37.2');
+    define('HL_SITE_VERSION', 'v2.38.2');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Unified Open Navigation Release');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Multi-Grade Wave & Traditional Pacing Suite Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Restoration of Direct Unified Access Across All Scholar, Educator, and Parent Portals');
+    define('HL_SITE_VERSION_SUMMARY', 'Universal Multi-Grade Support (Pre-K through High School) for 36-Week Traditional & 48-Week Year-Round Fiscal Wave Pacing Guides');
     }
 ?>
 <!DOCTYPE html>
@@ -688,6 +688,9 @@ if (! defined('HL_SITE_VERSION_SUMMARY')) {
                                         </a>
                                         <a href="/research/" class="nav-mega-footer-link">
                                             <i class="fas fa-microscope"></i> Research Papers
+                                        </a>
+                                        <a href="/pages/community.php" class="nav-mega-footer-link">
+                                            <i class="fas fa-users-cog"></i> Community Hub
                                         </a>
                                     </div>
                                 </div>

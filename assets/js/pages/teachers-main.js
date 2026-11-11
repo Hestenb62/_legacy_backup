@@ -314,7 +314,79 @@
     { week: 36, quarter: 4, title: 'Official End-of-Year Capstone & Certification', standard: 'CCSS.ENDYEAR.CERT', desc: 'Official End-of-Year cumulative assessment, completion badge award, and transcript issuance.', lesson: '/assessment/', checkpoint: 'ENDYEAR-CERT' }
   ];
 
-  const STORAGE_KEY_PACING = 'hesten_teacher_pacing_progress';
+  // Alias for traditional pacing plan
+  const TRADITIONAL_PACING_PLAN = MASTER_PACING_PLAN;
+
+  // Dedicated Year-Round Fiscal Wave Pacing Plan (6 Waves • 48 Weeks • July 1 – June 30)
+  // Fully independent from the 36-week traditional schedule.
+  // Each wave consists of 7 instructional weeks + 1 synthesis week (testing, finishing work, next wave planning).
+  const WAVE_PACING_PLAN = [
+    // === WAVE 1: Fiscal Kickoff & Number Foundations (July 1 – Late August) ===
+    { wave: 1, waveWeek: 1, fiscalWeek: 1,  fiscalDates: 'July 1 – July 7',   title: 'Diagnostic Orientation & Cardinal Foundations', standard: 'CCSS.MATH.K-3.OA', desc: 'Summer diagnostic baseline, number sense sequencing, cardinal recognition, and foundational reading habits.', lesson: '/levels/k.php?k-math-m1-a-1', checkpoint: 'OA.1', isSynthesis: false },
+    { wave: 1, waveWeek: 2, fiscalWeek: 2,  fiscalDates: 'July 8 – July 14',  title: 'Whole Number Representations & Array Modeling', standard: 'CCSS.MATH.OA.A.1', desc: 'Representing quantities using tactile arrays, visual ten-frames, and story problem schema.', lesson: '/levels/k.php?k-math-m1-a-2', checkpoint: 'OA.A.1', isSynthesis: false },
+    { wave: 1, waveWeek: 3, fiscalWeek: 3,  fiscalDates: 'July 15 – July 21', title: 'Comparative Reasoning & Literary Protagonists', standard: 'CCSS.MATH.CC.B.4', desc: 'Comparing values (greater/less), ordinal terms, and analyzing protagonist motives in literature.', lesson: '/levels/k.php?k-math-m1-a-3', checkpoint: 'CC.B.4', isSynthesis: false },
+    { wave: 1, waveWeek: 4, fiscalWeek: 4,  fiscalDates: 'July 22 – July 28', title: 'Physical States of Matter & Empirical Senses', standard: 'NGSS.PS1.A', desc: 'Classifying solids, liquids, and gases; laboratory observation journal entries and properties of matter.', lesson: '/src/lesson_runner.php?subject=science&level=1', checkpoint: 'PS1-1', isSynthesis: false },
+    { wave: 1, waveWeek: 5, fiscalWeek: 5,  fiscalDates: 'July 29 – Aug 4',   title: 'Operations: Number Lines & Word Sentence Modeling', standard: 'CCSS.MATH.OA.A.2', desc: 'Translating verbal stories into addition/subtraction equations and number line journeys.', lesson: '/src/lesson_runner.php?subject=math&level=2', checkpoint: 'OA.A.2', isSynthesis: false },
+    { wave: 1, waveWeek: 6, fiscalWeek: 6,  fiscalDates: 'Aug 5 – Aug 11',    title: 'Informational Text Architecture & Core Vocab', standard: 'CCSS.ELA.RI.2', desc: 'Headings, sidebars, chronological timelines, and root-word vocabulary decoding.', lesson: '/src/lesson_runner.php?subject=language&level=2', checkpoint: 'RI.2', isSynthesis: false },
+    { wave: 1, waveWeek: 7, fiscalWeek: 7,  fiscalDates: 'Aug 12 – Aug 18',   title: 'Community Systems, Civic Rights & Responsibilities', standard: 'C3.Civ.1', desc: 'Roles of citizens in local communities, voting processes, rules, and collaborative problem-solving.', lesson: '/src/lesson_runner.php?subject=social&level=1', checkpoint: 'Civ.1', isSynthesis: false },
+    { wave: 1, waveWeek: 8, fiscalWeek: 8,  fiscalDates: 'Aug 19 – Aug 26',   title: 'Wave 1 Synthesis: Milestone Testing, Work Completion & Wave 2 Planning', standard: 'WAVE1.SYNTHESIS', desc: 'Week 8 Synthesis: Formative testing across Wave 1 benchmarks, dedicated time to complete pending work, and lesson planning for Wave 2.', lesson: '/assessment/#standard=OA.A.1&count=10', checkpoint: 'W1-SYNTHESIS', isSynthesis: true },
+
+    // === WAVE 2: Multi-Step Integration & Natural Sciences (September – October) ===
+    { wave: 2, waveWeek: 1, fiscalWeek: 9,  fiscalDates: 'Sept 1 – Sept 7',   title: 'Base-Ten Place Architecture (Hundreds & Thousands)', standard: 'CCSS.MATH.NBT.A.1', desc: 'Decomposing digits, expanded notation, regrouping blocks, and place-value charts.', lesson: '/src/lesson_runner.php?subject=math&level=3', checkpoint: 'NBT.A.1', isSynthesis: false },
+    { wave: 2, waveWeek: 2, fiscalWeek: 10, fiscalDates: 'Sept 8 – Sept 14',  title: 'Multi-Digit Arithmetic & Estimation Verification', standard: 'CCSS.MATH.NBT.B.5', desc: 'Partial sums, standard algorithm readiness, rounding heuristics, and mental estimations.', lesson: '/src/lesson_runner.php?subject=math&level=4', checkpoint: 'NBT.B.5', isSynthesis: false },
+    { wave: 2, waveWeek: 3, fiscalWeek: 11, fiscalDates: 'Sept 15 – Sept 21', title: 'Forces, Gravitation & Balanced Energy Systems', standard: 'NGSS.PS2.A', desc: 'Newtonian motion, balanced vs unbalanced forces, friction coefficients, and incline plane labs.', lesson: '/src/lesson_runner.php?subject=science&level=3', checkpoint: 'PS2-1', isSynthesis: false },
+    { wave: 2, waveWeek: 4, fiscalWeek: 12, fiscalDates: 'Sept 22 – Sept 28', title: 'Narrative Story Arc & Character Voice', standard: 'CCSS.ELA.RL.2', desc: 'Exposition, rising action, climax, and distinguishing character dialogue from narrator voice.', lesson: '/src/lesson_runner.php?subject=language&level=3', checkpoint: 'RL.2', isSynthesis: false },
+    { wave: 2, waveWeek: 5, fiscalWeek: 13, fiscalDates: 'Sept 29 – Oct 5',   title: 'Foundations of Multiplication & Equal Groupings', standard: 'CCSS.MATH.OA.A.3', desc: 'Equal row-and-column arrays, repeated sums, skip counting strategies, and times table mastery.', lesson: '/src/lesson_runner.php?subject=math&level=5', checkpoint: 'OA.A.3', isSynthesis: false },
+    { wave: 2, waveWeek: 6, fiscalWeek: 14, fiscalDates: 'Oct 6 – Oct 12',    title: 'Cartography, Physical Biomes & Coordinate Keys', standard: 'C3.Geo.1', desc: 'Topographic contours, latitude/longitude grids, ecosystem biomes, and hemisphere mapping.', lesson: '/src/lesson_runner.php?subject=social&level=3', checkpoint: 'Geo.1', isSynthesis: false },
+    { wave: 2, waveWeek: 7, fiscalWeek: 15, fiscalDates: 'Oct 13 – Oct 19',   title: 'Compound Sentence Syntax & Tier-2 Vocabulary', standard: 'CCSS.ELA.L.3', desc: 'Coordinating conjunctions, dependent clauses, context clues, and precise descriptive adjectives.', lesson: '/src/lesson_runner.php?subject=language&level=4', checkpoint: 'L.3', isSynthesis: false },
+    { wave: 2, waveWeek: 8, fiscalWeek: 16, fiscalDates: 'Oct 20 – Oct 27',   title: 'Wave 2 Synthesis: Milestone Testing, Work Completion & Wave 3 Planning', standard: 'WAVE2.SYNTHESIS', desc: 'Week 8 Synthesis: Formative testing across Wave 2 benchmarks, completing pending assignments, and instructional planning for Wave 3.', lesson: '/assessment/#standard=NBT.B.5&count=10', checkpoint: 'W2-SYNTHESIS', isSynthesis: true },
+
+    // === WAVE 3: Fractions, Analytical Thinking & Earth Dynamics (November – December) ===
+    { wave: 3, waveWeek: 1, fiscalWeek: 17, fiscalDates: 'Nov 1 – Nov 7',   title: 'Unit Fractions & Part-to-Whole Partitioning', standard: 'CCSS.MATH.NF.A.1', desc: 'Visual tape diagrams, fraction bars, numerator/denominator roles, and partitioning planar shapes.', lesson: '/src/lesson_runner.php?subject=math&level=6', checkpoint: 'NF.A.1', isSynthesis: false },
+    { wave: 3, waveWeek: 2, fiscalWeek: 18, fiscalDates: 'Nov 8 – Nov 14',  title: 'Equivalent Fractions & Rational Number Lines', standard: 'CCSS.MATH.NF.A.2', desc: 'Benchmarking fractions to 0, 1/2, and 1; common denominators and visual equivalence grids.', lesson: '/src/lesson_runner.php?subject=math&level=7', checkpoint: 'NF.A.2', isSynthesis: false },
+    { wave: 3, waveWeek: 3, fiscalWeek: 19, fiscalDates: 'Nov 15 – Nov 21', title: 'Atmospheric Systems, Weather & Water Cycle Dynamics', standard: 'NGSS.ESS2.A', desc: 'Evaporation, condensation, precipitation, barometric pressure, and meteorology data analysis.', lesson: '/src/lesson_runner.php?subject=science&level=5', checkpoint: 'ESS2-1', isSynthesis: false },
+    { wave: 3, waveWeek: 4, fiscalWeek: 20, fiscalDates: 'Nov 22 – Nov 28', title: 'Argumentative Texts, Fact vs Opinion & Author Bias', standard: 'CCSS.ELA.RI.6', desc: 'Evaluating textual evidence, recognizing rhetorical bias, and verifying claim substantiation.', lesson: '/src/lesson_runner.php?subject=language&level=5', checkpoint: 'RI.6', isSynthesis: false },
+    { wave: 3, waveWeek: 5, fiscalWeek: 21, fiscalDates: 'Nov 29 – Dec 5',  title: 'Decimals, Fractional Tenths & Currency Operations', standard: 'CCSS.MATH.NF.C.6', desc: 'Tenths/hundredths decimal conversions, monetary addition/subtraction, and metric units.', lesson: '/src/lesson_runner.php?subject=math&level=8', checkpoint: 'NF.C.6', isSynthesis: false },
+    { wave: 3, waveWeek: 6, fiscalWeek: 22, fiscalDates: 'Dec 6 – Dec 12',   title: 'Economic Market Fundamentals: Supply & Global Trade', standard: 'C3.Econ.1', desc: 'Producer/consumer dynamics, market scarcity, international trade networks, and currency exchange.', lesson: '/src/lesson_runner.php?subject=social&level=5', checkpoint: 'Econ.1', isSynthesis: false },
+    { wave: 3, waveWeek: 7, fiscalWeek: 23, fiscalDates: 'Dec 13 – Dec 19',  title: 'Biospheric Food Webs & Habitat Adaptations', standard: 'NGSS.LS2.A', desc: 'Producer/consumer energy transfers, trophic cascades, and evolutionary biological adaptations.', lesson: '/src/lesson_runner.php?subject=science&level=6', checkpoint: 'LS2-1', isSynthesis: false },
+    { wave: 3, waveWeek: 8, fiscalWeek: 24, fiscalDates: 'Dec 20 – Dec 27',  title: 'Wave 3 Mid-Year Synthesis: Mid-Year Testing, Work Catch-Up & Wave 4 Planning', standard: 'WAVE3.SYNTHESIS', desc: 'Week 8 Synthesis: Mid-year comprehensive testing, wrapping up pending labs and portfolios, and planning curriculum for Wave 4.', lesson: '/assessment/#standard=NF.A.2&count=10', checkpoint: 'W3-SYNTHESIS', isSynthesis: true },
+
+    // === WAVE 4: Spatial Volumetrics, Engineering & Inventions (January – February) ===
+    { wave: 4, waveWeek: 1, fiscalWeek: 25, fiscalDates: 'Jan 2 – Jan 8',   title: 'Geometric Classification & Polygons', standard: 'CCSS.MATH.G.A.1', desc: 'Classifying quadrilaterals, angle measures (acute, right, obtuse), and lines of symmetry.', lesson: '/src/lesson_runner.php?subject=math&level=9', checkpoint: 'G.A.1', isSynthesis: false },
+    { wave: 4, waveWeek: 2, fiscalWeek: 26, fiscalDates: 'Jan 9 – Jan 15',  title: 'Area, Perimeter & Composite Polygon Tiling', standard: 'CCSS.MATH.MD.C.7', desc: 'Decomposing irregular rectilinear figures, perimeter formulas, and tiling area models.', lesson: '/src/lesson_runner.php?subject=math&level=10', checkpoint: 'MD.C.7', isSynthesis: false },
+    { wave: 4, waveWeek: 3, fiscalWeek: 27, fiscalDates: 'Jan 16 – Jan 22', title: 'Engineering Method: Controlled Testing & Prototypes', standard: 'NGSS.ETS1.A', desc: 'Variable isolation, engineering constraints, iterative testing, and blueprint modeling.', lesson: '/src/lesson_runner.php?subject=science&level=7', checkpoint: 'ETS1-1', isSynthesis: false },
+    { wave: 4, waveWeek: 4, fiscalWeek: 28, fiscalDates: 'Jan 23 – Jan 29', title: 'Expository Research, Primary Sources & Citations', standard: 'CCSS.ELA.W.2', desc: 'Synthesizing dual informational sources, parenthetical citations, and outline construction.', lesson: '/src/lesson_runner.php?subject=language&level=7', checkpoint: 'W.2', isSynthesis: false },
+    { wave: 4, waveWeek: 5, fiscalWeek: 29, fiscalDates: 'Jan 30 – Feb 5',  title: 'Statistical Distributions, Means & Frequency Graphs', standard: 'CCSS.MATH.SP.A', desc: 'Stem-and-leaf diagrams, median, mode, line plots, and data spread analysis.', lesson: '/src/lesson_runner.php?subject=math&level=11', checkpoint: 'SP.A', isSynthesis: false },
+    { wave: 4, waveWeek: 6, fiscalWeek: 30, fiscalDates: 'Feb 6 – Feb 12',   title: 'Historical Watersheds & Civil Rights Evolutions', standard: 'C3.His.1', desc: 'Analyzing constitutional amendments, civil rights speeches, and historical causation.', lesson: '/src/lesson_runner.php?subject=social&level=7', checkpoint: 'His.1', isSynthesis: false },
+    { wave: 4, waveWeek: 7, fiscalWeek: 31, fiscalDates: 'Feb 13 – Feb 19',  title: 'Multi-Step Operational Stamina & Elapsed Time', standard: 'CCSS.MATH.MD.B', desc: 'Clock intervals, mass and liquid volume calculations, and multi-step word problem stamina.', lesson: '/assessment/#mode=practice', checkpoint: 'MD.B', isSynthesis: false },
+    { wave: 4, waveWeek: 8, fiscalWeek: 32, fiscalDates: 'Feb 20 – Feb 27',  title: 'Wave 4 Synthesis: Milestone Testing, Work Completion & Wave 5 Planning', standard: 'WAVE4.SYNTHESIS', desc: 'Week 8 Synthesis: Formative testing across Wave 4 benchmarks, completing all pending assignments, and planning Wave 5 curriculum.', lesson: '/assessment/#standard=G.A.1&count=10', checkpoint: 'W4-SYNTHESIS', isSynthesis: true },
+
+    // === WAVE 5: Advanced Algebraic Patterns & Cellular Systems (March – April) ===
+    { wave: 5, waveWeek: 1, fiscalWeek: 33, fiscalDates: 'Mar 1 – Mar 7',   title: 'Algebraic Equations, Variables & Function Tables', standard: 'CCSS.MATH.OA.D.8', desc: 'Solving for unknowns, input/output function tables, and linear arithmetic patterns.', lesson: '/src/lesson_runner.php?subject=math&level=11', checkpoint: 'OA.D.8', isSynthesis: false },
+    { wave: 5, waveWeek: 2, fiscalWeek: 34, fiscalDates: 'Mar 8 – Mar 14',  title: 'Cellular Biology, Organelles & Energy Photosynthesis', standard: 'NGSS.MS-LS1.A', desc: 'Microscopic cellular structures, plant vs animal cells, mitochondria, and photosynthesis.', lesson: '/src/lesson_runner.php?subject=science&level=8', checkpoint: 'MS-LS1-1', isSynthesis: false },
+    { wave: 5, waveWeek: 3, fiscalWeek: 35, fiscalDates: 'Mar 15 – Mar 21', title: 'Comparative Essay Structures & Textual Evidence', standard: 'CCSS.ELA.W.7', desc: 'Comparative essay drafting, counter-arguments, paragraph transitions, and thesis defense.', lesson: '/src/lesson_runner.php?subject=language&level=8', checkpoint: 'W.7', isSynthesis: false },
+    { wave: 5, waveWeek: 4, fiscalWeek: 36, fiscalDates: 'Mar 22 – Mar 28', title: 'Coordinate Geometry & Four-Quadrant Spatial Plotting', standard: 'CCSS.MATH.G.B.1', desc: 'Ordered pairs (x, y), coordinate planes, distance between points, and geometric transformations.', lesson: '/src/lesson_runner.php?subject=math&level=12', checkpoint: 'G.B.1', isSynthesis: false },
+    { wave: 5, waveWeek: 5, fiscalWeek: 37, fiscalDates: 'Mar 29 – Apr 4',  title: 'Global Demographics, Resource Flows & Migration', standard: 'C3.Geo.4', desc: 'Human migration patterns, global supply chains, population density, and cartographic projections.', lesson: '/src/lesson_runner.php?subject=social&level=8', checkpoint: 'Geo.4', isSynthesis: false },
+    { wave: 5, waveWeek: 6, fiscalWeek: 38, fiscalDates: 'Apr 5 – Apr 11',   title: 'Thermodynamics, Energy Conservation & Waves', standard: 'NGSS.MS-PS3.B', desc: 'Conduction, convection, radiation heat transfer, kinetic/potential transformations, and sound waves.', lesson: '/src/lesson_runner.php?subject=science&level=9', checkpoint: 'MS-PS3-2', isSynthesis: false },
+    { wave: 5, waveWeek: 7, fiscalWeek: 39, fiscalDates: 'Apr 12 – Apr 18',  title: 'Persuasive Rhetoric, Socratic Debate & Oral Defense', standard: 'CCSS.ELA.SL.4', desc: 'Ethos, pathos, logos; public debate protocols, verbal inflection, and oral evidence citation.', lesson: '/src/lesson_runner.php?subject=language&level=9', checkpoint: 'SL.4', isSynthesis: false },
+    { wave: 5, waveWeek: 8, fiscalWeek: 40, fiscalDates: 'Apr 19 – Apr 26',  title: 'Wave 5 Synthesis: Spring Benchmark Testing, Work Completion & Wave 6 Planning', standard: 'WAVE5.SYNTHESIS', desc: 'Week 8 Synthesis: Spring benchmark testing, finishing up research papers and science projects, and planning final Wave 6 capstones.', lesson: '/assessment/#standard=OA.D.8&count=10', checkpoint: 'W5-SYNTHESIS', isSynthesis: true },
+
+    // === WAVE 6: Capstone Mastery, Civic Defense & Fiscal Year-End (May – June 30) ===
+    { wave: 6, waveWeek: 1, fiscalWeek: 41, fiscalDates: 'May 1 – May 7',   title: 'Applied Financial Literacy & Quantitative Analytics', standard: 'CCSS.MATH.FIN.1', desc: 'Compound interest, personal budgeting, tax calculations, and quantitative financial decisions.', lesson: '/src/lesson_runner.php?subject=math&level=12', checkpoint: 'FIN.1', isSynthesis: false },
+    { wave: 6, waveWeek: 2, fiscalWeek: 42, fiscalDates: 'May 8 – May 14',  title: 'Constitutional Law, Bill of Rights & Judicial Review', standard: 'C3.Civ.5', desc: 'Supreme Court jurisprudence, constitutional checks and balances, and civic rights defense.', lesson: '/src/lesson_runner.php?subject=social&level=9', checkpoint: 'Civ.5', isSynthesis: false },
+    { wave: 6, waveWeek: 3, fiscalWeek: 43, fiscalDates: 'May 15 – May 21', title: 'Empirical Capstone Investigation & Science Defense', standard: 'NGSS.ETS1.B', desc: 'Independent empirical science inquiry, formal hypothesis testing, and laboratory report defense.', lesson: '/src/lesson_runner.php?subject=science&level=9', checkpoint: 'ETS1-2', isSynthesis: false },
+    { wave: 6, waveWeek: 4, fiscalWeek: 44, fiscalDates: 'May 22 – May 28', title: 'Literary Criticism, Thematic Synthesis & Prose Analysis', standard: 'CCSS.ELA.RL.10', desc: 'Complex classic and modern prose analysis, literary devices, symbolism, and essay defense.', lesson: '/src/lesson_runner.php?subject=language&level=9', checkpoint: 'RL.10', isSynthesis: false },
+    { wave: 6, waveWeek: 5, fiscalWeek: 45, fiscalDates: 'May 29 – June 4', title: 'Cross-Domain Mathematical Modeling & Systems Inquiry', standard: 'CCSS.MATH.MODEL', desc: 'Mathematical modeling applied to real-world engineering, population growth, and spatial design.', lesson: '/src/lesson_runner.php?subject=math&level=12', checkpoint: 'MODEL.1', isSynthesis: false },
+    { wave: 6, waveWeek: 6, fiscalWeek: 46, fiscalDates: 'June 5 – June 11', title: 'Cumulative Multi-Disciplinary Spiral Review', standard: 'CCSS.SPIRAL.MASTERY', desc: 'Comprehensive spiral review spanning all foundational standards across Math, ELA, Science, and Social Studies.', lesson: '/pages/standards.php', checkpoint: 'SPIRAL-FINAL', isSynthesis: false },
+    { wave: 6, waveWeek: 7, fiscalWeek: 47, fiscalDates: 'June 12 – June 18', title: 'Student Capstone Portfolio Assembly & Exhibition Defense', standard: 'CCSS.PORTFOLIO.DEFENSE', desc: 'Compiling best work artifacts, student self-reflection narratives, and presenting academic portfolio exhibitions.', lesson: '/pages/profile.php', checkpoint: 'PORTFOLIO-DEFENSE', isSynthesis: false },
+    { wave: 6, waveWeek: 8, fiscalWeek: 48, fiscalDates: 'June 19 – June 30', title: 'Wave 6 Fiscal Year-End Capstone: Cumulative Testing, Certification & Fiscal Next-Year Prep', standard: 'CCSS.FISCAL.YEAR_END', desc: 'Week 8 Synthesis: Official cumulative fiscal year-end assessment, transcript audit, honors credential issuance, and planning for the new fiscal year starting July 1.', lesson: '/assessment/', checkpoint: 'FISCAL-YEAR-END', isSynthesis: true }
+  ];
+
+  const STORAGE_KEY_PACING_TRADITIONAL = 'hesten_teacher_pacing_progress';
+  const STORAGE_KEY_PACING_WAVE = 'hesten_teacher_pacing_wave_progress';
+  const STORAGE_KEY_PACING = STORAGE_KEY_PACING_TRADITIONAL;
+  const STORAGE_KEY_PACING_MODEL = 'hl_pacing_model';
+  const STORAGE_KEY_PACING_GRADE = 'hl_pacing_grade';
 
   // --- STATE ---
   let selectedGrade = '3';
@@ -323,6 +395,9 @@
   let selectedMode = 'practice';
   let selectedCount = 10;
   let activeQuarterFilter = 'all';
+  let activePacingModel = 'traditional';
+  let activeWaveFilter = 'all';
+  let activePacingGrade = '3';
 
   // --- INITIALIZATION ---
   document.addEventListener('DOMContentLoaded', () => {
@@ -566,13 +641,65 @@
     preview.style.display = isHidden ? 'block' : 'none';
   }
 
-  // --- 36-WEEK PACING GUIDE ENGINE ---
+  // --- CURRICULUM PACING GUIDE ENGINE (TRADITIONAL 36-WEEK & 8-WEEK WAVE MODELS ACROSS ALL GRADES) ---
   function initPacingGuide() {
     const container = document.getElementById('pacing-schedule-container');
     const quarterPills = document.querySelectorAll('.quarter-pill-btn');
+    const wavePills = document.querySelectorAll('.wave-pill-btn');
+    const modelBtns = document.querySelectorAll('.pacing-model-btn');
+    const traditionalFilters = document.getElementById('pacing-traditional-filters');
+    const waveFilters = document.getElementById('pacing-wave-filters');
+    const waveExplainer = document.getElementById('pacing-wave-explainer');
+    const gradeSelect = document.getElementById('pacing-grade-select');
+    const gradeBadge = document.getElementById('pacing-grade-badge');
     const printBtn = document.getElementById('pacing-print-btn');
 
     if (!container) return;
+
+    activePacingModel = localStorage.getItem(STORAGE_KEY_PACING_MODEL) || 'traditional';
+    activePacingGrade = localStorage.getItem(STORAGE_KEY_PACING_GRADE) || '3';
+
+    if (gradeSelect) {
+      gradeSelect.value = activePacingGrade;
+      gradeSelect.addEventListener('change', () => {
+        activePacingGrade = gradeSelect.value;
+        try { localStorage.setItem(STORAGE_KEY_PACING_GRADE, activePacingGrade); } catch (e) {}
+        updatePacingGradeBadge();
+        renderPacingSchedule();
+      });
+    }
+
+    function updatePacingGradeBadge() {
+      if (gradeBadge) {
+        const gMeta = (window.GRADE_PACING_METADATA && window.GRADE_PACING_METADATA[activePacingGrade]) || 
+                      (GRADE_CONFIG[activePacingGrade]) || { name: activePacingGrade, level: 'e' };
+        gradeBadge.innerHTML = `<i class="fas fa-book-reader"></i> Active Grade: ${escapeHtml(gMeta.name)} (Level ${escapeHtml(gMeta.level.toUpperCase())})`;
+      }
+    }
+
+    function setPacingModel(model) {
+      activePacingModel = model;
+      try { localStorage.setItem(STORAGE_KEY_PACING_MODEL, model); } catch (e) {}
+
+      modelBtns.forEach(btn => {
+        const isMatch = btn.getAttribute('data-pacing-model') === model;
+        btn.classList.toggle('active', isMatch);
+        btn.setAttribute('aria-checked', String(isMatch));
+      });
+
+      if (traditionalFilters) traditionalFilters.style.display = model === 'traditional' ? 'flex' : 'none';
+      if (waveFilters) waveFilters.style.display = model === 'wave' ? 'flex' : 'none';
+      if (waveExplainer) waveExplainer.style.display = model === 'wave' ? 'flex' : 'none';
+
+      renderPacingSchedule();
+    }
+
+    modelBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const model = btn.getAttribute('data-pacing-model') || 'traditional';
+        setPacingModel(model);
+      });
+    });
 
     quarterPills.forEach(pill => {
       pill.addEventListener('click', () => {
@@ -583,34 +710,59 @@
       });
     });
 
+    wavePills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        wavePills.forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        activeWaveFilter = pill.getAttribute('data-wave');
+        renderPacingSchedule();
+      });
+    });
+
     if (printBtn) {
       printBtn.addEventListener('click', () => {
         window.print();
       });
     }
 
-    renderPacingSchedule();
+    updatePacingGradeBadge();
+    setPacingModel(activePacingModel);
   }
 
-  function getCompletedWeeks() {
+  function getCompletedWeeks(model) {
+    const targetModel = model || activePacingModel;
+    const baseKey = targetModel === 'wave' ? STORAGE_KEY_PACING_WAVE : STORAGE_KEY_PACING_TRADITIONAL;
+    const gradeKey = `${baseKey}_${activePacingGrade}`;
     try {
-      return JSON.parse(localStorage.getItem(STORAGE_KEY_PACING)) || [];
+      const stored = localStorage.getItem(gradeKey);
+      if (stored) return JSON.parse(stored) || [];
+      if (activePacingGrade === '3') {
+        const legacy = localStorage.getItem(baseKey);
+        if (legacy) return JSON.parse(legacy) || [];
+      }
+      return [];
     } catch (e) {
       return [];
     }
   }
 
-  function toggleWeekCompletion(weekNum, isChecked) {
+  function toggleWeekCompletion(weekId, isChecked, model) {
+    const targetModel = model || activePacingModel;
+    const baseKey = targetModel === 'wave' ? STORAGE_KEY_PACING_WAVE : STORAGE_KEY_PACING_TRADITIONAL;
+    const gradeKey = `${baseKey}_${activePacingGrade}`;
     try {
-      let weeks = getCompletedWeeks();
-      if (isChecked && !weeks.includes(weekNum)) {
-        weeks.push(weekNum);
+      let weeks = getCompletedWeeks(targetModel);
+      if (isChecked && !weeks.includes(weekId)) {
+        weeks.push(weekId);
       } else if (!isChecked) {
-        weeks = weeks.filter(w => w !== weekNum);
+        weeks = weeks.filter(w => w !== weekId);
       }
-      localStorage.setItem(STORAGE_KEY_PACING, JSON.stringify(weeks));
+      localStorage.setItem(gradeKey, JSON.stringify(weeks));
+      if (activePacingGrade === '3') {
+        localStorage.setItem(baseKey, JSON.stringify(weeks));
+      }
       
-      const row = document.getElementById(`pacing-row-${weekNum}`);
+      const row = document.getElementById(`pacing-row-${weekId}`);
       if (row) {
         row.classList.toggle('completed-week', isChecked);
       }
@@ -623,77 +775,239 @@
     const container = document.getElementById('pacing-schedule-container');
     if (!container) return;
 
-    const completedWeeks = getCompletedWeeks();
-    const quarters = [
-      { q: 1, title: 'Quarter 1: Foundations & Core Concepts', badge: 'Weeks 1–9', cls: 'quarter-q1' },
-      { q: 2, title: 'Quarter 2: Multi-Step Integration & Operations', badge: 'Weeks 10–18', cls: 'quarter-q2' },
-      { q: 3, title: 'Quarter 3: Advanced Fractions & Analytical Thinking', badge: 'Weeks 19–27', cls: 'quarter-q3' },
-      { q: 4, title: 'Quarter 4: Geometric Synthesis & Capstone Mastery', badge: 'Weeks 28–36', cls: 'quarter-q4' }
-    ];
-
     let html = '';
 
-    quarters.forEach(quarterInfo => {
-      // Filter by active quarter
-      if (activeQuarterFilter !== 'all' && activeQuarterFilter !== String(quarterInfo.q)) {
-        return;
+    const gMeta = (window.GRADE_PACING_METADATA && window.GRADE_PACING_METADATA[activePacingGrade]) || 
+                  (GRADE_CONFIG[activePacingGrade]) || { name: `${activePacingGrade} Grade`, level: 'e' };
+
+    // Update print banner
+    const printTitle = document.getElementById('print-pacing-title');
+    const printSubtitle = document.getElementById('print-pacing-subtitle');
+    if (printTitle) {
+      printTitle.textContent = `Hesten's Learning • ${gMeta.name} ${activePacingModel === 'wave' ? 'Year-Round Wave (48 Wks)' : '36-Week Traditional'} Pacing Syllabus`;
+    }
+    if (printSubtitle) {
+      printSubtitle.textContent = activePacingModel === 'wave' 
+        ? `Fiscal Calendar Year-Round Schedule (July 1 – June 30) • Level ${gMeta.level.toUpperCase()} • hestena62.com`
+        : `Standards-Aligned Academic Scope & Sequence (CCSS, NGSS & C3) • Level ${gMeta.level.toUpperCase()} • hestena62.com`;
+    }
+
+    // MODEL A: 36-WEEK TRADITIONAL QUARTER SCHEDULE
+    if (activePacingModel === 'traditional') {
+      const completedWeeks = getCompletedWeeks('traditional');
+      let plan = TRADITIONAL_PACING_PLAN;
+      if (typeof window.buildGradePacingSchedule === 'function') {
+        plan = window.buildGradePacingSchedule(activePacingGrade, 'traditional');
       }
 
-      const weeksInQuarter = MASTER_PACING_PLAN.filter(item => item.quarter === quarterInfo.q);
+      const quarters = [
+        { q: 1, title: `${gMeta.name} Quarter 1: Foundations & Core Concepts`, badge: 'Weeks 1–9', cls: 'quarter-q1' },
+        { q: 2, title: `${gMeta.name} Quarter 2: Multi-Step Integration & Operations`, badge: 'Weeks 10–18', cls: 'quarter-q2' },
+        { q: 3, title: `${gMeta.name} Quarter 3: Analytical Thinking & Proportions`, badge: 'Weeks 19–27', cls: 'quarter-q3' },
+        { q: 4, title: `${gMeta.name} Quarter 4: Synthesis & Capstone Certification`, badge: 'Weeks 28–36', cls: 'quarter-q4' }
+      ];
 
-      html += `
-        <div class="quarter-section" id="quarter-${quarterInfo.q}">
-          <div class="quarter-banner ${quarterInfo.cls}">
-            <h3 class="quarter-title"><i class="fas fa-calendar-alt"></i> ${quarterInfo.title}</h3>
-            <span class="quarter-weeks-badge">${quarterInfo.badge}</span>
-          </div>
-          <div class="pacing-week-list">
-      `;
+      quarters.forEach(quarterInfo => {
+        if (activeQuarterFilter !== 'all' && activeQuarterFilter !== String(quarterInfo.q)) {
+          return;
+        }
 
-      weeksInQuarter.forEach(item => {
-        const isCompleted = completedWeeks.includes(item.week);
+        const weeksInQuarter = plan.filter(item => item.quarter === quarterInfo.q);
+
         html += `
-          <div class="pacing-week-row ${isCompleted ? 'completed-week' : ''}" id="pacing-row-${item.week}">
-            <div class="pacing-col-week">
-              <span>Wk ${item.week}</span>
+          <div class="quarter-section" id="quarter-${quarterInfo.q}">
+            <div class="quarter-banner ${quarterInfo.cls}">
+              <h3 class="quarter-title"><i class="fas fa-calendar-alt"></i> ${quarterInfo.title}</h3>
+              <span class="quarter-weeks-badge">${quarterInfo.badge}</span>
             </div>
-            <div class="pacing-col-unit">
-              <span class="pacing-unit-title">${escapeHtml(item.title)}</span>
-              <span class="pacing-unit-desc">${escapeHtml(item.desc)}</span>
+            <div class="pacing-week-list">
+        `;
+
+        weeksInQuarter.forEach(item => {
+          const isCompleted = completedWeeks.includes(item.week);
+          html += `
+            <div class="pacing-week-row ${isCompleted ? 'completed-week' : ''}" id="pacing-row-${item.week}">
+              <div class="pacing-col-week">
+                <span>Wk ${item.week}</span>
+              </div>
+              <div class="pacing-col-unit">
+                <span class="pacing-unit-title">${escapeHtml(item.title)}</span>
+                <span class="pacing-unit-desc">${escapeHtml(item.desc)}</span>
+              </div>
+              <div class="pacing-col-standard">
+                <span class="pacing-standard-badge">
+                  <i class="fas fa-bookmark"></i> ${escapeHtml(item.standard)}
+                </span>
+              </div>
+              <div class="pacing-col-links">
+                <a href="${item.lesson}" class="pacing-lesson-link" target="_blank">
+                  <i class="fas fa-chalkboard"></i> Lesson Module
+                </a>
+                <a href="/assessment/#standard=${encodeURIComponent(item.checkpoint)}&count=10" class="pacing-checkpoint-link" target="_blank">
+                  <i class="fas fa-check-circle"></i> Assessment Check
+                </a>
+              </div>
+              <div class="pacing-col-action">
+                <label class="pacing-check-label">
+                  <input type="checkbox" class="pacing-checkbox" ${isCompleted ? 'checked' : ''} onchange="window.handleWeekCheck(${item.week}, this.checked, 'traditional')">
+                  <span>Done</span>
+                </label>
+              </div>
             </div>
-            <div class="pacing-col-standard">
-              <span class="pacing-standard-badge">
-                <i class="fas fa-bookmark"></i> ${escapeHtml(item.standard)}
-              </span>
-            </div>
-            <div class="pacing-col-links">
-              <a href="${item.lesson}" class="pacing-lesson-link" target="_blank">
-                <i class="fas fa-chalkboard"></i> Lesson Module
-              </a>
-              <a href="/assessment/#standard=${encodeURIComponent(item.checkpoint)}&count=10" class="pacing-checkpoint-link" target="_blank">
-                <i class="fas fa-check-circle"></i> Assessment Check
-              </a>
-            </div>
-            <div class="pacing-col-action">
-              <label class="pacing-check-label">
-                <input type="checkbox" class="pacing-checkbox" ${isCompleted ? 'checked' : ''} onchange="window.handleWeekCheck(${item.week}, this.checked)">
-                <span>Done</span>
-              </label>
+          `;
+        });
+
+        html += `
             </div>
           </div>
         `;
       });
 
-      html += `
+    // MODEL B: YEAR-ROUND WAVE STRUCTURE (6 WAVES • 48 WEEKS • 7+1 MODEL • FISCAL YEAR: JULY 1 – JUNE 30)
+    // FULLY SEPARATE FROM THE 36-WEEK SCHEDULE
+    } else if (activePacingModel === 'wave') {
+      const completedWeeks = getCompletedWeeks('wave');
+      let plan = WAVE_PACING_PLAN;
+      if (typeof window.buildGradePacingSchedule === 'function') {
+        plan = window.buildGradePacingSchedule(activePacingGrade, 'wave');
+      }
+
+      const waveHeaders = [
+        {
+          wave: 1,
+          title: `${gMeta.name} Wave 1: Foundations & Core Operations (Fiscal Q1)`,
+          badge: 'July 1 – Late Aug • Weeks 1–8 (7 Wks Instruction + Wk 8 Testing & Planning)',
+          cls: 'wave-w1',
+          fiscalDates: 'July 1 – Late August'
+        },
+        {
+          wave: 2,
+          title: `${gMeta.name} Wave 2: Multi-Step Integration & Natural Sciences (Fiscal Q1-Q2)`,
+          badge: 'Sept – Oct • Weeks 9–16 (7 Wks Instruction + Wk 16 Testing & Planning)',
+          cls: 'wave-w2',
+          fiscalDates: 'September – October'
+        },
+        {
+          wave: 3,
+          title: `${gMeta.name} Wave 3: Fractions, Analytical Thinking & Earth Dynamics (Fiscal Q2)`,
+          badge: 'Nov – Dec • Weeks 17–24 (7 Wks Instruction + Wk 24 Mid-Year Testing & Planning)',
+          cls: 'wave-w3',
+          fiscalDates: 'November – December'
+        },
+        {
+          wave: 4,
+          title: `${gMeta.name} Wave 4: Spatial Volumetrics, Engineering & Inventions (Fiscal Q3)`,
+          badge: 'Jan – Feb • Weeks 25–32 (7 Wks Instruction + Wk 32 Testing & Planning)',
+          cls: 'wave-w4',
+          fiscalDates: 'January – February'
+        },
+        {
+          wave: 5,
+          title: `${gMeta.name} Wave 5: Advanced Algebraic Patterns & Cellular Systems (Fiscal Q3-Q4)`,
+          badge: 'Mar – Apr • Weeks 33–40 (7 Wks Instruction + Wk 40 Spring Benchmark & Planning)',
+          cls: 'wave-w5',
+          fiscalDates: 'March – April'
+        },
+        {
+          wave: 6,
+          title: `${gMeta.name} Wave 6: Capstone Mastery, Civic Defense & Fiscal Year-End Certification (Fiscal Q4)`,
+          badge: 'May – June 30 • Weeks 41–48 (7 Wks Instruction + Wk 48 Fiscal Year-End Assessment)',
+          cls: 'wave-w6',
+          fiscalDates: 'May – June 30'
+        }
+      ];
+
+      waveHeaders.forEach(waveInfo => {
+        if (activeWaveFilter !== 'all' && activeWaveFilter !== String(waveInfo.wave)) {
+          return;
+        }
+
+        const weeksInWave = plan.filter(item => item.wave === waveInfo.wave);
+
+        html += `
+          <div class="quarter-section" id="wave-${waveInfo.wave}">
+            <div class="wave-banner ${waveInfo.cls}">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <i class="fas fa-water"></i>
+                <div>
+                  <h3 class="quarter-title" style="margin: 0; font-size: 1.1rem;">${escapeHtml(waveInfo.title)}</h3>
+                  <span style="font-size: 0.775rem; opacity: 0.9; display: block; margin-top: 2px;">
+                    <i class="fas fa-calendar-alt"></i> Fiscal Window: ${escapeHtml(waveInfo.fiscalDates)} • 7 Wks Instruction + 1 Wk Synthesis
+                  </span>
+                </div>
+              </div>
+              <span class="quarter-weeks-badge" style="background: rgba(255, 255, 255, 0.25); color: #ffffff;">${escapeHtml(waveInfo.badge)}</span>
+            </div>
+            <div class="pacing-week-list">
+        `;
+
+        weeksInWave.forEach(item => {
+          const rowKey = `wave-${item.fiscalWeek}`;
+          const isCompleted = completedWeeks.includes(rowKey) || completedWeeks.includes(item.fiscalWeek);
+          const isSynthesis = item.isSynthesis;
+
+          html += `
+            <div class="pacing-week-row ${isSynthesis ? 'wave-synthesis-week' : ''} ${isCompleted ? 'completed-week' : ''}" id="pacing-row-${rowKey}">
+              <div class="pacing-col-week" style="display: flex; flex-direction: column; align-items: flex-start; gap: 0.15rem;">
+                <span style="font-weight: 800; font-size: 0.95rem;">Wk ${item.waveWeek}</span>
+                <span style="font-size: 0.7rem; color: var(--color-text-muted); font-weight: 600;">(Wk ${item.fiscalWeek})</span>
+                ${isSynthesis 
+                  ? `<span style="font-size: 0.65rem; color: #047857; font-weight: 800; text-transform: uppercase; background: rgba(16, 185, 129, 0.2); padding: 1px 6px; border-radius: 4px; margin-top: 2px;">Synthesis</span>` 
+                  : `<span style="font-size: 0.65rem; color: #4338ca; font-weight: 700; text-transform: uppercase; background: rgba(99, 102, 241, 0.12); padding: 1px 5px; border-radius: 4px; margin-top: 2px;">Immersion</span>`}
+              </div>
+              <div class="pacing-col-unit">
+                <span class="pacing-unit-title">
+                  ${isSynthesis ? `<i class="fas fa-clipboard-check text-emerald-600" style="margin-right: 0.35rem;"></i>` : ''}
+                  ${escapeHtml(item.title)}
+                </span>
+                <span class="pacing-unit-desc">${escapeHtml(item.desc)}</span>
+                <div style="margin-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 0.35rem;">
+                  ${isSynthesis ? `
+                    <span class="wave-type-badge badge-synthesis"><i class="fas fa-vial"></i> Formative &amp; Summative Testing</span>
+                    <span class="wave-type-badge badge-synthesis"><i class="fas fa-tasks"></i> Finishing Pending Work &amp; Portfolio Completion</span>
+                    <span class="wave-type-badge badge-synthesis" style="background: rgba(79, 70, 229, 0.15); color: #4338ca; border-color: rgba(79, 70, 229, 0.3);"><i class="fas fa-calendar-check"></i> Planning &amp; Prep Next Wave</span>
+                  ` : `
+                    <span class="wave-type-badge badge-instruction"><i class="fas fa-chalkboard-teacher"></i> Instructional Immersion (Week ${item.waveWeek} of 7 • ${escapeHtml(item.fiscalDates)})</span>
+                  `}
+                </div>
+              </div>
+              <div class="pacing-col-standard">
+                <span class="pacing-standard-badge">
+                  <i class="fas fa-bookmark"></i> ${escapeHtml(item.standard)}
+                </span>
+              </div>
+              <div class="pacing-col-links">
+                <a href="${item.lesson}" class="pacing-lesson-link" target="_blank">
+                  <i class="fas fa-chalkboard"></i> ${isSynthesis ? 'Review Units' : 'Lesson Module'}
+                </a>
+                <a href="/assessment/#standard=${encodeURIComponent(item.checkpoint)}&count=10" class="pacing-checkpoint-link" target="_blank">
+                  <i class="fas fa-check-circle"></i> ${isSynthesis ? 'Wave Milestone Exam' : 'Assessment Check'}
+                </a>
+              </div>
+              <div class="pacing-col-action">
+                <label class="pacing-check-label">
+                  <input type="checkbox" class="pacing-checkbox" ${isCompleted ? 'checked' : ''} onchange="window.handleWeekCheck('${rowKey}', this.checked, 'wave')">
+                  <span>Done</span>
+                </label>
+              </div>
+            </div>
+          `;
+        });
+
+        html += `
+            </div>
           </div>
-        </div>
-      `;
-    });
+        `;
+      });
+    }
 
     container.innerHTML = html;
   }
 
   // Expose global hook for week checkbox
+  window.handleWeekCheck = function (weekId, isChecked, model) {
+    toggleWeekCompletion(weekId, isChecked, model);
+  };
   window.handleWeekCheck = function (weekNum, isChecked) {
     toggleWeekCompletion(weekNum, isChecked);
   };
@@ -1322,6 +1636,9 @@
     try {
       localStorage.setItem(STORAGE_KEY_ROSTER, JSON.stringify(roster));
       window.dispatchEvent(new CustomEvent('hl:roster-updated', { detail: roster }));
+      if (typeof window.hlBroadcastSync === 'function') {
+        window.hlBroadcastSync('roster', roster);
+      }
     } catch (e) {}
   }
 
@@ -1558,16 +1875,76 @@
       }
     }
 
-    // Accommodations
+    // Accommodations (Unified Classroom & Parent Sync)
     const accomWrap = document.getElementById('dossier-accommodations-list');
     if (accomWrap) {
       accomWrap.innerHTML = '';
-      if (accoms.length > 0) {
-        accoms.forEach(acc => {
-          accomWrap.innerHTML += `<span class="dossier-tag accommodation"><i class="fas fa-universal-access"></i> ${escapeHtml(acc)}</span>`;
+      
+      // Check for parent-configured accommodations if student matches active profile
+      let parentAccoms = [];
+      try {
+        const rawProf = localStorage.getItem('hesten-user-profile') || localStorage.getItem('hesten_user_profile');
+        if (rawProf) {
+          const prof = JSON.parse(rawProf);
+          const profName = prof.firstName || prof.displayName || prof.name;
+          if (profName && student.name && profName.toLowerCase() === student.name.toLowerCase()) {
+            const rawParent = localStorage.getItem('hesten_parent_accommodations');
+            if (rawParent) {
+              const pKeys = JSON.parse(rawParent);
+              if (Array.isArray(pKeys)) {
+                const parentLabels = {
+                  'sensory-retreat': 'Calm Focus Retreat (Parent IEP)',
+                  'movement-breaks': 'Scheduled Movement Resets (Parent IEP)',
+                  'fidget-tools': 'Sensory Fidget Tools (Parent IEP)',
+                  'sound-reduction': 'Noise-Dampening Environment (Parent IEP)',
+                  'opendyslexic': 'OpenDyslexic Typeface (Parent IEP)',
+                  'bionic-reading': 'Bionic Contrast Reading (Parent IEP)',
+                  'audio-read-aloud': 'Audio Read-Aloud / TTS (Parent IEP)',
+                  'irlen-tint': 'Irlen Tint Filter (Parent IEP)',
+                  'screen-mask': 'Visual Reading Line Mask (Parent IEP)',
+                  'color-math': 'Dyscalculia Digit Colorizer (Parent IEP)',
+                  'untimed-mode': 'Untimed Practice Mode (Parent IEP)',
+                  'chunked-tasks': 'Chunked Tasks & Micro-Goals (Parent IEP)',
+                  'visual-timer': 'Visual Timer Aids (Parent IEP)'
+                };
+                parentAccoms = pKeys.map(k => parentLabels[k] || `Parent: ${k}`);
+              }
+            }
+          }
+        }
+      } catch (e) {}
+
+      const allAccoms = [...new Set([...accoms, ...parentAccoms])];
+
+      if (allAccoms.length > 0) {
+        allAccoms.forEach(acc => {
+          const isParent = acc.includes('(Parent IEP)');
+          const icon = isParent ? 'fa-home' : 'fa-universal-access';
+          const style = isParent ? 'background: rgba(16, 185, 129, 0.12); color: #047857; border-color: #a7f3d0;' : '';
+          accomWrap.innerHTML += `<span class="dossier-tag accommodation" style="${style}"><i class="fas ${icon}"></i> ${escapeHtml(acc)}</span>`;
         });
       } else {
         accomWrap.innerHTML = `<span class="text-xs text-slate-400 italic">Standard general education setting.</span>`;
+      }
+    }
+
+    // Parent Home Observations & Context (Synced from Parent Hub)
+    const parentNotesBox = document.getElementById('dossier-parent-notes-box');
+    if (parentNotesBox) {
+      let pNotes = student.parentNotes || '';
+      if (!pNotes) {
+        try {
+          pNotes = localStorage.getItem('hesten_parent_iep_notes') || '';
+        } catch (e) {}
+      }
+      if (pNotes && pNotes.trim()) {
+        parentNotesBox.textContent = pNotes.trim();
+        parentNotesBox.style.fontStyle = 'normal';
+        parentNotesBox.style.color = 'inherit';
+      } else {
+        parentNotesBox.textContent = 'No parent home observations recorded yet. Observations recorded in the Parent Hub (pages/parents.php) synchronize here automatically.';
+        parentNotesBox.style.fontStyle = 'italic';
+        parentNotesBox.style.color = 'var(--color-text-muted, #64748b)';
       }
     }
 
@@ -2084,7 +2461,14 @@
         }
         saveRoster(roster);
         renderRoster();
-        showToast(`Saved notes & synchronized ${currentDossierStudent.name} to roster!`);
+        if (typeof window.hlBroadcastSync === 'function') {
+          window.hlBroadcastSync('teacher-notes', {
+            student: currentDossierStudent.name,
+            notes: newNotes,
+            accommodations: currentDossierStudent.accommodations
+          });
+        }
+        showToast(`Saved notes & synchronized ${currentDossierStudent.name} across platform!`);
       });
     }
 
@@ -2487,6 +2871,9 @@
 
     renderRoster();
     window.addEventListener('hl:roster-updated', () => {
+      renderRoster();
+    });
+    window.addEventListener('hl:accommodations-updated', () => {
       renderRoster();
     });
   }

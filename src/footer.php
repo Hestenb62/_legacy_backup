@@ -67,6 +67,8 @@
                 <ul class="footer-links">
                     <li class="footer-link-item"><a href="/pages/contact.php"><i
                                 class="fas fa-envelope footer-link-icon"></i> Contact Us</a></li>
+                    <li class="footer-link-item"><a href="/pages/community.php"><i
+                                class="fas fa-users-cog footer-link-icon"></i> Community Hub</a></li>
                     <li class="footer-link-item"><a href="/student/index.php"><i
                                 class="fas fa-home footer-link-icon"></i> For Students</a></li>
                     <li class="footer-link-item"><a href="/pages/parents.php"><i
@@ -96,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.37.2';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Unified Open Navigation Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Restoration of Direct Unified Access Across All Scholar, Educator, and Parent Portals';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.38.2';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Multi-Grade Wave & Traditional Pacing Suite Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Multi-Grade Support (Pre-K through High School) for 36-Week Traditional & 48-Week Year-Round Fiscal Wave Pacing Guides';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -271,9 +273,74 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> completes the entire <strong>Grade 9 English Language Arts Curriculum (153 Total Lessons)</strong>, completing Modules 1, 2, 3, and 4. This milestone brings full inquiry-driven research in Module 3 (<em>Animals in Translation</em>) and historical argument writing in Module 4 (<em>Sugar Changed the World</em> &amp; <em>Globalization</em>), supported by 10 dedicated standalone library reading pages, interactive close-reading worksheets, and auto-saving digital working areas.
+                Version <?= htmlspecialchars($siteVersion) ?> expands our pacing architecture into a <strong>Universal Multi-Grade Pacing Suite (Pre-K through High School)</strong>, delivering independent scope &amp; sequence schedules for both the <strong>36-Week Traditional Calendar</strong> and the <strong>48-Week Year-Round Fiscal Wave Structure (July 1 – June 30)</strong> across all 11 grade levels. This release also features <strong>Parent Home Observations</strong> bridged directly into the Teacher Diagnostic Dossier and the community-driven <strong>Community Resources Hub (<code>/pages/community.php</code>)</strong>.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal Multi-Grade Pacing Suite (Pre-K through High School • v2.38.2):</strong> Comprehensive curriculum pacing for all grade bands at <code>/pages/teachers.php#pacing</code>:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>All 11 Grade Levels Supported:</strong> Pre-K, Kindergarten, Grades 1 through 8, and High School each have dedicated, standard-aligned scope and sequences spanning CCSS Math, CCSS ELA, NGSS Science, and C3 Social Studies.</li>
+                            <li><strong>Dual Structural Models for Every Grade:</strong> Seamless toggle between the 36-Week Traditional 4-Quarter schedule and the 48-Week Year-Round 6-Wave fiscal schedule with 7+1 learning cycles (7 weeks instructional immersion + 1 week synthesis testing &amp; next wave planning).</li>
+                            <li><strong>Independent Grade-Namespaced Progress Tracking:</strong> Progress checkboxes are isolated per grade and per model in <code>localStorage</code>, allowing educators to track multi-grade classrooms or individual homeschool learners without cross-grade state interference.</li>
+                            <li><strong>Dynamic Classroom Syllabus Printing:</strong> 1-click print output dynamically generates grade-specific and model-specific document titles and layout headers for print syllabi and offline planning binders.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(13, 148, 136, 0.15); color: #0d9488;">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Year-Round Wave Pacing Structure (6 Waves • 48 Weeks • v2.38.1):</strong> Independent fiscal-year pacing option at <code>/pages/teachers.php#pacing</code>:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Fully Separate from 36-Week Traditional Schedule:</strong> A distinct 48-week curriculum progression running July 1 through June 30 across 6 dedicated 8-week waves, each with separate progress tracking in <code>localStorage</code>.</li>
+                            <li><strong>7+1 Immersion &amp; Synthesis Cycle:</strong> Weeks 1–7 of each wave deliver uninterrupted instructional units, while Week 8 is dedicated to formative/summative testing, finishing incomplete assignments, and planning for the next wave.</li>
+                            <li><strong>Multi-Wave Filtering &amp; Syllabus Printing:</strong> 1-click filter pills for All 6 Waves or individual Waves 1 through 6, with clean print styling for classroom syllabi and parent planning binders.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Parent Home Observations Bridge to Teacher Dossier (v2.38.1):</strong>
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Parent Hub Field:</strong> Parents can record behavioral observations, sensory triggers, and home accommodation successes directly in the IEP/504 Brief modal (<code>pages/parents.php</code>).</li>
+                            <li><strong>Teacher Dossier Display:</strong> These observations dynamically sync across tabs to the Teacher Diagnostic Dossier with a dedicated "Synced from Parent Hub" badge, uniting educators and parents.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-users-cog"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Community Hub &amp; Resources Repository (v2.38.0):</strong> Dedicated collaboration portal at <code>/pages/community.php</code>:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Curated Directory &amp; Instant Filtering:</strong> Searchable repository spanning Homeschool Co-ops &amp; Networks, Educator Exchanges, Special Education &amp; Neurodiversity Coalitions, and STEAM Circles.</li>
+                            <li><strong>Interactive Feedback &amp; Ideas Studio:</strong> Comprehensive feedback mechanism featuring category selection, learning role attribution, honeypot anti-spam protection, and offline-saved submission history (<code>localStorage</code>).</li>
+                            <li><strong>Community Roadmap Upvote Board:</strong> Live upvoting board for community-suggested feature ideas with reactive counters and screen reader announcements (<code>aria-live="polite"</code>).</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Tripartite Role Data Synchronization Enhancements:</strong> Seamless bidirectional data flow between Student, Teacher, and Parent hubs:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Parent-to-Teacher Live Sync:</strong> Parent accommodation toggles (<code>hesten_parent_accommodations</code>) now reflect directly inside the Teacher Diagnostic Dossier with distinctive parent-configured indicators.</li>
+                            <li><strong>Teacher-to-Parent Live Sync:</strong> Educator diagnostic notes and instructional recommendations saved in the Educator Suite automatically bridge to student profile data and render on the official parent IEP/504 Accommodation &amp; Progress Brief.</li>
+                            <li><strong>Cross-Tab Event Reactivity:</strong> Hardened event listeners for <code>hl:roster-updated</code>, <code>hl:accommodations-updated</code>, <code>hl:profile-updated</code>, and <code>hl:teacher-notes-updated</code> preventing state staleness across open tabs.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
                         <i class="fas fa-graduation-cap"></i>

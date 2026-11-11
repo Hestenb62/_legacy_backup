@@ -120,6 +120,68 @@ document.addEventListener('DOMContentLoaded', function () {
         if (idx >= 0) {
             roster[idx].accommodations = accommodationsList;
             safeSetJson('hesten_teacher_roster', roster);
+            window.dispatchEvent(new CustomEvent('hl:roster-updated', { detail: roster }));
+        }
+    }
+
+    // Synchronize teacher notes & observations into active student profile
+    function syncTeacherNotesToStudentProfile(studentName, notes, teacherAccoms = null) {
+        if (!studentName) return;
+        const profileKey = localStorage.getItem('hesten-user-profile') ? 'hesten-user-profile' : 'hesten_user_profile';
+        const profile = safeGetJson(profileKey) || {};
+        const activeName = profile.firstName || profile.displayName || profile.name;
+        
+        if (activeName && activeName.toLowerCase() === studentName.toLowerCase()) {
+            profile.educatorNotes = notes || '';
+            profile.educatorNotesUpdatedAt = new Date().toISOString();
+            if (Array.isArray(teacherAccoms)) {
+                profile.teacherAccommodations = teacherAccoms;
+            }
+            safeSetJson(profileKey, profile);
+            window.dispatchEvent(new CustomEvent('hl:profile-updated', { detail: profile }));
+            window.dispatchEvent(new CustomEvent('hl:teacher-notes-updated', { detail: { studentName, notes, teacherAccoms } }));
+        }
+    }
+
+    // Check teacher roster updates to bridge notes/accommodations to student profile
+    function syncRosterToStudentProfile(roster) {
+        if (!Array.isArray(roster) || roster.length === 0) return;
+        const profileKey = localStorage.getItem('hesten-user-profile') ? 'hesten-user-profile' : 'hesten_user_profile';
+        const profile = safeGetJson(profileKey) || {};
+        const activeName = profile.firstName || profile.displayName || profile.name;
+        if (!activeName) return;
+
+        const match = roster.find(s => s && s.name && s.name.toLowerCase() === activeName.toLowerCase());
+        if (match) {
+            let changed = false;
+            if (match.notes !== undefined && match.notes !== profile.educatorNotes) {
+                profile.educatorNotes = match.notes;
+                profile.educatorNotesUpdatedAt = new Date().toISOString();
+                changed = true;
+            }
+            if (Array.isArray(match.accommodations) && JSON.stringify(match.accommodations) !== JSON.stringify(profile.teacherAccommodations)) {
+                profile.teacherAccommodations = match.accommodations;
+                changed = true;
+            }
+            if (changed) {
+                safeSetJson(profileKey, profile);
+                window.dispatchEvent(new CustomEvent('hl:profile-updated', { detail: profile }));
+            }
+        }
+    }
+
+    // Synchronize parent home observations & insights into teacher classroom roster
+    function syncParentNotesToTeacherRoster(studentName, notes) {
+        if (!studentName || !notes) return;
+        const roster = safeGetJson('hesten_teacher_roster');
+        if (!Array.isArray(roster) || roster.length === 0) return;
+
+        const idx = roster.findIndex(s => s && s.name && s.name.toLowerCase() === studentName.toLowerCase());
+        if (idx >= 0) {
+            roster[idx].parentNotes = notes;
+            safeSetJson('hesten_teacher_roster', roster);
+            window.dispatchEvent(new CustomEvent('hl:roster-updated', { detail: roster }));
+            window.dispatchEvent(new CustomEvent('hl:parent-notes-updated', { detail: { studentName, notes } }));
         }
     }
 
@@ -134,11 +196,19 @@ document.addEventListener('DOMContentLoaded', function () {
         } else if (e.key === 'hesten_parent_accommodations') {
             const accoms = safeGetJson('hesten_parent_accommodations');
             syncAccommodationsAcrossRoles(accoms);
+        } else if (e.key === 'hesten_parent_iep_notes') {
+            const profile = safeGetJson('hesten-user-profile') || safeGetJson('hesten_user_profile') || {};
+            const studentName = profile.firstName || profile.displayName || profile.name;
+            const notes = localStorage.getItem('hesten_parent_iep_notes');
+            if (studentName && notes) {
+                syncParentNotesToTeacherRoster(studentName, notes);
+            }
         } else if (e.key === 'hesten-user-profile' || e.key === 'hesten_user_profile') {
             const profile = safeGetJson(e.key);
             window.dispatchEvent(new CustomEvent('hl:profile-updated', { detail: profile }));
         } else if (e.key === 'hesten_teacher_roster') {
             const roster = safeGetJson('hesten_teacher_roster');
+            syncRosterToStudentProfile(roster);
             window.dispatchEvent(new CustomEvent('hl:roster-updated', { detail: roster }));
         }
     });
@@ -149,6 +219,12 @@ document.addEventListener('DOMContentLoaded', function () {
             syncMasteryToTeacherRoster(data);
         } else if (topic === 'accommodations') {
             syncAccommodationsAcrossRoles(data);
+        } else if (topic === 'teacher-notes' && data) {
+            syncTeacherNotesToStudentProfile(data.student || data.studentName, data.notes, data.accommodations);
+        } else if (topic === 'parent-notes' && data) {
+            syncParentNotesToTeacherRoster(data.student || data.studentName, data.notes);
+        } else if (topic === 'roster' && Array.isArray(data)) {
+            syncRosterToStudentProfile(data);
         }
         window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { topic, data } }));
     };

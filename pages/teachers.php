@@ -15,8 +15,8 @@ include '../src/header.php';
 
     <!-- Print-Only Header (Appears only when printing pacing guides for physical binders/portfolios) -->
     <div class="print-header-banner" style="display: none;">
-        <h1>Hesten's Learning • 36-Week Curriculum Pacing Syllabus</h1>
-        <p>Standards-Aligned Academic Scope & Sequence (CCSS & NGSS Aligned) • hestena62.com</p>
+        <h1 id="print-pacing-title">Hesten's Learning • Curriculum Pacing Syllabus</h1>
+        <p id="print-pacing-subtitle">Standards-Aligned Academic Scope &amp; Sequence (CCSS, NGSS &amp; C3) • hestena62.com</p>
     </div>
 
     <!-- Page Hero Banner -->
@@ -207,9 +207,50 @@ include '../src/header.php';
         <!-- ================================================================= -->
         <!-- TAB 2: 36-WEEK MASTER CURRICULUM PACING GUIDE                     -->
         <!-- ================================================================= -->
-        <section id="tab-pacing" class="teacher-tab-panel" role="tabpanel" aria-label="36-Week Pacing Guide">
+        <section id="tab-pacing" class="teacher-tab-panel" role="tabpanel" aria-label="Curriculum Pacing Guide">
             <div class="pacing-toolbar">
-                <div class="pacing-filter-group">
+                <!-- 1. Grade Level Selector -->
+                <div class="pacing-grade-selector" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; width: 100%; border-bottom: 1px solid var(--color-border); padding-bottom: 0.85rem; margin-bottom: 0.85rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                        <span style="font-size: 0.875rem; font-weight: 800; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <i class="fas fa-graduation-cap text-indigo-600"></i> Grade Level:
+                        </span>
+                        <select id="pacing-grade-select" class="builder-select" style="min-width: 240px; padding: 0.45rem 0.85rem; font-weight: 700;" aria-label="Select grade level for pacing syllabus">
+                            <option value="pre-k">Pre-K (Level A)</option>
+                            <option value="k">Kindergarten (Level B)</option>
+                            <option value="1">1st Grade (Level C)</option>
+                            <option value="2">2nd Grade (Level D)</option>
+                            <option value="3" selected>3rd Grade (Level E)</option>
+                            <option value="4">4th Grade (Level F)</option>
+                            <option value="5">5th Grade (Level G)</option>
+                            <option value="6">6th Grade (Level H)</option>
+                            <option value="7">7th Grade (Level I)</option>
+                            <option value="8">8th Grade (Level J)</option>
+                            <option value="hs">High School (Level K-N)</option>
+                        </select>
+                    </div>
+                    <span id="pacing-grade-badge" class="badge" style="background: rgba(99, 102, 241, 0.12); color: #4338ca; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.8rem;">
+                        <i class="fas fa-book-reader"></i> Active Grade: 3rd Grade (Level E)
+                    </span>
+                </div>
+
+                <!-- 2. Pacing Model Switcher -->
+                <div class="pacing-model-selector" style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; width: 100%; border-bottom: 1px solid var(--color-border); padding-bottom: 0.85rem; margin-bottom: 0.85rem;">
+                    <span style="font-size: 0.875rem; font-weight: 800; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <i class="fas fa-layer-group text-indigo-600"></i> Pacing Structure:
+                    </span>
+                    <div class="pacing-model-pills" role="radiogroup" aria-label="Select pacing model">
+                        <button type="button" class="pacing-model-btn active" data-pacing-model="traditional" role="radio" aria-checked="true">
+                            <i class="fas fa-calendar-alt"></i> 36-Week Traditional Schedule (4 Quarters)
+                        </button>
+                        <button type="button" class="pacing-model-btn" data-pacing-model="wave" role="radio" aria-checked="false">
+                            <i class="fas fa-water"></i> Year-Round Wave Structure (6 Waves • 48 Wks • Fiscal Calendar)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 2A. Traditional Quarter Filters -->
+                <div class="pacing-filter-group" id="pacing-traditional-filters">
                     <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-text-main);">
                         <i class="fas fa-filter text-indigo-600"></i> Academic Quarter:
                     </span>
@@ -222,10 +263,37 @@ include '../src/header.php';
                     </div>
                 </div>
 
+                <!-- 2B. Wave Filters (Hidden by Default) -->
+                <div class="pacing-filter-group" id="pacing-wave-filters" style="display: none;">
+                    <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-text-main);">
+                        <i class="fas fa-water" style="color: #0d9488;"></i> Active Fiscal Wave:
+                    </span>
+                    <div class="quarter-pills-bar">
+                        <button type="button" class="wave-pill-btn active" data-wave="all">All 6 Waves (July 1 – June 30 • 48 Wks)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="1">Wave 1 (July–Aug • Wks 1–8)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="2">Wave 2 (Sept–Oct • Wks 9–16)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="3">Wave 3 (Nov–Dec • Wks 17–24)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="4">Wave 4 (Jan–Feb • Wks 25–32)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="5">Wave 5 (Mar–Apr • Wks 33–40)</button>
+                        <button type="button" class="wave-pill-btn" data-wave="6">Wave 6 (May–Jun 30 • Wks 41–48)</button>
+                    </div>
+                </div>
+
                 <div class="no-print">
                     <button type="button" id="pacing-print-btn" class="builder-action-btn builder-btn-secondary">
                         <i class="fas fa-print"></i> Print Pacing Syllabus
                     </button>
+                </div>
+            </div>
+
+            <!-- Wave Structure Explainer Banner (Visible in Wave Mode) -->
+            <div id="pacing-wave-explainer" class="wave-explainer-card" style="display: none;">
+                <div class="wave-explainer-icon"><i class="fas fa-water"></i></div>
+                <div class="wave-explainer-content">
+                    <h4 class="wave-explainer-title">Year-Round Wave Schedule (6 Waves • 48 Weeks • Fiscal Calendar: July 1 – June 30)</h4>
+                    <p class="wave-explainer-desc">
+                        The Wave Structure is a <strong>fully independent, year-round educational framework</strong> following the fiscal calendar (Wave 1 begins July 1, Wave 6 concludes June 30). Each of the 6 waves spans <strong>8 full weeks</strong> using the proven <strong>7+1 learning cycle</strong>: <strong>7 uninterrupted weeks of instructional immersion</strong> followed by an intentional <strong>Week 8 dedicated to formative/summative testing, finishing up pending assignments, and planning for the next wave</strong>.
+                    </p>
                 </div>
             </div>
 
@@ -366,6 +434,22 @@ include '../src/header.php';
                     <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #4f46e5; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.switchTeacherTab && window.switchTeacherTab('tab-crossword')">
                         <span>Open Crossword Studio</span> <i class="fas fa-arrow-right"></i>
                     </button>
+                </div>
+
+                <!-- Card 9: Community Hub & Educator Exchanges -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="resource-card-title">Community &amp; Educator Exchanges</h3>
+                        <p class="resource-card-desc">
+                            Discover open educational resource (OER) networks, peer lesson review collaboratives, neurodiversity advocacy coalitions, and share platform suggestions.
+                        </p>
+                    </div>
+                    <a href="/pages/community.php" class="resource-action-link" style="color: #059669;">
+                        <span>Explore Community Hub</span> <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -727,7 +811,18 @@ include '../src/header.php';
                 <!-- Injected via JS -->
             </div>
 
-            <!-- 4. Teacher Observational Notes -->
+            <!-- 4. Parent / Guardian Home Observations (Synced from Parent Hub) -->
+            <div class="dossier-section-title mt-4" style="display: flex; align-items: center; justify-content: space-between;">
+                <span><i class="fas fa-home text-emerald-600"></i> Parent / Guardian Home Observations &amp; Context</span>
+                <span style="font-size: 0.725rem; font-weight: 700; background: rgba(16, 185, 129, 0.15); color: #047857; padding: 2px 8px; border-radius: 9999px;">
+                    <i class="fas fa-sync-alt"></i> Synced from Parent Hub
+                </span>
+            </div>
+            <div id="dossier-parent-notes-box" class="dossier-notes-textarea" style="min-height: 52px; max-height: 110px; overflow-y: auto; background: var(--color-surface-hover, #f8fafc); border-color: rgba(16, 185, 129, 0.35); font-size: 0.875rem; color: var(--color-text-main); font-style: normal; margin-bottom: 0.75rem; white-space: pre-wrap;" aria-live="polite">
+                <!-- Injected via JS -->
+            </div>
+
+            <!-- 5. Teacher Observational Notes -->
             <div class="dossier-section-title mt-4">
                 <i class="fas fa-edit text-indigo-600"></i> Educator Notes & Diagnostic Observations
             </div>
@@ -760,6 +855,7 @@ include '../src/header.php';
 <!-- Load Teacher Hub Script -->
 <script src="<?= assetVersion('/assets/js/components/word-search-generator.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/components/crossword-generator.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/standards/pacing-curriculum-registry.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/pages/teachers-main.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 

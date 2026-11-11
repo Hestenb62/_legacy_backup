@@ -153,20 +153,20 @@ include '../src/header.php';
 
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
                         <div style="background: var(--color-bg-surface); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--color-border);">
-                            <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #2563eb;"><i class="fas fa-book-reader"></i> Reading Accomplishments</h4>
-                            <p style="margin: 0; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
-                                Your learner explored <strong>George Orwell's 1984</strong> in both Original and Plain English Lexile modes this week.
+                            <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #2563eb;"><i class="fas fa-book-reader"></i> <span id="digest-student-greeting">Learner Progress &amp; Reading</span></h4>
+                            <p id="digest-reading-summary" style="margin: 0; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
+                                Your learner explored literature and core foundational skills with multimodal support this week.
                             </p>
-                            <div style="margin-top: 0.75rem; font-size: 0.82rem; font-weight: 700; color: #10b981;">
-                                <i class="fas fa-check-circle"></i> 100% Reading Goal Achieved
+                            <div id="digest-mastery-badge" style="margin-top: 0.75rem; font-size: 0.82rem; font-weight: 700; color: #10b981;">
+                                <i class="fas fa-check-circle"></i> Active Learning Goal Progress
                             </div>
                         </div>
 
                         <div style="background: var(--color-bg-surface); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--color-border);">
                             <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #f59e0b;"><i class="fas fa-comments"></i> Dinner Table Conversation Starters</h4>
-                            <ul style="margin: 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
-                                <li>"Why do you think the characters in 1984 had to be so careful about what they wrote?"</li>
-                                <li>"How did breaking down fractions with the fraction bars help today?"</li>
+                            <ul id="digest-conversation-list" style="margin: 0; padding-left: 1.25rem; font-size: 0.88rem; color: var(--color-text-muted); line-height: 1.5;">
+                                <li>"What was the most surprising discovery you made during your studies this week?"</li>
+                                <li>"How did your accommodations help you stay focused during challenging questions?"</li>
                             </ul>
                         </div>
                     </div>
@@ -221,6 +221,28 @@ include '../src/header.php';
                         <div class="parents-resource-info">
                             <h3 class="parents-resource-title">Wellness</h3>
                             <p class="parents-resource-desc">Mental health resources for students.</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 5: Community Hub -->
+                    <a href="/pages/community.php" class="glass-panel parents-resource-card hover-lift" style="border-left: 3px solid #6366f1;">
+                        <div class="parents-resource-icon icon-purple">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <div class="parents-resource-info">
+                            <h3 class="parents-resource-title">Community &amp; Co-ops</h3>
+                            <p class="parents-resource-desc">Connect with homeschool pods, IEP networks, and exchange ideas.</p>
+                        </div>
+                    </a>
+
+                    <!-- Card 6: Cerebral Palsy Guide & Educational Toolkit -->
+                    <a href="https://www.levinperconti.com/birth-injury/cerebral-palsy/guide-toolkit/" target="_blank" rel="noopener noreferrer" class="glass-panel parents-resource-card hover-lift" style="border-left: 3px solid #e11d48;" aria-label="Cerebral Palsy Family Guide & Educational Toolkit (opens in new tab)">
+                        <div class="parents-resource-icon icon-rose" style="background: rgba(244, 63, 94, 0.15); color: #e11d48;">
+                            <i class="fas fa-wheelchair"></i>
+                        </div>
+                        <div class="parents-resource-info">
+                            <h3 class="parents-resource-title">Cerebral Palsy Toolkit</h3>
+                            <p class="parents-resource-desc">Guide covering assistive tech, therapies, and Section 504 / IEP school accommodations.</p>
                         </div>
                     </a>
                 </div>
@@ -284,14 +306,14 @@ include '../src/header.php';
                         </div>
                     </div>
 
-                    <!-- Companion Tool 1: 36-Week Pacing Guide -->
+                    <!-- Companion Tool 1: Curriculum Pacing Guide & Wave Schedules -->
                     <a href="/pages/teachers.php#pacing" class="parents-tool-card hover-lift">
                         <div class="parents-tool-card-content">
                             <div class="parents-tool-icon icon-purple">
                                 <i class="fas fa-calendar-check"></i>
                             </div>
-                            <h3 class="parents-tool-title">36-Week Pacing Guide</h3>
-                            <p class="parents-tool-desc">Structured quarter-by-quarter curriculum scope, weekly milestones, and printable syllabus.</p>
+                            <h3 class="parents-tool-title">Curriculum Pacing &amp; Wave Schedules</h3>
+                            <p class="parents-tool-desc">Structured 36-week traditional quarters and 8-week "Wave" cycles (7 weeks instruction + 1 week testing &amp; planning).</p>
                         </div>
                         <span class="parents-tool-action action-purple">
                             Open Pacing Guide <i class="fas fa-arrow-right"></i>
@@ -758,6 +780,11 @@ include '../src/header.php';
                             <div class="parents-feedback-human-check">
                                 <i class="fas fa-check-circle"></i>
                                 <span>Read by real humans</span>
+                            </div>
+                            <div style="margin-top: 0.85rem;">
+                                <a href="/pages/community.php#community-feedback" style="display: inline-flex; align-items: center; gap: 0.45rem; font-size: 0.85rem; color: #4f46e5; font-weight: 700; text-decoration: none; background: rgba(79, 70, 229, 0.1); padding: 0.4rem 0.85rem; border-radius: 9999px;">
+                                    <i class="fas fa-lightbulb"></i> View Community Ideas &amp; Upvote Board &rarr;
+                                </a>
                             </div>
                         </div>
 
@@ -1556,15 +1583,36 @@ include '../src/header.php';
         const gradeInput = document.getElementById('iep-student-grade');
         const dateInput = document.getElementById('iep-meeting-date');
         const mgrInput = document.getElementById('iep-case-manager');
+        const notesInput = document.getElementById('iep-parent-notes');
 
         if (nameInput) nameInput.value = studentName || 'Student Scholar';
         if (gradeInput) gradeInput.value = gradeLevel;
         if (dateInput && !dateInput.value) dateInput.value = new Date().toISOString().split('T')[0];
         if (mgrInput && !mgrInput.value) mgrInput.value = 'Homeschool Learning Coach';
+        if (notesInput) {
+            notesInput.value = localStorage.getItem('hesten_parent_iep_notes') || '';
+        }
 
         window.syncIepBriefPreview();
         modal.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+    };
+
+    window.saveParentIepNotesAndSync = function() {
+        const notesInput = document.getElementById('iep-parent-notes');
+        const val = notesInput ? notesInput.value : '';
+        try {
+            localStorage.setItem('hesten_parent_iep_notes', val);
+        } catch (e) {}
+
+        const name = (document.getElementById('iep-student-name')?.value || '').trim();
+        if (typeof window.hlSyncParentNotesToTeacherRoster === 'function') {
+            window.hlSyncParentNotesToTeacherRoster(name, val);
+        }
+        if (typeof window.hlBroadcastSync === 'function') {
+            window.hlBroadcastSync('parent-notes', { studentName: name, notes: val });
+        }
+        window.syncIepBriefPreview();
     };
 
     window.closeIepBriefModal = function() {
@@ -1572,6 +1620,16 @@ include '../src/header.php';
         if (modal) modal.style.display = 'none';
         document.body.style.overflow = '';
     };
+
+    function escapeIepHtml(str) {
+        if (!str) return '';
+        return String(str)
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
 
     window.syncIepBriefPreview = function() {
         const container = document.getElementById('iep-brief-sheet');
@@ -1581,6 +1639,7 @@ include '../src/header.php';
         const grade = (document.getElementById('iep-student-grade')?.value || 'Current Grade').trim();
         const meetingDate = document.getElementById('iep-meeting-date')?.value || new Date().toLocaleDateString();
         const manager = (document.getElementById('iep-case-manager')?.value || 'Homeschool Learning Coach').trim();
+        const parentNotes = (document.getElementById('iep-parent-notes')?.value || localStorage.getItem('hesten_parent_iep_notes') || '').trim();
 
         // Active Accommodations
         const activeKeys = getSavedAccommodations();
@@ -1605,6 +1664,29 @@ include '../src/header.php';
             else if (score >= 60) proficientCount++;
             else developingCount++;
         });
+
+        // Educator Notes & Diagnostic Observations Bridge
+        let educatorNotes = '';
+        let teacherAccoms = [];
+        try {
+            const rawProf = localStorage.getItem('hesten-user-profile') || localStorage.getItem('hesten_user_profile');
+            if (rawProf) {
+                const prof = JSON.parse(rawProf);
+                if (prof.educatorNotes) educatorNotes = prof.educatorNotes;
+                if (Array.isArray(prof.teacherAccommodations)) teacherAccoms = prof.teacherAccommodations;
+            }
+            if (!educatorNotes) {
+                const rawRoster = localStorage.getItem('hesten_teacher_roster');
+                if (rawRoster) {
+                    const roster = JSON.parse(rawRoster);
+                    const match = roster.find(s => s && s.name && s.name.toLowerCase() === name.toLowerCase());
+                    if (match) {
+                        if (match.notes) educatorNotes = match.notes;
+                        if (Array.isArray(match.accommodations)) teacherAccoms = match.accommodations;
+                    }
+                }
+            }
+        } catch (e) {}
 
         // HTML Sheet
         container.innerHTML = `
@@ -1669,6 +1751,46 @@ include '../src/header.php';
             </div>
 
             <h4 class="iep-sheet-section-title">
+                <i class="fas fa-home" style="color: #059669;"></i> Parent / Guardian Home Observations &amp; Context
+            </h4>
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 12px 14px; font-size: 0.825rem; color: #166534; margin-bottom: 1.25rem;">
+                ${parentNotes ? `
+                    <p style="margin: 0; line-height: 1.5; white-space: pre-wrap;">
+                        <strong><i class="fas fa-comment-dots"></i> Home Observations &amp; Accommodations:</strong><br>
+                        ${escapeIepHtml(parentNotes)}
+                    </p>
+                ` : `
+                    <p style="margin: 0; color: #64748b; font-style: italic;">
+                        No home observations recorded yet. Parents can record home behaviors, sensory triggers, and home accommodations from the Parent Hub.
+                    </p>
+                `}
+            </div>
+
+            <h4 class="iep-sheet-section-title">
+                <i class="fas fa-chalkboard-teacher" style="color: #6366f1;"></i> Educator Observations &amp; Instructional Recommendations
+            </h4>
+            <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 6px; padding: 12px 14px; font-size: 0.825rem; color: #1e293b; margin-bottom: 1.25rem;">
+                ${educatorNotes ? `
+                    <p style="margin: 0 0 0.5rem 0; line-height: 1.5; white-space: pre-wrap;">
+                        <strong style="color: #4f46e5;"><i class="fas fa-sticky-note"></i> Teacher Diagnostic Observations:</strong><br>
+                        ${escapeIepHtml(educatorNotes)}
+                    </p>
+                ` : `
+                    <p style="margin: 0 0 0.5rem 0; color: #64748b; font-style: italic;">
+                        No qualitative observations recorded yet in the Educator Suite for this student.
+                    </p>
+                `}
+                ${teacherAccoms.length > 0 ? `
+                    <div style="margin-top: 0.5rem; pt-2; border-top: 1px dashed #cbd5e1; padding-top: 0.4rem;">
+                        <strong style="font-size: 0.775rem; color: #475569;">Teacher-Recommended Scaffolds:</strong>
+                        <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 4px;">
+                            ${teacherAccoms.map(a => `<span style="display: inline-block; padding: 2px 7px; background: #e0e7ff; color: #3730a3; border-radius: 4px; font-size: 0.75rem; font-weight: 600;">${escapeIepHtml(a)}</span>`).join('')}
+                        </div>
+                    </div>
+                ` : ''}
+            </div>
+
+            <h4 class="iep-sheet-section-title">
                 <i class="fas fa-lightbulb" style="color: #f59e0b;"></i> Universal Design for Learning (UDL) Scaffolds In Effect
             </h4>
             <ul style="font-size: 0.825rem; line-height: 1.6; color: #334155; margin: 0 0 1.5rem 1.25rem; padding: 0;">
@@ -1712,6 +1834,24 @@ include '../src/header.php';
 
         window.addEventListener('hl:accommodations-updated', () => {
             loadSavedAccommodations();
+            if (document.getElementById('iep-brief-modal')?.style.display === 'flex') {
+                window.syncIepBriefPreview();
+            }
+        });
+        window.addEventListener('hl:teacher-notes-updated', () => {
+            if (document.getElementById('iep-brief-modal')?.style.display === 'flex') {
+                window.syncIepBriefPreview();
+            }
+        });
+        window.addEventListener('hl:roster-updated', () => {
+            if (document.getElementById('iep-brief-modal')?.style.display === 'flex') {
+                window.syncIepBriefPreview();
+            }
+        });
+        window.addEventListener('hl:profile-updated', () => {
+            if (document.getElementById('iep-brief-modal')?.style.display === 'flex') {
+                window.syncIepBriefPreview();
+            }
         });
     });
 </script>
@@ -1752,6 +1892,10 @@ include '../src/header.php';
                 <div class="iep-field-group">
                     <label for="iep-case-manager">Parent Coach / Educator:</label>
                     <input type="text" id="iep-case-manager" class="parents-form-input" placeholder="e.g. Sarah Vance, M.Ed." oninput="window.syncIepBriefPreview()">
+                </div>
+                <div class="iep-field-group" style="grid-column: 1 / -1;">
+                    <label for="iep-parent-notes">Parent / Guardian Home Observations &amp; Context (Syncs to Teacher Dossier):</label>
+                    <textarea id="iep-parent-notes" class="parents-form-input" rows="3" placeholder="Record home observations, sensory triggers, accommodations that succeed at home, or questions for the educator..." oninput="window.saveParentIepNotesAndSync()"></textarea>
                 </div>
             </div>
 
