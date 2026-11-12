@@ -1942,4 +1942,731 @@
     body.printing-dossier .dossier-student-name {
         color: #000000 !important;
     }
+
+    /* Print styling for Wave Week Playbook */
+    body.printing-playbook .teacher-page-container,
+    body.printing-playbook header,
+    body.printing-playbook footer,
+    body.printing-playbook .site-header,
+    body.printing-playbook .playbook-modal-header,
+    body.printing-playbook .playbook-toolbar,
+    body.printing-playbook .playbook-main-grid,
+    body.printing-playbook .playbook-status-strip,
+    body.printing-playbook .playbook-modal-footer,
+    body.printing-playbook .no-print {
+        display: none !important;
+    }
+
+    body.printing-playbook #modal-wave-week-playbook {
+        position: static !important;
+        background: transparent !important;
+        padding: 0 !important;
+        display: block !important;
+    }
+
+    body.printing-playbook .playbook-modal-card {
+        border: none !important;
+        box-shadow: none !important;
+        max-width: 100% !important;
+        max-height: none !important;
+        overflow: visible !important;
+        padding: 0 !important;
+    }
+
+    body.printing-playbook .playbook-modal-body {
+        padding: 0 !important;
+        overflow: visible !important;
+    }
+
+    body.printing-playbook .playbook-print-sheet {
+        display: block !important;
+        padding: 0.4in !important;
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif !important;
+    }
+
+    body.printing-playbook .print-sheet-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        border-bottom: 2px solid #000000 !important;
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    body.printing-playbook .print-sheet-brand h2 {
+        font-size: 16pt;
+        margin: 0 0 2px 0;
+        font-weight: 800;
+        color: #000000;
+    }
+
+    body.printing-playbook .print-sheet-brand p {
+        font-size: 9.5pt;
+        margin: 0;
+        color: #333333;
+    }
+
+    body.printing-playbook .print-sheet-meta-box {
+        font-size: 9pt;
+        line-height: 1.5;
+        text-align: right;
+    }
+
+    body.printing-playbook .print-sheet-mission {
+        font-size: 10pt;
+        margin-bottom: 0.75rem;
+        padding: 0.5rem;
+        border: 1px solid #cccccc;
+        background: #fdfdfd;
+        line-height: 1.45;
+    }
+
+    body.printing-playbook .print-sheet-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 0.75rem;
+        font-size: 9pt;
+    }
+
+    body.printing-playbook .print-sheet-table th,
+    body.printing-playbook .print-sheet-table td {
+        border: 1px solid #000000 !important;
+        padding: 6px 8px;
+        vertical-align: top;
+        text-align: left;
+    }
+
+    body.printing-playbook .print-sheet-table th {
+        background: #f0f0f0 !important;
+        font-weight: 800;
+    }
+
+    body.printing-playbook .print-sheet-checkbox {
+        width: 16px;
+        height: 16px;
+        border: 1.5px solid #000000 !important;
+        margin: 4px auto 0 auto;
+    }
+
+    body.printing-playbook .print-sheet-library {
+        font-size: 8.5pt;
+        margin-bottom: 0.75rem;
+        border: 1px dashed #999999;
+        padding: 0.4rem 0.6rem;
+    }
+
+    body.printing-playbook .print-sheet-library ul {
+        margin: 0.25rem 0 0 1.25rem;
+        padding: 0;
+    }
+
+    body.printing-playbook .print-sheet-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        font-size: 9pt;
+        border-top: 1px solid #000000;
+        padding-top: 0.5rem;
+    }
 }
+
+/* ==========================================================================
+   WAVE WEEK PLAYBOOK & DIFFERENTIATION MODAL STYLES
+   ========================================================================== */
+
+.pacing-playbook-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.pacing-playbook-btn:hover {
+    background: linear-gradient(135deg, #4338ca, #4f46e5);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(79, 70, 229, 0.35);
+}
+
+.pacing-playbook-btn:focus-visible {
+    outline: 2px solid #4f46e5;
+    outline-offset: 2px;
+}
+
+.pacing-title-link:hover {
+    color: #4f46e5 !important;
+    text-decoration: underline !important;
+}
+
+.playbook-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(6px);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.playbook-modal-card {
+    background: var(--color-surface, #ffffff);
+    color: var(--color-text-main, #0f172a);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 1.25rem;
+    width: 100%;
+    max-width: 1100px;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+    overflow: hidden;
+    animation: playbookModalFadeIn 0.2s ease-out;
+}
+
+@keyframes playbookModalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.97) translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+.playbook-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.75rem;
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+    color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.playbook-modal-header-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.playbook-icon-badge {
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.playbook-modal-title {
+    font-size: 1.35rem;
+    font-weight: 800;
+    margin: 0;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.playbook-badge-wave {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(99, 102, 241, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 9999px;
+}
+
+.playbook-modal-subtitle {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin: 0.35rem 0 0 0;
+    line-height: 1.4;
+}
+
+.playbook-modal-close {
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #ffffff;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+
+.playbook-modal-close:hover {
+    background: #e11d48;
+    transform: scale(1.05);
+}
+
+.playbook-modal-close:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* Differentiation Toolbar */
+.playbook-toolbar {
+    background: var(--color-background, #f8fafc);
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    padding: 0.85rem 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.playbook-toolbar-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.playbook-toolbar-controls {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.playbook-control-item {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+}
+
+.playbook-control-item label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--color-text-muted, #475569);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.playbook-select {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.825rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: 1px solid var(--color-border, #cbd5e1);
+    background: var(--color-surface, #ffffff);
+    color: var(--color-text-main, #0f172a);
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.playbook-select:focus-visible {
+    border-color: #4f46e5;
+    outline: 2px solid rgba(79, 70, 229, 0.25);
+}
+
+/* Modal Body */
+.playbook-modal-body {
+    padding: 1.5rem 1.75rem;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.playbook-status-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid transparent;
+}
+
+.strip-immersion {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.08) 0%, rgba(14, 165, 233, 0.08) 100%);
+    border-color: rgba(79, 70, 229, 0.2);
+}
+
+.strip-synthesis {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(13, 148, 136, 0.1) 100%);
+    border-color: rgba(16, 185, 129, 0.3);
+}
+
+.status-strip-left {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.status-strip-left i {
+    font-size: 1.5rem;
+    color: #4f46e5;
+}
+
+.strip-synthesis .status-strip-left i {
+    color: #059669;
+}
+
+.status-strip-left strong {
+    font-size: 1rem;
+    color: var(--color-text-main, #0f172a);
+}
+
+.status-strip-left p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #475569);
+    margin: 0.2rem 0 0 0;
+    line-height: 1.4;
+}
+
+/* Main 2-Column Grid */
+.playbook-main-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+    .playbook-main-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+    }
+}
+
+.playbook-panel-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.playbook-panel-header h3 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    margin: 0;
+    color: var(--color-text-main, #0f172a);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.panel-header-badge {
+    font-size: 0.725rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    background: rgba(79, 70, 229, 0.1);
+    color: #4f46e5;
+    padding: 0.2rem 0.5rem;
+    border-radius: 9999px;
+}
+
+/* Daily List */
+.playbook-daily-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+}
+
+.playbook-daily-item {
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.playbook-daily-item:hover {
+    border-color: #cbd5e1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.playbook-daily-item.day-highlight {
+    border-left: 4px solid #10b981;
+    background: rgba(16, 185, 129, 0.03);
+}
+
+.daily-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.daily-item-day {
+    font-size: 0.825rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+}
+
+.daily-item-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.15rem 0.45rem;
+    border-radius: 9999px;
+}
+
+.tag-blue   { background: rgba(37, 99, 235, 0.1); color: #2563eb; }
+.tag-purple { background: rgba(124, 58, 237, 0.1); color: #7c3aed; }
+.tag-teal   { background: rgba(13, 148, 136, 0.1); color: #0d9488; }
+.tag-amber  { background: rgba(217, 119, 6, 0.1); color: #d97706; }
+.tag-green  { background: rgba(16, 185, 129, 0.1); color: #059669; }
+
+.daily-item-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 0.35rem 0;
+}
+
+.daily-item-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted, #475569);
+    line-height: 1.45;
+    margin: 0 0 0.5rem 0;
+}
+
+.daily-item-action {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #059669;
+    font-weight: 600;
+    background: rgba(16, 185, 129, 0.08);
+    padding: 0.35rem 0.65rem;
+    border-radius: 0.375rem;
+}
+
+.daily-item-action-label {
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+/* Pacing & UDL Cards */
+.playbook-pacing-card,
+.playbook-udl-card {
+    background: var(--color-background, #f8fafc);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+}
+
+.pacing-card-title,
+.udl-card-title {
+    font-size: 0.95rem;
+    font-weight: 800;
+    margin: 0 0 0.65rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-text-main, #0f172a);
+}
+
+.pacing-detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.825rem;
+    padding: 0.3rem 0;
+    border-bottom: 1px dashed var(--color-border, #e2e8f0);
+}
+
+.pacing-detail-label {
+    color: var(--color-text-muted, #475569);
+    font-weight: 600;
+}
+
+.pacing-detail-val {
+    color: var(--color-text-main, #0f172a);
+    font-weight: 700;
+}
+
+.pacing-card-desc,
+.udl-card-text {
+    font-size: 0.825rem;
+    color: var(--color-text-muted, #475569);
+    line-height: 1.45;
+    margin: 0.65rem 0 0 0;
+}
+
+.udl-card-list {
+    margin: 0.5rem 0 0 1.25rem;
+    padding: 0;
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #475569);
+    line-height: 1.5;
+}
+
+/* Library Books */
+.playbook-books-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.playbook-book-card {
+    background: var(--color-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.65rem;
+    padding: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.playbook-book-card:hover {
+    border-color: #cbd5e1;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+}
+
+.book-card-lexile {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    background: rgba(147, 51, 234, 0.12);
+    color: #7c3aed;
+    padding: 0.1rem 0.45rem;
+    border-radius: 9999px;
+    margin-bottom: 0.25rem;
+}
+
+.book-card-title {
+    font-size: 0.9rem;
+    font-weight: 800;
+    color: var(--color-text-main, #0f172a);
+    margin: 0;
+}
+
+.book-card-author {
+    font-size: 0.75rem;
+    color: var(--color-text-muted, #64748b);
+    display: block;
+    margin: 0.15rem 0 0.35rem 0;
+}
+
+.book-card-desc {
+    font-size: 0.8rem;
+    color: var(--color-text-muted, #475569);
+    line-height: 1.4;
+    margin: 0;
+}
+
+.book-open-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #4f46e5;
+    text-decoration: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.375rem;
+    background: rgba(79, 70, 229, 0.08);
+    transition: background 0.2s ease;
+    align-self: flex-start;
+}
+
+.book-open-btn:hover {
+    background: rgba(79, 70, 229, 0.18);
+}
+
+/* Modal Footer */
+.playbook-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.75rem;
+    background: var(--color-background, #f8fafc);
+    border-top: 1px solid var(--color-border, #e2e8f0);
+    flex-shrink: 0;
+}
+
+.playbook-print-sheet {
+    display: none;
+}
+
+/* High Contrast Mode Overrides */
+[data-theme="high-contrast"] .playbook-modal-card,
+.high-contrast .playbook-modal-card {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .playbook-modal-header,
+.high-contrast .playbook-modal-header {
+    background: #000000 !important;
+    border-bottom: 2px solid #ffffff !important;
+}
+
+[data-theme="high-contrast"] .playbook-toolbar,
+.high-contrast .playbook-toolbar,
+[data-theme="high-contrast"] .playbook-modal-footer,
+.high-contrast .playbook-modal-footer {
+    background: #111111 !important;
+    border-color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .playbook-select,
+.high-contrast .playbook-select {
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .playbook-daily-item,
+.high-contrast .playbook-daily-item,
+[data-theme="high-contrast"] .playbook-pacing-card,
+.high-contrast .playbook-pacing-card,
+[data-theme="high-contrast"] .playbook-udl-card,
+.high-contrast .playbook-udl-card,
+[data-theme="high-contrast"] .playbook-book-card,
+.high-contrast .playbook-book-card {
+    background: #000000 !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .pacing-playbook-btn,
+.high-contrast .pacing-playbook-btn {
+    background: #000000 !important;
+    border: 2px solid #facc15 !important;
+    color: #facc15 !important;
+}
+

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.38.2');
+    define('HL_SITE_VERSION', 'v2.39.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Multi-Grade Wave & Traditional Pacing Suite Release');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Wave Playbook & Differentiation Engine Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Universal Multi-Grade Support (Pre-K through High School) for 36-Week Traditional & 48-Week Year-Round Fiscal Wave Pacing Guides');
+    define('HL_SITE_VERSION_SUMMARY', 'Wave Week Playbook Modals with Daily Monday–Friday Plans, Pacing Rhythms, Lexile-Aligned Library Resources, and Printable Lesson Blueprints');
     }
 ?>
 <!DOCTYPE html>

@@ -362,8 +362,29 @@ include '../src/header.php';
             </article>
 
             <!-- Card 10: Cerebral Palsy Guide & Educational Toolkit -->
-            <article class="community-card" data-category="neurodiversity" data-keywords="cerebral palsy physical therapy assistive technology mobility iep 504 motor skills special education toolkit levin perconti">
-                <div class="card-header">
+            <article class="community-card" data-category="neurodiversity" data-keywords="cerebral palsy physical therapy assistive technology mobility iep 504 motor skills special education toolkit levin perconti" style="position: relative;">
+                <!-- Law Firm Disclosure Info Trigger (i) in corner -->
+                <div class="resource-disclosure-wrap">
+                    <button type="button" class="resource-disclosure-btn" id="btn-cp-disclosure-community" aria-haspopup="dialog" aria-expanded="false" aria-label="Resource disclosure: Information about Levin &amp; Perconti Law Firm" onclick="toggleResourceDisclosure(this, event)">
+                        <i class="fas fa-info" aria-hidden="true"></i>
+                    </button>
+                    <div class="resource-disclosure-popover" id="popover-cp-community" role="dialog" aria-labelledby="disclosure-title-community" aria-modal="false">
+                        <div class="resource-disclosure-header">
+                            <span class="resource-disclosure-badge" id="disclosure-title-community">
+                                <i class="fas fa-balance-scale" aria-hidden="true"></i> Law Firm Resource
+                            </span>
+                            <button type="button" class="resource-disclosure-close" onclick="closeResourceDisclosure(this, event)" aria-label="Close resource information">&times;</button>
+                        </div>
+                        <p class="resource-disclosure-text">
+                            This educational guide and toolkit is provided by <strong>Levin &amp; Perconti</strong>, a personal injury and medical malpractice law firm.
+                        </p>
+                        <p class="resource-disclosure-note">
+                            Covers Section 504 / IEP accommodations, special education rights, assistive technology, and family therapies.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-header" style="padding-right: 2rem;">
                     <div class="card-icon-box icon-rose">
                         <i class="fas fa-wheelchair"></i>
                     </div>

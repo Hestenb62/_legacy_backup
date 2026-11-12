@@ -236,15 +236,41 @@ include '../src/header.php';
                     </a>
 
                     <!-- Card 6: Cerebral Palsy Guide & Educational Toolkit -->
-                    <a href="https://www.levinperconti.com/birth-injury/cerebral-palsy/guide-toolkit/" target="_blank" rel="noopener noreferrer" class="glass-panel parents-resource-card hover-lift" style="border-left: 3px solid #e11d48;" aria-label="Cerebral Palsy Family Guide & Educational Toolkit (opens in new tab)">
-                        <div class="parents-resource-icon icon-rose" style="background: rgba(244, 63, 94, 0.15); color: #e11d48;">
-                            <i class="fas fa-wheelchair"></i>
+                    <div class="glass-panel parents-resource-card hover-lift" style="border-left: 3px solid #e11d48; position: relative;">
+                        <!-- Law Firm Disclosure Info Trigger (i) in corner -->
+                        <div class="resource-disclosure-wrap">
+                            <button type="button" class="resource-disclosure-btn" id="btn-cp-disclosure-parents" aria-haspopup="dialog" aria-expanded="false" aria-label="Resource disclosure: Information about Levin &amp; Perconti Law Firm" onclick="toggleResourceDisclosure(this, event)">
+                                <i class="fas fa-info" aria-hidden="true"></i>
+                            </button>
+                            <div class="resource-disclosure-popover" id="popover-cp-parents" role="dialog" aria-labelledby="disclosure-title-parents" aria-modal="false">
+                                <div class="resource-disclosure-header">
+                                    <span class="resource-disclosure-badge" id="disclosure-title-parents">
+                                        <i class="fas fa-balance-scale" aria-hidden="true"></i> Law Firm Resource
+                                    </span>
+                                    <button type="button" class="resource-disclosure-close" onclick="closeResourceDisclosure(this, event)" aria-label="Close resource information">&times;</button>
+                                </div>
+                                <p class="resource-disclosure-text">
+                                    This educational guide and toolkit is provided by <strong>Levin &amp; Perconti</strong>, a personal injury and medical malpractice law firm.
+                                </p>
+                                <p class="resource-disclosure-note">
+                                    Covers Section 504 / IEP accommodations, special education rights, assistive technology, and family therapies.
+                                </p>
+                            </div>
                         </div>
-                        <div class="parents-resource-info">
-                            <h3 class="parents-resource-title">Cerebral Palsy Toolkit</h3>
-                            <p class="parents-resource-desc">Guide covering assistive tech, therapies, and Section 504 / IEP school accommodations.</p>
-                        </div>
-                    </a>
+
+                        <a href="https://www.levinperconti.com/birth-injury/cerebral-palsy/guide-toolkit/" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: flex-start; gap: 1rem; text-decoration: none; color: inherit; width: 100%;" aria-label="Cerebral Palsy Family Guide &amp; Educational Toolkit (opens in new tab)">
+                            <div class="parents-resource-icon icon-rose" style="background: rgba(244, 63, 94, 0.15); color: #e11d48;">
+                                <i class="fas fa-wheelchair" aria-hidden="true"></i>
+                            </div>
+                            <div class="parents-resource-info" style="padding-right: 1.5rem;">
+                                <h3 class="parents-resource-title">
+                                    Cerebral Palsy Toolkit
+                                    <i class="fas fa-external-link-alt" style="font-size: 0.72rem; margin-left: 0.35rem; color: var(--color-text-muted);" aria-hidden="true"></i>
+                                </h3>
+                                <p class="parents-resource-desc">Guide covering assistive tech, therapies, and Section 504 / IEP school accommodations.</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </section>
 

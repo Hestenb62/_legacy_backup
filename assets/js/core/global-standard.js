@@ -228,4 +228,68 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         window.dispatchEvent(new CustomEvent('hl:data-sync', { detail: { topic, data } }));
     };
+
+    // --- Universal Resource Provider & Law Firm Disclosure Popovers ---
+    window.toggleResourceDisclosure = function (triggerBtn, event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        const wrap = triggerBtn.closest('.resource-disclosure-wrap');
+        if (!wrap) return;
+        const popover = wrap.querySelector('.resource-disclosure-popover');
+        if (!popover) return;
+
+        const isExpanded = triggerBtn.getAttribute('aria-expanded') === 'true';
+        if (isExpanded) {
+            window.closeResourceDisclosure(triggerBtn, event);
+        } else {
+            // Close any open popovers first
+            document.querySelectorAll('.resource-disclosure-popover.active').forEach(p => {
+                p.classList.remove('active');
+                const btn = p.closest('.resource-disclosure-wrap')?.querySelector('.resource-disclosure-btn');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+
+            popover.classList.add('active');
+            triggerBtn.setAttribute('aria-expanded', 'true');
+        }
+    };
+
+    window.closeResourceDisclosure = function (element, event) {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+        const wrap = element.closest('.resource-disclosure-wrap');
+        if (!wrap) return;
+        const popover = wrap.querySelector('.resource-disclosure-popover');
+        const triggerBtn = wrap.querySelector('.resource-disclosure-btn');
+        if (popover) popover.classList.remove('active');
+        if (triggerBtn) {
+            triggerBtn.setAttribute('aria-expanded', 'false');
+            triggerBtn.focus();
+        }
+    };
+
+    // Global click-outside listener to dismiss resource disclosures
+    document.addEventListener('click', function (e) {
+        if (!e.target.closest('.resource-disclosure-wrap')) {
+            document.querySelectorAll('.resource-disclosure-popover.active').forEach(p => {
+                p.classList.remove('active');
+                const btn = p.closest('.resource-disclosure-wrap')?.querySelector('.resource-disclosure-btn');
+                if (btn) btn.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+
+    // Global Escape key listener to dismiss active resource disclosures
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' || e.key === 'Esc') {
+            const activePopover = document.querySelector('.resource-disclosure-popover.active');
+            if (activePopover) {
+                window.closeResourceDisclosure(activePopover, e);
+            }
+        }
+    });
 })();

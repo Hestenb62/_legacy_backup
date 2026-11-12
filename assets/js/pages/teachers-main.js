@@ -958,7 +958,7 @@
               <div class="pacing-col-unit">
                 <span class="pacing-unit-title">
                   ${isSynthesis ? `<i class="fas fa-clipboard-check text-emerald-600" style="margin-right: 0.35rem;"></i>` : ''}
-                  ${escapeHtml(item.title)}
+                  <a href="javascript:void(0)" onclick="window.openWaveWeekPlaybook(${item.fiscalWeek}, '${escapeHtml(activePacingGrade)}')" class="pacing-title-link" title="Open Week ${item.waveWeek} Playbook &amp; Blueprint">${escapeHtml(item.title)}</a>
                 </span>
                 <span class="pacing-unit-desc">${escapeHtml(item.desc)}</span>
                 <div style="margin-top: 0.35rem; display: flex; flex-wrap: wrap; gap: 0.35rem;">
@@ -977,6 +977,9 @@
                 </span>
               </div>
               <div class="pacing-col-links">
+                <button type="button" class="pacing-playbook-btn" onclick="window.openWaveWeekPlaybook(${item.fiscalWeek}, '${escapeHtml(activePacingGrade)}')" aria-label="Open detailed weekly playbook and differentiated pacing guide for Wave ${item.wave} Week ${item.waveWeek}">
+                  <i class="fas fa-compass"></i> Week Playbook
+                </button>
                 <a href="${item.lesson}" class="pacing-lesson-link" target="_blank">
                   <i class="fas fa-chalkboard"></i> ${isSynthesis ? 'Review Units' : 'Lesson Module'}
                 </a>

@@ -6,7 +6,7 @@ Connect with homeschool cooperatives, educator exchanges, and special education 
 - **Curated Community Directory:** Filter and discover vetted organizations across 4 key categories:
   - **Homeschool & Co-ops:** Secular homeschool directories, state legal compliance guidelines, curriculum swaps, and local meetup networks.
   - **Educator Exchanges:** Open Educational Resources (OER) Commons, MTSS small-group intervention rubrics, and peer-reviewed lesson plan collaboratives.
-  - **Special Education & Neurodiversity:** Understood.org learning difference guides, International Dyslexia Association structured literacy toolkits, dyscalculia math frameworks, and cerebral palsy family toolkits (assistive technology, physical/occupational therapies, and Section 504 / IEP school accommodations).
+  - **Special Education & Neurodiversity:** Understood.org learning difference guides, International Dyslexia Association structured literacy toolkits, dyscalculia math frameworks, and cerebral palsy family toolkits (featuring accessible `(i)` provider disclosures highlighting law firm advocacy, assistive technology, physical/occupational therapies, and Section 504 / IEP school accommodations).
   - **STEAM & Learning Circles:** National Association of Math Circles, Science Olympiad maker spaces, and public library youth creative writing guilds.
 - **Live Search & Filter Engine:** Instantly search through community groups, organizations, and resource guides with real-time keyword matching and category filter pills.
 - **Two-Way Community Feedback Form:** Submit suggestions, report accessibility barriers, or recommend curriculum enhancements with learning role attribution (Parent, Teacher, Student, Advocate) and offline-first local storage backup (`localStorage`).

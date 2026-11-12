@@ -45,6 +45,12 @@ Every grade level from early childhood through secondary graduation features cus
 - **1-Click Model Switcher:** Instantly toggle between the Traditional 36-Week schedule and the Year-Round Wave structure; your selected preference automatically persists in local browser storage (`localStorage['hl_pacing_model']`).
 - **Independent Grade & Model Progress Checkboxes:** Mark completed instructional units and synthesis checkpoints as you advance; completions are isolated by grade and schedule model so multi-grade educators can manage diverse learners without cross-grade contamination.
 - **Wave Filter Pills:** Filter your view to display All 6 Waves (48 weeks) or inspect any specific wave (Wave 1 through Wave 6) with customized week indicators (`Wk 1 of 7` immersion vs `Synthesis`).
+- **Wave Week Playbook & Differentiation Popup:** Click **Week Playbook** on any wave row (or click the week's title) to open an in-depth weekly playbook popup.
+  - **What Should Be Done:** Daily Monday–Friday breakdown detailing concept launch, guided practice, STEM labs, fluency sprints, and exit tickets for Weeks 1–7; or work catch-up, remediation, wave milestone exams, gradebook reflections, and next wave planning for Week 8.
+  - **Pacing Suggestions & Rhythm:** Choose between Standard Spiral (45m), Accelerated Deep-Dive (55m), Scaffolded & Low-Anxiety (20m chunked, untimed mode), or Intensive 1-on-1 (Tier 3 CRA manipulatives) with recommended break rhythms and UDL accommodations.
+  - **Curated Library Literature:** Automatically matches authentic digital library books and decodables to the selected reading Lexile band (BR through 1200L+), offering 1-click links to read online with bimodal text-to-speech audio.
+  - **On-the-Fly Differentiation Controls:** Change the Grade Level, Reading Lexile, and Pacing Rhythm directly inside the popup to recalculate tasks in real time.
+  - **1-Click Printable Weekly Blueprint:** Click **Print Weekly Blueprint (PDF)** to print a clean, ad-free 8.5" x 11" lesson packet with daily student checkboxes, assigned reading list, and teacher signature section.
 - **Dynamic Printable Syllabus Exporter:** Click **Print Pacing Syllabus** to format a clean, ad-free 8.5" x 11" printable pacing handbook featuring dynamic grade and model title banners for homeschool reporting, classroom distribution, or accreditation binders.
 - **Deep-Linked Curriculum Access:** Jump straight into corresponding interactive lesson modules or formative assessment checkpoints directly from each weekly row.
 

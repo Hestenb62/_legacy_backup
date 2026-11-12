@@ -2192,3 +2192,172 @@ html {
     }
 }
 
+/* --- Resource Provider & Law Firm Disclosure Popover --- */
+.resource-disclosure-wrap {
+    position: absolute;
+    top: 0.65rem;
+    right: 0.65rem;
+    z-index: 15;
+}
+
+.resource-disclosure-btn {
+    width: 1.65rem;
+    height: 1.65rem;
+    border-radius: 9999px;
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--color-text-muted, #64748b);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: all 0.2s ease;
+    padding: 0;
+}
+
+.resource-disclosure-btn:hover,
+.resource-disclosure-btn:focus-visible,
+.resource-disclosure-btn[aria-expanded="true"] {
+    background: #e11d48;
+    color: #ffffff;
+    border-color: #e11d48;
+    transform: scale(1.1);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(225, 29, 72, 0.25);
+}
+
+.resource-disclosure-popover {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    width: 270px;
+    max-width: min(270px, calc(100vw - 32px));
+    background: var(--color-bg-surface, #ffffff);
+    border: 1px solid var(--color-border, #e2e8f0);
+    border-radius: 0.75rem;
+    padding: 0.85rem 1rem;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16), 0 4px 10px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+    text-align: left;
+    font-family: inherit;
+    animation: resourceDisclosureFadeIn 0.18s ease-out;
+}
+
+.resource-disclosure-popover.active {
+    display: block;
+}
+
+@keyframes resourceDisclosureFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resource-disclosure-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.45rem;
+    border-bottom: 1px solid var(--color-border, #e2e8f0);
+    padding-bottom: 0.35rem;
+}
+
+.resource-disclosure-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #e11d48;
+    background: rgba(225, 29, 72, 0.1);
+    padding: 0.15rem 0.5rem;
+    border-radius: 9999px;
+}
+
+.resource-disclosure-close {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted, #64748b);
+    font-size: 1.15rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0.15rem 0.25rem;
+    border-radius: 4px;
+}
+
+.resource-disclosure-close:hover,
+.resource-disclosure-close:focus-visible {
+    color: #e11d48;
+    outline: none;
+}
+
+.resource-disclosure-text {
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--color-text-main, #0f172a);
+    margin: 0 0 0.45rem 0;
+}
+
+.resource-disclosure-text strong {
+    color: #e11d48;
+    font-weight: 700;
+}
+
+.resource-disclosure-note {
+    font-size: 0.72rem;
+    color: var(--color-text-muted, #64748b);
+    line-height: 1.4;
+    margin: 0;
+    border-top: 1px dashed var(--color-border, #e2e8f0);
+    padding-top: 0.35rem;
+}
+
+/* High Contrast theme overrides */
+[data-theme="high-contrast"] .resource-disclosure-btn,
+.high-contrast .resource-disclosure-btn {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .resource-disclosure-btn:hover,
+[data-theme="high-contrast"] .resource-disclosure-btn:focus-visible,
+[data-theme="high-contrast"] .resource-disclosure-btn[aria-expanded="true"] {
+    background: #facc15 !important;
+    color: #000000 !important;
+    border-color: #facc15 !important;
+    outline: 2px solid #ffffff !important;
+}
+
+[data-theme="high-contrast"] .resource-disclosure-popover,
+.high-contrast .resource-disclosure-popover {
+    background: #000000 !important;
+    border: 2px solid #ffffff !important;
+    box-shadow: 0 0 0 2px #000000, 0 0 0 4px #ffffff !important;
+}
+
+[data-theme="high-contrast"] .resource-disclosure-badge,
+.high-contrast .resource-disclosure-badge {
+    background: #000000 !important;
+    border: 1px solid #facc15 !important;
+    color: #facc15 !important;
+}
+
+[data-theme="high-contrast"] .resource-disclosure-text,
+.high-contrast .resource-disclosure-text,
+[data-theme="high-contrast"] .resource-disclosure-note,
+.high-contrast .resource-disclosure-note {
+    color: #ffffff !important;
+}
+
+

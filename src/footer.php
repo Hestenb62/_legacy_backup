@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.38.2';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Multi-Grade Wave & Traditional Pacing Suite Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal Multi-Grade Support (Pre-K through High School) for 36-Week Traditional & 48-Week Year-Round Fiscal Wave Pacing Guides';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.39.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Wave Playbook & Differentiation Engine Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Wave Week Playbook Modals with Daily Monday–Friday Plans, Pacing Rhythms, Lexile-Aligned Library Resources, and Printable Lesson Blueprints';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,37 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> expands our pacing architecture into a <strong>Universal Multi-Grade Pacing Suite (Pre-K through High School)</strong>, delivering independent scope &amp; sequence schedules for both the <strong>36-Week Traditional Calendar</strong> and the <strong>48-Week Year-Round Fiscal Wave Structure (July 1 – June 30)</strong> across all 11 grade levels. This release also features <strong>Parent Home Observations</strong> bridged directly into the Teacher Diagnostic Dossier and the community-driven <strong>Community Resources Hub (<code>/pages/community.php</code>)</strong>.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces interactive <strong>Wave Week Playbook &amp; Differentiation Modals</strong> for every week of the 48-week Year-Round Wave Structure, delivering daily Monday–Friday actionable targets, tailored pacing rhythms, Lexile-aligned digital library literature, and 1-click printable PDF weekly lesson packets.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-compass"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Wave Week Playbook &amp; Differentiation Engine (v2.39.0):</strong> Comprehensive instructional popups for all 48 weeks at <code>/pages/teachers.php#pacing</code>:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Detailed "What Should Be Done":</strong> Daily Monday–Friday lesson plans distinguishing Weeks 1–7 (Core Instructional Immersion: Concept Launch, Guided Practice, STEM Lab, Speed Sprint, Exit Ticket) from Week 8 (Synthesis: Work Audit, Remediation Clinic, Milestone Exam, Gradebook Scoring, Next Wave Prep).</li>
+                            <li><strong>Pedagogical Pacing Suggestions:</strong> 4 selectable pacing rhythms (Standard Spiral, Accelerated Deep-Dive, Scaffolded &amp; Low-Anxiety, and Intensive Tier 3 Intervention) with tailored time blocks and UDL accommodations.</li>
+                            <li><strong>Curated Digital Library Resources:</strong> Dynamically loads authentic literature and decodable books matching the selected reading Lexile range (BR through 1200L+), linking directly into the digital reader.</li>
+                            <li><strong>On-the-Fly Customization:</strong> Real-time toolbar controls allow educators and parents to instantly change the active Grade Level, Reading Lexile, and Pacing Rhythm, dynamically recalibrating the playbook in real time.</li>
+                            <li><strong>1-Click Printable Weekly Blueprint:</strong> Generates a clean, monochrome 8.5" x 11" printable lesson plan and student checklist sheet for homeschool reporting and student binders.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Resource Provider &amp; Law Firm Disclosures (v2.38.3):</strong> Transparent attribution across resource hubs:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Corner Info (i) Trigger:</strong> Prominently positioned on the Cerebral Palsy Toolkit card in both the Parent Hub (<code>/pages/parents.php</code>) and Community Hub (<code>/pages/community.php</code>).</li>
+                            <li><strong>Accessible Disclosure Popover:</strong> One-click and keyboard-accessible modal disclosure clarifying that the guide is provided by Levin &amp; Perconti Law Firm, outlining Section 504 / IEP coverage, assistive technology references, and family therapy resources.</li>
+                            <li><strong>WCAG AA/AAA Compliance:</strong> Fully keyboard operable (<code>Enter</code>, <code>Space</code>, <code>Esc</code>), click-outside dismissal, visible focus indicators, and screen reader semantic attributes (<code>aria-expanded</code>, <code>aria-haspopup</code>, <code>role="dialog"</code>).</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
                         <i class="fas fa-layer-group"></i>

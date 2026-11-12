@@ -850,12 +850,98 @@ include '../src/header.php';
     </div>
 </div>
 
+<!-- ================================================================= -->
+<!-- WAVE WEEK PLAYBOOK & DIFFERENTIATION POPUP MODAL                  -->
+<!-- ================================================================= -->
+<div id="modal-wave-week-playbook" class="playbook-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="playbook-modal-title" style="display: none;">
+    <div class="playbook-modal-card">
+        <!-- Modal Header -->
+        <div class="playbook-modal-header">
+            <div class="playbook-modal-header-info">
+                <div class="playbook-icon-badge">
+                    <i class="fas fa-compass" aria-hidden="true"></i>
+                </div>
+                <div>
+                    <h2 id="playbook-modal-title" class="playbook-modal-title">
+                        Wave Week Playbook &amp; Blueprint
+                    </h2>
+                    <p id="playbook-modal-subtitle" class="playbook-modal-subtitle">
+                        Comprehensive weekly scope, differentiated pacing suggestions, and curated library resources.
+                    </p>
+                </div>
+            </div>
+            <button type="button" class="playbook-modal-close" onclick="window.closeWaveWeekPlaybook()" aria-label="Close Weekly Playbook">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <!-- Real-Time Differentiation Customizer Toolbar -->
+        <div class="playbook-toolbar no-print">
+            <div class="playbook-toolbar-title">
+                <i class="fas fa-sliders-h" style="color: #4f46e5;"></i>
+                <span>Differentiation &amp; Pacing Settings:</span>
+            </div>
+            <div class="playbook-toolbar-controls">
+                <div class="playbook-control-item">
+                    <label for="playbook-grade-select"><i class="fas fa-graduation-cap"></i> Grade Level:</label>
+                    <select id="playbook-grade-select" class="playbook-select" onchange="window.handlePlaybookDifferentiationChange()">
+                        <option value="pre-k">Pre-K (Level A)</option>
+                        <option value="k">Kindergarten (Level B)</option>
+                        <option value="1">1st Grade (Level C)</option>
+                        <option value="2">2nd Grade (Level D)</option>
+                        <option value="3">3rd Grade (Level E)</option>
+                        <option value="4">4th Grade (Level F)</option>
+                        <option value="5">5th Grade (Level G)</option>
+                        <option value="6">6th Grade (Level H)</option>
+                        <option value="7">7th Grade (Level I)</option>
+                        <option value="8">8th Grade (Level J)</option>
+                        <option value="hs">High School (Level K-N)</option>
+                    </select>
+                </div>
+
+                <div class="playbook-control-item">
+                    <label for="playbook-lexile-select"><i class="fas fa-book-reader"></i> Reading Lexile:</label>
+                    <select id="playbook-lexile-select" class="playbook-select" onchange="window.handlePlaybookDifferentiationChange()">
+                        <!-- Populated dynamically -->
+                    </select>
+                </div>
+
+                <div class="playbook-control-item">
+                    <label for="playbook-pacing-select"><i class="fas fa-stopwatch"></i> Pacing Rhythm:</label>
+                    <select id="playbook-pacing-select" class="playbook-select" onchange="window.handlePlaybookDifferentiationChange()">
+                        <option value="standard">Standard Spiral (45m / 15m)</option>
+                        <option value="accelerated">Accelerated Deep-Dive</option>
+                        <option value="scaffolded">Scaffolded &amp; Low-Anxiety (20m / Untimed)</option>
+                        <option value="intensive">Intensive 1-on-1 (Tier 3 CRA)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dynamic Body Content -->
+        <div id="playbook-dynamic-content" class="playbook-modal-body">
+            <!-- Injected dynamically by pacing-weekly-playbook.js -->
+        </div>
+
+        <!-- Modal Actions Footer -->
+        <div class="playbook-modal-footer no-print">
+            <button type="button" class="builder-action-btn builder-btn-secondary" onclick="window.closeWaveWeekPlaybook()">
+                Close
+            </button>
+            <button type="button" class="builder-action-btn builder-btn-primary" style="background: linear-gradient(135deg, #059669, #10b981); border: none;" onclick="window.printWaveWeekBlueprint()">
+                <i class="fas fa-print"></i> Print Weekly Blueprint (PDF)
+            </button>
+        </div>
+    </div>
+</div>
+
 <!-- Load Curriculum Standards Data Loader -->
 <script src="<?= assetVersion('/assets/js/standards/standards-ccss-math-ela.js') ?>"></script>
 <!-- Load Teacher Hub Script -->
 <script src="<?= assetVersion('/assets/js/components/word-search-generator.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/components/crossword-generator.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/standards/pacing-curriculum-registry.js') ?>"></script>
+<script src="<?= assetVersion('/assets/js/standards/pacing-weekly-playbook.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/pages/teachers-main.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 
