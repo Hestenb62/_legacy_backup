@@ -292,4 +292,30 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }
     });
+
+    // --- Universal Platform Active Development Notice Dismissal ---
+    window.dismissHlDevNotice = function (closeBtn) {
+        const banner = closeBtn ? closeBtn.closest('.hl-dev-notice-banner') : document.getElementById('hl-dev-notice-banner');
+        if (banner) {
+            banner.style.transition = 'opacity 0.25s ease, transform 0.25s ease';
+            banner.style.opacity = '0';
+            banner.style.transform = 'translateY(-6px)';
+            setTimeout(() => {
+                banner.style.display = 'none';
+            }, 250);
+            try {
+                sessionStorage.setItem('hl_dev_notice_dismissed', 'true');
+            } catch (e) {}
+        }
+    };
+
+    // Auto-hide development notice if dismissed in this session
+    try {
+        if (sessionStorage.getItem('hl_dev_notice_dismissed') === 'true') {
+            const banner = document.getElementById('hl-dev-notice-banner');
+            if (banner) {
+                banner.style.display = 'none';
+            }
+        }
+    } catch (e) {}
 })();

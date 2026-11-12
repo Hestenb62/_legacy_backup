@@ -96,6 +96,30 @@ include ABSPATH . '../src/header.php';
             </div>
         </header>
 
+        <!-- Active Development Notice Banner -->
+        <div class="hl-dev-notice-banner no-print" id="hl-dev-notice-banner" role="region" aria-label="Active Platform Updates Notice">
+            <div class="hl-dev-notice-glow" aria-hidden="true"></div>
+            <div class="hl-dev-notice-content">
+                <div class="hl-dev-notice-icon-box" aria-hidden="true">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="hl-dev-notice-text-wrap">
+                    <div class="hl-dev-notice-header-row">
+                        <span class="hl-dev-notice-badge">
+                            <i class="fas fa-hammer"></i> Active Improvements in Progress
+                        </span>
+                        <span class="hl-dev-notice-author">A Message from Hesten</span>
+                    </div>
+                    <p class="hl-dev-notice-message">
+                        <strong>Pardon our progress!</strong> I am currently actively working on updating and enhancing the <strong>Parents</strong>, <strong>Teachers</strong>, and <strong>Students</strong> sections of the site. Not everything may work completely while new features and upgrades are being implemented, so please sit tight as these changes are rolled out. Thank you for your patience and support!
+                    </p>
+                </div>
+            </div>
+            <button type="button" class="hl-dev-notice-close" onclick="window.dismissHlDevNotice(this)" aria-label="Dismiss active update notice">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+
         <!-- Announcement Banner -->
         <div class="profile-announcement-banner animate-reveal" id="profile-announcement-banner">
             <div class="announcement-content">

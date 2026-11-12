@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.39.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Wave Playbook & Differentiation Engine Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Wave Week Playbook Modals with Daily Monday–Friday Plans, Pacing Rhythms, Lexile-Aligned Library Resources, and Printable Lesson Blueprints';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.39.1';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Active Development Transparency & Role Hubs Update';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Transparent Active Development Notice Banners across Parents, Teachers, and Students Hubs';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,22 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces interactive <strong>Wave Week Playbook &amp; Differentiation Modals</strong> for every week of the 48-week Year-Round Wave Structure, delivering daily Monday–Friday actionable targets, tailored pacing rhythms, Lexile-aligned digital library literature, and 1-click printable PDF weekly lesson packets.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces transparent <strong>Active Platform Development Notices</strong> across the Parents, Teachers, and Students hubs keeping users informed of ongoing enhancements, alongside the <strong>Wave Week Playbook &amp; Differentiation Engine</strong> and <strong>Resource Provider Disclosures</strong>.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Active Development Transparency Banners (v2.39.1):</strong> Prominent, accessible announcement banners across key role portals:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Deployed on All Role Hubs:</strong> Active notices on the Parent Hub (<code>/pages/parents.php</code>), Educator Suite (<code>/pages/teachers.php</code>), Student Academic Hub (<code>/student/index.php</code>), and Scholar Profile (<code>/pages/profile.php</code>).</li>
+                            <li><strong>Clear Community Communication:</strong> Informs visitors that Hesten is actively working on upgrading these sections, that some features may temporarily be undergoing adjustments, and to sit tight as new capabilities arrive.</li>
+                            <li><strong>WCAG AA/AAA &amp; Session Memory:</strong> Features high-contrast mode compliance, keyboard dismissability (<code>Tab</code>, <code>Enter</code>, <code>Space</code>), screen reader region semantics, and session-aware dismissal memory (<code>sessionStorage</code>).</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
                         <i class="fas fa-compass"></i>

@@ -121,3 +121,199 @@ mjx-container[jax="SVG"] > svg {
   vertical-align: middle;
 }
 
+/* ==========================================================================
+   Active Development Notice Banner (Parents, Teachers, Students Hubs)
+   ========================================================================== */
+.hl-dev-notice-banner {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.15rem 1.5rem;
+  margin: 1.25rem 0 1.75rem 0;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12) 0%, rgba(217, 119, 6, 0.08) 50%, rgba(79, 70, 229, 0.08) 100%);
+  border: 1.5px solid rgba(245, 158, 11, 0.4);
+  box-shadow: 0 4px 16px rgba(245, 158, 11, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  transition: all 0.25s ease;
+  z-index: 5;
+}
+
+[data-theme="dark"] .hl-dev-notice-banner {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(30, 27, 75, 0.5) 100%);
+  border-color: rgba(245, 158, 11, 0.5);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.hl-dev-notice-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.25) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hl-dev-notice-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-grow: 1;
+}
+
+.hl-dev-notice-icon-box {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(245, 158, 11, 0.35);
+}
+
+.hl-dev-notice-text-wrap {
+  flex-grow: 1;
+}
+
+.hl-dev-notice-header-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 0.35rem;
+}
+
+.hl-dev-notice-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.725rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(245, 158, 11, 0.2);
+  color: #b45309;
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+[data-theme="dark"] .hl-dev-notice-badge {
+  background: rgba(245, 158, 11, 0.25);
+  color: #fde68a;
+  border-color: rgba(245, 158, 11, 0.5);
+}
+
+.hl-dev-notice-author {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted, #475569);
+}
+
+.hl-dev-notice-message {
+  font-size: 0.925rem;
+  color: var(--color-text-main, #1e293b);
+  line-height: 1.55;
+  margin: 0;
+}
+
+[data-theme="dark"] .hl-dev-notice-message {
+  color: #f1f5f9;
+}
+
+.hl-dev-notice-message strong {
+  color: #b45309;
+}
+
+[data-theme="dark"] .hl-dev-notice-message strong {
+  color: #f59e0b;
+}
+
+.hl-dev-notice-close {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted, #64748b);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.hl-dev-notice-close:hover {
+  background: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+}
+
+.hl-dev-notice-close:focus-visible {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* High-Contrast AAA Mode */
+[data-theme="high-contrast"] .hl-dev-notice-banner,
+.high-contrast .hl-dev-notice-banner {
+  background: #000000 !important;
+  border: 2px solid #facc15 !important;
+  box-shadow: 0 0 0 2px #000000, 0 0 0 4px #facc15 !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-icon-box,
+.high-contrast .hl-dev-notice-icon-box {
+  background: #000000 !important;
+  border: 2px solid #facc15 !important;
+  color: #facc15 !important;
+  box-shadow: none !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-badge,
+.high-contrast .hl-dev-notice-badge {
+  background: #000000 !important;
+  border: 1px solid #facc15 !important;
+  color: #facc15 !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-author,
+.high-contrast .hl-dev-notice-author,
+[data-theme="high-contrast"] .hl-dev-notice-message,
+.high-contrast .hl-dev-notice-message {
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-message strong,
+.high-contrast .hl-dev-notice-message strong {
+  color: #facc15 !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-close,
+.high-contrast .hl-dev-notice-close {
+  color: #ffffff !important;
+}
+
+[data-theme="high-contrast"] .hl-dev-notice-close:hover,
+[data-theme="high-contrast"] .hl-dev-notice-close:focus-visible {
+  background: #facc15 !important;
+  color: #000000 !important;
+}
+
+/* Print Suppression */
+@media print {
+  .hl-dev-notice-banner {
+    display: none !important;
+  }
+}
+

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.39.0');
+    define('HL_SITE_VERSION', 'v2.39.1');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Wave Playbook & Differentiation Engine Release');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Active Development Transparency & Role Hubs Update');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Wave Week Playbook Modals with Daily Monday–Friday Plans, Pacing Rhythms, Lexile-Aligned Library Resources, and Printable Lesson Blueprints');
+    define('HL_SITE_VERSION_SUMMARY', 'Transparent Active Development Notice Banners across Parents, Teachers, and Students Hubs');
     }
 ?>
 <!DOCTYPE html>
