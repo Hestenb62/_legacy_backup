@@ -4,8 +4,8 @@ const ASSETS_TO_CACHE = [
   // Main Directory Pages & Manifest
   '/',
   '/index.php',
-  '/offline.php',
-  '/updates.php',
+  '/pages/offline.php',
+  '/pages/updates.php',
   '/manifest.json',
   '/assessment/index.php',
   '/assessment/diagnostic.php',

@@ -423,6 +423,8 @@
   function switchTab(targetId) {
     const tabBtns = document.querySelectorAll('.teacher-tab-btn');
     const tabPanels = document.querySelectorAll('.teacher-tab-panel');
+    const targetPanel = document.getElementById(targetId);
+    if (!targetPanel) return;
 
     tabBtns.forEach(b => {
       const isActive = b.getAttribute('data-tab') === targetId;
@@ -434,30 +436,6 @@
       const isActive = panel.id === targetId;
       panel.classList.toggle('active', isActive);
     });
-
-    // Lazy initialize Word Search Studio if selected
-    if (targetId === 'tab-word-search') {
-      const wsRoot = document.getElementById('teacher-word-search-root');
-      if (wsRoot && !wsRoot.hasAttribute('data-ws-initialized') && typeof window.HLWordSearchStudio === 'function') {
-        wsRoot.setAttribute('data-ws-initialized', 'true');
-        new window.HLWordSearchStudio('teacher-word-search-root', {
-          defaultGridSize: 12,
-          defaultDifficulty: 'medium',
-          defaultPreset: 'math-elem'
-        });
-      }
-    }
-
-    // Lazy initialize Crossword Studio if selected
-    if (targetId === 'tab-crossword') {
-      const cwRoot = document.getElementById('teacher-crossword-root');
-      if (cwRoot && !cwRoot.hasAttribute('data-cw-initialized') && typeof window.HLCrosswordStudio === 'function') {
-        cwRoot.setAttribute('data-cw-initialized', 'true');
-        new window.HLCrosswordStudio('teacher-crossword-root', {
-          defaultPreset: 'math-elem'
-        });
-      }
-    }
 
     // Update URL hash without jumping
     if (history.replaceState) {
@@ -478,12 +456,6 @@
       switchTab('tab-builder');
     } else if (hash === 'lesson' || hash === 'lesson-plan' || hash === 'quiz') {
       switchTab('tab-lesson-plan');
-    } else if (hash === 'roster' || hash === 'students' || hash === 'class') {
-      switchTab('tab-roster');
-    } else if (hash === 'wordsearch' || hash === 'word-search' || hash === 'puzzle' || hash === 'puzzles') {
-      switchTab('tab-word-search');
-    } else if (hash === 'crossword' || hash === 'crosswords') {
-      switchTab('tab-crossword');
     }
   }
 

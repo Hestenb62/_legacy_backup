@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.39.1';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Active Development Transparency & Role Hubs Update';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Transparent Active Development Notice Banners across Parents, Teachers, and Students Hubs';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.40.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Modern Academic Studio & Teacher Suite Redesign';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Teacher Suite Modern Academic Studio Redesign, 2-Column Sticky Assignment Builder, Unified Pacing Command Bar, and Enhanced Accessibility';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,24 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces transparent <strong>Active Platform Development Notices</strong> across the Parents, Teachers, and Students hubs keeping users informed of ongoing enhancements, alongside the <strong>Wave Week Playbook &amp; Differentiation Engine</strong> and <strong>Resource Provider Disclosures</strong>.
+                Version <?= htmlspecialchars($siteVersion) ?> introduces the complete <strong>Modern Academic Studio Redesign</strong> of the Educator &amp; Homeschool Suite (<code>/pages/teachers.php</code>), featuring a streamlined 2-column sticky Assignment Builder, a unified Pacing Command Bar, modern curriculum week cards, and enhanced WCAG AAA accessibility.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Teacher Suite Modern Academic Studio Redesign (v2.40.0):</strong> Complete formatting overhaul of <code>/pages/teachers.php</code> and <code>/assets/css/pages/teachers.css</code>:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Modern Academic Studio Aesthetic:</strong> Rich indigo and slate palette with refined typography, subtle ambient glows, frosted card surfaces, and polished badge chips.</li>
+                            <li><strong>2-Column Sticky Assignment Builder:</strong> Desktop layout cleanly divides form configuration controls from the live URL generator and prompt preview column (sticky positioned), allowing real-time parameter tweaking without repetitive scrolling.</li>
+                            <li><strong>Unified Pacing Command Bar:</strong> Streamlines 4 disconnected toolbar tiers into a single, cohesive command surface featuring grade selection, model switching (36-Week Traditional vs. 48-Week Year-Round Waves), and 1-click syllabus printing.</li>
+                            <li><strong>Modernized Curriculum Cards:</strong> Redesigned 5-column week rows with crisp unit badges, standard targets, matching lesson shortcuts, and synthesis indicators.</li>
+                            <li><strong>WCAG 2.2 AA &amp; AAA Compliance:</strong> High-contrast mode (≥7:1 contrast ratio), visible high-contrast focus rings (<code>:focus-visible</code>), user-scalable mobile viewports, and clean 8.5" &times; 11" print stylesheets.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(245, 158, 11, 0.15); color: #d97706;">
                         <i class="fas fa-tools"></i>

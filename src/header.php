@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.39.1');
+    define('HL_SITE_VERSION', 'v2.40.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Active Development Transparency & Role Hubs Update');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Modern Academic Studio & Teacher Suite Redesign');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Transparent Active Development Notice Banners across Parents, Teachers, and Students Hubs');
+    define('HL_SITE_VERSION_SUMMARY', 'Teacher Suite Modern Academic Studio Redesign, 2-Column Sticky Assignment Builder, Unified Pacing Command Bar, and Enhanced Accessibility');
     }
 ?>
 <!DOCTYPE html>

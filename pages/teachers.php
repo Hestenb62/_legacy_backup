@@ -7,9 +7,6 @@ include '../src/header.php';
 
 <!-- Teacher Suite Page Stylesheet -->
 <link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/teachers.css') ?>">
-<link rel="stylesheet" href="<?= assetVersion('/assets/css/teacher/mastery-heatmap.css') ?>">
-<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/word-search.css') ?>">
-<link rel="stylesheet" href="<?= assetVersion('/assets/css/pages/crossword.css') ?>">
 
 <main class="flex-grow" id="main-content">
 
@@ -20,21 +17,21 @@ include '../src/header.php';
     </div>
 
     <!-- Page Hero Banner -->
-    <div class="page-hero">
-        <div class="page-hero-bg">
-            <i class="fas fa-chalkboard-teacher absolute top-10 left-10 text-8xl text-white/10 transform-gpu"></i>
-            <i class="fas fa-apple-alt absolute bottom-20 right-10 text-[12rem] text-white/5 rotate-12 transform-gpu"></i>
+    <div class="teacher-hero">
+        <div class="teacher-hero-bg" aria-hidden="true">
+            <i class="fas fa-chalkboard-teacher teacher-hero-icon-left"></i>
+            <i class="fas fa-apple-alt teacher-hero-icon-right"></i>
         </div>
 
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <span class="page-hero-badge">
-                <i class="fas fa-graduation-cap"></i> Educator & Homeschool Suite
+        <div class="teacher-hero-inner">
+            <span class="teacher-hero-badge">
+                <i class="fas fa-graduation-cap"></i> Educator &amp; Homeschool Suite
             </span>
-            <h1 class="page-hero-title">
-                Teacher Toolkit & Pacing Guide
+            <h1 class="teacher-hero-title">
+                Teacher Toolkit &amp; Pacing Guide
             </h1>
-            <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto font-light leading-relaxed">
-                Generate direct student assignment links, dispatch standard-targeted assessments, and navigate structured 36-week curriculum plans.
+            <p class="teacher-hero-subtitle">
+                Generate direct student assignment links, dispatch standard-targeted assessments, and navigate structured 36-week or 48-week curriculum plans.
             </p>
 
             <div class="teacher-hero-stats no-print">
@@ -45,7 +42,10 @@ include '../src/header.php';
                     <i class="fas fa-bolt"></i> 60s Fluency Sprint Dispatcher
                 </span>
                 <span class="teacher-hero-pill">
-                    <i class="fas fa-calendar-alt"></i> 36-Week Scope & Sequence
+                    <i class="fas fa-calendar-alt"></i> 36-Week Scope &amp; Sequence
+                </span>
+                <span class="teacher-hero-pill">
+                    <i class="fas fa-water"></i> 48-Week Wave Blueprint
                 </span>
                 <span class="teacher-hero-pill">
                     <i class="fas fa-print"></i> Printable Binder Worksheets
@@ -89,19 +89,10 @@ include '../src/header.php';
                 <i class="fas fa-calendar-check"></i> 36-Week Pacing Guide
             </button>
             <button type="button" class="teacher-tab-btn" data-tab="tab-lesson-plan" role="tab" aria-selected="false">
-                <i class="fas fa-file-alt"></i> Lesson Plan & Quiz Customizer
-            </button>
-            <button type="button" class="teacher-tab-btn" data-tab="tab-roster" role="tab" aria-selected="false">
-                <i class="fas fa-users"></i> Class Roster & Progress
-            </button>
-            <button type="button" class="teacher-tab-btn" data-tab="tab-word-search" role="tab" aria-selected="false">
-                <i class="fas fa-th"></i> Word Search Studio
-            </button>
-            <button type="button" class="teacher-tab-btn" data-tab="tab-crossword" role="tab" aria-selected="false">
-                <i class="fas fa-pen-nib"></i> Crossword Studio
+                <i class="fas fa-file-alt"></i> Lesson Plan &amp; Quiz Customizer
             </button>
             <button type="button" class="teacher-tab-btn" data-tab="tab-resources" role="tab" aria-selected="false">
-                <i class="fas fa-toolbox"></i> Educator Resources & Keys
+                <i class="fas fa-toolbox"></i> Educator Resources &amp; Keys
             </button>
         </div>
 
@@ -121,124 +112,131 @@ include '../src/header.php';
                     </div>
                 </div>
 
-                <!-- Builder Form -->
-                <div class="builder-form-grid">
-                    <!-- Grade Select -->
-                    <div class="builder-field-group">
-                        <label class="builder-field-label" for="builder-grade-select">
-                            <i class="fas fa-graduation-cap"></i> Grade Level
-                        </label>
-                        <select id="builder-grade-select" class="builder-select">
-                            <option value="pre-k">Pre-K (Level A)</option>
-                            <option value="k">Kindergarten (Level B)</option>
-                            <option value="1">1st Grade (Level C)</option>
-                            <option value="2">2nd Grade (Level D)</option>
-                            <option value="3" selected>3rd Grade (Level E)</option>
-                            <option value="4">4th Grade (Level F)</option>
-                            <option value="5">5th Grade (Level G)</option>
-                            <option value="6">6th Grade (Level H)</option>
-                            <option value="7">7th Grade (Level I)</option>
-                            <option value="8">8th Grade (Level J)</option>
-                            <option value="hs">High School (Level K-N)</option>
-                        </select>
+                <!-- 2-Column Responsive Builder Layout -->
+                <div class="builder-layout-grid">
+                    <!-- Form Controls Column -->
+                    <div class="builder-form-col">
+                        <div class="builder-form-grid">
+                            <!-- Grade Select -->
+                            <div class="builder-field-group">
+                                <label class="builder-field-label" for="builder-grade-select">
+                                    <i class="fas fa-graduation-cap"></i> Grade Level
+                                </label>
+                                <select id="builder-grade-select" class="builder-select">
+                                    <option value="pre-k">Pre-K (Level A)</option>
+                                    <option value="k">Kindergarten (Level B)</option>
+                                    <option value="1">1st Grade (Level C)</option>
+                                    <option value="2">2nd Grade (Level D)</option>
+                                    <option value="3" selected>3rd Grade (Level E)</option>
+                                    <option value="4">4th Grade (Level F)</option>
+                                    <option value="5">5th Grade (Level G)</option>
+                                    <option value="6">6th Grade (Level H)</option>
+                                    <option value="7">7th Grade (Level I)</option>
+                                    <option value="8">8th Grade (Level J)</option>
+                                    <option value="hs">High School (Level K-N)</option>
+                                </select>
+                            </div>
+
+                            <!-- Subject Select -->
+                            <div class="builder-field-group">
+                                <label class="builder-field-label" for="builder-subject-select">
+                                    <i class="fas fa-book"></i> Subject Area
+                                </label>
+                                <select id="builder-subject-select" class="builder-select">
+                                    <option value="Math" selected>Mathematics (CCSS)</option>
+                                    <option value="Language Arts">English Language Arts (CCSS)</option>
+                                    <option value="Science">Science (NGSS)</option>
+                                    <option value="Social Studies">Social Studies (C3)</option>
+                                </select>
+                            </div>
+
+                            <!-- Standard Benchmark Select -->
+                            <div class="builder-field-group builder-field-full">
+                                <label class="builder-field-label" for="builder-standard-select">
+                                    <i class="fas fa-bullseye"></i> Academic Standard Target
+                                </label>
+                                <select id="builder-standard-select" class="builder-select">
+                                    <!-- Populated dynamically by teachers-main.js -->
+                                </select>
+                            </div>
+
+                            <!-- Assessment Mode -->
+                            <div class="builder-field-group">
+                                <label class="builder-field-label" for="builder-mode-select">
+                                    <i class="fas fa-sliders-h"></i> Assessment Mode
+                                </label>
+                                <select id="builder-mode-select" class="builder-select">
+                                    <option value="practice" selected>Standard Mastery (Untimed + Explanations)</option>
+                                    <option value="sprint">⚡ 60-Second Fluency Sprint (Speed Recall)</option>
+                                </select>
+                            </div>
+
+                            <!-- Question Count -->
+                            <div class="builder-field-group">
+                                <label class="builder-field-label" for="builder-count-select">
+                                    <i class="fas fa-list-ol"></i> Question Count
+                                </label>
+                                <select id="builder-count-select" class="builder-select">
+                                    <option value="5">5 Questions (Quick Check)</option>
+                                    <option value="10" selected>10 Questions (Standard Quiz)</option>
+                                    <option value="15">15 Questions (Unit Benchmark)</option>
+                                    <option value="20">20 Questions (Cumulative Exam)</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- Subject Select -->
-                    <div class="builder-field-group">
-                        <label class="builder-field-label" for="builder-subject-select">
-                            <i class="fas fa-book"></i> Subject Area
-                        </label>
-                        <select id="builder-subject-select" class="builder-select">
-                            <option value="Math" selected>Mathematics (CCSS)</option>
-                            <option value="Language Arts">English Language Arts (CCSS)</option>
-                            <option value="Science">Science (NGSS)</option>
-                            <option value="Social Studies">Social Studies (C3)</option>
-                        </select>
-                    </div>
+                    <!-- Output & Action Column (Sticky on Desktop) -->
+                    <div class="builder-output-col-sticky">
+                        <div class="builder-output-box">
+                            <div class="builder-output-header">
+                                <span class="builder-output-label">
+                                    <i class="fas fa-share-alt"></i> Generated Student Launch URL
+                                </span>
+                                <a id="builder-lesson-shortcut" href="/src/lesson_runner.php?subject=math&level=e" target="_blank" class="pacing-lesson-link">
+                                    Lesson Runner <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
 
-                    <!-- Standard Benchmark Select -->
-                    <div class="builder-field-group" style="grid-column: span 2;">
-                        <label class="builder-field-label" for="builder-standard-select">
-                            <i class="fas fa-bullseye"></i> Academic Standard Target
-                        </label>
-                        <select id="builder-standard-select" class="builder-select">
-                            <!-- Populated dynamically by teachers-main.js -->
-                        </select>
-                    </div>
+                            <div class="builder-url-display">
+                                <span id="builder-url-text">Loading direct assignment URL...</span>
+                            </div>
 
-                    <!-- Assessment Mode -->
-                    <div class="builder-field-group">
-                        <label class="builder-field-label" for="builder-mode-select">
-                            <i class="fas fa-sliders-h"></i> Assessment Mode
-                        </label>
-                        <select id="builder-mode-select" class="builder-select">
-                            <option value="practice" selected>Standard Mastery (Untimed + Explanations)</option>
-                            <option value="sprint">⚡ 60-Second Fluency Sprint (Speed Recall)</option>
-                        </select>
-                    </div>
+                            <div class="builder-actions-row">
+                                <button type="button" id="builder-copy-url-btn" class="builder-action-btn builder-btn-primary">
+                                    <i class="fas fa-copy"></i> Copy Student Link
+                                </button>
+                                <button type="button" id="builder-copy-prompt-btn" class="builder-action-btn builder-btn-secondary">
+                                    <i class="fas fa-chalkboard"></i> Copy LMS Prompt
+                                </button>
+                                <button type="button" id="builder-test-student-btn" class="builder-action-btn builder-btn-test">
+                                    <i class="fas fa-external-link-alt"></i> Test as Student
+                                </button>
+                                <button type="button" id="builder-toggle-prompt-btn" class="builder-action-btn builder-btn-secondary">
+                                    <i class="fas fa-eye"></i> Preview Prompt
+                                </button>
+                            </div>
 
-                    <!-- Question Count -->
-                    <div class="builder-field-group">
-                        <label class="builder-field-label" for="builder-count-select">
-                            <i class="fas fa-list-ol"></i> Question Count
-                        </label>
-                        <select id="builder-count-select" class="builder-select">
-                            <option value="5">5 Questions (Quick Check)</option>
-                            <option value="10" selected>10 Questions (Standard Quiz)</option>
-                            <option value="15">15 Questions (Unit Benchmark)</option>
-                            <option value="20">20 Questions (Cumulative Exam)</option>
-                        </select>
+                            <!-- Collapsible LMS Prompt Preview -->
+                            <pre id="builder-prompt-preview" class="lms-prompt-preview" style="display: none;"></pre>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Live Output Display -->
-                <div class="builder-output-box">
-                    <div class="builder-output-header">
-                        <span class="builder-output-label">
-                            <i class="fas fa-share-alt"></i> Generated Student Launch URL
-                        </span>
-                        <a id="builder-lesson-shortcut" href="/src/lesson_runner.php?subject=math&level=e" target="_blank" class="pacing-lesson-link">
-                            Open Matching Lesson Runner <i class="fas fa-external-link-alt"></i>
-                        </a>
-                    </div>
-
-                    <div class="builder-url-display">
-                        <span id="builder-url-text">Loading direct assignment URL...</span>
-                    </div>
-
-                    <div class="builder-actions-row">
-                        <button type="button" id="builder-copy-url-btn" class="builder-action-btn builder-btn-primary">
-                            <i class="fas fa-copy"></i> Copy Student Link
-                        </button>
-                        <button type="button" id="builder-copy-prompt-btn" class="builder-action-btn builder-btn-secondary">
-                            <i class="fas fa-chalkboard"></i> Copy LMS / Classroom Prompt
-                        </button>
-                        <button type="button" id="builder-test-student-btn" class="builder-action-btn builder-btn-test">
-                            <i class="fas fa-external-link-alt"></i> Test as Student
-                        </button>
-                        <button type="button" id="builder-toggle-prompt-btn" class="builder-action-btn builder-btn-secondary">
-                            <i class="fas fa-eye"></i> Preview Prompt Text
-                        </button>
-                    </div>
-
-                    <!-- Collapsible LMS Prompt Preview -->
-                    <pre id="builder-prompt-preview" class="lms-prompt-preview" style="display: none;"></pre>
                 </div>
             </div>
         </section>
 
         <!-- ================================================================= -->
-        <!-- TAB 2: 36-WEEK MASTER CURRICULUM PACING GUIDE                     -->
+        <!-- TAB 2: 36-WEEK & 48-WEEK MASTER CURRICULUM PACING GUIDE          -->
         <!-- ================================================================= -->
         <section id="tab-pacing" class="teacher-tab-panel" role="tabpanel" aria-label="Curriculum Pacing Guide">
-            <div class="pacing-toolbar">
-                <!-- 1. Grade Level Selector -->
-                <div class="pacing-grade-selector" style="display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; flex-wrap: wrap; width: 100%; border-bottom: 1px solid var(--color-border); padding-bottom: 0.85rem; margin-bottom: 0.85rem;">
-                    <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
-                        <span style="font-size: 0.875rem; font-weight: 800; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 0.4rem;">
+            <div class="pacing-command-bar">
+                <!-- Top Row: Grade Selection, Pacing Model, Print -->
+                <div class="pacing-command-header">
+                    <div class="pacing-grade-control">
+                        <label for="pacing-grade-select" class="pacing-control-label">
                             <i class="fas fa-graduation-cap text-indigo-600"></i> Grade Level:
-                        </span>
-                        <select id="pacing-grade-select" class="builder-select" style="min-width: 240px; padding: 0.45rem 0.85rem; font-weight: 700;" aria-label="Select grade level for pacing syllabus">
+                        </label>
+                        <select id="pacing-grade-select" class="pacing-control-select" aria-label="Select grade level for pacing syllabus">
                             <option value="pre-k">Pre-K (Level A)</option>
                             <option value="k">Kindergarten (Level B)</option>
                             <option value="1">1st Grade (Level C)</option>
@@ -251,61 +249,64 @@ include '../src/header.php';
                             <option value="8">8th Grade (Level J)</option>
                             <option value="hs">High School (Level K-N)</option>
                         </select>
+                        <span id="pacing-grade-badge" class="pacing-grade-pill">
+                            <i class="fas fa-book-reader"></i> Active Grade: 3rd Grade (Level E)
+                        </span>
                     </div>
-                    <span id="pacing-grade-badge" class="badge" style="background: rgba(99, 102, 241, 0.12); color: #4338ca; font-weight: 700; padding: 0.35rem 0.75rem; border-radius: 9999px; font-size: 0.8rem;">
-                        <i class="fas fa-book-reader"></i> Active Grade: 3rd Grade (Level E)
-                    </span>
-                </div>
 
-                <!-- 2. Pacing Model Switcher -->
-                <div class="pacing-model-selector" style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; width: 100%; border-bottom: 1px solid var(--color-border); padding-bottom: 0.85rem; margin-bottom: 0.85rem;">
-                    <span style="font-size: 0.875rem; font-weight: 800; color: var(--color-text-main); display: inline-flex; align-items: center; gap: 0.4rem;">
-                        <i class="fas fa-layer-group text-indigo-600"></i> Pacing Structure:
-                    </span>
-                    <div class="pacing-model-pills" role="radiogroup" aria-label="Select pacing model">
-                        <button type="button" class="pacing-model-btn active" data-pacing-model="traditional" role="radio" aria-checked="true">
-                            <i class="fas fa-calendar-alt"></i> 36-Week Traditional Schedule (4 Quarters)
+                    <!-- Pacing Model Switcher -->
+                    <div class="pacing-model-control">
+                        <span class="pacing-control-label">
+                            <i class="fas fa-layer-group text-indigo-600"></i> Structure:
+                        </span>
+                        <div class="pacing-model-pills" role="radiogroup" aria-label="Select pacing model">
+                            <button type="button" class="pacing-model-btn active" data-pacing-model="traditional" role="radio" aria-checked="true">
+                                <i class="fas fa-calendar-alt"></i> 36-Week Traditional
+                            </button>
+                            <button type="button" class="pacing-model-btn" data-pacing-model="wave" role="radio" aria-checked="false">
+                                <i class="fas fa-water"></i> 48-Week Year-Round Waves
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="pacing-print-control no-print">
+                        <button type="button" id="pacing-print-btn" class="builder-action-btn builder-btn-secondary">
+                            <i class="fas fa-print"></i> Print Pacing Syllabus
                         </button>
-                        <button type="button" class="pacing-model-btn" data-pacing-model="wave" role="radio" aria-checked="false">
-                            <i class="fas fa-water"></i> Year-Round Wave Structure (6 Waves • 48 Wks • Fiscal Calendar)
-                        </button>
                     </div>
                 </div>
 
-                <!-- 2A. Traditional Quarter Filters -->
-                <div class="pacing-filter-group" id="pacing-traditional-filters">
-                    <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-text-main);">
-                        <i class="fas fa-filter text-indigo-600"></i> Academic Quarter:
-                    </span>
-                    <div class="quarter-pills-bar">
-                        <button type="button" class="quarter-pill-btn active" data-quarter="all">Full 36-Week Syllabus</button>
-                        <button type="button" class="quarter-pill-btn" data-quarter="1">Quarter 1 (Wks 1–9)</button>
-                        <button type="button" class="quarter-pill-btn" data-quarter="2">Quarter 2 (Wks 10–18)</button>
-                        <button type="button" class="quarter-pill-btn" data-quarter="3">Quarter 3 (Wks 19–27)</button>
-                        <button type="button" class="quarter-pill-btn" data-quarter="4">Quarter 4 (Wks 28–36)</button>
+                <!-- Bottom Row: Filter Pills (Traditional Quarters vs Fiscal Waves) -->
+                <div class="pacing-command-filters">
+                    <!-- Traditional Quarter Filters -->
+                    <div class="pacing-filter-group" id="pacing-traditional-filters">
+                        <span class="pacing-filter-label">
+                            <i class="fas fa-filter text-indigo-600"></i> Academic Quarter:
+                        </span>
+                        <div class="quarter-pills-bar">
+                            <button type="button" class="quarter-pill-btn active" data-quarter="all">Full 36-Week Syllabus</button>
+                            <button type="button" class="quarter-pill-btn" data-quarter="1">Quarter 1 (Wks 1–9)</button>
+                            <button type="button" class="quarter-pill-btn" data-quarter="2">Quarter 2 (Wks 10–18)</button>
+                            <button type="button" class="quarter-pill-btn" data-quarter="3">Quarter 3 (Wks 19–27)</button>
+                            <button type="button" class="quarter-pill-btn" data-quarter="4">Quarter 4 (Wks 28–36)</button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- 2B. Wave Filters (Hidden by Default) -->
-                <div class="pacing-filter-group" id="pacing-wave-filters" style="display: none;">
-                    <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-text-main);">
-                        <i class="fas fa-water" style="color: #0d9488;"></i> Active Fiscal Wave:
-                    </span>
-                    <div class="quarter-pills-bar">
-                        <button type="button" class="wave-pill-btn active" data-wave="all">All 6 Waves (July 1 – June 30 • 48 Wks)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="1">Wave 1 (July–Aug • Wks 1–8)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="2">Wave 2 (Sept–Oct • Wks 9–16)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="3">Wave 3 (Nov–Dec • Wks 17–24)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="4">Wave 4 (Jan–Feb • Wks 25–32)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="5">Wave 5 (Mar–Apr • Wks 33–40)</button>
-                        <button type="button" class="wave-pill-btn" data-wave="6">Wave 6 (May–Jun 30 • Wks 41–48)</button>
+                    <!-- Wave Filters (Hidden by Default) -->
+                    <div class="pacing-filter-group" id="pacing-wave-filters" style="display: none;">
+                        <span class="pacing-filter-label" style="color: #0d9488;">
+                            <i class="fas fa-water"></i> Active Fiscal Wave:
+                        </span>
+                        <div class="quarter-pills-bar">
+                            <button type="button" class="wave-pill-btn active" data-wave="all">All 6 Waves (July 1 – June 30 • 48 Wks)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="1">Wave 1 (July–Aug • Wks 1–8)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="2">Wave 2 (Sept–Oct • Wks 9–16)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="3">Wave 3 (Nov–Dec • Wks 17–24)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="4">Wave 4 (Jan–Feb • Wks 25–32)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="5">Wave 5 (Mar–Apr • Wks 33–40)</button>
+                            <button type="button" class="wave-pill-btn" data-wave="6">Wave 6 (May–Jun 30 • Wks 41–48)</button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="no-print">
-                    <button type="button" id="pacing-print-btn" class="builder-action-btn builder-btn-secondary">
-                        <i class="fas fa-print"></i> Print Pacing Syllabus
-                    </button>
                 </div>
             </div>
 
@@ -327,213 +328,14 @@ include '../src/header.php';
         </section>
 
         <!-- ================================================================= -->
-        <!-- TAB 3: EDUCATOR RESOURCES & PRINTABLES                            -->
-        <!-- ================================================================= -->
-        <section id="tab-resources" class="teacher-tab-panel" role="tabpanel" aria-label="Educator Resources">
-            <div class="resource-cards-grid">
-                <!-- Card 1 -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper icon-blue">
-                            <i class="fas fa-print"></i>
-                        </div>
-                        <h3 class="resource-card-title">Printable Worksheets & Answer Keys</h3>
-                        <p class="resource-card-desc">
-                            Instantly format clean assessment worksheets for classroom test packets, complete with educator answer keys and pedagogical rationale matrices.
-                        </p>
-                    </div>
-                    <a href="/assessment/" class="resource-action-link">
-                        Launch Worksheet Generator <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Card 2 -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper icon-purple">
-                            <i class="fas fa-sitemap"></i>
-                        </div>
-                        <h3 class="resource-card-title">Academic Standards Matrix</h3>
-                        <p class="resource-card-desc">
-                            Explore comprehensive Common Core and NGSS standards across Math, ELA, Science, and Social Studies with live student progress overlays.
-                        </p>
-                    </div>
-                    <a href="/pages/standards.php" class="resource-action-link">
-                        View Standards Directory <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper icon-emerald">
-                            <i class="fas fa-file-invoice"></i>
-                        </div>
-                        <h3 class="resource-card-title">Student Competency Transcripts</h3>
-                        <p class="resource-card-desc">
-                            Access official printable student report cards featuring letter grades, GPA calculation, domain mastery percentages, and attendance tracking.
-                        </p>
-                    </div>
-                    <a href="/pages/profile.php" class="resource-action-link">
-                        Open Report Card Portal <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper icon-amber">
-                            <i class="fas fa-chalkboard"></i>
-                        </div>
-                        <h3 class="resource-card-title">Universal Interactive Lesson Runner</h3>
-                        <p class="resource-card-desc">
-                            Project interactive lessons featuring synchronized text-to-speech audio, in-text vocabulary popovers, and interactive "Check Understanding" widgets.
-                        </p>
-                    </div>
-                    <a href="/src/lesson_runner.php" class="resource-action-link">
-                        Open Lesson Runner <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Card 5 -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper icon-rose">
-                            <i class="fas fa-book-reader"></i>
-                        </div>
-                        <h3 class="resource-card-title">Curriculum Library & Citations</h3>
-                        <p class="resource-card-desc">
-                            Access public-domain literature, historical documents, and research readers with built-in reading streak trackers and BibTeX/RIS export tools.
-                        </p>
-                    </div>
-                    <a href="/library/" class="resource-action-link">
-                        Browse Digital Library <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-
-                <!-- Card 6: Official Certificate of Mastery -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3 class="resource-card-title">Official Achievement Diplomas</h3>
-                        <p class="resource-card-desc">
-                            Generate and print official 8.5" x 11" landscape mastery diplomas with gold seals, credential IDs, and educator/parent signatures for homeschool portfolios.
-                        </p>
-                    </div>
-                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #d97706; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.openCertificateModal && window.openCertificateModal()">
-                        <span>Generate Student Diploma</span> <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <!-- Card 7: Word Search & Vocabulary Studio -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper" style="background: rgba(225, 29, 72, 0.15); color: #e11d48;">
-                            <i class="fas fa-th"></i>
-                        </div>
-                        <h3 class="resource-card-title">Word Search &amp; Spelling Studio</h3>
-                        <p class="resource-card-desc">
-                            Create custom standards-aligned vocabulary word searches and print clean 8.5" &times; 11" student worksheets with educator answer keys.
-                        </p>
-                    </div>
-                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #e11d48; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.switchTeacherTab && window.switchTeacherTab('tab-word-search')">
-                        <span>Open Word Search Studio</span> <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <!-- Card 8: Crossword Puzzle Studio -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
-                            <i class="fas fa-pen-nib"></i>
-                        </div>
-                        <h3 class="resource-card-title">Crossword Puzzle Studio</h3>
-                        <p class="resource-card-desc">
-                            Generate intersecting crossword puzzles from academic terms and definitions. Print clean student worksheets and educator answer keys.
-                        </p>
-                    </div>
-                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #4f46e5; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.switchTeacherTab && window.switchTeacherTab('tab-crossword')">
-                        <span>Open Crossword Studio</span> <i class="fas fa-arrow-right"></i>
-                    </button>
-                </div>
-
-                <!-- Card 9: Community Hub & Educator Exchanges -->
-                <div class="resource-feature-card">
-                    <div>
-                        <div class="resource-icon-wrapper" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3 class="resource-card-title">Community &amp; Educator Exchanges</h3>
-                        <p class="resource-card-desc">
-                            Discover open educational resource (OER) networks, peer lesson review collaboratives, neurodiversity advocacy coalitions, and share platform suggestions.
-                        </p>
-                    </div>
-                    <a href="/pages/community.php" class="resource-action-link" style="color: #059669;">
-                        <span>Explore Community Hub</span> <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- TAB: WORD SEARCH & VOCABULARY STUDIO                              -->
-        <!-- ================================================================= -->
-        <section id="tab-word-search" class="teacher-tab-panel" role="tabpanel" aria-label="Word Search Studio">
-            <div class="teacher-card" style="padding: 1.5rem; margin-bottom: 2rem;">
-                <div class="teacher-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                    <div>
-                        <h2 class="teacher-card-title">
-                            <i class="fas fa-th text-indigo-600"></i> Word Search &amp; Vocabulary Puzzle Studio
-                        </h2>
-                        <p class="teacher-card-subtitle">
-                            Generate custom academic vocabulary puzzles, spelling reviews, and 8.5" &times; 11" printable worksheets with educator answer keys.
-                        </p>
-                    </div>
-                    <a href="/pages/word-search.php" target="_blank" class="builder-action-btn builder-btn-secondary" style="text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> Open Fullscreen Studio
-                    </a>
-                </div>
-
-                <!-- Embedded Studio Root -->
-                <div id="teacher-word-search-root"></div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- TAB: CROSSWORD PUZZLE STUDIO                                      -->
-        <!-- ================================================================= -->
-        <section id="tab-crossword" class="teacher-tab-panel" role="tabpanel" aria-label="Crossword Studio">
-            <div class="teacher-card" style="padding: 1.5rem; margin-bottom: 2rem;">
-                <div class="teacher-card-header" style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.5rem;">
-                    <div>
-                        <h2 class="teacher-card-title">
-                            <i class="fas fa-pen-nib text-indigo-600"></i> Crossword Puzzle Studio
-                        </h2>
-                        <p class="teacher-card-subtitle">
-                            Generate custom academic crossword puzzles, vocabulary reviews, and 8.5" &times; 11" printable worksheets with educator answer keys.
-                        </p>
-                    </div>
-                    <a href="/pages/crossword.php" target="_blank" class="builder-action-btn builder-btn-secondary" style="text-decoration: none;">
-                        <i class="fas fa-external-link-alt"></i> Open Fullscreen Studio
-                    </a>
-                </div>
-
-                <!-- Embedded Studio Root -->
-                <div id="teacher-crossword-root"></div>
-            </div>
-        </section>
-
-        <!-- ================================================================= -->
-        <!-- TAB 4: LESSON PLAN & QUIZ CUSTOMIZER                              -->
+        <!-- TAB 3: LESSON PLAN & QUIZ CUSTOMIZER                              -->
         <!-- ================================================================= -->
         <section id="tab-lesson-plan" class="teacher-tab-panel" role="tabpanel" aria-label="Lesson Plan & Quiz Customizer">
             <div class="teacher-card">
                 <div class="teacher-card-header">
                     <div>
                         <h2 class="teacher-card-title">
-                            <i class="fas fa-file-signature text-indigo-600"></i> Standards-Aligned Lesson Plan & Quiz Generator
+                            <i class="fas fa-file-signature text-indigo-600"></i> Standards-Aligned Lesson Plan &amp; Quiz Generator
                         </h2>
                         <p class="teacher-card-subtitle">
                             Configure standard-aligned pedagogical frameworks and formative quizzes ready for classroom instruction, print binders, or LMS dispatch.
@@ -600,18 +402,18 @@ include '../src/header.php';
                         </label>
                         <select id="lp-model-select" class="builder-select">
                             <option value="cra" selected>Concrete-Representational-Abstract (CRA)</option>
-                            <option value="inquiry">5E Guided Inquiry & Discovery</option>
-                            <option value="workshop">Reader/Writer Workshop & Socratic Dialogue</option>
+                            <option value="inquiry">5E Guided Inquiry &amp; Discovery</option>
+                            <option value="workshop">Reader/Writer Workshop &amp; Socratic Dialogue</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="builder-actions-row" style="margin-top: 1.5rem; display: flex; gap: 0.75rem; flex-wrap: wrap;">
                     <button type="button" id="btn-generate-lesson-plan" class="builder-action-btn builder-btn-primary">
-                        <i class="fas fa-magic"></i> Generate 5-Stage Lesson Plan & Formative Quiz
+                        <i class="fas fa-magic"></i> Generate 5-Stage Lesson Plan &amp; Formative Quiz
                     </button>
                     <button type="button" id="btn-generate-worksheet" class="builder-action-btn builder-btn-secondary" style="border-color: #6366f1; color: #4f46e5; background: #ffffff;">
-                        <i class="fas fa-print"></i> Generate Printable Student Worksheet & Answer Key
+                        <i class="fas fa-print"></i> Generate Printable Student Worksheet &amp; Answer Key
                     </button>
                 </div>
 
@@ -623,106 +425,120 @@ include '../src/header.php';
         </section>
 
         <!-- ================================================================= -->
-        <!-- TAB 5: CLASS ROSTER & STUDENT PROGRESS TRACKER                    -->
+        <!-- TAB 4: EDUCATOR RESOURCES & PRINTABLES                            -->
         <!-- ================================================================= -->
-        <section id="tab-roster" class="teacher-tab-panel" role="tabpanel" aria-label="Class Roster & Progress Tracker">
-            <div class="teacher-card">
-                <div class="teacher-card-header">
+        <section id="tab-resources" class="teacher-tab-panel" role="tabpanel" aria-label="Educator Resources">
+            <div class="resource-cards-grid">
+                <!-- Card 1 -->
+                <div class="resource-feature-card">
                     <div>
-                        <h2 class="teacher-card-title">
-                            <i class="fas fa-users-cog text-indigo-600"></i> Classroom Roster & Standards Progress
-                        </h2>
-                        <p class="teacher-card-subtitle">
-                            Monitor multi-student competency mastery, log assessment benchmarks, and export gradebook records in standardized CSV format.
+                        <div class="resource-icon-wrapper icon-blue">
+                            <i class="fas fa-print"></i>
+                        </div>
+                        <h3 class="resource-card-title">Printable Worksheets &amp; Answer Keys</h3>
+                        <p class="resource-card-desc">
+                            Instantly format clean assessment worksheets for classroom test packets, complete with educator answer keys and pedagogical rationale matrices.
                         </p>
                     </div>
+                    <a href="/assessment/" class="resource-action-link">
+                        Launch Worksheet Generator <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Summary Metrics Bar -->
-                <div class="roster-metrics-grid">
-                    <div class="roster-metric-chip">
-                        <span class="roster-metric-label"><i class="fas fa-user-graduate" style="color:#6366f1;"></i> Enrolled Students</span>
-                        <span class="roster-metric-val" id="roster-stat-total">5</span>
+                <!-- Card 2 -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper icon-purple">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <h3 class="resource-card-title">Academic Standards Matrix</h3>
+                        <p class="resource-card-desc">
+                            Explore comprehensive Common Core and NGSS standards across Math, ELA, Science, and Social Studies with live student progress overlays.
+                        </p>
                     </div>
-                    <div class="roster-metric-chip">
-                        <span class="roster-metric-label"><i class="fas fa-chart-line" style="color:#10b981;"></i> Class Average Mastery</span>
-                        <span class="roster-metric-val" style="color:#10b981;" id="roster-stat-avg">84%</span>
-                    </div>
-                    <div class="roster-metric-chip">
-                        <span class="roster-metric-label"><i class="fas fa-award" style="color:#f59e0b;"></i> Honors Proficient (85%+)</span>
-                        <span class="roster-metric-val" style="color:#f59e0b;" id="roster-stat-honors">3</span>
-                    </div>
-                    <div class="roster-metric-chip">
-                        <span class="roster-metric-label"><i class="fas fa-life-ring" style="color:#ef4444;"></i> Targeted Intervention</span>
-                        <span class="roster-metric-val" style="color:#ef4444;" id="roster-stat-support">1</span>
-                    </div>
+                    <a href="/pages/standards.php" class="resource-action-link">
+                        View Standards Directory <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Toolbar -->
-                <div class="roster-toolbar no-print">
-                    <div class="roster-add-form">
-                        <input type="text" id="roster-new-name" placeholder="Student Name (e.g. Elena Rostova)" class="builder-input" style="max-width: 260px;">
-                        <select id="roster-new-grade" class="builder-select" style="max-width: 160px;">
-                            <option value="Grade 3">Grade 3</option>
-                            <option value="Grade 4">Grade 4</option>
-                            <option value="Grade 5" selected>Grade 5</option>
-                            <option value="Grade 6">Grade 6</option>
-                            <option value="Grade 7">Grade 7</option>
-                            <option value="Grade 8">Grade 8</option>
-                        </select>
-                        <button type="button" id="btn-add-roster-student" class="builder-action-btn builder-btn-primary">
-                            <i class="fas fa-user-plus"></i> Add Student
-                        </button>
+                <!-- Card 3 -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper icon-emerald">
+                            <i class="fas fa-file-invoice"></i>
+                        </div>
+                        <h3 class="resource-card-title">Student Competency Transcripts</h3>
+                        <p class="resource-card-desc">
+                            Access official printable student report cards featuring letter grades, GPA calculation, domain mastery percentages, and attendance tracking.
+                        </p>
                     </div>
-
-                    <div class="roster-export-group">
-                        <button type="button" id="btn-cluster-groups" class="builder-action-btn builder-btn-secondary" style="border-color: #ec4899; color: #db2777; background: #ffffff;">
-                            <i class="fas fa-layer-group"></i> Intervention Clusters
-                        </button>
-                        <button type="button" id="btn-upload-report-card" class="builder-action-btn builder-btn-primary" style="background: linear-gradient(135deg, #4f46e5, #6366f1); border: none;">
-                            <i class="fas fa-file-upload"></i> Upload Report Card (.json)
-                        </button>
-                        <input type="file" id="roster-report-card-file" accept=".json,application/json" style="display: none;">
-                        <button type="button" id="btn-reset-roster" class="builder-action-btn builder-btn-secondary" title="Reset to standard 5-student sample class">
-                            <i class="fas fa-undo"></i> Reset Demo
-                        </button>
-                        <button type="button" id="btn-import-roster-csv" class="builder-action-btn builder-btn-secondary" style="border-color: #059669; color: #059669; background: #ffffff;" title="Import student roster from CSV">
-                            <i class="fas fa-file-import"></i> Import CSV
-                        </button>
-                        <input type="file" id="roster-csv-file" accept=".csv,text/csv" style="display: none;">
-                        <button type="button" id="btn-export-roster-csv" class="builder-action-btn builder-btn-primary" style="background:#059669; border-color:#059669;">
-                            <i class="fas fa-file-csv"></i> Export CSV
-                        </button>
-                    </div>
+                    <a href="/pages/profile.php" class="resource-action-link">
+                        Open Report Card Portal <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Differentiated Intervention Clusters Container -->
-                <div id="intervention-clusters-container" class="intervention-clusters-section no-print" style="display: none; margin-bottom: 1.5rem;">
-                    <!-- Rendered dynamically by JS -->
+                <!-- Card 4 -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper icon-amber">
+                            <i class="fas fa-chalkboard"></i>
+                        </div>
+                        <h3 class="resource-card-title">Universal Interactive Lesson Runner</h3>
+                        <p class="resource-card-desc">
+                            Project interactive lessons featuring synchronized text-to-speech audio, in-text vocabulary popovers, and interactive "Check Understanding" widgets.
+                        </p>
+                    </div>
+                    <a href="/src/lesson_runner.php" class="resource-action-link">
+                        Open Lesson Runner <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
 
-                <!-- Classroom Standards Mastery Heatmap -->
-                <div id="class-mastery-heatmap-root"></div>
+                <!-- Card 5 -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper icon-rose">
+                            <i class="fas fa-book-reader"></i>
+                        </div>
+                        <h3 class="resource-card-title">Curriculum Library &amp; Citations</h3>
+                        <p class="resource-card-desc">
+                            Access public-domain literature, historical documents, and research readers with built-in reading streak trackers and BibTeX/RIS export tools.
+                        </p>
+                    </div>
+                    <a href="/library/" class="resource-action-link">
+                        Browse Digital Library <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
 
-                <!-- Roster Data Table Container -->
-                <div class="roster-table-wrapper">
-                    <table class="roster-table" id="roster-table">
-                        <thead>
-                            <tr>
-                                <th>Student Name</th>
-                                <th>Grade</th>
-                                <th>Math Mastery</th>
-                                <th>ELA Mastery</th>
-                                <th>Science Mastery</th>
-                                <th>Overall Competency</th>
-                                <th>Status</th>
-                                <th class="no-print">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody id="roster-table-body">
-                            <!-- Populated dynamically by teachers-main.js -->
-                        </tbody>
-                    </table>
+                <!-- Card 6: Official Certificate of Mastery -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(245, 158, 11, 0.15); color: #f59e0b;">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="resource-card-title">Official Achievement Diplomas</h3>
+                        <p class="resource-card-desc">
+                            Generate and print official 8.5" x 11" landscape mastery diplomas with gold seals, credential IDs, and educator/parent signatures for homeschool portfolios.
+                        </p>
+                    </div>
+                    <button type="button" class="resource-action-link" style="background: none; border: none; cursor: pointer; padding: 0; font-weight: 800; font-size: 0.9rem; color: #d97706; display: inline-flex; align-items: center; gap: 0.4rem;" onclick="window.openCertificateModal && window.openCertificateModal()">
+                        <span>Generate Student Diploma</span> <i class="fas fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Card 7: Community Hub & Educator Exchanges -->
+                <div class="resource-feature-card">
+                    <div>
+                        <div class="resource-icon-wrapper" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="resource-card-title">Community &amp; Educator Exchanges</h3>
+                        <p class="resource-card-desc">
+                            Discover open educational resource (OER) networks, peer lesson review collaboratives, neurodiversity advocacy coalitions, and share platform suggestions.
+                        </p>
+                    </div>
+                    <a href="/pages/community.php" class="resource-action-link" style="color: #059669;">
+                        <span>Explore Community Hub</span> <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -730,148 +546,6 @@ include '../src/header.php';
     </div>
 
 </main>
-
-<!-- ================================================================= -->
-<!-- STUDENT DIAGNOSTIC DOSSIER POPUP MODAL                            -->
-<!-- ================================================================= -->
-<div id="modal-student-dossier" class="dossier-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="dossier-student-name">
-    <div class="dossier-modal-container">
-        <!-- Header Banner -->
-        <div class="dossier-header">
-            <div class="dossier-header-main">
-                <div class="dossier-avatar" id="dossier-avatar">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <div class="dossier-title-group">
-                    <div class="dossier-meta-tags">
-                        <span class="dossier-grade-badge" id="dossier-grade-badge">Grade 5</span>
-                        <span class="dossier-date-badge" id="dossier-date-badge"><i class="fas fa-calendar-alt"></i> Evaluated: Today</span>
-                        <span class="dossier-source-badge" id="dossier-source-badge"><i class="fas fa-file-code"></i> Report Card JSON</span>
-                    </div>
-                    <h3 class="dossier-student-name" id="dossier-student-name">Student Name</h3>
-                </div>
-            </div>
-            <div class="dossier-header-actions" style="display: flex; align-items: center; gap: 1rem;">
-                <div class="dossier-score-chip" id="dossier-score-chip">
-                    <span class="dossier-score-num" id="dossier-score-num">85%</span>
-                    <span class="dossier-score-label" id="dossier-score-status">Honors Proficient</span>
-                </div>
-                <button type="button" class="dossier-close-btn" onclick="window.closeDossierModal()" aria-label="Close Dossier" title="Close Dossier">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-        </div>
-
-        <!-- Dossier Body Content -->
-        <div class="dossier-body">
-            <!-- 1. Subject Mastery Progress Cards -->
-            <div class="dossier-section-title">
-                <i class="fas fa-chart-pie text-indigo-600"></i> Subject Competency Breakdown
-            </div>
-            <div class="dossier-subjects-grid">
-                <div class="dossier-subj-card">
-                    <div class="dossier-subj-header">
-                        <span><i class="fas fa-calculator" style="color: #3b82f6;"></i> Mathematics</span>
-                        <strong id="dossier-math-pct">--%</strong>
-                    </div>
-                    <div class="dossier-progress-track">
-                        <div class="dossier-progress-fill math-fill" id="dossier-math-fill" style="width: 0%;"></div>
-                    </div>
-                </div>
-                <div class="dossier-subj-card">
-                    <div class="dossier-subj-header">
-                        <span><i class="fas fa-book-reader" style="color: #8b5cf6;"></i> Language Arts</span>
-                        <strong id="dossier-ela-pct">--%</strong>
-                    </div>
-                    <div class="dossier-progress-track">
-                        <div class="dossier-progress-fill ela-fill" id="dossier-ela-fill" style="width: 0%;"></div>
-                    </div>
-                </div>
-                <div class="dossier-subj-card">
-                    <div class="dossier-subj-header">
-                        <span><i class="fas fa-flask" style="color: #10b981;"></i> Science & Labs</span>
-                        <strong id="dossier-science-pct">--%</strong>
-                    </div>
-                    <div class="dossier-progress-track">
-                        <div class="dossier-progress-fill science-fill" id="dossier-science-fill" style="width: 0%;"></div>
-                    </div>
-                </div>
-                <div class="dossier-subj-card">
-                    <div class="dossier-subj-header">
-                        <span><i class="fas fa-landmark" style="color: #f59e0b;"></i> Social Studies</span>
-                        <strong id="dossier-social-pct">--%</strong>
-                    </div>
-                    <div class="dossier-progress-track">
-                        <div class="dossier-progress-fill social-fill" id="dossier-social-fill" style="width: 0%;"></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2. Targeted Standards Matrix -->
-            <div class="dossier-section-title mt-4">
-                <i class="fas fa-bullseye text-indigo-600"></i> Standards Proficiency & Targeted Remediation
-            </div>
-            <div class="dossier-standards-split">
-                <div class="dossier-standards-block">
-                    <span class="dossier-sub-label text-emerald-600"><i class="fas fa-check-circle"></i> Demonstrated Competencies (80%+)</span>
-                    <div class="dossier-tags-wrap" id="dossier-mastered-standards">
-                        <!-- Injected via JS -->
-                    </div>
-                </div>
-                <div class="dossier-standards-block">
-                    <span class="dossier-sub-label text-rose-600"><i class="fas fa-exclamation-triangle"></i> Priority Intervention Needs (&lt;70%)</span>
-                    <div class="dossier-tags-wrap" id="dossier-weak-standards">
-                        <!-- Injected via JS -->
-                    </div>
-                </div>
-            </div>
-
-            <!-- 3. Active Accommodations & Neurodiversity Profile -->
-            <div class="dossier-section-title mt-4">
-                <i class="fas fa-universal-access text-indigo-600"></i> Active IEP / Neurodiversity Accommodations
-            </div>
-            <div class="dossier-tags-wrap" id="dossier-accommodations-list">
-                <!-- Injected via JS -->
-            </div>
-
-            <!-- 4. Parent / Guardian Home Observations (Synced from Parent Hub) -->
-            <div class="dossier-section-title mt-4" style="display: flex; align-items: center; justify-content: space-between;">
-                <span><i class="fas fa-home text-emerald-600"></i> Parent / Guardian Home Observations &amp; Context</span>
-                <span style="font-size: 0.725rem; font-weight: 700; background: rgba(16, 185, 129, 0.15); color: #047857; padding: 2px 8px; border-radius: 9999px;">
-                    <i class="fas fa-sync-alt"></i> Synced from Parent Hub
-                </span>
-            </div>
-            <div id="dossier-parent-notes-box" class="dossier-notes-textarea" style="min-height: 52px; max-height: 110px; overflow-y: auto; background: var(--color-surface-hover, #f8fafc); border-color: rgba(16, 185, 129, 0.35); font-size: 0.875rem; color: var(--color-text-main); font-style: normal; margin-bottom: 0.75rem; white-space: pre-wrap;" aria-live="polite">
-                <!-- Injected via JS -->
-            </div>
-
-            <!-- 5. Teacher Observational Notes -->
-            <div class="dossier-section-title mt-4">
-                <i class="fas fa-edit text-indigo-600"></i> Educator Notes & Diagnostic Observations
-            </div>
-            <textarea id="dossier-teacher-notes" class="dossier-notes-textarea" placeholder="Record qualitative insights, intervention strategy, or student strengths..."></textarea>
-        </div>
-
-        <!-- Actions Footer -->
-        <div class="dossier-footer no-print">
-            <button type="button" id="btn-dossier-gen-lesson" class="builder-action-btn builder-btn-primary" style="background: linear-gradient(135deg, #4f46e5, #6366f1); border: none;">
-                <i class="fas fa-magic"></i> Generate Targeted Remediation Lesson
-            </button>
-            <button type="button" id="btn-dossier-launch-quiz" class="builder-action-btn builder-btn-secondary" style="border-color: #6366f1; color: #4f46e5;">
-                <i class="fas fa-external-link-alt"></i> Launch Diagnostic Quiz
-            </button>
-            <button type="button" id="btn-dossier-save-roster" class="builder-action-btn builder-btn-primary" style="background: #059669; border-color: #059669;">
-                <i class="fas fa-save"></i> Save & Sync to Roster
-            </button>
-            <button type="button" id="btn-dossier-print" class="builder-action-btn builder-btn-secondary" onclick="window.printStudentDossier()">
-                <i class="fas fa-print"></i> Print Dossier
-            </button>
-            <button type="button" id="btn-dossier-close" class="builder-action-btn builder-btn-secondary" onclick="window.closeDossierModal()">
-                Close
-            </button>
-        </div>
-    </div>
-</div>
 
 <!-- ================================================================= -->
 <!-- WAVE WEEK PLAYBOOK & DIFFERENTIATION POPUP MODAL                  -->
@@ -961,11 +635,8 @@ include '../src/header.php';
 <!-- Load Curriculum Standards Data Loader -->
 <script src="<?= assetVersion('/assets/js/standards/standards-ccss-math-ela.js') ?>"></script>
 <!-- Load Teacher Hub Script -->
-<script src="<?= assetVersion('/assets/js/components/word-search-generator.js') ?>"></script>
-<script src="<?= assetVersion('/assets/js/components/crossword-generator.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/standards/pacing-curriculum-registry.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/standards/pacing-weekly-playbook.js') ?>"></script>
 <script src="<?= assetVersion('/assets/js/pages/teachers-main.js') ?>"></script>
-<script src="<?= assetVersion('/assets/js/teacher/mastery-heatmap.js') ?>"></script>
 
 <?php include '../src/footer.php'; ?>

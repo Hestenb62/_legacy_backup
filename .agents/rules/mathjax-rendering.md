@@ -1,5 +1,5 @@
 ---
-trigger: always_on
+trigger: off
 ---
 
 # Rule: Universal MathJax Mathematical Typography & Rendering Standard
