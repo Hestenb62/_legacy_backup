@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.40.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Modern Academic Studio & Teacher Suite Redesign';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Teacher Suite Modern Academic Studio Redesign, 2-Column Sticky Assignment Builder, Unified Pacing Command Bar, and Enhanced Accessibility';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.41.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 100% P-12 Math Completion & Grade 7 Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal P-12 Mathematics 100% Complete: Grade 7 (Level I) 139 Lessons Across Modules 1–6 Added, Bringing Platform Math to 1,911 Total Lessons Across 82 Modules';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,23 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> introduces the complete <strong>Modern Academic Studio Redesign</strong> of the Educator &amp; Homeschool Suite (<code>/pages/teachers.php</code>), featuring a streamlined 2-column sticky Assignment Builder, a unified Pacing Command Bar, modern curriculum week cards, and enhanced WCAG AAA accessibility.
+                Version <?= htmlspecialchars($siteVersion) ?> achieves the monumental <strong>100% P-12 Mathematics Completion Milestone</strong>, adding Grade 7 (Level I) across all 6 modules (139 lessons). Every single grade level from Pre-K through Grade 12 now possesses complete, interactive EngageNY / Eureka Math curriculum coverage with embedded worksheets, worked teacher keys, and MathJax notation.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Universal P-12 Mathematics 100% Completion Milestone (v2.41.0):</strong> Built out Grade 7 (Level I) across all 6 modules, completing every single grade of the P-12 Mathematics Curriculum:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete Grade 7 Curriculum (139 Lessons):</strong> Module 1 (Ratios &amp; Proportions, 22 lessons), Module 2 (Rational Numbers, 23 lessons), Module 3 (Expressions &amp; Equations, 26 lessons), Module 4 (Percent &amp; Proportions, 18 lessons), Module 5 (Statistics &amp; Probability, 23 lessons), and Module 6 (Geometry, 27 lessons).</li>
+                            <li><strong>All 13 Grades 100% Complete (Pre-K through Grade 12):</strong> Total platform math reaches 1,911 lessons across 82 high-performance module datasets (<code>a-math-m1.json</code> through <code>n-math-m5.json</code>).</li>
+                            <li><strong>Interactive Worksheets &amp; Teacher Solution Keys:</strong> Full student practice worksheets with MathJax SVG notation, digital answer areas, step-by-step worked teacher keys, and 1-click printing.</li>
+                            <li><strong>Level I Portal Hydration:</strong> Updated <code>levels/i.php</code> with tiered single-lesson routing and dynamic module outline loading.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(79, 70, 229, 0.15); color: #4f46e5;">
                         <i class="fas fa-palette"></i>

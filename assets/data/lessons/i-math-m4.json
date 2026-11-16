@@ -1,0 +1,2878 @@
+{
+  "id": "i-math-m4",
+  "module": 4,
+  "subject": "math",
+  "grade": 7,
+  "level": "i",
+  "title": "Module 4: Percent and Proportional Relationships",
+  "description": "Percent calculations, markups, markdowns, simple interest, commission, tax, scale drawings with percent, and population estimation.",
+  "lessonsCount": 18,
+  "topics": [
+    {
+      "letter": "A",
+      "title": "Finding the Whole in Percent Problems",
+      "name": "Finding the Whole in Percent Problems",
+      "standards": [
+        "7.RP.A.1",
+        "7.RP.A.2c",
+        "7.RP.A.3"
+      ],
+      "lessons": [
+        {
+          "id": "i-math-m4-a-1",
+          "code": "I.M4.A.1",
+          "name": "Percent",
+          "title": "Percent",
+          "url": "/levels/i.php?i-math-m4-a-1"
+        },
+        {
+          "id": "i-math-m4-a-2",
+          "code": "I.M4.A.2",
+          "name": "Part of a Whole as a Percent",
+          "title": "Part of a Whole as a Percent",
+          "url": "/levels/i.php?i-math-m4-a-2"
+        },
+        {
+          "id": "i-math-m4-a-3",
+          "code": "I.M4.A.3",
+          "name": "Comparing Quantities with Percent",
+          "title": "Comparing Quantities with Percent",
+          "url": "/levels/i.php?i-math-m4-a-3"
+        },
+        {
+          "id": "i-math-m4-a-4",
+          "code": "I.M4.A.4",
+          "name": "Percent Increase and Decrease",
+          "title": "Percent Increase and Decrease",
+          "url": "/levels/i.php?i-math-m4-a-4"
+        },
+        {
+          "id": "i-math-m4-a-5",
+          "code": "I.M4.A.5",
+          "name": "Finding One Hundred Percent Given Another Percent",
+          "title": "Finding One Hundred Percent Given Another Percent",
+          "url": "/levels/i.php?i-math-m4-a-5"
+        },
+        {
+          "id": "i-math-m4-a-6",
+          "code": "I.M4.A.6",
+          "name": "Fluency with Percents",
+          "title": "Fluency with Percents",
+          "url": "/levels/i.php?i-math-m4-a-6"
+        }
+      ],
+      "skills": [
+        {
+          "id": "i-math-m4-a-1",
+          "code": "I.M4.A.1",
+          "name": "Percent",
+          "title": "Percent",
+          "url": "/levels/i.php?i-math-m4-a-1"
+        },
+        {
+          "id": "i-math-m4-a-2",
+          "code": "I.M4.A.2",
+          "name": "Part of a Whole as a Percent",
+          "title": "Part of a Whole as a Percent",
+          "url": "/levels/i.php?i-math-m4-a-2"
+        },
+        {
+          "id": "i-math-m4-a-3",
+          "code": "I.M4.A.3",
+          "name": "Comparing Quantities with Percent",
+          "title": "Comparing Quantities with Percent",
+          "url": "/levels/i.php?i-math-m4-a-3"
+        },
+        {
+          "id": "i-math-m4-a-4",
+          "code": "I.M4.A.4",
+          "name": "Percent Increase and Decrease",
+          "title": "Percent Increase and Decrease",
+          "url": "/levels/i.php?i-math-m4-a-4"
+        },
+        {
+          "id": "i-math-m4-a-5",
+          "code": "I.M4.A.5",
+          "name": "Finding One Hundred Percent Given Another Percent",
+          "title": "Finding One Hundred Percent Given Another Percent",
+          "url": "/levels/i.php?i-math-m4-a-5"
+        },
+        {
+          "id": "i-math-m4-a-6",
+          "code": "I.M4.A.6",
+          "name": "Fluency with Percents",
+          "title": "Fluency with Percents",
+          "url": "/levels/i.php?i-math-m4-a-6"
+        }
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Percent Problems Including More Than One Whole",
+      "name": "Percent Problems Including More Than One Whole",
+      "standards": [
+        "7.RP.A.1",
+        "7.RP.A.2",
+        "7.RP.A.3"
+      ],
+      "lessons": [
+        {
+          "id": "i-math-m4-b-7",
+          "code": "I.M4.B.7",
+          "name": "Markup and Markdown Problems",
+          "title": "Markup and Markdown Problems",
+          "url": "/levels/i.php?i-math-m4-b-7"
+        },
+        {
+          "id": "i-math-m4-b-8",
+          "code": "I.M4.B.8",
+          "name": "Percent Error Problems",
+          "title": "Percent Error Problems",
+          "url": "/levels/i.php?i-math-m4-b-8"
+        },
+        {
+          "id": "i-math-m4-b-9",
+          "code": "I.M4.B.9",
+          "name": "Problem Solving When the Percent Changes",
+          "title": "Problem Solving When the Percent Changes",
+          "url": "/levels/i.php?i-math-m4-b-9"
+        },
+        {
+          "id": "i-math-m4-b-10",
+          "code": "I.M4.B.10",
+          "name": "Simple Interest",
+          "title": "Simple Interest",
+          "url": "/levels/i.php?i-math-m4-b-10"
+        },
+        {
+          "id": "i-math-m4-b-11",
+          "code": "I.M4.B.11",
+          "name": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+          "title": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+          "url": "/levels/i.php?i-math-m4-b-11"
+        }
+      ],
+      "skills": [
+        {
+          "id": "i-math-m4-b-7",
+          "code": "I.M4.B.7",
+          "name": "Markup and Markdown Problems",
+          "title": "Markup and Markdown Problems",
+          "url": "/levels/i.php?i-math-m4-b-7"
+        },
+        {
+          "id": "i-math-m4-b-8",
+          "code": "I.M4.B.8",
+          "name": "Percent Error Problems",
+          "title": "Percent Error Problems",
+          "url": "/levels/i.php?i-math-m4-b-8"
+        },
+        {
+          "id": "i-math-m4-b-9",
+          "code": "I.M4.B.9",
+          "name": "Problem Solving When the Percent Changes",
+          "title": "Problem Solving When the Percent Changes",
+          "url": "/levels/i.php?i-math-m4-b-9"
+        },
+        {
+          "id": "i-math-m4-b-10",
+          "code": "I.M4.B.10",
+          "name": "Simple Interest",
+          "title": "Simple Interest",
+          "url": "/levels/i.php?i-math-m4-b-10"
+        },
+        {
+          "id": "i-math-m4-b-11",
+          "code": "I.M4.B.11",
+          "name": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+          "title": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+          "url": "/levels/i.php?i-math-m4-b-11"
+        }
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Scale Drawings",
+      "name": "Scale Drawings",
+      "standards": [
+        "7.RP.A.2b",
+        "7.G.A.1"
+      ],
+      "lessons": [
+        {
+          "id": "i-math-m4-c-12",
+          "code": "I.M4.C.12",
+          "name": "The Scale Factor as a Percent for a Scale Drawing",
+          "title": "The Scale Factor as a Percent for a Scale Drawing",
+          "url": "/levels/i.php?i-math-m4-c-12"
+        },
+        {
+          "id": "i-math-m4-c-13",
+          "code": "I.M4.C.13",
+          "name": "Changing Scales Using Percents",
+          "title": "Changing Scales Using Percents",
+          "url": "/levels/i.php?i-math-m4-c-13"
+        },
+        {
+          "id": "i-math-m4-c-14",
+          "code": "I.M4.C.14",
+          "name": "Computing Actual Lengths from a Scale Drawing with Percents",
+          "title": "Computing Actual Lengths from a Scale Drawing with Percents",
+          "url": "/levels/i.php?i-math-m4-c-14"
+        },
+        {
+          "id": "i-math-m4-c-15",
+          "code": "I.M4.C.15",
+          "name": "Solving Area Problems Using Scale Drawings",
+          "title": "Solving Area Problems Using Scale Drawings",
+          "url": "/levels/i.php?i-math-m4-c-15"
+        }
+      ],
+      "skills": [
+        {
+          "id": "i-math-m4-c-12",
+          "code": "I.M4.C.12",
+          "name": "The Scale Factor as a Percent for a Scale Drawing",
+          "title": "The Scale Factor as a Percent for a Scale Drawing",
+          "url": "/levels/i.php?i-math-m4-c-12"
+        },
+        {
+          "id": "i-math-m4-c-13",
+          "code": "I.M4.C.13",
+          "name": "Changing Scales Using Percents",
+          "title": "Changing Scales Using Percents",
+          "url": "/levels/i.php?i-math-m4-c-13"
+        },
+        {
+          "id": "i-math-m4-c-14",
+          "code": "I.M4.C.14",
+          "name": "Computing Actual Lengths from a Scale Drawing with Percents",
+          "title": "Computing Actual Lengths from a Scale Drawing with Percents",
+          "url": "/levels/i.php?i-math-m4-c-14"
+        },
+        {
+          "id": "i-math-m4-c-15",
+          "code": "I.M4.C.15",
+          "name": "Solving Area Problems Using Scale Drawings",
+          "title": "Solving Area Problems Using Scale Drawings",
+          "url": "/levels/i.php?i-math-m4-c-15"
+        }
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Population, Mixture, and Counting Problems",
+      "name": "Population, Mixture, and Counting Problems",
+      "standards": [
+        "7.RP.A.2",
+        "7.RP.A.3",
+        "7.SP.A.1",
+        "7.SP.A.2"
+      ],
+      "lessons": [
+        {
+          "id": "i-math-m4-d-16",
+          "code": "I.M4.D.16",
+          "name": "Population Problems",
+          "title": "Population Problems",
+          "url": "/levels/i.php?i-math-m4-d-16"
+        },
+        {
+          "id": "i-math-m4-d-17",
+          "code": "I.M4.D.17",
+          "name": "Mixture Problems",
+          "title": "Mixture Problems",
+          "url": "/levels/i.php?i-math-m4-d-17"
+        },
+        {
+          "id": "i-math-m4-d-18",
+          "code": "I.M4.D.18",
+          "name": "Counting Problems",
+          "title": "Counting Problems",
+          "url": "/levels/i.php?i-math-m4-d-18"
+        }
+      ],
+      "skills": [
+        {
+          "id": "i-math-m4-d-16",
+          "code": "I.M4.D.16",
+          "name": "Population Problems",
+          "title": "Population Problems",
+          "url": "/levels/i.php?i-math-m4-d-16"
+        },
+        {
+          "id": "i-math-m4-d-17",
+          "code": "I.M4.D.17",
+          "name": "Mixture Problems",
+          "title": "Mixture Problems",
+          "url": "/levels/i.php?i-math-m4-d-17"
+        },
+        {
+          "id": "i-math-m4-d-18",
+          "code": "I.M4.D.18",
+          "name": "Counting Problems",
+          "title": "Counting Problems",
+          "url": "/levels/i.php?i-math-m4-d-18"
+        }
+      ]
+    }
+  ],
+  "lessons": {
+    "i-math-m4-a-1": {
+      "id": "i-math-m4-a-1",
+      "code": "I.M4.A.1",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Percent",
+        "pageTitle": "Percent | Grade 7 Math | Hesten's Learning",
+        "description": "Master Percent in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Percent with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.1",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 1",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Percent, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Percent.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Percent",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Percent. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 1 Exit Ticket",
+        "prompt": "Demonstrate mastery of Percent: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Percent. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Percent?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-a-2": {
+      "id": "i-math-m4-a-2",
+      "code": "I.M4.A.2",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Part of a Whole as a Percent",
+        "pageTitle": "Part of a Whole as a Percent | Grade 7 Math | Hesten's Learning",
+        "description": "Master Part of a Whole as a Percent in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Part of a Whole as a Percent with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.2",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 2",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Part of a Whole as a Percent, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Part of a Whole as a Percent.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Part of a Whole as a Percent",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Part of a Whole as a Percent. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 2 Exit Ticket",
+        "prompt": "Demonstrate mastery of Part of a Whole as a Percent: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Part of a Whole as a Percent. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Part of a Whole as a Percent?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-a-3": {
+      "id": "i-math-m4-a-3",
+      "code": "I.M4.A.3",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Comparing Quantities with Percent",
+        "pageTitle": "Comparing Quantities with Percent | Grade 7 Math | Hesten's Learning",
+        "description": "Master Comparing Quantities with Percent in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Comparing Quantities with Percent with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.3",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 3",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Comparing Quantities with Percent, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Comparing Quantities with Percent.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Comparing Quantities with Percent",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Comparing Quantities with Percent. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 3 Exit Ticket",
+        "prompt": "Demonstrate mastery of Comparing Quantities with Percent: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Comparing Quantities with Percent. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Comparing Quantities with Percent?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-a-4": {
+      "id": "i-math-m4-a-4",
+      "code": "I.M4.A.4",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Percent Increase and Decrease",
+        "pageTitle": "Percent Increase and Decrease | Grade 7 Math | Hesten's Learning",
+        "description": "Master Percent Increase and Decrease in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Percent Increase and Decrease with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.4",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 4",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Percent Increase and Decrease, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Percent Increase and Decrease.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Percent Increase and Decrease",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Percent Increase and Decrease. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 4 Exit Ticket",
+        "prompt": "Demonstrate mastery of Percent Increase and Decrease: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Percent Increase and Decrease. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Percent Increase and Decrease?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-a-5": {
+      "id": "i-math-m4-a-5",
+      "code": "I.M4.A.5",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Finding One Hundred Percent Given Another Percent",
+        "pageTitle": "Finding One Hundred Percent Given Another Percent | Grade 7 Math | Hesten's Learning",
+        "description": "Master Finding One Hundred Percent Given Another Percent in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Finding One Hundred Percent Given Another Percent with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.5",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 5",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Finding One Hundred Percent Given Another Percent, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Finding One Hundred Percent Given Another Percent.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Finding One Hundred Percent Given Another Percent",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Finding One Hundred Percent Given Another Percent. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 5 Exit Ticket",
+        "prompt": "Demonstrate mastery of Finding One Hundred Percent Given Another Percent: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Finding One Hundred Percent Given Another Percent. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Finding One Hundred Percent Given Another Percent?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-a-6": {
+      "id": "i-math-m4-a-6",
+      "code": "I.M4.A.6",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Fluency with Percents",
+        "pageTitle": "Fluency with Percents | Grade 7 Math | Hesten's Learning",
+        "description": "Master Fluency with Percents in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Fluency with Percents with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.A.6",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 6",
+        "pill": "Module 4 &bull; Finding the Whole in Percent Problems",
+        "text": "In this lesson on Fluency with Percents, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Fluency with Percents.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Fluency with Percents",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Fluency with Percents. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 6 Exit Ticket",
+        "prompt": "Demonstrate mastery of Fluency with Percents: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Fluency with Percents. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Fluency with Percents?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-b-7": {
+      "id": "i-math-m4-b-7",
+      "code": "I.M4.B.7",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Markup and Markdown Problems",
+        "pageTitle": "Markup and Markdown Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Markup and Markdown Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Markup and Markdown Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.B.7",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 7",
+        "pill": "Module 4 &bull; Percent Problems Including More Than One Whole",
+        "text": "In this lesson on Markup and Markdown Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Markup and Markdown Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Markup and Markdown Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Markup and Markdown Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 7 Exit Ticket",
+        "prompt": "Demonstrate mastery of Markup and Markdown Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Markup and Markdown Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Markup and Markdown Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-b-8": {
+      "id": "i-math-m4-b-8",
+      "code": "I.M4.B.8",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Percent Error Problems",
+        "pageTitle": "Percent Error Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Percent Error Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Percent Error Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.B.8",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 8",
+        "pill": "Module 4 &bull; Percent Problems Including More Than One Whole",
+        "text": "In this lesson on Percent Error Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Percent Error Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Percent Error Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Percent Error Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 8 Exit Ticket",
+        "prompt": "Demonstrate mastery of Percent Error Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Percent Error Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Percent Error Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-b-9": {
+      "id": "i-math-m4-b-9",
+      "code": "I.M4.B.9",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Problem Solving When the Percent Changes",
+        "pageTitle": "Problem Solving When the Percent Changes | Grade 7 Math | Hesten's Learning",
+        "description": "Master Problem Solving When the Percent Changes in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Problem Solving When the Percent Changes with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.B.9",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 9",
+        "pill": "Module 4 &bull; Percent Problems Including More Than One Whole",
+        "text": "In this lesson on Problem Solving When the Percent Changes, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Problem Solving When the Percent Changes.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Problem Solving When the Percent Changes",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Problem Solving When the Percent Changes. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 9 Exit Ticket",
+        "prompt": "Demonstrate mastery of Problem Solving When the Percent Changes: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Problem Solving When the Percent Changes. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Problem Solving When the Percent Changes?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-b-10": {
+      "id": "i-math-m4-b-10",
+      "code": "I.M4.B.10",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Simple Interest",
+        "pageTitle": "Simple Interest | Grade 7 Math | Hesten's Learning",
+        "description": "Master Simple Interest in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Simple Interest with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.B.10",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 10",
+        "pill": "Module 4 &bull; Percent Problems Including More Than One Whole",
+        "text": "In this lesson on Simple Interest, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Simple Interest.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Simple Interest",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Simple Interest. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 10 Exit Ticket",
+        "prompt": "Demonstrate mastery of Simple Interest: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Simple Interest. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Simple Interest?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-b-11": {
+      "id": "i-math-m4-b-11",
+      "code": "I.M4.B.11",
+      "standard": "7.RP.A.1",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+        "pageTitle": "Tax, Commissions, Fees, and Other Real-World Percent Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Tax, Commissions, Fees, and Other Real-World Percent Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.1.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Tax, Commissions, Fees, and Other Real-World Percent Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.B.11",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 11",
+        "pill": "Module 4 &bull; Percent Problems Including More Than One Whole",
+        "text": "In this lesson on Tax, Commissions, Fees, and Other Real-World Percent Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Tax, Commissions, Fees, and Other Real-World Percent Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Tax, Commissions, Fees, and Other Real-World Percent Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Tax, Commissions, Fees, and Other Real-World Percent Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 11 Exit Ticket",
+        "prompt": "Demonstrate mastery of Tax, Commissions, Fees, and Other Real-World Percent Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Tax, Commissions, Fees, and Other Real-World Percent Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Tax, Commissions, Fees, and Other Real-World Percent Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-c-12": {
+      "id": "i-math-m4-c-12",
+      "code": "I.M4.C.12",
+      "standard": "7.RP.A.2b",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "The Scale Factor as a Percent for a Scale Drawing",
+        "pageTitle": "The Scale Factor as a Percent for a Scale Drawing | Grade 7 Math | Hesten's Learning",
+        "description": "Master The Scale Factor as a Percent for a Scale Drawing in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2b.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on The Scale Factor as a Percent for a Scale Drawing with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.C.12",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 12",
+        "pill": "Module 4 &bull; Scale Drawings",
+        "text": "In this lesson on The Scale Factor as a Percent for a Scale Drawing, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with The Scale Factor as a Percent for a Scale Drawing.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: The Scale Factor as a Percent for a Scale Drawing",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of The Scale Factor as a Percent for a Scale Drawing. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 12 Exit Ticket",
+        "prompt": "Demonstrate mastery of The Scale Factor as a Percent for a Scale Drawing: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for The Scale Factor as a Percent for a Scale Drawing. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in The Scale Factor as a Percent for a Scale Drawing?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-c-13": {
+      "id": "i-math-m4-c-13",
+      "code": "I.M4.C.13",
+      "standard": "7.RP.A.2b",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Changing Scales Using Percents",
+        "pageTitle": "Changing Scales Using Percents | Grade 7 Math | Hesten's Learning",
+        "description": "Master Changing Scales Using Percents in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2b.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Changing Scales Using Percents with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.C.13",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 13",
+        "pill": "Module 4 &bull; Scale Drawings",
+        "text": "In this lesson on Changing Scales Using Percents, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Changing Scales Using Percents.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Changing Scales Using Percents",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Changing Scales Using Percents. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 13 Exit Ticket",
+        "prompt": "Demonstrate mastery of Changing Scales Using Percents: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Changing Scales Using Percents. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Changing Scales Using Percents?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-c-14": {
+      "id": "i-math-m4-c-14",
+      "code": "I.M4.C.14",
+      "standard": "7.RP.A.2b",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Computing Actual Lengths from a Scale Drawing with Percents",
+        "pageTitle": "Computing Actual Lengths from a Scale Drawing with Percents | Grade 7 Math | Hesten's Learning",
+        "description": "Master Computing Actual Lengths from a Scale Drawing with Percents in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2b.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Computing Actual Lengths from a Scale Drawing with Percents with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.C.14",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 14",
+        "pill": "Module 4 &bull; Scale Drawings",
+        "text": "In this lesson on Computing Actual Lengths from a Scale Drawing with Percents, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Computing Actual Lengths from a Scale Drawing with Percents.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Computing Actual Lengths from a Scale Drawing with Percents",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Computing Actual Lengths from a Scale Drawing with Percents. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 14 Exit Ticket",
+        "prompt": "Demonstrate mastery of Computing Actual Lengths from a Scale Drawing with Percents: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Computing Actual Lengths from a Scale Drawing with Percents. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Computing Actual Lengths from a Scale Drawing with Percents?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-c-15": {
+      "id": "i-math-m4-c-15",
+      "code": "I.M4.C.15",
+      "standard": "7.RP.A.2b",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Solving Area Problems Using Scale Drawings",
+        "pageTitle": "Solving Area Problems Using Scale Drawings | Grade 7 Math | Hesten's Learning",
+        "description": "Master Solving Area Problems Using Scale Drawings in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2b.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Solving Area Problems Using Scale Drawings with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.C.15",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 15",
+        "pill": "Module 4 &bull; Scale Drawings",
+        "text": "In this lesson on Solving Area Problems Using Scale Drawings, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Solving Area Problems Using Scale Drawings.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Solving Area Problems Using Scale Drawings",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Solving Area Problems Using Scale Drawings. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 15 Exit Ticket",
+        "prompt": "Demonstrate mastery of Solving Area Problems Using Scale Drawings: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Solving Area Problems Using Scale Drawings. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Solving Area Problems Using Scale Drawings?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-d-16": {
+      "id": "i-math-m4-d-16",
+      "code": "I.M4.D.16",
+      "standard": "7.RP.A.2",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Population Problems",
+        "pageTitle": "Population Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Population Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Population Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.D.16",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 16",
+        "pill": "Module 4 &bull; Population, Mixture, and Counting Problems",
+        "text": "In this lesson on Population Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Population Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Population Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Population Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 16 Exit Ticket",
+        "prompt": "Demonstrate mastery of Population Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Population Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Population Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-d-17": {
+      "id": "i-math-m4-d-17",
+      "code": "I.M4.D.17",
+      "standard": "7.RP.A.2",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Mixture Problems",
+        "pageTitle": "Mixture Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Mixture Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Mixture Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.D.17",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 17",
+        "pill": "Module 4 &bull; Population, Mixture, and Counting Problems",
+        "text": "In this lesson on Mixture Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Mixture Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Mixture Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Mixture Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 17 Exit Ticket",
+        "prompt": "Demonstrate mastery of Mixture Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Mixture Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Mixture Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    },
+    "i-math-m4-d-18": {
+      "id": "i-math-m4-d-18",
+      "code": "I.M4.D.18",
+      "standard": "7.RP.A.2",
+      "levelId": "i",
+      "requiresMathJax": true,
+      "meta": {
+        "title": "Counting Problems",
+        "pageTitle": "Counting Problems | Grade 7 Math | Hesten's Learning",
+        "description": "Master Counting Problems in Grade 7 Mathematics aligned with Common Core standard 7.RP.A.2.",
+        "pageDescription": "EngageNY Grade 7 Math lesson on Counting Problems with step-by-step proofs, exercises, and problem sets.",
+        "author": "Antigravity & Hesten",
+        "badge": "Math I.M4.D.18",
+        "badgeIcon": "fa-calculator"
+      },
+      "overview": {
+        "title": "Student & Teacher Overview: Lesson 18",
+        "pill": "Module 4 &bull; Population, Mixture, and Counting Problems",
+        "text": "In this lesson on Counting Problems, explore proportional reasoning, rational number operations, algebraic equations, or geometric proofs aligned with national Common Core standards.",
+        "outcomes": [
+          "Develop conceptual understanding and fluency with Counting Problems.",
+          "Apply properties of operations and proportional reasoning to formulate models and equations.",
+          "Demonstrate precision in problem solving and communicate mathematical reasoning using clear mathematical notation."
+        ],
+        "teacherInsight": "Emphasize the transition from visual tape diagrams and double number lines to formal algebraic equations ($y = kx$, $p + q$, $I = Prt$). Guide students to verify their solutions by substituting values back into original expressions."
+      },
+      "vocabulary": [
+        {
+          "term": "Constant of Proportionality",
+          "pos": "noun",
+          "definition": "The constant value of the ratio between two proportional quantities, typically denoted by $k = \\frac{y}{x}$."
+        },
+        {
+          "term": "Rational Number",
+          "pos": "noun",
+          "definition": "Any number that can be expressed as the quotient or fraction $\\frac{p}{q}$ of two integers, with the denominator $q \\ne 0$."
+        },
+        {
+          "term": "Additive Inverse",
+          "pos": "noun",
+          "definition": "The number that, when added to a given number, yields zero ($a + (-a) = 0$)."
+        }
+      ],
+      "guidedExercises": [
+        {
+          "number": 1,
+          "title": "Guided Modeling Exercise: Counting Problems",
+          "prompt": "Work collaboratively with the class to analyze the core mathematical principles of Counting Problems. Deconstruct the given values and identify the applicable algebraic formula.",
+          "solution": "Identify given constraints, formulate an algebraic representation, and solve step-by-step."
+        }
+      ],
+      "exitTicket": {
+        "title": "Lesson 18 Exit Ticket",
+        "prompt": "Demonstrate mastery of Counting Problems: solve the target problem and explain your mathematical justification in complete sentences.",
+        "solution": "A proficient response will correctly execute the algebraic procedure, show all calculation steps, and provide a clear contextual explanation."
+      },
+      "problemSet": {
+        "title": "Official Worksheet: Problem Set & Practice",
+        "description": "Work through these curriculum problem set exercises for Counting Problems. Record your steps in the digital workspace and check with the teacher solutions.",
+        "problems": [
+          {
+            "number": 1,
+            "title": "Problem 1: Markup and Discount Sequence",
+            "prompt": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "problem": "A boutique buys a jacket wholesale for $\\$60$. They mark up the price by $40\\%$. During a weekend clearance sale, they discount the retail price by $25\\%$. Find the final sale price and the store's net profit.",
+            "hint": "Retail price $= 60 \\times 1.40$. Clearance price $= \\text{Retail} \\times (1 - 0.25)$. Net profit $= \\text{Sale Price} - 60$.",
+            "solution": "$\\text{Retail} = 60 \\times 1.40 = \\$84$. $\\text{Sale Price} = 84 \\times 0.75 = \\$63$. $\\text{Net Profit} = 63 - 60 = \\$3$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Apply 40% markup",
+                "result": "$\\$60 \\times 1.40 = \\$84$"
+              },
+              {
+                "step": 2,
+                "action": "Apply 25% discount",
+                "result": "$\\$84 \\times 0.75 = \\$63$"
+              },
+              {
+                "step": 3,
+                "action": "Net profit",
+                "result": "$\\$63 - \\$60 = \\$3$"
+              }
+            ]
+          },
+          {
+            "number": 2,
+            "title": "Problem 2: Simple Interest Formula",
+            "prompt": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "problem": "An investor deposits $\\$2,400$ into a savings bond earning $3.5\\%$ simple annual interest for $5$ years. Calculate the total interest earned and the final account balance using $I = Prt$.",
+            "hint": "$I = Prt$, where $P = 2400$, $r = 0.035$, and $t = 5$. Total Balance $= P + I$.",
+            "solution": "$I = 2400 \\times 0.035 \\times 5 = \\$420$. Total Balance $= 2400 + 420 = \\$2,820$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Compute interest",
+                "result": "$I = 2400(0.035)(5) = \\$420$"
+              },
+              {
+                "step": 2,
+                "action": "Compute total balance",
+                "result": "$\\$2,400 + \\$420 = \\$2,820$"
+              }
+            ]
+          },
+          {
+            "number": 3,
+            "title": "Problem 3: Percent Error Calculation",
+            "prompt": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "problem": "A student estimates the length of a desk to be $120\\text{ cm}$. The actual measured length is $128\\text{ cm}$. Calculate the percent error of the estimation to the nearest tenth of a percent.",
+            "hint": "$\\text{Percent Error} = \\frac{|\\text{Experimental} - \\text{Actual}|}{\\text{Actual}} \\times 100\\%$.",
+            "solution": "$\\text{Error} = \\frac{|120 - 128|}{128} \\times 100\\% = \\frac{8}{128} \\times 100\\% = 0.0625 \\times 100\\% = 6.25\\% \\approx 6.3\\%$.",
+            "steps": [
+              {
+                "step": 1,
+                "action": "Find absolute deviation",
+                "result": "$|120 - 128| = 8\\text{ cm}$"
+              },
+              {
+                "step": 2,
+                "action": "Divide by true value and multiply by 100",
+                "result": "$\\frac{8}{128} \\times 100\\% = 6.25\\%$"
+              }
+            ]
+          }
+        ]
+      },
+      "practiceQuestions": [
+        {
+          "question": "Which mathematical concept is primary in Counting Problems?",
+          "options": [
+            "Proportional and algebraic problem-solving",
+            "Random guessing",
+            "Undefined operations",
+            "Non-proportional estimation only"
+          ],
+          "answer": "Proportional and algebraic problem-solving",
+          "explanation": "Grade 7 mathematics emphasizes rigorous proportional relationships, rational operations, and linear equations."
+        }
+      ],
+      "citation": "EngageNY / Eureka Math Grade 7 Mathematics, New York State Education Department."
+    }
+  }
+}

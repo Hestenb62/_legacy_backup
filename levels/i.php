@@ -1,44 +1,85 @@
 <?php
 /**
  * Hesten's Learning - Level I (Grade 7)
+ * Complete 139-lesson EngageNY / Eureka Math buildout.
  */
 
+// Dynamic Single-Lesson Router: Check if a lesson is requested via query string (e.g. ?i-math-m1-a-1 or ?lesson=i-math-m1-a-1)
+$requestedLesson = null;
+if (!empty($_GET['lesson'])) {
+    $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', trim($_GET['lesson']));
+} elseif (!empty($_SERVER['QUERY_STRING'])) {
+    $rawQuery = trim(explode('&', $_SERVER['QUERY_STRING'])[0]);
+    if (!empty($rawQuery) && !str_contains($rawQuery, '=')) {
+        $requestedLesson = preg_replace('/[^a-zA-Z0-9\-_]/', '', $rawQuery);
+    }
+}
+
+if (!empty($requestedLesson)) {
+    // Dynamic JSON Lesson Router: Tiered Resolution (Module JSON -> Individual JSON -> Master Registry)
+    $hasJson = false;
+    $parts = explode('-', $requestedLesson);
+    if (count($parts) >= 3) {
+        $moduleKey = strtolower($parts[0] . '-' . $parts[1] . '-' . $parts[2]);
+        $modLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $moduleKey . '.json';
+        if (file_exists($modLessonFile)) {
+            $modData = json_decode(file_get_contents($modLessonFile), true);
+            if (isset($modData['lessons'][$requestedLesson])) {
+                $hasJson = true;
+            }
+        }
+    }
+
+    if (!$hasJson) {
+        $jsonLessonFile = dirname(__DIR__) . '/assets/data/lessons/' . $requestedLesson . '.json';
+        $hasJson = file_exists($jsonLessonFile);
+    }
+
+    $mainLessonsFile = dirname(__DIR__) . '/assets/data/lessons.json';
+    if (!$hasJson && file_exists($mainLessonsFile)) {
+        $data = json_decode(file_get_contents($mainLessonsFile), true);
+        if (isset($data['lessons'][$requestedLesson])) {
+            $hasJson = true;
+        }
+    }
+
+    $lessonId = $requestedLesson;
+    $levelUrl = 'i.php';
+    $levelTitle = 'Level I';
+    include dirname(__DIR__) . '/src/lesson_renderer.php';
+    exit;
+}
+
+// Page-Specific Metadata
 $pageTitle       = "7th Grade Level I | Hesten's Learning";
 $pageDescription = "Proportions, integers, linear expressions, and geometry applications for 7th-grade students.";
-$pageKeywords    = "Grade 7, 7th Grade, proportional relationships, surface area and volume, cellular structure";
+$pageKeywords    = "Grade 7, 7th Grade, proportional relationships, rational numbers, expressions and equations, geometry, statistics, EngageNY, Eureka Math";
 
+// Template Variables
 $themeColor = 'purple';
 $levelId = 'i';
 $levelTitle = 'Level I';
 $gradeText = '7th Grade';
 $initialSubject = 'math';
 $initialSubjectName = 'Math';
-$initialSubjectDesc = 'Proportional relationships, integers, and geometry applications for 7th graders.';
+$initialSubjectDesc = 'Proportional relationships, rational numbers, linear expressions, and geometry applications for 7th graders.';
 
-$modules = [
-    [
-        'title' => 'Middle School Mastery',
-        'description' => 'Deepening algebraic and geometric understanding.',
-        'topics' => [
-            [
-                'letter' => 'A',
-                'name' => 'Proportions',
-                'skills' => [
-                    ['id' => 'i-math-m1-a-1', 'code' => 'I.M1.A.1', 'name' => 'Ratios of fractions and unit rates'],
-                    ['id' => 'i-math-m1-a-2', 'code' => 'I.M1.A.2', 'name' => 'Identifying and representing proportional relationships']
-                ]
-            ],
-            [
-                'letter' => 'B',
-                'name' => 'Geometry Applications',
-                'skills' => [
-                    ['id' => 'i-math-m1-b-1', 'code' => 'I.M1.B.1', 'name' => 'Scale drawings of geometric figures'],
-                    ['id' => 'i-math-m1-b-2', 'code' => 'I.M1.B.2', 'name' => 'Area and circumference of circles']
-                ]
-            ]
-        ]
-    ]
-];
+// Dynamic Module Loader from curriculum-engageny-math.json
+$modules = [];
+$engPath = dirname(__DIR__) . '/assets/data/curriculum-engageny-math.json';
+if (file_exists($engPath)) {
+    $raw = json_decode(file_get_contents($engPath), true);
+    if (!empty($raw['grades']['7th Grade']['modules'])) {
+        foreach ($raw['grades']['7th Grade']['modules'] as $mod) {
+            $modules[] = [
+                'title' => $mod['title'],
+                'description' => $mod['description'],
+                'topics' => $mod['topics']
+            ];
+        }
+    }
+}
 
-include '../src/level_template.php';
+// Load the Master Template
+include __DIR__ . '/../src/level_template.php';
 ?>

@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.40.0');
+    define('HL_SITE_VERSION', 'v2.41.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Modern Academic Studio & Teacher Suite Redesign');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 100% P-12 Math Completion & Grade 7 Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Teacher Suite Modern Academic Studio Redesign, 2-Column Sticky Assignment Builder, Unified Pacing Command Bar, and Enhanced Accessibility');
+    define('HL_SITE_VERSION_SUMMARY', 'Universal P-12 Mathematics 100% Complete: Grade 7 (Level I) 139 Lessons Across Modules 1–6 Added, Bringing Platform Math to 1,911 Total Lessons Across 82 Modules');
     }
 ?>
 <!DOCTYPE html>

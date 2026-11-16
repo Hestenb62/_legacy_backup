@@ -17807,6 +17807,2304 @@
           ]
         }
       ]
+    },
+    "7th Grade": {
+      "title": "7th Grade Math",
+      "levelId": "i",
+      "modules": [
+        {
+          "moduleNumber": 1,
+          "title": "Module 1: Ratios and Proportional Relationships",
+          "description": "Proportional relationships, unit rates, constants of proportionality, ratios involving fractions, and scale drawings.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Proportional Relationships",
+              "name": "Proportional Relationships",
+              "standards": [
+                "7.RP.A.2a"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m1-a-1",
+                  "code": "I.M1.A.1",
+                  "name": "An Experience in Relationships as Measuring Rate",
+                  "title": "An Experience in Relationships as Measuring Rate",
+                  "url": "/levels/i.php?i-math-m1-a-1"
+                },
+                {
+                  "id": "i-math-m1-a-2",
+                  "code": "I.M1.A.2",
+                  "name": "Proportional Relationships",
+                  "title": "Proportional Relationships",
+                  "url": "/levels/i.php?i-math-m1-a-2"
+                },
+                {
+                  "id": "i-math-m1-a-3",
+                  "code": "I.M1.A.3",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "url": "/levels/i.php?i-math-m1-a-3"
+                },
+                {
+                  "id": "i-math-m1-a-4",
+                  "code": "I.M1.A.4",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "url": "/levels/i.php?i-math-m1-a-4"
+                },
+                {
+                  "id": "i-math-m1-a-5",
+                  "code": "I.M1.A.5",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "url": "/levels/i.php?i-math-m1-a-5"
+                },
+                {
+                  "id": "i-math-m1-a-6",
+                  "code": "I.M1.A.6",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "url": "/levels/i.php?i-math-m1-a-6"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m1-a-1",
+                  "code": "I.M1.A.1",
+                  "name": "An Experience in Relationships as Measuring Rate",
+                  "title": "An Experience in Relationships as Measuring Rate",
+                  "url": "/levels/i.php?i-math-m1-a-1"
+                },
+                {
+                  "id": "i-math-m1-a-2",
+                  "code": "I.M1.A.2",
+                  "name": "Proportional Relationships",
+                  "title": "Proportional Relationships",
+                  "url": "/levels/i.php?i-math-m1-a-2"
+                },
+                {
+                  "id": "i-math-m1-a-3",
+                  "code": "I.M1.A.3",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "url": "/levels/i.php?i-math-m1-a-3"
+                },
+                {
+                  "id": "i-math-m1-a-4",
+                  "code": "I.M1.A.4",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Tables",
+                  "url": "/levels/i.php?i-math-m1-a-4"
+                },
+                {
+                  "id": "i-math-m1-a-5",
+                  "code": "I.M1.A.5",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "url": "/levels/i.php?i-math-m1-a-5"
+                },
+                {
+                  "id": "i-math-m1-a-6",
+                  "code": "I.M1.A.6",
+                  "name": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "title": "Identifying Proportional and Non-Proportional Relationships in Graphs",
+                  "url": "/levels/i.php?i-math-m1-a-6"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Unit Rate and the Constant of Proportionality",
+              "name": "Unit Rate and the Constant of Proportionality",
+              "standards": [
+                "7.RP.A.2b",
+                "7.RP.A.2c",
+                "7.RP.A.2d",
+                "7.EE.B.4a"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m1-b-7",
+                  "code": "I.M1.B.7",
+                  "name": "Unit Rate as the Constant of Proportionality",
+                  "title": "Unit Rate as the Constant of Proportionality",
+                  "url": "/levels/i.php?i-math-m1-b-7"
+                },
+                {
+                  "id": "i-math-m1-b-8",
+                  "code": "I.M1.B.8",
+                  "name": "Representing Proportional Relationships with Equations",
+                  "title": "Representing Proportional Relationships with Equations",
+                  "url": "/levels/i.php?i-math-m1-b-8"
+                },
+                {
+                  "id": "i-math-m1-b-9",
+                  "code": "I.M1.B.9",
+                  "name": "Representing Proportional Relationships with Equations",
+                  "title": "Representing Proportional Relationships with Equations",
+                  "url": "/levels/i.php?i-math-m1-b-9"
+                },
+                {
+                  "id": "i-math-m1-b-10",
+                  "code": "I.M1.B.10",
+                  "name": "Interpreting Graphs of Proportional Relationships",
+                  "title": "Interpreting Graphs of Proportional Relationships",
+                  "url": "/levels/i.php?i-math-m1-b-10"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m1-b-7",
+                  "code": "I.M1.B.7",
+                  "name": "Unit Rate as the Constant of Proportionality",
+                  "title": "Unit Rate as the Constant of Proportionality",
+                  "url": "/levels/i.php?i-math-m1-b-7"
+                },
+                {
+                  "id": "i-math-m1-b-8",
+                  "code": "I.M1.B.8",
+                  "name": "Representing Proportional Relationships with Equations",
+                  "title": "Representing Proportional Relationships with Equations",
+                  "url": "/levels/i.php?i-math-m1-b-8"
+                },
+                {
+                  "id": "i-math-m1-b-9",
+                  "code": "I.M1.B.9",
+                  "name": "Representing Proportional Relationships with Equations",
+                  "title": "Representing Proportional Relationships with Equations",
+                  "url": "/levels/i.php?i-math-m1-b-9"
+                },
+                {
+                  "id": "i-math-m1-b-10",
+                  "code": "I.M1.B.10",
+                  "name": "Interpreting Graphs of Proportional Relationships",
+                  "title": "Interpreting Graphs of Proportional Relationships",
+                  "url": "/levels/i.php?i-math-m1-b-10"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Ratios and Rates Involving Fractions",
+              "name": "Ratios and Rates Involving Fractions",
+              "standards": [
+                "7.RP.A.1",
+                "7.RP.A.3",
+                "7.EE.B.4a"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m1-c-11",
+                  "code": "I.M1.C.11",
+                  "name": "Ratios of Fractions and Their Unit Rates",
+                  "title": "Ratios of Fractions and Their Unit Rates",
+                  "url": "/levels/i.php?i-math-m1-c-11"
+                },
+                {
+                  "id": "i-math-m1-c-12",
+                  "code": "I.M1.C.12",
+                  "name": "Ratios of Fractions and Their Unit Rates",
+                  "title": "Ratios of Fractions and Their Unit Rates",
+                  "url": "/levels/i.php?i-math-m1-c-12"
+                },
+                {
+                  "id": "i-math-m1-c-13",
+                  "code": "I.M1.C.13",
+                  "name": "Finding Equivalent Ratios Given the Total Quantity",
+                  "title": "Finding Equivalent Ratios Given the Total Quantity",
+                  "url": "/levels/i.php?i-math-m1-c-13"
+                },
+                {
+                  "id": "i-math-m1-c-14",
+                  "code": "I.M1.C.14",
+                  "name": "Multi-Step Ratio Problems",
+                  "title": "Multi-Step Ratio Problems",
+                  "url": "/levels/i.php?i-math-m1-c-14"
+                },
+                {
+                  "id": "i-math-m1-c-15",
+                  "code": "I.M1.C.15",
+                  "name": "Equations of Graphs of Proportional Relationships Involving Fractions",
+                  "title": "Equations of Graphs of Proportional Relationships Involving Fractions",
+                  "url": "/levels/i.php?i-math-m1-c-15"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m1-c-11",
+                  "code": "I.M1.C.11",
+                  "name": "Ratios of Fractions and Their Unit Rates",
+                  "title": "Ratios of Fractions and Their Unit Rates",
+                  "url": "/levels/i.php?i-math-m1-c-11"
+                },
+                {
+                  "id": "i-math-m1-c-12",
+                  "code": "I.M1.C.12",
+                  "name": "Ratios of Fractions and Their Unit Rates",
+                  "title": "Ratios of Fractions and Their Unit Rates",
+                  "url": "/levels/i.php?i-math-m1-c-12"
+                },
+                {
+                  "id": "i-math-m1-c-13",
+                  "code": "I.M1.C.13",
+                  "name": "Finding Equivalent Ratios Given the Total Quantity",
+                  "title": "Finding Equivalent Ratios Given the Total Quantity",
+                  "url": "/levels/i.php?i-math-m1-c-13"
+                },
+                {
+                  "id": "i-math-m1-c-14",
+                  "code": "I.M1.C.14",
+                  "name": "Multi-Step Ratio Problems",
+                  "title": "Multi-Step Ratio Problems",
+                  "url": "/levels/i.php?i-math-m1-c-14"
+                },
+                {
+                  "id": "i-math-m1-c-15",
+                  "code": "I.M1.C.15",
+                  "name": "Equations of Graphs of Proportional Relationships Involving Fractions",
+                  "title": "Equations of Graphs of Proportional Relationships Involving Fractions",
+                  "url": "/levels/i.php?i-math-m1-c-15"
+                }
+              ]
+            },
+            {
+              "letter": "D",
+              "title": "Ratios of Scale Drawings",
+              "name": "Ratios of Scale Drawings",
+              "standards": [
+                "7.RP.A.2b",
+                "7.G.A.1"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m1-d-16",
+                  "code": "I.M1.D.16",
+                  "name": "Relating Scale Drawings to Ratios and Rates",
+                  "title": "Relating Scale Drawings to Ratios and Rates",
+                  "url": "/levels/i.php?i-math-m1-d-16"
+                },
+                {
+                  "id": "i-math-m1-d-17",
+                  "code": "I.M1.D.17",
+                  "name": "The Unit Rate as the Scale Factor",
+                  "title": "The Unit Rate as the Scale Factor",
+                  "url": "/levels/i.php?i-math-m1-d-17"
+                },
+                {
+                  "id": "i-math-m1-d-18",
+                  "code": "I.M1.D.18",
+                  "name": "Computing Actual Lengths from a Scale Drawing",
+                  "title": "Computing Actual Lengths from a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-18"
+                },
+                {
+                  "id": "i-math-m1-d-19",
+                  "code": "I.M1.D.19",
+                  "name": "Computing Actual Areas from a Scale Drawing",
+                  "title": "Computing Actual Areas from a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-19"
+                },
+                {
+                  "id": "i-math-m1-d-20",
+                  "code": "I.M1.D.20",
+                  "name": "An Exercise in Creating a Scale Drawing",
+                  "title": "An Exercise in Creating a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-20"
+                },
+                {
+                  "id": "i-math-m1-d-21",
+                  "code": "I.M1.D.21",
+                  "name": "An Exercise in Changing Scales",
+                  "title": "An Exercise in Changing Scales",
+                  "url": "/levels/i.php?i-math-m1-d-21"
+                },
+                {
+                  "id": "i-math-m1-d-22",
+                  "code": "I.M1.D.22",
+                  "name": "An Exercise in Changing Scales",
+                  "title": "An Exercise in Changing Scales",
+                  "url": "/levels/i.php?i-math-m1-d-22"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m1-d-16",
+                  "code": "I.M1.D.16",
+                  "name": "Relating Scale Drawings to Ratios and Rates",
+                  "title": "Relating Scale Drawings to Ratios and Rates",
+                  "url": "/levels/i.php?i-math-m1-d-16"
+                },
+                {
+                  "id": "i-math-m1-d-17",
+                  "code": "I.M1.D.17",
+                  "name": "The Unit Rate as the Scale Factor",
+                  "title": "The Unit Rate as the Scale Factor",
+                  "url": "/levels/i.php?i-math-m1-d-17"
+                },
+                {
+                  "id": "i-math-m1-d-18",
+                  "code": "I.M1.D.18",
+                  "name": "Computing Actual Lengths from a Scale Drawing",
+                  "title": "Computing Actual Lengths from a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-18"
+                },
+                {
+                  "id": "i-math-m1-d-19",
+                  "code": "I.M1.D.19",
+                  "name": "Computing Actual Areas from a Scale Drawing",
+                  "title": "Computing Actual Areas from a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-19"
+                },
+                {
+                  "id": "i-math-m1-d-20",
+                  "code": "I.M1.D.20",
+                  "name": "An Exercise in Creating a Scale Drawing",
+                  "title": "An Exercise in Creating a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m1-d-20"
+                },
+                {
+                  "id": "i-math-m1-d-21",
+                  "code": "I.M1.D.21",
+                  "name": "An Exercise in Changing Scales",
+                  "title": "An Exercise in Changing Scales",
+                  "url": "/levels/i.php?i-math-m1-d-21"
+                },
+                {
+                  "id": "i-math-m1-d-22",
+                  "code": "I.M1.D.22",
+                  "name": "An Exercise in Changing Scales",
+                  "title": "An Exercise in Changing Scales",
+                  "url": "/levels/i.php?i-math-m1-d-22"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 2,
+          "title": "Module 2: Rational Numbers",
+          "description": "Addition, subtraction, multiplication, and division of integers and rational numbers, decimals, and algebraic operations.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Addition and Subtraction of Integers and Rational Numbers",
+              "name": "Addition and Subtraction of Integers and Rational Numbers",
+              "standards": [
+                "7.NS.A.1"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m2-a-1",
+                  "code": "I.M2.A.1",
+                  "name": "Opposite Quantities Combine to Make Zero",
+                  "title": "Opposite Quantities Combine to Make Zero",
+                  "url": "/levels/i.php?i-math-m2-a-1"
+                },
+                {
+                  "id": "i-math-m2-a-2",
+                  "code": "I.M2.A.2",
+                  "name": "Using the Number Line to Model the Addition of Integers",
+                  "title": "Using the Number Line to Model the Addition of Integers",
+                  "url": "/levels/i.php?i-math-m2-a-2"
+                },
+                {
+                  "id": "i-math-m2-a-3",
+                  "code": "I.M2.A.3",
+                  "name": "Understanding Addition of Integers",
+                  "title": "Understanding Addition of Integers",
+                  "url": "/levels/i.php?i-math-m2-a-3"
+                },
+                {
+                  "id": "i-math-m2-a-4",
+                  "code": "I.M2.A.4",
+                  "name": "Efficiently Adding Integers and Other Rational Numbers",
+                  "title": "Efficiently Adding Integers and Other Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-4"
+                },
+                {
+                  "id": "i-math-m2-a-5",
+                  "code": "I.M2.A.5",
+                  "name": "Understanding Subtraction of Integers and Other Rational Numbers",
+                  "title": "Understanding Subtraction of Integers and Other Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-5"
+                },
+                {
+                  "id": "i-math-m2-a-6",
+                  "code": "I.M2.A.6",
+                  "name": "The Distance Between Two Rational Numbers",
+                  "title": "The Distance Between Two Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-6"
+                },
+                {
+                  "id": "i-math-m2-a-7",
+                  "code": "I.M2.A.7",
+                  "name": "Addition and Subtraction of Rational Numbers",
+                  "title": "Addition and Subtraction of Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-7"
+                },
+                {
+                  "id": "i-math-m2-a-8",
+                  "code": "I.M2.A.8",
+                  "name": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "title": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-8"
+                },
+                {
+                  "id": "i-math-m2-a-9",
+                  "code": "I.M2.A.9",
+                  "name": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "title": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-9"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m2-a-1",
+                  "code": "I.M2.A.1",
+                  "name": "Opposite Quantities Combine to Make Zero",
+                  "title": "Opposite Quantities Combine to Make Zero",
+                  "url": "/levels/i.php?i-math-m2-a-1"
+                },
+                {
+                  "id": "i-math-m2-a-2",
+                  "code": "I.M2.A.2",
+                  "name": "Using the Number Line to Model the Addition of Integers",
+                  "title": "Using the Number Line to Model the Addition of Integers",
+                  "url": "/levels/i.php?i-math-m2-a-2"
+                },
+                {
+                  "id": "i-math-m2-a-3",
+                  "code": "I.M2.A.3",
+                  "name": "Understanding Addition of Integers",
+                  "title": "Understanding Addition of Integers",
+                  "url": "/levels/i.php?i-math-m2-a-3"
+                },
+                {
+                  "id": "i-math-m2-a-4",
+                  "code": "I.M2.A.4",
+                  "name": "Efficiently Adding Integers and Other Rational Numbers",
+                  "title": "Efficiently Adding Integers and Other Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-4"
+                },
+                {
+                  "id": "i-math-m2-a-5",
+                  "code": "I.M2.A.5",
+                  "name": "Understanding Subtraction of Integers and Other Rational Numbers",
+                  "title": "Understanding Subtraction of Integers and Other Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-5"
+                },
+                {
+                  "id": "i-math-m2-a-6",
+                  "code": "I.M2.A.6",
+                  "name": "The Distance Between Two Rational Numbers",
+                  "title": "The Distance Between Two Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-6"
+                },
+                {
+                  "id": "i-math-m2-a-7",
+                  "code": "I.M2.A.7",
+                  "name": "Addition and Subtraction of Rational Numbers",
+                  "title": "Addition and Subtraction of Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-7"
+                },
+                {
+                  "id": "i-math-m2-a-8",
+                  "code": "I.M2.A.8",
+                  "name": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "title": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-8"
+                },
+                {
+                  "id": "i-math-m2-a-9",
+                  "code": "I.M2.A.9",
+                  "name": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "title": "Applying the Properties of Operations to Add and Subtract Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-a-9"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Multiplication and Division of Integers and Rational Numbers",
+              "name": "Multiplication and Division of Integers and Rational Numbers",
+              "standards": [
+                "7.NS.A.2"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m2-b-10",
+                  "code": "I.M2.B.10",
+                  "name": "Understanding Multiplication of Integers",
+                  "title": "Understanding Multiplication of Integers",
+                  "url": "/levels/i.php?i-math-m2-b-10"
+                },
+                {
+                  "id": "i-math-m2-b-11",
+                  "code": "I.M2.B.11",
+                  "name": "Develop Rules for Multiplying Signed Numbers",
+                  "title": "Develop Rules for Multiplying Signed Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-11"
+                },
+                {
+                  "id": "i-math-m2-b-12",
+                  "code": "I.M2.B.12",
+                  "name": "Division of Integers",
+                  "title": "Division of Integers",
+                  "url": "/levels/i.php?i-math-m2-b-12"
+                },
+                {
+                  "id": "i-math-m2-b-13",
+                  "code": "I.M2.B.13",
+                  "name": "Converting Between Fractions and Decimals Using Equivalent Fractions",
+                  "title": "Converting Between Fractions and Decimals Using Equivalent Fractions",
+                  "url": "/levels/i.php?i-math-m2-b-13"
+                },
+                {
+                  "id": "i-math-m2-b-14",
+                  "code": "I.M2.B.14",
+                  "name": "Converting Rational Numbers to Decimals Using Long Division",
+                  "title": "Converting Rational Numbers to Decimals Using Long Division",
+                  "url": "/levels/i.php?i-math-m2-b-14"
+                },
+                {
+                  "id": "i-math-m2-b-15",
+                  "code": "I.M2.B.15",
+                  "name": "Multiplication and Division of Rational Numbers",
+                  "title": "Multiplication and Division of Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-15"
+                },
+                {
+                  "id": "i-math-m2-b-16",
+                  "code": "I.M2.B.16",
+                  "name": "Applying the Properties of Operations to Multiply and Divide Rational Numbers",
+                  "title": "Applying the Properties of Operations to Multiply and Divide Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-16"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m2-b-10",
+                  "code": "I.M2.B.10",
+                  "name": "Understanding Multiplication of Integers",
+                  "title": "Understanding Multiplication of Integers",
+                  "url": "/levels/i.php?i-math-m2-b-10"
+                },
+                {
+                  "id": "i-math-m2-b-11",
+                  "code": "I.M2.B.11",
+                  "name": "Develop Rules for Multiplying Signed Numbers",
+                  "title": "Develop Rules for Multiplying Signed Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-11"
+                },
+                {
+                  "id": "i-math-m2-b-12",
+                  "code": "I.M2.B.12",
+                  "name": "Division of Integers",
+                  "title": "Division of Integers",
+                  "url": "/levels/i.php?i-math-m2-b-12"
+                },
+                {
+                  "id": "i-math-m2-b-13",
+                  "code": "I.M2.B.13",
+                  "name": "Converting Between Fractions and Decimals Using Equivalent Fractions",
+                  "title": "Converting Between Fractions and Decimals Using Equivalent Fractions",
+                  "url": "/levels/i.php?i-math-m2-b-13"
+                },
+                {
+                  "id": "i-math-m2-b-14",
+                  "code": "I.M2.B.14",
+                  "name": "Converting Rational Numbers to Decimals Using Long Division",
+                  "title": "Converting Rational Numbers to Decimals Using Long Division",
+                  "url": "/levels/i.php?i-math-m2-b-14"
+                },
+                {
+                  "id": "i-math-m2-b-15",
+                  "code": "I.M2.B.15",
+                  "name": "Multiplication and Division of Rational Numbers",
+                  "title": "Multiplication and Division of Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-15"
+                },
+                {
+                  "id": "i-math-m2-b-16",
+                  "code": "I.M2.B.16",
+                  "name": "Applying the Properties of Operations to Multiply and Divide Rational Numbers",
+                  "title": "Applying the Properties of Operations to Multiply and Divide Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-b-16"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Applying Operations with Rational Numbers to Expressions and Equations",
+              "name": "Applying Operations with Rational Numbers to Expressions and Equations",
+              "standards": [
+                "7.NS.A.3",
+                "7.EE.B.4a"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m2-c-17",
+                  "code": "I.M2.C.17",
+                  "name": "Comparing Tape Diagram Solutions to Algebraic Solutions",
+                  "title": "Comparing Tape Diagram Solutions to Algebraic Solutions",
+                  "url": "/levels/i.php?i-math-m2-c-17"
+                },
+                {
+                  "id": "i-math-m2-c-18",
+                  "code": "I.M2.C.18",
+                  "name": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "title": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-18"
+                },
+                {
+                  "id": "i-math-m2-c-19",
+                  "code": "I.M2.C.19",
+                  "name": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "title": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-19"
+                },
+                {
+                  "id": "i-math-m2-c-20",
+                  "code": "I.M2.C.20",
+                  "name": "Investments—Performing Operations with Rational Numbers",
+                  "title": "Investments—Performing Operations with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-20"
+                },
+                {
+                  "id": "i-math-m2-c-21",
+                  "code": "I.M2.C.21",
+                  "name": "If-Then Moves with Equations That Contain Rational Numbers",
+                  "title": "If-Then Moves with Equations That Contain Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-21"
+                },
+                {
+                  "id": "i-math-m2-c-22",
+                  "code": "I.M2.C.22",
+                  "name": "Solving Equations Using Algebra",
+                  "title": "Solving Equations Using Algebra",
+                  "url": "/levels/i.php?i-math-m2-c-22"
+                },
+                {
+                  "id": "i-math-m2-c-23",
+                  "code": "I.M2.C.23",
+                  "name": "Solving Equations Using Algebra",
+                  "title": "Solving Equations Using Algebra",
+                  "url": "/levels/i.php?i-math-m2-c-23"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m2-c-17",
+                  "code": "I.M2.C.17",
+                  "name": "Comparing Tape Diagram Solutions to Algebraic Solutions",
+                  "title": "Comparing Tape Diagram Solutions to Algebraic Solutions",
+                  "url": "/levels/i.php?i-math-m2-c-17"
+                },
+                {
+                  "id": "i-math-m2-c-18",
+                  "code": "I.M2.C.18",
+                  "name": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "title": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-18"
+                },
+                {
+                  "id": "i-math-m2-c-19",
+                  "code": "I.M2.C.19",
+                  "name": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "title": "Writing, Evaluating, and Finding Equivalent Expressions with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-19"
+                },
+                {
+                  "id": "i-math-m2-c-20",
+                  "code": "I.M2.C.20",
+                  "name": "Investments—Performing Operations with Rational Numbers",
+                  "title": "Investments—Performing Operations with Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-20"
+                },
+                {
+                  "id": "i-math-m2-c-21",
+                  "code": "I.M2.C.21",
+                  "name": "If-Then Moves with Equations That Contain Rational Numbers",
+                  "title": "If-Then Moves with Equations That Contain Rational Numbers",
+                  "url": "/levels/i.php?i-math-m2-c-21"
+                },
+                {
+                  "id": "i-math-m2-c-22",
+                  "code": "I.M2.C.22",
+                  "name": "Solving Equations Using Algebra",
+                  "title": "Solving Equations Using Algebra",
+                  "url": "/levels/i.php?i-math-m2-c-22"
+                },
+                {
+                  "id": "i-math-m2-c-23",
+                  "code": "I.M2.C.23",
+                  "name": "Solving Equations Using Algebra",
+                  "title": "Solving Equations Using Algebra",
+                  "url": "/levels/i.php?i-math-m2-c-23"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 3,
+          "title": "Module 3: Expressions and Equations",
+          "description": "Linear expressions, angle relationships, multi-step equations and inequalities, circle circumference and area, surface area, and volume.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Use Properties of Operations to Generate Equivalent Expressions",
+              "name": "Use Properties of Operations to Generate Equivalent Expressions",
+              "standards": [
+                "7.EE.A.1",
+                "7.EE.A.2"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m3-a-1",
+                  "code": "I.M3.A.1",
+                  "name": "Generating Equivalent Expressions",
+                  "title": "Generating Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-1"
+                },
+                {
+                  "id": "i-math-m3-a-2",
+                  "code": "I.M3.A.2",
+                  "name": "Generating Equivalent Expressions",
+                  "title": "Generating Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-2"
+                },
+                {
+                  "id": "i-math-m3-a-3",
+                  "code": "I.M3.A.3",
+                  "name": "Writing Products as Sums and Sums as Products",
+                  "title": "Writing Products as Sums and Sums as Products",
+                  "url": "/levels/i.php?i-math-m3-a-3"
+                },
+                {
+                  "id": "i-math-m3-a-4",
+                  "code": "I.M3.A.4",
+                  "name": "Writing Products as Sums and Sums as Products",
+                  "title": "Writing Products as Sums and Sums as Products",
+                  "url": "/levels/i.php?i-math-m3-a-4"
+                },
+                {
+                  "id": "i-math-m3-a-5",
+                  "code": "I.M3.A.5",
+                  "name": "Using the Identity and Inverse to Write Equivalent Expressions",
+                  "title": "Using the Identity and Inverse to Write Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-5"
+                },
+                {
+                  "id": "i-math-m3-a-6",
+                  "code": "I.M3.A.6",
+                  "name": "Collecting Rational Number Like Terms",
+                  "title": "Collecting Rational Number Like Terms",
+                  "url": "/levels/i.php?i-math-m3-a-6"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m3-a-1",
+                  "code": "I.M3.A.1",
+                  "name": "Generating Equivalent Expressions",
+                  "title": "Generating Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-1"
+                },
+                {
+                  "id": "i-math-m3-a-2",
+                  "code": "I.M3.A.2",
+                  "name": "Generating Equivalent Expressions",
+                  "title": "Generating Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-2"
+                },
+                {
+                  "id": "i-math-m3-a-3",
+                  "code": "I.M3.A.3",
+                  "name": "Writing Products as Sums and Sums as Products",
+                  "title": "Writing Products as Sums and Sums as Products",
+                  "url": "/levels/i.php?i-math-m3-a-3"
+                },
+                {
+                  "id": "i-math-m3-a-4",
+                  "code": "I.M3.A.4",
+                  "name": "Writing Products as Sums and Sums as Products",
+                  "title": "Writing Products as Sums and Sums as Products",
+                  "url": "/levels/i.php?i-math-m3-a-4"
+                },
+                {
+                  "id": "i-math-m3-a-5",
+                  "code": "I.M3.A.5",
+                  "name": "Using the Identity and Inverse to Write Equivalent Expressions",
+                  "title": "Using the Identity and Inverse to Write Equivalent Expressions",
+                  "url": "/levels/i.php?i-math-m3-a-5"
+                },
+                {
+                  "id": "i-math-m3-a-6",
+                  "code": "I.M3.A.6",
+                  "name": "Collecting Rational Number Like Terms",
+                  "title": "Collecting Rational Number Like Terms",
+                  "url": "/levels/i.php?i-math-m3-a-6"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Solve Problems Using Expressions, Equations, and Inequalities",
+              "name": "Solve Problems Using Expressions, Equations, and Inequalities",
+              "standards": [
+                "7.EE.B.3",
+                "7.EE.B.4a",
+                "7.EE.B.4b"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m3-b-7",
+                  "code": "I.M3.B.7",
+                  "name": "Understanding Equations",
+                  "title": "Understanding Equations",
+                  "url": "/levels/i.php?i-math-m3-b-7"
+                },
+                {
+                  "id": "i-math-m3-b-8",
+                  "code": "I.M3.B.8",
+                  "name": "Using If-Then Moves in Solving Equations",
+                  "title": "Using If-Then Moves in Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-8"
+                },
+                {
+                  "id": "i-math-m3-b-9",
+                  "code": "I.M3.B.9",
+                  "name": "Using If-Then Moves in Solving Equations",
+                  "title": "Using If-Then Moves in Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-9"
+                },
+                {
+                  "id": "i-math-m3-b-10",
+                  "code": "I.M3.B.10",
+                  "name": "Angle Problems and Solving Equations",
+                  "title": "Angle Problems and Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-10"
+                },
+                {
+                  "id": "i-math-m3-b-11",
+                  "code": "I.M3.B.11",
+                  "name": "Angle Problems and Solving Equations",
+                  "title": "Angle Problems and Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-11"
+                },
+                {
+                  "id": "i-math-m3-b-12",
+                  "code": "I.M3.B.12",
+                  "name": "Properties of Inequalities",
+                  "title": "Properties of Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-12"
+                },
+                {
+                  "id": "i-math-m3-b-13",
+                  "code": "I.M3.B.13",
+                  "name": "Inequalities",
+                  "title": "Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-13"
+                },
+                {
+                  "id": "i-math-m3-b-14",
+                  "code": "I.M3.B.14",
+                  "name": "Solving Inequalities",
+                  "title": "Solving Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-14"
+                },
+                {
+                  "id": "i-math-m3-b-15",
+                  "code": "I.M3.B.15",
+                  "name": "Graphing Solutions to Inequalities",
+                  "title": "Graphing Solutions to Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-15"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m3-b-7",
+                  "code": "I.M3.B.7",
+                  "name": "Understanding Equations",
+                  "title": "Understanding Equations",
+                  "url": "/levels/i.php?i-math-m3-b-7"
+                },
+                {
+                  "id": "i-math-m3-b-8",
+                  "code": "I.M3.B.8",
+                  "name": "Using If-Then Moves in Solving Equations",
+                  "title": "Using If-Then Moves in Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-8"
+                },
+                {
+                  "id": "i-math-m3-b-9",
+                  "code": "I.M3.B.9",
+                  "name": "Using If-Then Moves in Solving Equations",
+                  "title": "Using If-Then Moves in Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-9"
+                },
+                {
+                  "id": "i-math-m3-b-10",
+                  "code": "I.M3.B.10",
+                  "name": "Angle Problems and Solving Equations",
+                  "title": "Angle Problems and Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-10"
+                },
+                {
+                  "id": "i-math-m3-b-11",
+                  "code": "I.M3.B.11",
+                  "name": "Angle Problems and Solving Equations",
+                  "title": "Angle Problems and Solving Equations",
+                  "url": "/levels/i.php?i-math-m3-b-11"
+                },
+                {
+                  "id": "i-math-m3-b-12",
+                  "code": "I.M3.B.12",
+                  "name": "Properties of Inequalities",
+                  "title": "Properties of Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-12"
+                },
+                {
+                  "id": "i-math-m3-b-13",
+                  "code": "I.M3.B.13",
+                  "name": "Inequalities",
+                  "title": "Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-13"
+                },
+                {
+                  "id": "i-math-m3-b-14",
+                  "code": "I.M3.B.14",
+                  "name": "Solving Inequalities",
+                  "title": "Solving Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-14"
+                },
+                {
+                  "id": "i-math-m3-b-15",
+                  "code": "I.M3.B.15",
+                  "name": "Graphing Solutions to Inequalities",
+                  "title": "Graphing Solutions to Inequalities",
+                  "url": "/levels/i.php?i-math-m3-b-15"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Use Equations and Inequalities to Solve Geometry Problems",
+              "name": "Use Equations and Inequalities to Solve Geometry Problems",
+              "standards": [
+                "7.G.B.4",
+                "7.G.B.5",
+                "7.G.B.6"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m3-c-16",
+                  "code": "I.M3.C.16",
+                  "name": "The Most Famous Ratio of All—Circumference",
+                  "title": "The Most Famous Ratio of All—Circumference",
+                  "url": "/levels/i.php?i-math-m3-c-16"
+                },
+                {
+                  "id": "i-math-m3-c-17",
+                  "code": "I.M3.C.17",
+                  "name": "The Area of a Circle",
+                  "title": "The Area of a Circle",
+                  "url": "/levels/i.php?i-math-m3-c-17"
+                },
+                {
+                  "id": "i-math-m3-c-18",
+                  "code": "I.M3.C.18",
+                  "name": "More Problems on Area and Circumference",
+                  "title": "More Problems on Area and Circumference",
+                  "url": "/levels/i.php?i-math-m3-c-18"
+                },
+                {
+                  "id": "i-math-m3-c-19",
+                  "code": "I.M3.C.19",
+                  "name": "Unknown Area Problems on the Coordinate Plane",
+                  "title": "Unknown Area Problems on the Coordinate Plane",
+                  "url": "/levels/i.php?i-math-m3-c-19"
+                },
+                {
+                  "id": "i-math-m3-c-20",
+                  "code": "I.M3.C.20",
+                  "name": "Composite Area Problems",
+                  "title": "Composite Area Problems",
+                  "url": "/levels/i.php?i-math-m3-c-20"
+                },
+                {
+                  "id": "i-math-m3-c-21",
+                  "code": "I.M3.C.21",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-21"
+                },
+                {
+                  "id": "i-math-m3-c-22",
+                  "code": "I.M3.C.22",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-22"
+                },
+                {
+                  "id": "i-math-m3-c-23",
+                  "code": "I.M3.C.23",
+                  "name": "The Volume of a Right Prism",
+                  "title": "The Volume of a Right Prism",
+                  "url": "/levels/i.php?i-math-m3-c-23"
+                },
+                {
+                  "id": "i-math-m3-c-24",
+                  "code": "I.M3.C.24",
+                  "name": "The Volume of a Right Prism",
+                  "title": "The Volume of a Right Prism",
+                  "url": "/levels/i.php?i-math-m3-c-24"
+                },
+                {
+                  "id": "i-math-m3-c-25",
+                  "code": "I.M3.C.25",
+                  "name": "Volume and Surface Area",
+                  "title": "Volume and Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-25"
+                },
+                {
+                  "id": "i-math-m3-c-26",
+                  "code": "I.M3.C.26",
+                  "name": "Volume and Surface Area",
+                  "title": "Volume and Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-26"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m3-c-16",
+                  "code": "I.M3.C.16",
+                  "name": "The Most Famous Ratio of All—Circumference",
+                  "title": "The Most Famous Ratio of All—Circumference",
+                  "url": "/levels/i.php?i-math-m3-c-16"
+                },
+                {
+                  "id": "i-math-m3-c-17",
+                  "code": "I.M3.C.17",
+                  "name": "The Area of a Circle",
+                  "title": "The Area of a Circle",
+                  "url": "/levels/i.php?i-math-m3-c-17"
+                },
+                {
+                  "id": "i-math-m3-c-18",
+                  "code": "I.M3.C.18",
+                  "name": "More Problems on Area and Circumference",
+                  "title": "More Problems on Area and Circumference",
+                  "url": "/levels/i.php?i-math-m3-c-18"
+                },
+                {
+                  "id": "i-math-m3-c-19",
+                  "code": "I.M3.C.19",
+                  "name": "Unknown Area Problems on the Coordinate Plane",
+                  "title": "Unknown Area Problems on the Coordinate Plane",
+                  "url": "/levels/i.php?i-math-m3-c-19"
+                },
+                {
+                  "id": "i-math-m3-c-20",
+                  "code": "I.M3.C.20",
+                  "name": "Composite Area Problems",
+                  "title": "Composite Area Problems",
+                  "url": "/levels/i.php?i-math-m3-c-20"
+                },
+                {
+                  "id": "i-math-m3-c-21",
+                  "code": "I.M3.C.21",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-21"
+                },
+                {
+                  "id": "i-math-m3-c-22",
+                  "code": "I.M3.C.22",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-22"
+                },
+                {
+                  "id": "i-math-m3-c-23",
+                  "code": "I.M3.C.23",
+                  "name": "The Volume of a Right Prism",
+                  "title": "The Volume of a Right Prism",
+                  "url": "/levels/i.php?i-math-m3-c-23"
+                },
+                {
+                  "id": "i-math-m3-c-24",
+                  "code": "I.M3.C.24",
+                  "name": "The Volume of a Right Prism",
+                  "title": "The Volume of a Right Prism",
+                  "url": "/levels/i.php?i-math-m3-c-24"
+                },
+                {
+                  "id": "i-math-m3-c-25",
+                  "code": "I.M3.C.25",
+                  "name": "Volume and Surface Area",
+                  "title": "Volume and Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-25"
+                },
+                {
+                  "id": "i-math-m3-c-26",
+                  "code": "I.M3.C.26",
+                  "name": "Volume and Surface Area",
+                  "title": "Volume and Surface Area",
+                  "url": "/levels/i.php?i-math-m3-c-26"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 4,
+          "title": "Module 4: Percent and Proportional Relationships",
+          "description": "Percent calculations, markups, markdowns, simple interest, commission, tax, scale drawings with percent, and population estimation.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Finding the Whole in Percent Problems",
+              "name": "Finding the Whole in Percent Problems",
+              "standards": [
+                "7.RP.A.1",
+                "7.RP.A.2c",
+                "7.RP.A.3"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m4-a-1",
+                  "code": "I.M4.A.1",
+                  "name": "Percent",
+                  "title": "Percent",
+                  "url": "/levels/i.php?i-math-m4-a-1"
+                },
+                {
+                  "id": "i-math-m4-a-2",
+                  "code": "I.M4.A.2",
+                  "name": "Part of a Whole as a Percent",
+                  "title": "Part of a Whole as a Percent",
+                  "url": "/levels/i.php?i-math-m4-a-2"
+                },
+                {
+                  "id": "i-math-m4-a-3",
+                  "code": "I.M4.A.3",
+                  "name": "Comparing Quantities with Percent",
+                  "title": "Comparing Quantities with Percent",
+                  "url": "/levels/i.php?i-math-m4-a-3"
+                },
+                {
+                  "id": "i-math-m4-a-4",
+                  "code": "I.M4.A.4",
+                  "name": "Percent Increase and Decrease",
+                  "title": "Percent Increase and Decrease",
+                  "url": "/levels/i.php?i-math-m4-a-4"
+                },
+                {
+                  "id": "i-math-m4-a-5",
+                  "code": "I.M4.A.5",
+                  "name": "Finding One Hundred Percent Given Another Percent",
+                  "title": "Finding One Hundred Percent Given Another Percent",
+                  "url": "/levels/i.php?i-math-m4-a-5"
+                },
+                {
+                  "id": "i-math-m4-a-6",
+                  "code": "I.M4.A.6",
+                  "name": "Fluency with Percents",
+                  "title": "Fluency with Percents",
+                  "url": "/levels/i.php?i-math-m4-a-6"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m4-a-1",
+                  "code": "I.M4.A.1",
+                  "name": "Percent",
+                  "title": "Percent",
+                  "url": "/levels/i.php?i-math-m4-a-1"
+                },
+                {
+                  "id": "i-math-m4-a-2",
+                  "code": "I.M4.A.2",
+                  "name": "Part of a Whole as a Percent",
+                  "title": "Part of a Whole as a Percent",
+                  "url": "/levels/i.php?i-math-m4-a-2"
+                },
+                {
+                  "id": "i-math-m4-a-3",
+                  "code": "I.M4.A.3",
+                  "name": "Comparing Quantities with Percent",
+                  "title": "Comparing Quantities with Percent",
+                  "url": "/levels/i.php?i-math-m4-a-3"
+                },
+                {
+                  "id": "i-math-m4-a-4",
+                  "code": "I.M4.A.4",
+                  "name": "Percent Increase and Decrease",
+                  "title": "Percent Increase and Decrease",
+                  "url": "/levels/i.php?i-math-m4-a-4"
+                },
+                {
+                  "id": "i-math-m4-a-5",
+                  "code": "I.M4.A.5",
+                  "name": "Finding One Hundred Percent Given Another Percent",
+                  "title": "Finding One Hundred Percent Given Another Percent",
+                  "url": "/levels/i.php?i-math-m4-a-5"
+                },
+                {
+                  "id": "i-math-m4-a-6",
+                  "code": "I.M4.A.6",
+                  "name": "Fluency with Percents",
+                  "title": "Fluency with Percents",
+                  "url": "/levels/i.php?i-math-m4-a-6"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Percent Problems Including More Than One Whole",
+              "name": "Percent Problems Including More Than One Whole",
+              "standards": [
+                "7.RP.A.1",
+                "7.RP.A.2",
+                "7.RP.A.3"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m4-b-7",
+                  "code": "I.M4.B.7",
+                  "name": "Markup and Markdown Problems",
+                  "title": "Markup and Markdown Problems",
+                  "url": "/levels/i.php?i-math-m4-b-7"
+                },
+                {
+                  "id": "i-math-m4-b-8",
+                  "code": "I.M4.B.8",
+                  "name": "Percent Error Problems",
+                  "title": "Percent Error Problems",
+                  "url": "/levels/i.php?i-math-m4-b-8"
+                },
+                {
+                  "id": "i-math-m4-b-9",
+                  "code": "I.M4.B.9",
+                  "name": "Problem Solving When the Percent Changes",
+                  "title": "Problem Solving When the Percent Changes",
+                  "url": "/levels/i.php?i-math-m4-b-9"
+                },
+                {
+                  "id": "i-math-m4-b-10",
+                  "code": "I.M4.B.10",
+                  "name": "Simple Interest",
+                  "title": "Simple Interest",
+                  "url": "/levels/i.php?i-math-m4-b-10"
+                },
+                {
+                  "id": "i-math-m4-b-11",
+                  "code": "I.M4.B.11",
+                  "name": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+                  "title": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+                  "url": "/levels/i.php?i-math-m4-b-11"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m4-b-7",
+                  "code": "I.M4.B.7",
+                  "name": "Markup and Markdown Problems",
+                  "title": "Markup and Markdown Problems",
+                  "url": "/levels/i.php?i-math-m4-b-7"
+                },
+                {
+                  "id": "i-math-m4-b-8",
+                  "code": "I.M4.B.8",
+                  "name": "Percent Error Problems",
+                  "title": "Percent Error Problems",
+                  "url": "/levels/i.php?i-math-m4-b-8"
+                },
+                {
+                  "id": "i-math-m4-b-9",
+                  "code": "I.M4.B.9",
+                  "name": "Problem Solving When the Percent Changes",
+                  "title": "Problem Solving When the Percent Changes",
+                  "url": "/levels/i.php?i-math-m4-b-9"
+                },
+                {
+                  "id": "i-math-m4-b-10",
+                  "code": "I.M4.B.10",
+                  "name": "Simple Interest",
+                  "title": "Simple Interest",
+                  "url": "/levels/i.php?i-math-m4-b-10"
+                },
+                {
+                  "id": "i-math-m4-b-11",
+                  "code": "I.M4.B.11",
+                  "name": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+                  "title": "Tax, Commissions, Fees, and Other Real-World Percent Problems",
+                  "url": "/levels/i.php?i-math-m4-b-11"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Scale Drawings",
+              "name": "Scale Drawings",
+              "standards": [
+                "7.RP.A.2b",
+                "7.G.A.1"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m4-c-12",
+                  "code": "I.M4.C.12",
+                  "name": "The Scale Factor as a Percent for a Scale Drawing",
+                  "title": "The Scale Factor as a Percent for a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m4-c-12"
+                },
+                {
+                  "id": "i-math-m4-c-13",
+                  "code": "I.M4.C.13",
+                  "name": "Changing Scales Using Percents",
+                  "title": "Changing Scales Using Percents",
+                  "url": "/levels/i.php?i-math-m4-c-13"
+                },
+                {
+                  "id": "i-math-m4-c-14",
+                  "code": "I.M4.C.14",
+                  "name": "Computing Actual Lengths from a Scale Drawing with Percents",
+                  "title": "Computing Actual Lengths from a Scale Drawing with Percents",
+                  "url": "/levels/i.php?i-math-m4-c-14"
+                },
+                {
+                  "id": "i-math-m4-c-15",
+                  "code": "I.M4.C.15",
+                  "name": "Solving Area Problems Using Scale Drawings",
+                  "title": "Solving Area Problems Using Scale Drawings",
+                  "url": "/levels/i.php?i-math-m4-c-15"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m4-c-12",
+                  "code": "I.M4.C.12",
+                  "name": "The Scale Factor as a Percent for a Scale Drawing",
+                  "title": "The Scale Factor as a Percent for a Scale Drawing",
+                  "url": "/levels/i.php?i-math-m4-c-12"
+                },
+                {
+                  "id": "i-math-m4-c-13",
+                  "code": "I.M4.C.13",
+                  "name": "Changing Scales Using Percents",
+                  "title": "Changing Scales Using Percents",
+                  "url": "/levels/i.php?i-math-m4-c-13"
+                },
+                {
+                  "id": "i-math-m4-c-14",
+                  "code": "I.M4.C.14",
+                  "name": "Computing Actual Lengths from a Scale Drawing with Percents",
+                  "title": "Computing Actual Lengths from a Scale Drawing with Percents",
+                  "url": "/levels/i.php?i-math-m4-c-14"
+                },
+                {
+                  "id": "i-math-m4-c-15",
+                  "code": "I.M4.C.15",
+                  "name": "Solving Area Problems Using Scale Drawings",
+                  "title": "Solving Area Problems Using Scale Drawings",
+                  "url": "/levels/i.php?i-math-m4-c-15"
+                }
+              ]
+            },
+            {
+              "letter": "D",
+              "title": "Population, Mixture, and Counting Problems",
+              "name": "Population, Mixture, and Counting Problems",
+              "standards": [
+                "7.RP.A.2",
+                "7.RP.A.3",
+                "7.SP.A.1",
+                "7.SP.A.2"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m4-d-16",
+                  "code": "I.M4.D.16",
+                  "name": "Population Problems",
+                  "title": "Population Problems",
+                  "url": "/levels/i.php?i-math-m4-d-16"
+                },
+                {
+                  "id": "i-math-m4-d-17",
+                  "code": "I.M4.D.17",
+                  "name": "Mixture Problems",
+                  "title": "Mixture Problems",
+                  "url": "/levels/i.php?i-math-m4-d-17"
+                },
+                {
+                  "id": "i-math-m4-d-18",
+                  "code": "I.M4.D.18",
+                  "name": "Counting Problems",
+                  "title": "Counting Problems",
+                  "url": "/levels/i.php?i-math-m4-d-18"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m4-d-16",
+                  "code": "I.M4.D.16",
+                  "name": "Population Problems",
+                  "title": "Population Problems",
+                  "url": "/levels/i.php?i-math-m4-d-16"
+                },
+                {
+                  "id": "i-math-m4-d-17",
+                  "code": "I.M4.D.17",
+                  "name": "Mixture Problems",
+                  "title": "Mixture Problems",
+                  "url": "/levels/i.php?i-math-m4-d-17"
+                },
+                {
+                  "id": "i-math-m4-d-18",
+                  "code": "I.M4.D.18",
+                  "name": "Counting Problems",
+                  "title": "Counting Problems",
+                  "url": "/levels/i.php?i-math-m4-d-18"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 5,
+          "title": "Module 5: Statistics and Probability",
+          "description": "Theoretical and experimental probabilities, compound events, simulations, random sampling, and comparing two populations.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Calculating and Interpreting Probabilities",
+              "name": "Calculating and Interpreting Probabilities",
+              "standards": [
+                "7.SP.C.5",
+                "7.SP.C.6",
+                "7.SP.C.7"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m5-a-1",
+                  "code": "I.M5.A.1",
+                  "name": "Chance Experiments",
+                  "title": "Chance Experiments",
+                  "url": "/levels/i.php?i-math-m5-a-1"
+                },
+                {
+                  "id": "i-math-m5-a-2",
+                  "code": "I.M5.A.2",
+                  "name": "Estimating Probabilities by Collecting Data",
+                  "title": "Estimating Probabilities by Collecting Data",
+                  "url": "/levels/i.php?i-math-m5-a-2"
+                },
+                {
+                  "id": "i-math-m5-a-3",
+                  "code": "I.M5.A.3",
+                  "name": "Chance Experiments with Equally Likely Outcomes",
+                  "title": "Chance Experiments with Equally Likely Outcomes",
+                  "url": "/levels/i.php?i-math-m5-a-3"
+                },
+                {
+                  "id": "i-math-m5-a-4",
+                  "code": "I.M5.A.4",
+                  "name": "Calculating Probabilities for Chance Experiments with Equally Likely Outcomes",
+                  "title": "Calculating Probabilities for Chance Experiments with Equally Likely Outcomes",
+                  "url": "/levels/i.php?i-math-m5-a-4"
+                },
+                {
+                  "id": "i-math-m5-a-5",
+                  "code": "I.M5.A.5",
+                  "name": "Chance Experiments with Outcomes That Are Not Equally Likely",
+                  "title": "Chance Experiments with Outcomes That Are Not Equally Likely",
+                  "url": "/levels/i.php?i-math-m5-a-5"
+                },
+                {
+                  "id": "i-math-m5-a-6",
+                  "code": "I.M5.A.6",
+                  "name": "Using Tree Diagrams to Represent a Sample Space and to Calculate Probabilities",
+                  "title": "Using Tree Diagrams to Represent a Sample Space and to Calculate Probabilities",
+                  "url": "/levels/i.php?i-math-m5-a-6"
+                },
+                {
+                  "id": "i-math-m5-a-7",
+                  "code": "I.M5.A.7",
+                  "name": "Calculating Probabilities for Compound Events",
+                  "title": "Calculating Probabilities for Compound Events",
+                  "url": "/levels/i.php?i-math-m5-a-7"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m5-a-1",
+                  "code": "I.M5.A.1",
+                  "name": "Chance Experiments",
+                  "title": "Chance Experiments",
+                  "url": "/levels/i.php?i-math-m5-a-1"
+                },
+                {
+                  "id": "i-math-m5-a-2",
+                  "code": "I.M5.A.2",
+                  "name": "Estimating Probabilities by Collecting Data",
+                  "title": "Estimating Probabilities by Collecting Data",
+                  "url": "/levels/i.php?i-math-m5-a-2"
+                },
+                {
+                  "id": "i-math-m5-a-3",
+                  "code": "I.M5.A.3",
+                  "name": "Chance Experiments with Equally Likely Outcomes",
+                  "title": "Chance Experiments with Equally Likely Outcomes",
+                  "url": "/levels/i.php?i-math-m5-a-3"
+                },
+                {
+                  "id": "i-math-m5-a-4",
+                  "code": "I.M5.A.4",
+                  "name": "Calculating Probabilities for Chance Experiments with Equally Likely Outcomes",
+                  "title": "Calculating Probabilities for Chance Experiments with Equally Likely Outcomes",
+                  "url": "/levels/i.php?i-math-m5-a-4"
+                },
+                {
+                  "id": "i-math-m5-a-5",
+                  "code": "I.M5.A.5",
+                  "name": "Chance Experiments with Outcomes That Are Not Equally Likely",
+                  "title": "Chance Experiments with Outcomes That Are Not Equally Likely",
+                  "url": "/levels/i.php?i-math-m5-a-5"
+                },
+                {
+                  "id": "i-math-m5-a-6",
+                  "code": "I.M5.A.6",
+                  "name": "Using Tree Diagrams to Represent a Sample Space and to Calculate Probabilities",
+                  "title": "Using Tree Diagrams to Represent a Sample Space and to Calculate Probabilities",
+                  "url": "/levels/i.php?i-math-m5-a-6"
+                },
+                {
+                  "id": "i-math-m5-a-7",
+                  "code": "I.M5.A.7",
+                  "name": "Calculating Probabilities for Compound Events",
+                  "title": "Calculating Probabilities for Compound Events",
+                  "url": "/levels/i.php?i-math-m5-a-7"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Estimating Probabilities",
+              "name": "Estimating Probabilities",
+              "standards": [
+                "7.SP.C.6",
+                "7.SP.C.7",
+                "7.SP.C.8"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m5-b-8",
+                  "code": "I.M5.B.8",
+                  "name": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "title": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "url": "/levels/i.php?i-math-m5-b-8"
+                },
+                {
+                  "id": "i-math-m5-b-9",
+                  "code": "I.M5.B.9",
+                  "name": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "title": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "url": "/levels/i.php?i-math-m5-b-9"
+                },
+                {
+                  "id": "i-math-m5-b-10",
+                  "code": "I.M5.B.10",
+                  "name": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "title": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "url": "/levels/i.php?i-math-m5-b-10"
+                },
+                {
+                  "id": "i-math-m5-b-11",
+                  "code": "I.M5.B.11",
+                  "name": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "title": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "url": "/levels/i.php?i-math-m5-b-11"
+                },
+                {
+                  "id": "i-math-m5-b-12",
+                  "code": "I.M5.B.12",
+                  "name": "Calculating Conditional Probabilities and Evaluating Independence",
+                  "title": "Calculating Conditional Probabilities and Evaluating Independence",
+                  "url": "/levels/i.php?i-math-m5-b-12"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m5-b-8",
+                  "code": "I.M5.B.8",
+                  "name": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "title": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "url": "/levels/i.php?i-math-m5-b-8"
+                },
+                {
+                  "id": "i-math-m5-b-9",
+                  "code": "I.M5.B.9",
+                  "name": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "title": "Comparing Estimated Probabilities to Theoretical Probabilities",
+                  "url": "/levels/i.php?i-math-m5-b-9"
+                },
+                {
+                  "id": "i-math-m5-b-10",
+                  "code": "I.M5.B.10",
+                  "name": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "title": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "url": "/levels/i.php?i-math-m5-b-10"
+                },
+                {
+                  "id": "i-math-m5-b-11",
+                  "code": "I.M5.B.11",
+                  "name": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "title": "Conducting a Simulation to Estimate the Probability of an Event",
+                  "url": "/levels/i.php?i-math-m5-b-11"
+                },
+                {
+                  "id": "i-math-m5-b-12",
+                  "code": "I.M5.B.12",
+                  "name": "Calculating Conditional Probabilities and Evaluating Independence",
+                  "title": "Calculating Conditional Probabilities and Evaluating Independence",
+                  "url": "/levels/i.php?i-math-m5-b-12"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Random Sampling and Comparing Populations",
+              "name": "Random Sampling and Comparing Populations",
+              "standards": [
+                "7.SP.A.1",
+                "7.SP.A.2",
+                "7.SP.B.3",
+                "7.SP.B.4"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m5-c-13",
+                  "code": "I.M5.C.13",
+                  "name": "Populations, Samples, and Generalizing from a Sample to a Population",
+                  "title": "Populations, Samples, and Generalizing from a Sample to a Population",
+                  "url": "/levels/i.php?i-math-m5-c-13"
+                },
+                {
+                  "id": "i-math-m5-c-14",
+                  "code": "I.M5.C.14",
+                  "name": "Selecting a Sample",
+                  "title": "Selecting a Sample",
+                  "url": "/levels/i.php?i-math-m5-c-14"
+                },
+                {
+                  "id": "i-math-m5-c-15",
+                  "code": "I.M5.C.15",
+                  "name": "Random Sampling",
+                  "title": "Random Sampling",
+                  "url": "/levels/i.php?i-math-m5-c-15"
+                },
+                {
+                  "id": "i-math-m5-c-16",
+                  "code": "I.M5.C.16",
+                  "name": "Methods for Selecting a Random Sample",
+                  "title": "Methods for Selecting a Random Sample",
+                  "url": "/levels/i.php?i-math-m5-c-16"
+                },
+                {
+                  "id": "i-math-m5-c-17",
+                  "code": "I.M5.C.17",
+                  "name": "Sampling Variability",
+                  "title": "Sampling Variability",
+                  "url": "/levels/i.php?i-math-m5-c-17"
+                },
+                {
+                  "id": "i-math-m5-c-18",
+                  "code": "I.M5.C.18",
+                  "name": "Comparing Populations and Samples",
+                  "title": "Comparing Populations and Samples",
+                  "url": "/levels/i.php?i-math-m5-c-18"
+                },
+                {
+                  "id": "i-math-m5-c-19",
+                  "code": "I.M5.C.19",
+                  "name": "Understanding Variability When Comparing Two Populations",
+                  "title": "Understanding Variability When Comparing Two Populations",
+                  "url": "/levels/i.php?i-math-m5-c-19"
+                },
+                {
+                  "id": "i-math-m5-c-20",
+                  "code": "I.M5.C.20",
+                  "name": "Comparing Two Populations",
+                  "title": "Comparing Two Populations",
+                  "url": "/levels/i.php?i-math-m5-c-20"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m5-c-13",
+                  "code": "I.M5.C.13",
+                  "name": "Populations, Samples, and Generalizing from a Sample to a Population",
+                  "title": "Populations, Samples, and Generalizing from a Sample to a Population",
+                  "url": "/levels/i.php?i-math-m5-c-13"
+                },
+                {
+                  "id": "i-math-m5-c-14",
+                  "code": "I.M5.C.14",
+                  "name": "Selecting a Sample",
+                  "title": "Selecting a Sample",
+                  "url": "/levels/i.php?i-math-m5-c-14"
+                },
+                {
+                  "id": "i-math-m5-c-15",
+                  "code": "I.M5.C.15",
+                  "name": "Random Sampling",
+                  "title": "Random Sampling",
+                  "url": "/levels/i.php?i-math-m5-c-15"
+                },
+                {
+                  "id": "i-math-m5-c-16",
+                  "code": "I.M5.C.16",
+                  "name": "Methods for Selecting a Random Sample",
+                  "title": "Methods for Selecting a Random Sample",
+                  "url": "/levels/i.php?i-math-m5-c-16"
+                },
+                {
+                  "id": "i-math-m5-c-17",
+                  "code": "I.M5.C.17",
+                  "name": "Sampling Variability",
+                  "title": "Sampling Variability",
+                  "url": "/levels/i.php?i-math-m5-c-17"
+                },
+                {
+                  "id": "i-math-m5-c-18",
+                  "code": "I.M5.C.18",
+                  "name": "Comparing Populations and Samples",
+                  "title": "Comparing Populations and Samples",
+                  "url": "/levels/i.php?i-math-m5-c-18"
+                },
+                {
+                  "id": "i-math-m5-c-19",
+                  "code": "I.M5.C.19",
+                  "name": "Understanding Variability When Comparing Two Populations",
+                  "title": "Understanding Variability When Comparing Two Populations",
+                  "url": "/levels/i.php?i-math-m5-c-19"
+                },
+                {
+                  "id": "i-math-m5-c-20",
+                  "code": "I.M5.C.20",
+                  "name": "Comparing Two Populations",
+                  "title": "Comparing Two Populations",
+                  "url": "/levels/i.php?i-math-m5-c-20"
+                }
+              ]
+            },
+            {
+              "letter": "D",
+              "title": "Comparing Populations",
+              "name": "Comparing Populations",
+              "standards": [
+                "7.SP.B.3",
+                "7.SP.B.4"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m5-d-21",
+                  "code": "I.M5.D.21",
+                  "name": "Why Worry About Sampling Variability?",
+                  "title": "Why Worry About Sampling Variability?",
+                  "url": "/levels/i.php?i-math-m5-d-21"
+                },
+                {
+                  "id": "i-math-m5-d-22",
+                  "code": "I.M5.D.22",
+                  "name": "Using Sample Statistics to Compare Two Populations",
+                  "title": "Using Sample Statistics to Compare Two Populations",
+                  "url": "/levels/i.php?i-math-m5-d-22"
+                },
+                {
+                  "id": "i-math-m5-d-23",
+                  "code": "I.M5.D.23",
+                  "name": "Comparing Two Populations Using Random Samples",
+                  "title": "Comparing Two Populations Using Random Samples",
+                  "url": "/levels/i.php?i-math-m5-d-23"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m5-d-21",
+                  "code": "I.M5.D.21",
+                  "name": "Why Worry About Sampling Variability?",
+                  "title": "Why Worry About Sampling Variability?",
+                  "url": "/levels/i.php?i-math-m5-d-21"
+                },
+                {
+                  "id": "i-math-m5-d-22",
+                  "code": "I.M5.D.22",
+                  "name": "Using Sample Statistics to Compare Two Populations",
+                  "title": "Using Sample Statistics to Compare Two Populations",
+                  "url": "/levels/i.php?i-math-m5-d-22"
+                },
+                {
+                  "id": "i-math-m5-d-23",
+                  "code": "I.M5.D.23",
+                  "name": "Comparing Two Populations Using Random Samples",
+                  "title": "Comparing Two Populations Using Random Samples",
+                  "url": "/levels/i.php?i-math-m5-d-23"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "moduleNumber": 6,
+          "title": "Module 6: Geometry",
+          "description": "Angle theorems, construction of unique triangles, cross-sections of 3D solids, composite area, surface area, and volume.",
+          "topics": [
+            {
+              "letter": "A",
+              "title": "Unknown Angles",
+              "name": "Unknown Angles",
+              "standards": [
+                "7.G.B.5"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m6-a-1",
+                  "code": "I.M6.A.1",
+                  "name": "Complementary and Supplementary Angles",
+                  "title": "Complementary and Supplementary Angles",
+                  "url": "/levels/i.php?i-math-m6-a-1"
+                },
+                {
+                  "id": "i-math-m6-a-2",
+                  "code": "I.M6.A.2",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-2"
+                },
+                {
+                  "id": "i-math-m6-a-3",
+                  "code": "I.M6.A.3",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-3"
+                },
+                {
+                  "id": "i-math-m6-a-4",
+                  "code": "I.M6.A.4",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-4"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m6-a-1",
+                  "code": "I.M6.A.1",
+                  "name": "Complementary and Supplementary Angles",
+                  "title": "Complementary and Supplementary Angles",
+                  "url": "/levels/i.php?i-math-m6-a-1"
+                },
+                {
+                  "id": "i-math-m6-a-2",
+                  "code": "I.M6.A.2",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-2"
+                },
+                {
+                  "id": "i-math-m6-a-3",
+                  "code": "I.M6.A.3",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-3"
+                },
+                {
+                  "id": "i-math-m6-a-4",
+                  "code": "I.M6.A.4",
+                  "name": "Solving for Unknown Angles Using Equations",
+                  "title": "Solving for Unknown Angles Using Equations",
+                  "url": "/levels/i.php?i-math-m6-a-4"
+                }
+              ]
+            },
+            {
+              "letter": "B",
+              "title": "Constructing Triangles",
+              "name": "Constructing Triangles",
+              "standards": [
+                "7.G.A.2"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m6-b-5",
+                  "code": "I.M6.B.5",
+                  "name": "Identical Triangles",
+                  "title": "Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-5"
+                },
+                {
+                  "id": "i-math-m6-b-6",
+                  "code": "I.M6.B.6",
+                  "name": "Drawing Geometric Shapes",
+                  "title": "Drawing Geometric Shapes",
+                  "url": "/levels/i.php?i-math-m6-b-6"
+                },
+                {
+                  "id": "i-math-m6-b-7",
+                  "code": "I.M6.B.7",
+                  "name": "Drawing Parallelograms",
+                  "title": "Drawing Parallelograms",
+                  "url": "/levels/i.php?i-math-m6-b-7"
+                },
+                {
+                  "id": "i-math-m6-b-8",
+                  "code": "I.M6.B.8",
+                  "name": "Drawing Triangles under Other Conditions",
+                  "title": "Drawing Triangles under Other Conditions",
+                  "url": "/levels/i.php?i-math-m6-b-8"
+                },
+                {
+                  "id": "i-math-m6-b-9",
+                  "code": "I.M6.B.9",
+                  "name": "Conditions for a Unique Triangle—Three Sides and Two Sides and the Included Angle",
+                  "title": "Conditions for a Unique Triangle—Three Sides and Two Sides and the Included Angle",
+                  "url": "/levels/i.php?i-math-m6-b-9"
+                },
+                {
+                  "id": "i-math-m6-b-10",
+                  "code": "I.M6.B.10",
+                  "name": "Conditions for a Unique Triangle—Two Angles and the Included Side",
+                  "title": "Conditions for a Unique Triangle—Two Angles and the Included Side",
+                  "url": "/levels/i.php?i-math-m6-b-10"
+                },
+                {
+                  "id": "i-math-m6-b-11",
+                  "code": "I.M6.B.11",
+                  "name": "Conditions on Angles and Sides",
+                  "title": "Conditions on Angles and Sides",
+                  "url": "/levels/i.php?i-math-m6-b-11"
+                },
+                {
+                  "id": "i-math-m6-b-12",
+                  "code": "I.M6.B.12",
+                  "name": "Unique Triangles—Two Sides and a Non-Included Angle",
+                  "title": "Unique Triangles—Two Sides and a Non-Included Angle",
+                  "url": "/levels/i.php?i-math-m6-b-12"
+                },
+                {
+                  "id": "i-math-m6-b-13",
+                  "code": "I.M6.B.13",
+                  "name": "Checking for Identical Triangles",
+                  "title": "Checking for Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-13"
+                },
+                {
+                  "id": "i-math-m6-b-14",
+                  "code": "I.M6.B.14",
+                  "name": "Checking for Identical Triangles",
+                  "title": "Checking for Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-14"
+                },
+                {
+                  "id": "i-math-m6-b-15",
+                  "code": "I.M6.B.15",
+                  "name": "Using Conditions to Determine a Triangle",
+                  "title": "Using Conditions to Determine a Triangle",
+                  "url": "/levels/i.php?i-math-m6-b-15"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m6-b-5",
+                  "code": "I.M6.B.5",
+                  "name": "Identical Triangles",
+                  "title": "Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-5"
+                },
+                {
+                  "id": "i-math-m6-b-6",
+                  "code": "I.M6.B.6",
+                  "name": "Drawing Geometric Shapes",
+                  "title": "Drawing Geometric Shapes",
+                  "url": "/levels/i.php?i-math-m6-b-6"
+                },
+                {
+                  "id": "i-math-m6-b-7",
+                  "code": "I.M6.B.7",
+                  "name": "Drawing Parallelograms",
+                  "title": "Drawing Parallelograms",
+                  "url": "/levels/i.php?i-math-m6-b-7"
+                },
+                {
+                  "id": "i-math-m6-b-8",
+                  "code": "I.M6.B.8",
+                  "name": "Drawing Triangles under Other Conditions",
+                  "title": "Drawing Triangles under Other Conditions",
+                  "url": "/levels/i.php?i-math-m6-b-8"
+                },
+                {
+                  "id": "i-math-m6-b-9",
+                  "code": "I.M6.B.9",
+                  "name": "Conditions for a Unique Triangle—Three Sides and Two Sides and the Included Angle",
+                  "title": "Conditions for a Unique Triangle—Three Sides and Two Sides and the Included Angle",
+                  "url": "/levels/i.php?i-math-m6-b-9"
+                },
+                {
+                  "id": "i-math-m6-b-10",
+                  "code": "I.M6.B.10",
+                  "name": "Conditions for a Unique Triangle—Two Angles and the Included Side",
+                  "title": "Conditions for a Unique Triangle—Two Angles and the Included Side",
+                  "url": "/levels/i.php?i-math-m6-b-10"
+                },
+                {
+                  "id": "i-math-m6-b-11",
+                  "code": "I.M6.B.11",
+                  "name": "Conditions on Angles and Sides",
+                  "title": "Conditions on Angles and Sides",
+                  "url": "/levels/i.php?i-math-m6-b-11"
+                },
+                {
+                  "id": "i-math-m6-b-12",
+                  "code": "I.M6.B.12",
+                  "name": "Unique Triangles—Two Sides and a Non-Included Angle",
+                  "title": "Unique Triangles—Two Sides and a Non-Included Angle",
+                  "url": "/levels/i.php?i-math-m6-b-12"
+                },
+                {
+                  "id": "i-math-m6-b-13",
+                  "code": "I.M6.B.13",
+                  "name": "Checking for Identical Triangles",
+                  "title": "Checking for Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-13"
+                },
+                {
+                  "id": "i-math-m6-b-14",
+                  "code": "I.M6.B.14",
+                  "name": "Checking for Identical Triangles",
+                  "title": "Checking for Identical Triangles",
+                  "url": "/levels/i.php?i-math-m6-b-14"
+                },
+                {
+                  "id": "i-math-m6-b-15",
+                  "code": "I.M6.B.15",
+                  "name": "Using Conditions to Determine a Triangle",
+                  "title": "Using Conditions to Determine a Triangle",
+                  "url": "/levels/i.php?i-math-m6-b-15"
+                }
+              ]
+            },
+            {
+              "letter": "C",
+              "title": "Slicing Solids",
+              "name": "Slicing Solids",
+              "standards": [
+                "7.G.A.3"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m6-c-16",
+                  "code": "I.M6.C.16",
+                  "name": "Slicing a Right Rectangular Prism with a Plane",
+                  "title": "Slicing a Right Rectangular Prism with a Plane",
+                  "url": "/levels/i.php?i-math-m6-c-16"
+                },
+                {
+                  "id": "i-math-m6-c-17",
+                  "code": "I.M6.C.17",
+                  "name": "Slicing a Right Rectangular Pyramid with a Plane",
+                  "title": "Slicing a Right Rectangular Pyramid with a Plane",
+                  "url": "/levels/i.php?i-math-m6-c-17"
+                },
+                {
+                  "id": "i-math-m6-c-18",
+                  "code": "I.M6.C.18",
+                  "name": "Slicing on an Angle",
+                  "title": "Slicing on an Angle",
+                  "url": "/levels/i.php?i-math-m6-c-18"
+                },
+                {
+                  "id": "i-math-m6-c-19",
+                  "code": "I.M6.C.19",
+                  "name": "Understanding Three-Dimensional Figures",
+                  "title": "Understanding Three-Dimensional Figures",
+                  "url": "/levels/i.php?i-math-m6-c-19"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m6-c-16",
+                  "code": "I.M6.C.16",
+                  "name": "Slicing a Right Rectangular Prism with a Plane",
+                  "title": "Slicing a Right Rectangular Prism with a Plane",
+                  "url": "/levels/i.php?i-math-m6-c-16"
+                },
+                {
+                  "id": "i-math-m6-c-17",
+                  "code": "I.M6.C.17",
+                  "name": "Slicing a Right Rectangular Pyramid with a Plane",
+                  "title": "Slicing a Right Rectangular Pyramid with a Plane",
+                  "url": "/levels/i.php?i-math-m6-c-17"
+                },
+                {
+                  "id": "i-math-m6-c-18",
+                  "code": "I.M6.C.18",
+                  "name": "Slicing on an Angle",
+                  "title": "Slicing on an Angle",
+                  "url": "/levels/i.php?i-math-m6-c-18"
+                },
+                {
+                  "id": "i-math-m6-c-19",
+                  "code": "I.M6.C.19",
+                  "name": "Understanding Three-Dimensional Figures",
+                  "title": "Understanding Three-Dimensional Figures",
+                  "url": "/levels/i.php?i-math-m6-c-19"
+                }
+              ]
+            },
+            {
+              "letter": "D",
+              "title": "Problems Involving Area and Surface Area",
+              "name": "Problems Involving Area and Surface Area",
+              "standards": [
+                "7.G.B.6"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m6-d-20",
+                  "code": "I.M6.D.20",
+                  "name": "Real-World Area Problems",
+                  "title": "Real-World Area Problems",
+                  "url": "/levels/i.php?i-math-m6-d-20"
+                },
+                {
+                  "id": "i-math-m6-d-21",
+                  "code": "I.M6.D.21",
+                  "name": "Mathematical Area Problems",
+                  "title": "Mathematical Area Problems",
+                  "url": "/levels/i.php?i-math-m6-d-21"
+                },
+                {
+                  "id": "i-math-m6-d-22",
+                  "code": "I.M6.D.22",
+                  "name": "Area Problems with Polygons",
+                  "title": "Area Problems with Polygons",
+                  "url": "/levels/i.php?i-math-m6-d-22"
+                },
+                {
+                  "id": "i-math-m6-d-23",
+                  "code": "I.M6.D.23",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m6-d-23"
+                },
+                {
+                  "id": "i-math-m6-d-24",
+                  "code": "I.M6.D.24",
+                  "name": "Surface Area of Right Prisms and Pyramids",
+                  "title": "Surface Area of Right Prisms and Pyramids",
+                  "url": "/levels/i.php?i-math-m6-d-24"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m6-d-20",
+                  "code": "I.M6.D.20",
+                  "name": "Real-World Area Problems",
+                  "title": "Real-World Area Problems",
+                  "url": "/levels/i.php?i-math-m6-d-20"
+                },
+                {
+                  "id": "i-math-m6-d-21",
+                  "code": "I.M6.D.21",
+                  "name": "Mathematical Area Problems",
+                  "title": "Mathematical Area Problems",
+                  "url": "/levels/i.php?i-math-m6-d-21"
+                },
+                {
+                  "id": "i-math-m6-d-22",
+                  "code": "I.M6.D.22",
+                  "name": "Area Problems with Polygons",
+                  "title": "Area Problems with Polygons",
+                  "url": "/levels/i.php?i-math-m6-d-22"
+                },
+                {
+                  "id": "i-math-m6-d-23",
+                  "code": "I.M6.D.23",
+                  "name": "Surface Area",
+                  "title": "Surface Area",
+                  "url": "/levels/i.php?i-math-m6-d-23"
+                },
+                {
+                  "id": "i-math-m6-d-24",
+                  "code": "I.M6.D.24",
+                  "name": "Surface Area of Right Prisms and Pyramids",
+                  "title": "Surface Area of Right Prisms and Pyramids",
+                  "url": "/levels/i.php?i-math-m6-d-24"
+                }
+              ]
+            },
+            {
+              "letter": "E",
+              "title": "Problems Involving Volume",
+              "name": "Problems Involving Volume",
+              "standards": [
+                "7.G.B.6"
+              ],
+              "lessons": [
+                {
+                  "id": "i-math-m6-e-25",
+                  "code": "I.M6.E.25",
+                  "name": "Volume of Right Prisms",
+                  "title": "Volume of Right Prisms",
+                  "url": "/levels/i.php?i-math-m6-e-25"
+                },
+                {
+                  "id": "i-math-m6-e-26",
+                  "code": "I.M6.E.26",
+                  "name": "Volume of Composite Three-Dimensional Figures",
+                  "title": "Volume of Composite Three-Dimensional Figures",
+                  "url": "/levels/i.php?i-math-m6-e-26"
+                },
+                {
+                  "id": "i-math-m6-e-27",
+                  "code": "I.M6.E.27",
+                  "name": "Real-World Volume Problems",
+                  "title": "Real-World Volume Problems",
+                  "url": "/levels/i.php?i-math-m6-e-27"
+                }
+              ],
+              "skills": [
+                {
+                  "id": "i-math-m6-e-25",
+                  "code": "I.M6.E.25",
+                  "name": "Volume of Right Prisms",
+                  "title": "Volume of Right Prisms",
+                  "url": "/levels/i.php?i-math-m6-e-25"
+                },
+                {
+                  "id": "i-math-m6-e-26",
+                  "code": "I.M6.E.26",
+                  "name": "Volume of Composite Three-Dimensional Figures",
+                  "title": "Volume of Composite Three-Dimensional Figures",
+                  "url": "/levels/i.php?i-math-m6-e-26"
+                },
+                {
+                  "id": "i-math-m6-e-27",
+                  "code": "I.M6.E.27",
+                  "name": "Real-World Volume Problems",
+                  "title": "Real-World Volume Problems",
+                  "url": "/levels/i.php?i-math-m6-e-27"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   }
 }
