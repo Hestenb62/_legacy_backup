@@ -1,0 +1,35 @@
+{
+  "slug": "kingsolver-water-is-life",
+  "type": "reading",
+  "title": "Water Is Life (2010)",
+  "author": "Barbara Kingsolver",
+  "source": "National Geographic (Special Issue: Water: Our Thirsty World, April 2010)",
+  "gradeLevel": "Grade 7 ELA (Level I)",
+  "moduleInfo": "Module 4B, Unit 1 Central Nonfiction Anchor",
+  "backLessonUrl": "/levels/i.php?lesson=i-ela-m4b-u1-l2",
+  "citation": "Kingsolver, Barbara. 'Water Is Life.' National Geographic, vol. 217, no. 4, Apr. 2010, pp. 36\u201359.",
+  "sections": [
+    {
+      "heading": "The Finite Blessing of Fresh Water",
+      "epigraph": {
+        "quote": "Water is the very lifeblood of our planet, yet we treat it as an infinite commodity.",
+        "attribution": "\u2014Barbara Kingsolver, Water Is Life"
+      },
+      "paragraphs": [
+        "We live on a blue planet, covered seventy percent by water. Yet less than three percent of all water on Earth is fresh, and of that tiny sliver, more than two-thirds is trapped in polar ice caps and glaciers. That leaves less than one percent of the world's water accessible in rivers, lakes, and shallow aquifers to sustain every human being, every farm, and every terrestrial ecosystem on Earth.",
+        "In the developed world, we turn on a brass tap and pure, drinkable water gushes forth without thought. We flush gallons of potable water down toilets, irrigate green lawns in desert suburbs, and discard bottled water without a second thought. But for billions of people in developing countries, water is an elusive, exhausting daily quest that consumes hours of physical labor and threatens survival."
+      ]
+    },
+    {
+      "heading": "Ecosystem Interdependence and Moral Stewardship",
+      "epigraph": {
+        "quote": "How can we balance the needs of people and the environment when both depend upon the same precious drop?",
+        "attribution": "\u2014Barbara Kingsolver, Water Is Life"
+      },
+      "paragraphs": [
+        "Across the globe, ancient underground aquifers\u2014such as the Ogallala Aquifer beneath the American Great Plains\u2014are being pumped dry at rates ten times faster than rainfall can replenish them. Major rivers, including the Colorado in the American West and the Yellow River in China, run completely dry before reaching the sea, destroying wetlands and coastal fisheries.",
+        "To ensure our future, humanity must transition from an era of water exploitation to an era of water stewardship. Water is not merely a commercial resource to be bought and sold by agribusiness; it is a sacred ecological commons. Recognizing that water is life means honoring the interconnected web of plants, animals, rivers, and communities that all depend upon the same finite cycle of rain."
+      ]
+    }
+  ]
+}

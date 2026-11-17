@@ -1,0 +1,46 @@
+{
+  "slug": "to-kill-a-mockingbird-selections",
+  "type": "reading",
+  "title": "To Kill a Mockingbird (Core Selections & Moral Arc)",
+  "author": "Harper Lee",
+  "source": "To Kill a Mockingbird (J. B. Lippincott & Co., 1960)",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 2A, Units 1\u20133 Central Literary Anchor",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m2a-u1-l10",
+  "citation": "Lee, Harper. To Kill a Mockingbird. J. B. Lippincott & Co., 1960.",
+  "sections": [
+    {
+      "heading": "Atticus on Empathy: Walking in Another Man's Shoes",
+      "epigraph": {
+        "quote": "You never really understand a person until you consider things from his point of view\u2014until you climb into his skin and walk around in it.",
+        "attribution": "\u2014Atticus Finch, To Kill a Mockingbird"
+      },
+      "paragraphs": [
+        "When Scout returns home from her first day of first grade frustrated and angry at Miss Caroline's rigid expectations, Atticus listens quietly on the front porch of their Maycomb home. Rather than validating her resentment or dismissing her feelings, he imparts a moral compass that guides the entire novel.",
+        "'First of all,' he tells Scout gently, 'if you can learn a simple trick, Scout, you'll get along a lot better with all kinds of folks. You never really understand a person until you consider things from his point of view\u2014until you climb into his skin and walk around in it.' This fundamental principle of empathy forms the cornerstone of Atticus's parenting, his legal career, and his quiet moral defiance against Maycomb's deep-seated racial bigotry."
+      ]
+    },
+    {
+      "heading": "True Courage: Mrs. Dubose and the Camellias",
+      "epigraph": {
+        "quote": "Real courage is when you know you're licked before you begin but you begin anyway and you see it through no matter what.",
+        "attribution": "\u2014Atticus Finch, To Kill a Mockingbird"
+      },
+      "paragraphs": [
+        "When Jem, enraged by the caustic insults of elderly neighbor Mrs. Dubose, destroys her camellia bushes with Scout's baton, Atticus punishes him by requiring him to read to her every afternoon for a month. Only after her death does Atticus reveal that Mrs. Dubose was battling a fatal morphine addiction and was determined to break her dependency before she died.",
+        "'I wanted you to see what real courage is, instead of getting the idea that courage is a man with a gun in his hand,' Atticus explains to his children. 'It's when you know you're licked before you begin but you begin anyway and you see it through no matter what. You rarely win, but sometimes you do. Mrs. Dubose won, all ninety-eight pounds of her. According to her views, she died beholden to nothing and nobody. She was the bravest person I ever knew.'"
+      ]
+    },
+    {
+      "heading": "The Courtroom Defense and Standing on the Radley Porch",
+      "epigraph": {
+        "quote": "In the name of God, believe him.",
+        "attribution": "\u2014Atticus Finch's Closing Argument, To Kill a Mockingbird"
+      },
+      "paragraphs": [
+        "In defending Tom Robinson against the fabricated accusations of Mayella and Bob Ewell, Atticus takes a stand that isolates him from Maycomb's white consensus. In his closing argument, he appeals not only to evidence and reason, but to the sacred ideal of the courtroom as the great leveler of human inequality: 'In our courts all men are created equal.'",
+        "Although the all-white jury convicts Tom Robinson due to ingrained racial prejudice, the Black community in the balcony stands in silent reverence as Atticus packs his briefcase: 'Miss Jean Louise, stand up. Your father's passin'.' At the novel's end, after Boo Radley saves Scout and Jem from Bob Ewell, Scout walks Boo home and stands on the Radley porch, gazing out over Maycomb. Looking through Boo's eyes, she finally understands Atticus's lesson: empathy transforms our sight, allowing us to see human beings with unconditional compassion."
+      ]
+    }
+  ]
+}

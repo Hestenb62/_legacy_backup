@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.41.0');
+    define('HL_SITE_VERSION', 'v2.46.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 100% P-12 Math Completion & Grade 7 Release');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Grade 7 ELA Full Curriculum & Digital Library Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Universal P-12 Mathematics 100% Complete: Grade 7 (Level I) 139 Lessons Across Modules 1–6 Added, Bringing Platform Math to 1,911 Total Lessons Across 82 Modules');
+    define('HL_SITE_VERSION_SUMMARY', 'Grade 7 ELA (Level I) Complete Across All 6 Modules (238 Lessons), 11 Dedicated Digital Library Reading Pages; Total Platform Lessons Expanded to 2,785');
     }
 ?>
 <!DOCTYPE html>

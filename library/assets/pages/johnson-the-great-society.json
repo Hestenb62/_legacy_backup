@@ -1,0 +1,35 @@
+{
+  "slug": "johnson-the-great-society",
+  "type": "reading",
+  "title": "The Great Society (1964)",
+  "author": "Lyndon B. Johnson",
+  "source": "Commencement Address at the University of Michigan, May 22, 1964",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 2A, Unit 1 Mid-Unit Assessment Text",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m2a-u1-l8",
+  "citation": "Johnson, Lyndon B. 'The Great Society.' Commencement Address, University of Michigan, Ann Arbor, Michigan, 22 May 1964. Public Papers of the Presidents of the United States: Lyndon B. Johnson, 1963-64, vol. 1, pp. 704\u2013707.",
+  "sections": [
+    {
+      "heading": "The Vision of an Enriched Civilization",
+      "epigraph": {
+        "quote": "The Great Society rests on abundance and liberty for all. It demands an end to poverty and racial injustice.",
+        "attribution": "\u2014Lyndon B. Johnson"
+      },
+      "paragraphs": [
+        "We have the opportunity to move not only toward the rich society and the powerful society, but upward to the Great Society. The Great Society rests on abundance and liberty for all. It demands an end to poverty and racial injustice, to which we are totally committed in our time. But that is just the beginning.",
+        "The Great Society is a place where every child can find knowledge to enrich his mind and to enlarge his talents. It is a place where leisure is a welcome chance to build and reflect, not a feared cause of boredom and restlessness. It is a place where the city of man serves not only the needs of the body and the demands of commerce but the desire for beauty and the hunger for community."
+      ]
+    },
+    {
+      "heading": "Three Critical Battlegrounds: Cities, Countryside, and Classrooms",
+      "epigraph": {
+        "quote": "Our society will not be great until every young mind is set free to explore the frontiers of human thought and creative expression.",
+        "attribution": "\u2014Lyndon B. Johnson"
+      },
+      "paragraphs": [
+        "There are three places where we begin to build the Great Society: in our cities, in our countryside, and in our classrooms. In our cities, we must rebuild the urban environment to foster community rather than alienation. In our countryside, we must preserve the natural splendor of our water, forests, and air, defending our natural heritage against toxic encroachment.",
+        "Most urgent of all, in our classrooms, we must expand educational opportunity so that poverty of family does not dictate poverty of opportunity. A great nation does not measure its wealth solely by the volume of its industrial output or the size of its gross national product. It measures its greatness by the dignity of its citizens, the quality of their lives, and their capacity to achieve human fulfillment."
+      ]
+    }
+  ]
+}

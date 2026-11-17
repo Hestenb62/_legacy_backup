@@ -1,0 +1,23 @@
+{
+  "slug": "declaration-of-independence",
+  "type": "reading",
+  "title": "The Declaration of Independence",
+  "author": "Thomas Jefferson (Second Continental Congress)",
+  "source": "Philadelphia, Pennsylvania (July 4, 1776)",
+  "gradeLevel": "Grade 11 ELA (Level M)",
+  "moduleInfo": "Module 2, Unit 1 Anchor Text",
+  "backLessonUrl": "/levels/m.php?lesson=m-ela-m2-a-13",
+  "citation": "Jefferson, Thomas, et al. The Declaration of Independence. Continental Congress, 4 July 1776.",
+  "sections": [
+    {
+      "heading": "The Unanimous Declaration of the Thirteen United States of America",
+      "epigraph": {
+        "quote": "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",
+        "attribution": "—Thomas Jefferson"
+      },
+      "paragraphs": [
+        "We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.—That to secure these rights, Governments are instituted among Men, deriving their just powers from the consent of the governed, —That whenever any Form of Government becomes destructive of these ends, it is the Right of the People to alter or to abolish it, and to institute new Government, laying its foundation on such principles and organizing its powers in such form, as to them shall seem most likely to the effect their Safety and Happiness."
+      ]
+    }
+  ]
+}

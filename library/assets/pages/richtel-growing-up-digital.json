@@ -1,0 +1,35 @@
+{
+  "slug": "richtel-growing-up-digital",
+  "type": "reading",
+  "title": "Growing Up Digital: Screen Time and the Adolescent Mind",
+  "author": "Matt Richtel",
+  "source": "The New York Times Upfront (2011)",
+  "gradeLevel": "Grade 7 ELA (Level I)",
+  "moduleInfo": "Module 4A, Unit 2 Supporting Informational Text",
+  "backLessonUrl": "/levels/i.php?lesson=i-ela-m4a-u2-l2",
+  "citation": "Richtel, Matt. 'Growing Up Digital.' The New York Times Upfront, 31 Jan. 2011.",
+  "sections": [
+    {
+      "heading": "Constant Companions and The Myth of Multitasking",
+      "epigraph": {
+        "quote": "Technology is rewiring our brains, trading depth and reflection for velocity and rapid stimulation.",
+        "attribution": "\u2014Matt Richtel"
+      },
+      "paragraphs": [
+        "Across America, the average teenager spends more than seven and a half hours a day consuming entertainment media on digital screens\u2014smartphones, video consoles, tablets, and computers. For many young people, silence and solitude have been completely replaced by an endless stream of text notifications, video feeds, and social media likes.",
+        "While many adolescents believe they are skilled multitaskers\u2014doing homework while streaming video, texting friends, and playing music simultaneously\u2014cognitive scientists at Stanford University have demonstrated that the human brain cannot actually focus on two complex cognitive tasks at once. What feels like multitasking is actually 'continuous partial attention' or rapid task-switching, which fragments working memory, increases stress hormones like cortisol, and significantly degrades the quality of learning."
+      ]
+    },
+    {
+      "heading": "Balancing the Digital World with Cognitive Well-Being",
+      "epigraph": {
+        "quote": "The question is not whether technology is good or bad, but whether we control our screens or let our screens control us.",
+        "attribution": "\u2014Matt Richtel"
+      },
+      "paragraphs": [
+        "The digital revolution offers unprecedented benefits: instantaneous access to human knowledge, creative tools, and global communication networks. However, medical researchers emphasize that adolescents require intentional boundaries to protect sleep, deep reading, and face-to-face social connections.",
+        "Developing digital literacy in the twenty-first century requires young people to practice metacognition\u2014actively reflecting on how technology makes them feel, recognizing algorithmic manipulation designed to hook their dopamine receptors, and choosing to unplug regularly to cultivate deep focus, creative imagination, and inner peace."
+      ]
+    }
+  ]
+}

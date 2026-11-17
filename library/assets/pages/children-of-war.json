@@ -1,0 +1,35 @@
+{
+  "slug": "children-of-war",
+  "type": "reading",
+  "title": "Children of War: Stories of Young Refugees",
+  "author": "Arthur Brice",
+  "source": "Scholastic Scope / Informational Text (1994)",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 1, Unit 2 Informational Text",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m1-u2-l1",
+  "citation": "Brice, Arthur. 'Children of War.' Scholastic Scope, vol. 42, no. 12, 1994, pp. 10\u201314.",
+  "sections": [
+    {
+      "heading": "The Innocents Caught in Conflict",
+      "epigraph": {
+        "quote": "Wars are fought by adults, but the heaviest burden is often carried on the fragile shoulders of children.",
+        "attribution": "\u2014Arthur Brice"
+      },
+      "paragraphs": [
+        "Across global history, armed conflicts have torn millions of children from their classrooms, playgrounds, and homes. In Bosnia, Rwanda, Vietnam, and Somalia, young people have witnessed the sudden collapse of civil society. Buildings crumble, schools close, and familiar street corners turn into dangerous combat zones overnight.",
+        "For children fleeing war, the psychological shock is profound. They leave behind childhood pets, favorite toys, books, and often extended family members who cannot travel. The journey itself is fraught with danger: crossing minefields, dodging sniper fire, boarding overcrowded boats, and enduring days with little food or water."
+      ]
+    },
+    {
+      "heading": "Resilience and the Search for Belonging",
+      "epigraph": {
+        "quote": "Refugee children do not ask for pity; they ask for safety, an opportunity to learn, and a community to call home.",
+        "attribution": "\u2014Arthur Brice"
+      },
+      "paragraphs": [
+        "Upon arriving in refugee camps or resettlement countries like the United States, Canada, or Australia, child refugees face a new battle: cultural dislocation. They must master an unfamiliar language, adapt to strange customs, and navigate social prejudice while coping with post-traumatic stress.",
+        "Yet despite these staggering hurdles, the universal hallmark of young refugees is extraordinary resilience. In classrooms across America, former child refugees excel academically, learn English with remarkable speed, and become community leaders, doctors, teachers, and authors. Their stories demonstrate that while war can destroy a city, it cannot extinguish the human capacity for courage and renewal."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "pollan-the-omnivores-dilemma",
+  "type": "reading",
+  "title": "The Omnivore's Dilemma: The Four Food Chains",
+  "author": "Michael Pollan",
+  "source": "The Omnivore's Dilemma: A Natural History of Four Meals (Penguin Press, 2006)",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 4, Units 1\u20133 Central Nonfiction Anchor",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m4-u1-l2",
+  "citation": "Pollan, Michael. The Omnivore's Dilemma: A Natural History of Four Meals. Penguin Press, 2006.",
+  "sections": [
+    {
+      "heading": "The Omnivore's Dilemma and The Industrial Corn Web",
+      "epigraph": {
+        "quote": "When you can eat almost anything nature has to offer, deciding what you should eat will inevitably stir anxiety.",
+        "attribution": "\u2014Michael Pollan, The Omnivore's Dilemma"
+      },
+      "paragraphs": [
+        "What should we have for dinner? For most of human history, this question was answered simply by geography, season, and tradition. You ate what grew within walking distance of your village, harvest by harvest. But in the modern American supermarket, lined with forty-five thousand distinct items, deciding what to eat has become a perplexing moral, ecological, and nutritional dilemma.",
+        "If you trace modern supermarket food back to its biological roots, you discover an astounding fact: America's industrial food chain is overwhelmingly built on a single plant species\u2014Zea mays, or corn. The corn in chicken nuggets, soda, salad dressing, toothpaste, ketchup, and battery acid is ubiquitous. We do not eat corn on the cob; rather, through massive agribusiness subsidies and chemical processing, surplus yellow dent #2 corn is transformed into high-fructose corn syrup, modified food starches, and animal feed for vast concentrated animal feeding operations (CAFOs). As Pollan observes, when a scientist analyzes our carbon isotopes, we look like walking cornchips."
+      ]
+    },
+    {
+      "heading": "Industrial Organic vs. Local Sustainable: Polyface Farm",
+      "epigraph": {
+        "quote": "A sustainable agriculture must imitate nature's ecosystems, where waste does not exist and biological diversity creates resilience.",
+        "attribution": "\u2014Michael Pollan, The Omnivore's Dilemma"
+      },
+      "paragraphs": [
+        "In examining alternatives, Pollan investigates 'Industrial Organic'\u2014supermarket brands that eschew synthetic pesticides but mimic the vast transportation networks, monocultures, and corporate packaging of conventional agribusiness. While better for soil health, industrial organic still requires massive fossil fuel inputs to ship organic lettuce three thousand miles across the continent in refrigerated diesel trucks.",
+        "By contrast, at Joel Salatin's Polyface Farm in Virginia's Shenandoah Valley, Pollan witnesses 'Local Sustainable' agriculture at its finest. Polyface does not ship food or use chemical fertilizers; instead, Salatin operates a closed-loop biological cycle driven by sunlight and grass. Cattle graze pastures, followed three days later by portable chicken coops ('Eggmobiles'), where hens feast on fly larvae in cow manure, fertilizing the pasture while producing nutrient-dense eggs. The system produces enormous quantities of healthy food with zero chemical waste, presenting students with a powerful model of ecological harmony."
+      ]
+    }
+  ]
+}

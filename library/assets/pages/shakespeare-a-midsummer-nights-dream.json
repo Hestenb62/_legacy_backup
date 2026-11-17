@@ -1,0 +1,46 @@
+{
+  "slug": "shakespeare-a-midsummer-nights-dream",
+  "type": "reading",
+  "title": "A Midsummer Night's Dream (Key Scenes & The Theme of Control)",
+  "author": "William Shakespeare",
+  "source": "First Folio (1623) / Dramatic Selections",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 2B, Units 1\u20133 Central Literary Anchor",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m2b-u1-l2",
+  "citation": "Shakespeare, William. A Midsummer Night's Dream. Edited by Barbara A. Mowat and Paul Werstine, Folger Shakespeare Library, Simon & Schuster, 2004.",
+  "sections": [
+    {
+      "heading": "Act 1, Scene 1: Parental Authority and Patriarchal Law",
+      "epigraph": {
+        "quote": "As she is mine, I may dispose of her: which shall be either to this gentleman or to her death, according to our law.",
+        "attribution": "\u2014Egeus, A Midsummer Night's Dream"
+      },
+      "paragraphs": [
+        "The play opens in Duke Theseus's palace in Athens, where Egeus arrives furiously dragging his daughter Hermia. Egeus demands that Hermia marry Demetrius, whom he has chosen. Hermia, however, is deeply in love with Lysander.",
+        "Egeus appeals to ancient Athenian law, claiming absolute ownership over Hermia's body and destiny: 'As she is mine, I may dispose of her.' Theseus reinforces this patriarchal control, informing Hermia that her choices are narrow: obey her father, face execution, or take vows of lifelong chastity in a convent. Hermia's bold refusal to surrender her autonomy prompts Lysander and Hermia to conspire secretly to flee into the enchanted woods beyond the reach of Athenian legal control."
+      ]
+    },
+    {
+      "heading": "Act 2, Scene 1: Puck and Oberon's Magical Manipulation",
+      "epigraph": {
+        "quote": "Fetch me that flower; the herb I shew'd thee once: the juice of it on sleeping eye-lids laid will make or man or woman madly dote.",
+        "attribution": "\u2014Oberon to Puck, A Midsummer Night's Dream"
+      },
+      "paragraphs": [
+        "In the moonlit forest near Athens, the natural realm is thrown into chaos by a fierce domestic quarrel between Oberon, King of the Fairies, and Titania, Queen of the Fairies. Both refuse to yield control of a changeling boy whom Titania protects out of loyalty to his deceased mother.",
+        "Seeking to humiliate and overpower Titania, Oberon commands his mischievous spirit, Puck (Robin Goodfellow), to gather the magical herb 'love-in-idleness,' whose distilled juice compels anyone struck by it to fall passionately in love with the first living creature seen upon waking. When Oberon witnesses Demetrius harshly rejecting the adoring Helena in the forest, he attempts to exert benevolent control over human romantic relationships, ordering Puck to anoint the Athenian's eyes. Through Puck's comical error in mistaking Lysander for Demetrius, human desires and allegiances are thrown into riotous discord."
+      ]
+    },
+    {
+      "heading": "Act 3, Scene 1 & Act 5 Epilogue: Bottom Transformed and The Dream Confirmed",
+      "epigraph": {
+        "quote": "If we shadows have offended, think but this, and all is mended, that you have but slumber'd here while these visions did appear.",
+        "attribution": "\u2014Puck's Epilogue, A Midsummer Night's Dream"
+      },
+      "paragraphs": [
+        "Meanwhile, a troupe of amateur Athenian craftsmen\u2014the 'mechanicals'\u2014gather in the woods to rehearse their play, 'The Most Lamentable Comedy and Most Cruel Death of Pyramus and Thisbe.' Puck mischievously transforms Nick Bottom's head into that of an ass. When Titania awakes under the spell of the love potion, she immediately falls rapturously in love with the monstrously transformed Bottom, illustrating Shakespeare's brilliant satirical commentary on how infatuation blinds human judgment.",
+        "Once order, balance, and reconciliation are restored by Oberon and Theseus, and the lovers are rightly paired in marriage, Puck steps forward to deliver the famous epilogue. Addressing the audience directly, he blurs the boundary between stagecraft, manipulation, and reality: 'If we shadows have offended, think but this, and all is mended, that you have but slumber'd here while these visions did appear.' Shakespeare leaves us contemplating whether anyone can truly control another person\u2014or whether life itself is an ever-shifting dream."
+      ]
+    }
+  ]
+}

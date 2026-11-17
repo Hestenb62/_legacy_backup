@@ -1,0 +1,28 @@
+{
+  "slug": "the-passionate-shepherd-to-his-love",
+  "type": "reading",
+  "title": "The Passionate Shepherd to His Love",
+  "author": "Christopher Marlowe",
+  "source": "EngageNY Grade 10 ELA Module 1, Unit 1",
+  "gradeLevel": "Grade 10 ELA (Level L)",
+  "moduleInfo": "Module 1, Unit 1 Anchor Text",
+  "backLessonUrl": "/levels/l.php?lesson=l-ela-m1-a-1",
+  "citation": "Marlowe, Christopher. 'The Passionate Shepherd to His Love.' The Passionate Pilgrim, 1599.",
+  "sections": [
+    {
+      "heading": "The Pastoral Lyric",
+      "epigraph": {
+        "quote": "Come live with me and be my love, / And we will all the pleasures prove...",
+        "attribution": "—Christopher Marlowe"
+      },
+      "paragraphs": [
+        "Come live with me and be my love,\nAnd we will all the pleasures prove\nThat valleys, groves, hills, and fields,\nWoods, or steepy mountain yields.",
+        "And we will sit upon the rocks,\nSeeing the shepherds feed their flocks,\nBy shallow rivers to whose falls\nMelodious birds sing madrigals.",
+        "And I will make thee beds of roses\nAnd a thousand fragrant posies,\nA cap of flowers, and a kirtle\nEmbroidered all with leaves of myrtle;",
+        "A gown made of the finest wool\nWhich from our pretty lambs we pull;\nFair lined slippers for the cold,\nWith buckles of the purest gold;",
+        "A belt of straw and ivy buds,\nWith coral clasps and amber studs:\nAnd if these pleasures may thee move,\nCome live with me, and be my love.",
+        "The shepherds’ swains shall dance and sing\nFor thy delight each May morning:\nIf these delights thy mind may move,\nThen live with me and be my love."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "slug": "the-vietnam-wars",
+  "type": "reading",
+  "title": "The Vietnam Wars: 1945\u20131975",
+  "author": "Tod Olson",
+  "source": "Scholastic Update / Informational Text (1995)",
+  "gradeLevel": "Grade 8 ELA (Level J)",
+  "moduleInfo": "Module 1, Unit 1 Informational Text",
+  "backLessonUrl": "/levels/j.php?lesson=j-ela-m1-u1-l6",
+  "citation": "Olson, Tod. 'The Vietnam Wars: 1945\u20131975.' Scholastic Update, vol. 127, no. 10, 1995, pp. 16\u201320.",
+  "sections": [
+    {
+      "heading": "A Land of Resilience and Struggle",
+      "epigraph": {
+        "quote": "For centuries, the people of Vietnam fought against foreign domination, fiercely defending their national identity and land.",
+        "attribution": "\u2014Tod Olson"
+      },
+      "paragraphs": [
+        "To understand the tragedy of the Vietnam War in the twentieth century, one must recognize that Vietnam's history has long been defined by resistance against foreign occupation. For nearly a thousand years, Vietnamese patriots resisted Chinese imperial control. In the nineteenth century, French colonial forces established French Indochina, exploiting Vietnam's rubber plantations, rice paddies, and mineral wealth while suppressing political dissent.",
+        "During World War II, Imperial Japan occupied Vietnam. In response, a nationalist coalition known as the Viet Minh, led by Ho Chi Minh, organized guerrilla resistance. In September 1945, standing before thousands in Hanoi, Ho Chi Minh read Vietnam's Declaration of Independence, deliberately echoing the words of Thomas Jefferson: 'All men are created equal... endowed by their Creator with certain unalienable Rights.'"
+      ]
+    },
+    {
+      "heading": "Partition, Escalation, and the Fall of Saigon",
+      "epigraph": {
+        "quote": "The 1954 Geneva Accords temporarily divided the nation along the 17th parallel, setting the stage for decades of cold war conflict.",
+        "attribution": "\u2014Tod Olson"
+      },
+      "paragraphs": [
+        "Following the French defeat at Dien Bien Phu in 1954, international negotiators partitioned Vietnam into North Vietnam (under communist leadership) and South Vietnam (backed by the United States and Western allies). What was intended as a temporary partition hardened into a bitter ideological and military standoff as the Cold War deepened.",
+        "Between 1965 and 1973, American military involvement escalated dramatically, peaking at over 500,000 troops. Despite intensive bombing campaigns and immense sacrifice, the war caused immense devastation across the countryside and deep political division within the United States. Following the withdrawal of American combat forces under the 1973 Paris Peace Accords, North Vietnamese forces launched a final offensive in the spring of 1975. On April 30, 1975, tanks crashed through the gates of the Presidential Palace in Saigon, marking the official end of the war and triggering an unprecedented exodus of hundreds of thousands of Vietnamese refugees."
+      ]
+    }
+  ]
+}

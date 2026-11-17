@@ -1,0 +1,35 @@
+{
+  "slug": "giedd-the-teen-brain",
+  "type": "reading",
+  "title": "Teens and Decision Making: What Brain Science Reveals",
+  "author": "National Institute on Drug Abuse (NIDA) & Dr. Jay Giedd",
+  "source": "New York Times Upfront & Scientific American (2008\u20132012)",
+  "gradeLevel": "Grade 7 ELA (Level I)",
+  "moduleInfo": "Module 4A, Units 1\u20133 Central Informational Anchor",
+  "backLessonUrl": "/levels/i.php?lesson=i-ela-m4a-u1-l2",
+  "citation": "Scholastic Inc. & NIDA. 'Teens and Decision Making: What Brain Science Reveals.' New York Times Upfront, vol. 140, no. 13, 2008, p. 18.",
+  "sections": [
+    {
+      "heading": "The Prefrontal Cortex Under Construction",
+      "epigraph": {
+        "quote": "The adolescent brain is not a defective adult brain; it is a brain exquisitely sculpted by evolution to explore, take risks, and learn.",
+        "attribution": "\u2014Dr. Jay N. Giedd, M.D."
+      },
+      "paragraphs": [
+        "For decades, scientists believed that the human brain was largely fully developed by early childhood. However, pioneering magnetic resonance imaging (MRI) studies led by Dr. Jay Giedd at the National Institute of Mental Health revealed a surprising truth: the human brain undergoes a massive second wave of structural restructuring during adolescence, continuing until approximately age twenty-five.",
+        "The last region of the brain to fully mature is the prefrontal cortex\u2014the 'CEO of the brain' responsible for long-term planning, evaluating consequences, impulse control, and emotional regulation. By contrast, the limbic system, which governs emotions, pleasure, and sensation-seeking (driven by the amygdala), matures much earlier during puberty. This maturational gap explains why teenagers are often driven by emotional impulses and peer approval rather than rational risk analysis."
+      ]
+    },
+    {
+      "heading": "Neuroplasticity and the 'Use It or Lose It' Principle",
+      "epigraph": {
+        "quote": "Whatever activities a teenager engages in during these critical years\u2014whether reading, sports, music, or video games\u2014are what the brain physically hardwires.",
+        "attribution": "\u2014Dr. Jay N. Giedd, M.D."
+      },
+      "paragraphs": [
+        "During early adolescence, the brain produces an excess of synaptic connections in the gray matter. Then, throughout the teen years, a biological pruning process begins: synaptic connections that are regularly stimulated and exercised are strengthened and coated with a protective fatty sheath called myelin, speeding neural transmission up to a hundred times. Conversely, connections that are not used wither away.",
+        "This principle of neuroplasticity\u2014popularly summarized as 'use it or lose it'\u2014means that the habits and cognitive activities teens engage in literally shape their brain's physical wiring. Spending hours immersed in complex problem-solving, reading, sports, or creative arts reinforces neural networks for deep concentration and discipline. Conversely, spending excessive hours multitasking on digital screens can wire the brain for immediate gratification and shortened attention spans."
+      ]
+    }
+  ]
+}

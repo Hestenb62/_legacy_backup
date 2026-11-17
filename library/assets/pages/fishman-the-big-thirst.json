@@ -1,0 +1,35 @@
+{
+  "slug": "fishman-the-big-thirst",
+  "type": "reading",
+  "title": "The Big Thirst: The Secret Life and Future of Water",
+  "author": "Charles Fishman",
+  "source": "The Big Thirst: The Secret Life and Turbulent Future of Water (Free Press, 2011)",
+  "gradeLevel": "Grade 7 ELA (Level I)",
+  "moduleInfo": "Module 4B, Units 1\u20133 Supporting Nonfiction Anchor",
+  "backLessonUrl": "/levels/i.php?lesson=i-ela-m4b-u1-l6",
+  "citation": "Fishman, Charles. The Big Thirst: The Secret Life and Turbulent Future of Water. Free Press, 2011.",
+  "sections": [
+    {
+      "heading": "The Illusion of Abundance and The End of Easy Water",
+      "epigraph": {
+        "quote": "The era of easy water is over. The golden age of water\u2014in which clean, limitless water was cheap, safe, and invisible\u2014has come to an end.",
+        "attribution": "\u2014Charles Fishman, The Big Thirst"
+      },
+      "paragraphs": [
+        "Water is the most familiar substance on Earth, yet the modern world suffers from profound 'water illiteracy.' We know nothing of where our water comes from, what it takes to clean it, or where it goes after it disappears down the drain. Because water has been miraculously reliable and virtually free in modern cities, we have constructed an industrial and agricultural system that treats it with reckless disregard.",
+        "It takes forty gallons of water to produce a single cup of coffee, six hundred gallons to make a hamburger, and nearly three thousand gallons to manufacture a pair of cotton jeans. As global population grows toward eight billion and climate change accelerates droughts and floods, the illusion of limitless water is collapsing. Cities from Atlanta and Las Vegas to Melbourne and Cape Town have come within days of running completely out of water."
+      ]
+    },
+    {
+      "heading": "Smart Water Management: Innovation, Recycling, and Conservation",
+      "epigraph": {
+        "quote": "All water is recycled water. The water coming out of your kitchen tap today was once drunk by dinosaurs.",
+        "attribution": "\u2014Charles Fishman, The Big Thirst"
+      },
+      "paragraphs": [
+        "The good news, Fishman argues, is that water problems are inherently local and solvable. Unlike energy, which requires global carbon agreements, water can be managed effectively watershed by watershed, city by city. Pioneering cities are revolutionizing water efficiency.",
+        "In Las Vegas, where Lake Mead has dropped to historic lows, ninety-nine percent of indoor water is captured, treated, and returned to the lake. In Windhoek, Namibia, and Orange County, California, advanced wastewater purification turns sewage water directly into pristine drinking water that exceeds federal purity standards. Solving the water crisis does not require suffering or privation; it requires intelligence, conservation technology, and a renewed appreciation for the miracle of water."
+      ]
+    }
+  ]
+}

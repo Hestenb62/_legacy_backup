@@ -52,17 +52,21 @@ if (!empty($requestedLesson)) {
 
 // Page Metadata
 $pageTitle       = "8th Grade Level J | Hesten's Learning";
-$pageDescription = "Pre-Algebra, linear equations, functions, geometric transformations, and irrational numbers for 8th-grade students.";
-$pageKeywords    = "Grade 8, 8th Grade, Pre-Algebra, linear equations, functions, Pythagorean Theorem, scientific notation, similarity, congruence";
+$pageDescription = "Pre-Algebra, linear equations, functions, literature analysis, and argumentative writing for 8th-grade students.";
+$pageKeywords    = "Grade 8, 8th Grade, Pre-Algebra, linear equations, functions, Pythagorean Theorem, scientific notation, ELA, Literature, EngageNY";
 
 // Template Variables
 $themeColor = 'fuchsia';
 $levelId = 'j';
 $levelTitle = 'Level J';
 $gradeText = '8th Grade';
-$initialSubject = 'math';
-$initialSubjectName = 'Math';
-$initialSubjectDesc = 'Pre-Algebra concepts, linear equations, functions, and preparing for High School mathematics.';
+$initialSubject = (isset($_GET['subject']) && in_array(strtolower($_GET['subject']), ['math', 'ela', 'science', 'social']))
+    ? strtolower($_GET['subject'])
+    : 'math';
+$initialSubjectName = ($initialSubject === 'ela') ? 'English Language Arts' : 'Math';
+$initialSubjectDesc = ($initialSubject === 'ela')
+    ? 'Close reading, literary analysis, argument craft, and thematic synthesis across 6 core modules.'
+    : 'Pre-Algebra concepts, linear equations, functions, and preparing for High School mathematics.';
 
 $modules = [
     [

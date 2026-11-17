@@ -52,17 +52,21 @@ if (!empty($requestedLesson)) {
 
 // Page-Specific Metadata
 $pageTitle       = "7th Grade Level I | Hesten's Learning";
-$pageDescription = "Proportions, integers, linear expressions, and geometry applications for 7th-grade students.";
-$pageKeywords    = "Grade 7, 7th Grade, proportional relationships, rational numbers, expressions and equations, geometry, statistics, EngageNY, Eureka Math";
+$pageDescription = "Proportions, integers, linear expressions, literature analysis, and argumentative writing for 7th-grade students.";
+$pageKeywords    = "Grade 7, 7th Grade, proportional relationships, rational numbers, expressions, geometry, ELA, Literature, EngageNY";
 
 // Template Variables
 $themeColor = 'purple';
 $levelId = 'i';
 $levelTitle = 'Level I';
 $gradeText = '7th Grade';
-$initialSubject = 'math';
-$initialSubjectName = 'Math';
-$initialSubjectDesc = 'Proportional relationships, rational numbers, linear expressions, and geometry applications for 7th graders.';
+$initialSubject = (isset($_GET['subject']) && in_array(strtolower($_GET['subject']), ['math', 'ela', 'science', 'social']))
+    ? strtolower($_GET['subject'])
+    : 'math';
+$initialSubjectName = ($initialSubject === 'ela') ? 'English Language Arts' : 'Math';
+$initialSubjectDesc = ($initialSubject === 'ela')
+    ? 'Close reading, literary analysis, argument craft, and research across 6 core modules.'
+    : 'Proportional relationships, rational numbers, linear expressions, and geometry applications for 7th graders.';
 
 // Dynamic Module Loader from curriculum-engageny-math.json
 $modules = [];

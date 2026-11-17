@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.41.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 100% P-12 Math Completion & Grade 7 Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Universal P-12 Mathematics 100% Complete: Grade 7 (Level I) 139 Lessons Across Modules 1–6 Added, Bringing Platform Math to 1,911 Total Lessons Across 82 Modules';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.46.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Grade 7 ELA Full Curriculum & Digital Library Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 7 ELA (Level I) Complete Across All 6 Modules (238 Lessons), 11 Dedicated Digital Library Reading Pages; Total Platform Lessons Expanded to 2,785';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,71 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> achieves the monumental <strong>100% P-12 Mathematics Completion Milestone</strong>, adding Grade 7 (Level I) across all 6 modules (139 lessons). Every single grade level from Pre-K through Grade 12 now possesses complete, interactive EngageNY / Eureka Math curriculum coverage with embedded worksheets, worked teacher keys, and MathJax notation.
+                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete <strong>Grade 7 (Level I) English Language Arts Curriculum</strong> across all 6 EngageNY / Expeditionary Learning modules (Modules 1, 2A, 2B, 3, 4A, and 4B — 238 total lessons) alongside 11 dedicated Digital Library reading pages, expanding the platform's verified curriculum to 2,785 total lessons.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 7 ELA Full Curriculum &amp; Digital Library Release (v2.46.0):</strong> Comprehensive EngageNY / Expeditionary Learning buildout for Level I spanning 238 lessons across 6 core and alternate modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 6-Module Scope (238 Lessons):</strong> Module 1 (Journeys &amp; Survival: Linda Sue Park's <em>A Long Walk to Water</em> &amp; Lost Boys of Sudan, 39 lessons), Module 2A (Working Conditions: Katherine Paterson's <em>Lyddie</em>, César Chávez's Commonwealth Club Address, 38 lessons), Module 2B (Identity &amp; Transformation: George Bernard Shaw's <em>Pygmalion</em>, gender stereotypes &amp; counter-ads, 42 lessons), Module 3 (What Gives Stories Power?: <em>Narrative of the Life of Frederick Douglass</em> &amp; abolitionist poetry, 43 lessons), Module 4A (Adolescent Brain Development &amp; Screen Time: Dr. Jay Giedd, NIDA, Matt Richtel, 39 lessons), Module 4B (Water Sustainability: Charles Fishman's <em>The Big Thirst</em> &amp; Barbara Kingsolver's <em>Water Is Life</em>, 37 lessons).</li>
+                            <li><strong>11 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book shelves.</li>
+                            <li><strong>Master Lessons Index:</strong> Total platform lessons now reach <strong>2,785</strong> in <code>assets/data/lessons.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(217, 70, 239, 0.15); color: #c026d3;">
+                        <i class="fas fa-feather-alt"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 8 ELA Full Curriculum &amp; Digital Library Release (v2.45.0):</strong> Comprehensive EngageNY / Expeditionary Learning buildout for Level J spanning 239 lessons across 6 core and alternate modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 6-Module Scope (239 Lessons):</strong> Module 1 (Thanhha Lai's <em>Inside Out &amp; Back Again</em>, Vietnam War, 40 lessons), Module 2A (Taking a Stand: Chisholm, Truth, LBJ, Harper Lee's <em>To Kill a Mockingbird</em>, 40 lessons), Module 2B (Universal Theme of Control: Shakespeare's <em>A Midsummer Night's Dream</em> &amp; Ovid's <em>Pyramus and Thisbe</em>, 40 lessons), Module 3A (Resilience: Laura Hillenbrand's <em>Unbroken</em> &amp; Miné Okubo's <em>Citizen 13660</em>, 40 lessons), Module 3B (Civil Rights: Carlotta Walls LaNier's <em>A Mighty Long Way</em> &amp; The Little Rock Nine, 41 lessons), Module 4 (Sustainability: Michael Pollan's <em>The Omnivore's Dilemma</em>, 38 lessons).</li>
+                            <li><strong>16 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book shelves.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(14, 165, 233, 0.15); color: #0284c7;">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 12 ELA Full Curriculum &amp; High School ELA Completion (v2.44.0):</strong> Comprehensive EngageNY English Language Arts buildout for Level N spanning 154 lessons across 4 core modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 4-Module Scope (154 Lessons):</strong> Module 1 (Narrative &amp; Heritage: <em>Autobiography of Malcolm X</em>, Silko's <em>Yellow Woman</em>, College Application Essay, 41 lessons), Module 2 (Resistance &amp; Power: Bhutto's <em>Ideas Live On</em>, Thoreau's <em>Civil Disobedience</em>, Shakespeare's <em>Julius Caesar</em>, 38 lessons), Module 3 (Anthropological Inquiry: Diamond's <em>Guns, Germs, and Steel</em>, 38 lessons), Module 4 (Desire, Illusion &amp; Identity: Williams's <em>A Streetcar Named Desire</em>, Baca, Gogol's <em>The Overcoat</em>, Lahiri's <em>The Namesake</em>, 37 lessons).</li>
+                            <li><strong>10 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book shelves.</li>
+                            <li><strong>High School ELA 100% Complete (Grades 9–12):</strong> Full coverage across Grades 9, 10, 11, and 12 totaling 598 lessons across 16 modules.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 11 ELA Full Curriculum &amp; Digital Library Release (v2.43.0):</strong> Comprehensive EngageNY English Language Arts buildout for Level M spanning 155 lessons across 4 core modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 4-Module Scope (155 Lessons):</strong> Module 1 (Browning, Shakespeare's <em>Hamlet</em>, Woolf's <em>A Room of One's Own</em>, 39 lessons), Module 2 (Du Bois, Washington, Jefferson, Stanton, Lorde, 40 lessons), Module 3 (Research Argumentation, 38 lessons), Module 4 (O'Brien, Erdrich, Chopin's <em>The Awakening</em>, 38 lessons).</li>
+                            <li><strong>11 Dedicated Digital Library Reading Pages:</strong> Ingested into <code>library/assets/pages/</code> with structured sections.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(99, 102, 241, 0.15); color: #4f46e5;">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 10 ELA Full Curriculum &amp; Digital Library Release (v2.42.0):</strong> Comprehensive EngageNY English Language Arts buildout for Level L spanning 148 lessons across 4 core modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 4-Module Scope (148 Lessons):</strong> Module 1 (Character &amp; Expectation: Marlowe, Raleigh, Williams, Canin's <em>The Palace Thief</em>, Bissinger's <em>Friday Night Lights</em>, 34 lessons), Module 2 (Rhetoric &amp; Human Rights: King's <em>Letter from Birmingham Jail</em>, Alvarez's <em>A Genetics of Justice</em>, <em>Universal Declaration of Human Rights</em>, Roosevelt, 37 lessons), Module 3 (Inquiry &amp; Bioethics: Skloot's <em>The Immortal Life of Henrietta Lacks</em>, 39 lessons), Module 4 (Tragic Arc &amp; Power: White's <em>Death of a Pig</em>, Shakespeare's <em>Macbeth</em>, Machiavelli's <em>The Prince</em>, 38 lessons).</li>
+                            <li><strong>13 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free, accessible reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book catalog shelves.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
                         <i class="fas fa-check-double"></i>

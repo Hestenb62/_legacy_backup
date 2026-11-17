@@ -1,0 +1,29 @@
+{
+  "slug": "the-immortal-life-of-henrietta-lacks",
+  "type": "reading",
+  "title": "The Immortal Life of Henrietta Lacks: Prologue",
+  "author": "Rebecca Skloot",
+  "source": "Crown Publishers (2010)",
+  "gradeLevel": "Grade 10 ELA (Level L)",
+  "moduleInfo": "Module 3, Unit 1 Anchor Text",
+  "backLessonUrl": "/levels/l.php?lesson=l-ela-m3-a-1",
+  "citation": "Skloot, Rebecca. The Immortal Life of Henrietta Lacks. Crown Publishers, 2010, pp. 1–7.",
+  "sections": [
+    {
+      "heading": "Prologue: The Woman in the Photograph",
+      "epigraph": {
+        "quote": "We must not see any person as an abstraction. Instead, we must see in every person a universe with its own secrets...",
+        "attribution": "—Elie Wiesel (epigraph to The Immortal Life of Henrietta Lacks)"
+      },
+      "paragraphs": [
+        "There's a photo on my wall of a woman I've never met, its left corner torn and patched together with tape. She looks into the camera, smiling, hands on hips, suit neat, lips painted deep red. It's the late 1940s and she hasn't yet reached the age of thirty. Her name was Henrietta Lacks, but scientists know her only as HeLa, the code name given to the world's first immortal human cells—her cells, cut from her cervix just months before she died of a virulent cancer in 1951.",
+        "A scientist once offered to show me her cells under a microscope. I stepped onto a stool and peered down into the lens. The cells were rounded and blotchy, filled with tiny green granules, glowing with vitality. They were dividing right before my eyes. 'They're magnificent,' the scientist whispered. If you could gather all HeLa cells ever grown onto a scale, they'd weigh more than 50 million metric tons—an unimaginable number, considering an individual cell weighs almost nothing.",
+        "Henrietta's cells helped develop the polio vaccine; went up in the first space missions to see what would happen to human cells in zero gravity; helped lead to gene mapping, cloning, and in vitro fertilization. Scientists have bought and sold billions of dollars' worth of HeLa cells, yet Henrietta's family never saw a penny of that wealth. For decades, they couldn't even afford health insurance.",
+        "When I first learned about Henrietta in a high school biology class, our teacher scribbled her name on the chalkboard: HENRIETTA LACKS. He told us she was a Black tobacco farmer from southern Virginia who died at thirty-one, leaving behind five young children. 'Her cells were taken without her knowledge or consent,' he added casually before moving on to mitochondria. I raised my hand: 'Did she have any children? What did they think about her cells being alive all over the world?' He smiled and said, 'No one knows anything about her.'",
+        "I became obsessed with finding out who she was. Henrietta was born Loretta Pleasant in Roanoke, Virginia, in 1920. After her mother died, she was sent to live with her grandfather in a log cabin that had once been the slave quarters on a tobacco plantation where her white great-grandfather had enslaved her Black ancestors. She worked the fields barefoot from dawn until dusk, married her cousin David 'Day' Lacks, and moved to Baltimore during World War II so Day could work in the steel mills.",
+        "In 1951, experiencing severe abdominal pain and abnormal bleeding, Henrietta went to the 'colored ward' of Johns Hopkins Hospital—the only major hospital in the region that treated Black patients during Jim Crow segregation. Dr. Howard Jones discovered a large, shiny purple tumor on her cervix. Before treating her with radium tubes, a surgeon sliced two dime-sized samples of tissue from her cervix: one healthy, one cancerous. The tissue was sent to Dr. George Gey, head of tissue culture research at Hopkins, who had spent decades trying to grow human cells in vitro.",
+        "All previous human cells had quickly withered and died in test tubes. But Henrietta's cells were different: they doubled every twenty-four hours, multiplying with ferocious speed. They became the first immortal human cell line. Yet Henrietta was never told her tissue had been taken, nor did she know that part of her would live forever. The story of HeLa raises profound bioethical questions about bodily autonomy, informed consent, racial disparity in medicine, and who profits from scientific discovery."
+      ]
+    }
+  ]
+}

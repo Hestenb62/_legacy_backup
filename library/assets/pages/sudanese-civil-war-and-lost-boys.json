@@ -1,0 +1,35 @@
+{
+  "slug": "sudanese-civil-war-and-lost-boys",
+  "type": "reading",
+  "title": "The Second Sudanese Civil War and the Lost Boys",
+  "author": "Informational History",
+  "source": "United Nations High Commissioner for Refugees (UNHCR) & Historical Archives",
+  "gradeLevel": "Grade 7 ELA (Level I)",
+  "moduleInfo": "Module 1, Unit 1 Supporting Informational Text",
+  "backLessonUrl": "/levels/i.php?lesson=i-ela-m1-u1-l6",
+  "citation": "UNHCR. 'The Plight of the Lost Boys of Sudan: Displacement, Survival, and Resettlement.' United Nations High Commissioner for Refugees Historical Review, 2001.",
+  "sections": [
+    {
+      "heading": "Roots of Conflict: North vs. South Sudan",
+      "epigraph": {
+        "quote": "The civil war in Sudan was one of the longest and deadliest conflicts of the late twentieth century, displacing millions.",
+        "attribution": "\u2014UNHCR Report"
+      },
+      "paragraphs": [
+        "The Second Sudanese Civil War erupted in 1983 when the central government in Khartoum, dominated by Arab and Muslim leaders, attempted to impose Islamic Sharia law and centralized political control over the ethnically diverse southern region, which was predominantly Christian and animist. In response, southern rebels formed the Sudan People's Liberation Army (SPLA).",
+        "For more than two decades, the war devastated civilian communities. Government forces and allied militias conducted scorched-earth raids on southern villages, burning crops, poisoning wells, and abducting women and children. Over two million people died from violence, famine, and disease, while another four million were displaced."
+      ]
+    },
+    {
+      "heading": "The Exodus of the Lost Boys",
+      "epigraph": {
+        "quote": "An estimated twenty thousand boys walked more than a thousand miles on foot, creating a brotherhood forged in survival.",
+        "attribution": "\u2014Historical Account"
+      },
+      "paragraphs": [
+        "Among the most harrowing chapters of the war was the exodus of more than twenty thousand unaccompanied children, mostly boys aged seven to seventeen, who became known to international relief workers as the 'Lost Boys of Sudan.' Fleeing village raids where their parents were killed or captured, the boys banded together, walking barefoot across vast savanna, desert, and mountain ranges toward refugee camps in Ethiopia and later Kenya.",
+        "More than half died during the journey from dehydration, starvation, wild animals, and military attacks. Yet those who survived formed tight-knit communal networks, caring for the younger children, sharing meager rations, and keeping hope alive. In 2001, the United States government initiated an unprecedented resettlement program, bringing nearly four thousand Lost Boys to communities across America, where many, like Salva Dut, pursued higher education and established non-profit foundations dedicated to rebuilding South Sudan."
+      ]
+    }
+  ]
+}
