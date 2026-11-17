@@ -48,16 +48,16 @@ if (! function_exists('assetVersion')) {
 
 // Core Platform Version Definition
 if (! defined('HL_SITE_VERSION')) {
-    define('HL_SITE_VERSION', 'v2.47.0');
+    define('HL_SITE_VERSION', 'v2.48.0');
     }
 if (! defined('HL_SITE_VERSION_DATE')) {
     define('HL_SITE_VERSION_DATE', 'November 2026');
     }
 if (! defined('HL_SITE_VERSION_LABEL')) {
-    define('HL_SITE_VERSION_LABEL', 'November 2026 Grade 6 ELA & Middle School ELA Completion Release');
+    define('HL_SITE_VERSION_LABEL', 'November 2026 Grade 5 ELA & Upper Elementary Launch Release');
     }
 if (! defined('HL_SITE_VERSION_SUMMARY')) {
-    define('HL_SITE_VERSION_SUMMARY', 'Grade 6 ELA (Level H) Complete Across All 6 Modules (227 Lessons), 10 Dedicated Digital Library Reading Pages; Middle School ELA (Grades 6–8) 100% Complete; Platform Lessons Exceed 3,000 (3,012 Total)');
+    define('HL_SITE_VERSION_SUMMARY', 'Grade 5 ELA (Level G) Complete Across All 6 Modules (224 Lessons), 10 Dedicated Digital Library Reading Pages; Launch of Upper Elementary ELA Band; Platform Lessons Reach 3,236 Total');
     }
 ?>
 <!DOCTYPE html>

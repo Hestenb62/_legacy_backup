@@ -1,0 +1,34 @@
+{
+  "slug": "lemke-max-axiom",
+  "type": "reading",
+  "title": "Investigating the Scientific Method with Max Axiom, Super Scientist",
+  "author": "Donald B. Lemke",
+  "source": "Investigating the Scientific Method with Max Axiom, Super Scientist (Capstone Press, 2008)",
+  "gradeLevel": "Grade 5 ELA (Level G)",
+  "moduleInfo": "Module 2B, Units 1\u20133 Central Graphic Nonfiction Anchor",
+  "backLessonUrl": "/levels/g.php?lesson=g-ela-m2b-u1-l2",
+  "citation": "Lemke, Donald B. Investigating the Scientific Method with Max Axiom, Super Scientist. Illustrated by Tod Smith and Al Milgrom, Graphic Science / Capstone Press, 2008.",
+  "sections": [
+    {
+      "heading": "Super Scientist on a Mission of Inquiry",
+      "epigraph": {
+        "quote": "Science isn't just a collection of facts in a dusty book; it's an adventure of asking questions and testing reality!",
+        "attribution": "\u2014Max Axiom, Super Scientist"
+      },
+      "paragraphs": [
+        "Max Axiom is no ordinary scientist. Empowered by a freak lightning strike that gave him the ability to shrink to the size of a molecule, breathe underwater, and travel at supersonic speed, Max operates out of a high-tech laboratory dedicated to solving mysteries through rigorous scientific inquiry.",
+        "In this graphic novel adventure, Max demystifies the scientific method, showing young learners that every great breakthrough\u2014from curing diseases to exploring deep space\u2014begins with natural curiosity: making close observations, asking precise questions, and refusing to accept assumptions without empirical proof."
+      ]
+    },
+    {
+      "heading": "The Steps of the Scientific Method",
+      "epigraph": {
+        "quote": "A hypothesis is not a wild guess; it is an educated prediction you can test.",
+        "attribution": "\u2014Max Axiom, Super Scientist"
+      },
+      "paragraphs": [
+        "Max guides students through the structured cycle of scientific investigation:\n1. **Ask a Question**: Identify a specific, testable problem observed in the natural world.\n2. **Gather Information**: Conduct thorough background research to learn what other scientists have discovered.\n3. **Form a Hypothesis**: Formulate an educated prediction in an 'If... then...' framework.\n4. **Test the Hypothesis (Experimentation)**: Design a controlled experiment with independent, dependent, and controlled variables to test one factor at a time.\n5. **Analyze the Data**: Organize quantitative and qualitative observations using tables, charts, and graphs.\n6. **Draw Conclusions & Share Results**: Determine whether the data supports or refutes the hypothesis, and publish findings so fellow scientists can replicate the results. Max demonstrates that even when an experiment 'fails,' a scientist learns valuable truth, refining hypotheses to push human knowledge forward."
+      ]
+    }
+  ]
+}

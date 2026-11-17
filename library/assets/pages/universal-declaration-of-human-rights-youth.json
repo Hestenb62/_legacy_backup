@@ -1,0 +1,33 @@
+{
+  "slug": "universal-declaration-of-human-rights-youth",
+  "type": "reading",
+  "title": "Universal Declaration of Human Rights (Plain Language Youth Edition)",
+  "author": "United Nations Commission on Human Rights",
+  "source": "Adopted by the UN General Assembly in Paris, December 10, 1948",
+  "gradeLevel": "Grade 5 ELA (Level G)",
+  "moduleInfo": "Module 1, Supporting Foundational Framework",
+  "backLessonUrl": "/levels/g.php?lesson=g-ela-m1-u1-l3",
+  "citation": "United Nations General Assembly. Universal Declaration of Human Rights. UN General Assembly Resolution 217 A, 10 Dec. 1948.",
+  "sections": [
+    {
+      "heading": "Introduction: The Universal Foundation of Human Dignity",
+      "epigraph": {
+        "quote": "Where, after all, do universal human rights begin? In small places, close to home\u2014so close and so small that they cannot be seen on any maps of the world.",
+        "attribution": "\u2014Eleanor Roosevelt"
+      },
+      "paragraphs": [
+        "Following the unspeakable horrors and mass devastation of World War II, delegates from nations around the globe gathered under the leadership of former First Lady Eleanor Roosevelt. Together, they drafted the Universal Declaration of Human Rights (UDHR)\u2014a landmark global document proclaiming that all human beings, regardless of their nationality, race, religion, gender, or social background, are born with inherent dignity and fundamental rights that no government can take away."
+      ]
+    },
+    {
+      "heading": "Core Articles for Young Citizens",
+      "epigraph": {
+        "quote": "All human beings are born free and equal in dignity and rights.",
+        "attribution": "\u2014Article 1, Universal Declaration of Human Rights"
+      },
+      "paragraphs": [
+        "\u2022 **Article 1**: All human beings are born free and equal. Everyone has the ability to reason and should act toward one another in a spirit of brotherhood.\n\u2022 **Article 2**: Everyone is entitled to all human rights, regardless of race, skin color, gender, language, religion, or social class.\n\u2022 **Article 3**: Everyone has the right to life, liberty, and personal safety.\n\u2022 **Article 4**: No one shall be held in slavery or servitude. Slavery in all its forms is forbidden.\n\u2022 **Article 5**: No one shall be subjected to torture or to cruel, inhuman, or degrading treatment.\n\u2022 **Article 14**: Everyone has the right to seek and enjoy asylum from persecution in other countries.\n\u2022 **Article 23**: Everyone has the right to work, to fair working conditions, to equal pay for equal work, and to join trade unions.\n\u2022 **Article 25**: Everyone has the right to a standard of living adequate for health and well-being, including food, clothing, housing, and medical care.\n\u2022 **Article 26**: Everyone has the right to education. Elementary education shall be free and compulsory."
+      ]
+    }
+  ]
+}

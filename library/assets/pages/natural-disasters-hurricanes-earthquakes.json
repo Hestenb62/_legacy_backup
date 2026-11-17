@@ -1,0 +1,35 @@
+{
+  "slug": "natural-disasters-hurricanes-earthquakes",
+  "type": "reading",
+  "title": "The Science of Natural Disasters: Earthquakes and Hurricanes",
+  "author": "Scientific Educational Review",
+  "source": "National Oceanic and Atmospheric Administration (NOAA) & USGS Geological Reports",
+  "gradeLevel": "Grade 5 ELA (Level G)",
+  "moduleInfo": "Module 4, Unit 1 Central Informational Anchor",
+  "backLessonUrl": "/levels/g.php?lesson=g-ela-m4-u1-l2",
+  "citation": "NOAA & USGS. 'The Physical Science of Extreme Earth Events: Cyclonic Dynamics and Tectonic Shifts.' Geological Educational Series, 2012.",
+  "sections": [
+    {
+      "heading": "Tectonic Forces: How Earthquakes Shake the Ground",
+      "epigraph": {
+        "quote": "The Earth beneath our feet feels solid, but it is actually a restless mosaic of giant floating puzzle pieces.",
+        "attribution": "\u2014USGS Geological Review"
+      },
+      "paragraphs": [
+        "The outer crust of the Earth is broken into enormous pieces called tectonic plates that float on the hot, semi-fluid mantle beneath. These plates move constantly at the rate of a few centimeters per year. Along plate boundaries\u2014such as the San Andreas Fault in California or the Enriquillo-Plantain Garden Fault in the Caribbean\u2014plates grind against one another.",
+        "When friction prevents the plates from sliding smoothly, immense physical stress builds up over decades. Eventually, the locked rocks snap under pressure, releasing vast waves of energy called seismic waves that radiate outward in all directions. On January 12, 2010, a catastrophic magnitude 7.0 earthquake struck near Port-au-Prince, Haiti, collapsing buildings and displacing over one million people, highlighting the vulnerability of developing nations lacking earthquake-resistant infrastructure."
+      ]
+    },
+    {
+      "heading": "Atmospheric Giants: The Anatomy of a Hurricane",
+      "epigraph": {
+        "quote": "A hurricane is Earth's most powerful heat engine, transforming warm tropical ocean water into howling winds and torrential rains.",
+        "attribution": "\u2014NOAA Atmospheric Science"
+      },
+      "paragraphs": [
+        "Hurricanes\u2014also known as tropical cyclones or typhoons\u2014form over warm tropical ocean waters near the equator where water temperatures exceed 80 degrees Fahrenheit. Warm, moist air rises rapidly from the ocean surface, creating an area of low air pressure below. Cooler surrounding air rushes in to fill the void, heats up, and rises in turn.",
+        "Due to the Earth's rotation (the Coriolis effect), this rising air begins to spin counterclockwise in the Northern Hemisphere, forming towering thunderstorms around a calm center called the 'eye.' When sustained wind speeds reach 74 miles per hour, the storm is officially classified as a hurricane. The greatest danger from a hurricane is often not the wind, but the 'storm surge'\u2014a massive wall of ocean water pushed ashore by the storm that inundates coastal cities and destroys infrastructure."
+      ]
+    }
+  ]
+}

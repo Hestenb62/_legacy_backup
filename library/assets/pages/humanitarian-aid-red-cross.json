@@ -1,0 +1,35 @@
+{
+  "slug": "humanitarian-aid-red-cross",
+  "type": "reading",
+  "title": "Humanitarian Aid: The American Red Cross in Action",
+  "author": "Humanitarian Relief Archives",
+  "source": "American Red Cross Historical & Emergency Response Reports",
+  "gradeLevel": "Grade 5 ELA (Level G)",
+  "moduleInfo": "Module 4, Unit 2 Supporting Informational Text",
+  "backLessonUrl": "/levels/g.php?lesson=g-ela-m4-u2-l2",
+  "citation": "American Red Cross. 'History of Disaster Services and Emergency Response Protocols.' Washington, D.C., 2011.",
+  "sections": [
+    {
+      "heading": "Clara Barton and the Founding of Humanitarian Neutrality",
+      "epigraph": {
+        "quote": "I may be compelled to face danger, but never fear it, and while our soldiers can stand and fight, I can stand and feed and nurse them.",
+        "attribution": "\u2014Clara Barton"
+      },
+      "paragraphs": [
+        "The American Red Cross was founded in 1881 by Clara Barton, a heroic Civil War nurse known as the 'Angel of the Battlefield.' Inspired by the International Red Cross movement founded in Geneva, Switzerland, by Henry Dunant, Barton expanded the organization's charter beyond wartime medical care to include relief for peacetime natural disasters\u2014such as floods, forest fires, famines, and earthquakes.",
+        "At the core of the Red Cross are seven fundamental principles: Humanity, Impartiality, Neutrality, Independence, Voluntary Service, Unity, and Universality. In times of crisis, the Red Cross aids anyone in need, regardless of political affiliation, race, or nationality."
+      ]
+    },
+    {
+      "heading": "Modern Disaster Response: Relief, Water, and Rebuilding",
+      "epigraph": {
+        "quote": "In the wake of devastation, compassion must be organized into immediate, life-saving action.",
+        "attribution": "\u2014American Red Cross Field Guide"
+      },
+      "paragraphs": [
+        "When natural disasters like Hurricane Katrina (2005) or the Haiti earthquake (2010) strike, humanitarian organizations mobilize an intricate logistics network within hours. Emergency response vehicles deploy to distribute millions of hot meals, bottled water, hygiene kits, and emergency blankets. Tents and temporary shelters are erected to house displaced families, and volunteer medical teams provide emergency triage and clean water purification tablets to prevent cholera epidemics.",
+        "Beyond immediate survival, humanitarian aid focuses on long-term resilience: rebuilding earthquake-resistant schools, planting mangrove buffers to absorb storm surges, and training local communities in first aid. Learning about humanitarian relief inspires young people to understand their civic responsibility as compassionate global citizens who can take action to support vulnerable communities in times of crisis."
+      ]
+    }
+  ]
+}

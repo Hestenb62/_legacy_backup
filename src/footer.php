@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.47.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Grade 6 ELA & Middle School ELA Completion Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 6 ELA (Level H) Complete Across All 6 Modules (227 Lessons), 10 Dedicated Digital Library Reading Pages; Middle School ELA (Grades 6–8) 100% Complete; Platform Lessons Exceed 3,000 (3,012 Total)';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.48.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Grade 5 ELA & Upper Elementary Launch Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 5 ELA (Level G) Complete Across All 6 Modules (224 Lessons), 10 Dedicated Digital Library Reading Pages; Launch of Upper Elementary ELA Band; Platform Lessons Reach 3,236 Total';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,23 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> achieves the major milestone of <strong>100% Middle School English Language Arts Completion (Grades 6–8)</strong>, delivering Grade 6 (Level H) across all 6 EngageNY / Expeditionary Learning modules (Modules 1, 2A, 2B, 3A, 3B, and 4 — 227 total lessons) alongside 10 dedicated Digital Library reading pages, pushing total platform curriculum lessons past 3,000 to <strong>3,012 lessons</strong>.
+                Version <?= htmlspecialchars($siteVersion) ?> launches the <strong>Upper Elementary English Language Arts Band</strong>, delivering Grade 5 (Level G) across all 6 EngageNY / Expeditionary Learning modules (Modules 1, 2A, 2B, 3A, 3B, and 4 — 224 total lessons) alongside 10 dedicated Digital Library reading pages, expanding total platform curriculum lessons to <strong>3,236 lessons</strong>.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(16, 185, 129, 0.15); color: #059669;">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 5 ELA Full Curriculum &amp; Upper Elementary Launch (v2.48.0):</strong> Comprehensive EngageNY / Expeditionary Learning buildout for Level G spanning 224 lessons across 6 core and alternate modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 6-Module Scope (224 Lessons):</strong> Module 1 (Human Rights &amp; Social Justice: Pam Muñoz Ryan's <em>Esperanza Rising</em> &amp; UN Universal Declaration of Human Rights, 41 lessons), Module 2A (Rainforest Biodiversity: Kathryn Lasky's <em>The Most Beautiful Roof in the World</em> &amp; Aaron Shepard's <em>The Wings of the Butterfly</em>, 40 lessons), Module 2B (Scientific Method &amp; Inventions: Donald B. Lemke's <em>Max Axiom, Super Scientist</em>, 40 lessons), Module 3A (Athletes Breaking Barriers: Sharon Robinson's <em>Promises to Keep: Jackie Robinson</em>, Roberto Clemente, Althea Gibson, 39 lessons), Module 3B (Arctic Innovations: Alootook Ipellie's <em>The Inuit Thought of It</em>, 31 lessons), Module 4 (Natural Disasters &amp; Humanitarian Aid: Earthquakes, Hurricanes, American Red Cross, 33 lessons).</li>
+                            <li><strong>10 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book catalog shelves.</li>
+                            <li><strong>Upper Elementary ELA Launch:</strong> Establishes Grade 5 as the bridge connecting elementary foundational literacy with secondary textual analysis.</li>
+                            <li><strong>Platform Milestone:</strong> Total platform lessons now expand to <strong>3,236</strong> in <code>assets/data/lessons.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(139, 92, 246, 0.15); color: #7c3aed;">
                         <i class="fas fa-crown"></i>

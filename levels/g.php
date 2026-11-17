@@ -60,9 +60,13 @@ $themeColor = 'emerald';
 $levelId = 'g';
 $levelTitle = 'Level G';
 $gradeText = '5th Grade';
-$initialSubject = 'math';
-$initialSubjectName = 'Math';
-$initialSubjectDesc = 'Decimal operations, fraction arithmetic, volume, and coordinate plane problem solving.';
+$initialSubject = (isset($_GET['subject']) && in_array(strtolower($_GET['subject']), ['math', 'ela', 'science', 'social']))
+    ? strtolower($_GET['subject'])
+    : 'math';
+$initialSubjectName = ($initialSubject === 'ela') ? 'English Language Arts' : 'Math';
+$initialSubjectDesc = ($initialSubject === 'ela')
+    ? 'Close reading, literary analysis, scientific inquiry, and informational research across 6 core modules.'
+    : 'Decimal operations, fraction arithmetic, volume, and coordinate plane problem solving.';
 
 $modules = [
     [

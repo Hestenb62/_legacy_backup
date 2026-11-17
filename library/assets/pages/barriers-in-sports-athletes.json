@@ -1,0 +1,35 @@
+{
+  "slug": "barriers-in-sports-athletes",
+  "type": "reading",
+  "title": "Athletes Who Broke Barriers: Roberto Clemente & Althea Gibson",
+  "author": "Historical Biographies",
+  "source": "National Baseball Hall of Fame & International Tennis Archives",
+  "gradeLevel": "Grade 5 ELA (Level G)",
+  "moduleInfo": "Module 3A, Unit 1 Supporting Historical Biographies",
+  "backLessonUrl": "/levels/g.php?lesson=g-ela-m3a-u1-l5",
+  "citation": "National Baseball Hall of Fame. 'Roberto Clemente: Humanitarian and Trailblazer.' Cooperstown, NY; International Tennis Hall of Fame. 'Althea Gibson: Pioneer on Grass and Clay.' Newport, RI.",
+  "sections": [
+    {
+      "heading": "Roberto Clemente: Pride, Passion, and Humanitarian Dignity",
+      "epigraph": {
+        "quote": "Any time you have an opportunity to make a difference in this world and you don't, then you are wasting your time on Earth.",
+        "attribution": "\u2014Roberto Clemente"
+      },
+      "paragraphs": [
+        "Born in Carolina, Puerto Rico, in 1934, Roberto Clemente Walker became the first Latin American superstar in Major League Baseball. Signing with the Pittsburgh Pirates in 1954, Clemente faced dual discrimination: racial prejudice as a Black man in segregated spring training cities, and linguistic mockery from sports reporters who ridiculed his Spanish accent and Anglicized his name to 'Bob.'",
+        "Clemente stood tall, proudly insisting on his Puerto Rican heritage and demanding respect for Latino ballplayers. Over an eighteen-year Hall of Fame career, he racked up exactly 3,000 hits, twelve Gold Glove awards, four batting titles, and led the Pirates to two World Series championships. On New Year's Eve 1972, Clemente died tragically in an airplane crash off the coast of Puerto Rico while personally escorting relief supplies to earthquake victims in Managua, Nicaragua, cementing his immortal legacy as a hero on and off the diamond."
+      ]
+    },
+    {
+      "heading": "Althea Gibson: Breaking Tennis's Country Club Color Line",
+      "epigraph": {
+        "quote": "I always wanted to be somebody. If I made it, it's half because I was game enough to take a lot of punishment along the way.",
+        "attribution": "\u2014Althea Gibson"
+      },
+      "paragraphs": [
+        "Raised in Harlem, New York, during the Depression, Althea Gibson was a rebellious, street-smart athlete who honed her lightning-fast reflexes playing paddle tennis on closed Harlem streets. In the 1940s, competitive tennis was strictly an elite white country club sport, completely barred to African Americans.",
+        "Mentored by physicians Dr. Hubert Eaton and Dr. Robert Johnson of the American Tennis Association (ATA), Gibson developed a booming serve and athletic net game. In 1950, through the public advocacy of former champion Alice Marble, Gibson became the first Black athlete to compete at the U.S. National Championships (Forest Hills). In 1957, she made history as the first African American to win Wimbledon and the U.S. Open, receiving a ticker-tape parade up Broadway and paving the way for future legends like Arthur Ashe and Serena Williams."
+      ]
+    }
+  ]
+}
