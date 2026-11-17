@@ -1,0 +1,34 @@
+{
+  "slug": "campbell-the-heros-journey",
+  "type": "reading",
+  "title": "The Hero's Journey: The Monomyth Archetype",
+  "author": "Joseph Campbell",
+  "source": "The Hero with a Thousand Faces (Pantheon Books, 1949)",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 1, Unit 1 Supporting Conceptual Framework",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m1-u1-l8",
+  "citation": "Campbell, Joseph. The Hero with a Thousand Faces. Pantheon Books, 1949.",
+  "sections": [
+    {
+      "heading": "The Universal Pattern of Mythological Adventure",
+      "epigraph": {
+        "quote": "A hero ventures forth from the world of common day into a region of supernatural wonder: fabulous forces are there encountered and a decisive victory is won.",
+        "attribution": "\u2014Joseph Campbell"
+      },
+      "paragraphs": [
+        "In his landmark comparative study of world mythology, mythologist Joseph Campbell discovered that across wildly diverse civilizations\u2014from ancient Greece and Mesopotamia to indigenous Native American traditions and Asian epics\u2014human cultures have told essentially the same foundational story. Campbell termed this universal narrative structure the 'Monomyth' or 'The Hero's Journey.'",
+        "The journey represents the timeless psychological and spiritual process of human growth: leaving behind the safety of childhood ignorance, confronting deep fears and mortal perils, and returning to community with wisdom, courage, and power to heal."
+      ]
+    },
+    {
+      "heading": "The Three Great Acts: Departure, Initiation, and Return",
+      "epigraph": {
+        "quote": "Where we had thought to travel outward, we will come to the center of our own being.",
+        "attribution": "\u2014Joseph Campbell"
+      },
+      "paragraphs": [
+        "The Hero's Journey unfolds across three primary stages:\n1. **Departure (Separation)**: The hero begins in the mundane Ordinary World, receives a Call to Adventure (often heralded by a crisis or mysterious messenger), may initially refuse the call out of fear, meets a wise Supernatural Mentor who imparts tools or advice, and ultimately crosses the First Threshold into the Unknown.\n2. **Initiation**: In the Special World, the hero faces a Road of Trials, encounters loyal allies and dangerous enemies, descends into the 'Inmost Cave,' endures the supreme Ordeal (a symbolic death and rebirth), and claims the Ultimate Reward or Boon.\n3. **Return**: The hero must make the dangerous trek back to the ordinary world (the Crossing of the Return Threshold), synthesizing the wisdom of both realms to become the Master of Two Worlds and securing freedom to live for their people."
+      ]
+    }
+  ]
+}

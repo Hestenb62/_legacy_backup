@@ -1,0 +1,35 @@
+{
+  "slug": "yep-the-lost-garden",
+  "type": "reading",
+  "title": "The Lost Garden (Autobiographical Selections)",
+  "author": "Laurence Yep",
+  "source": "The Lost Garden: A Memoir (Julian Messner, 1991)",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 3A, Unit 1 Supporting Memoir",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m3a-u1-l8",
+  "citation": "Yep, Laurence. The Lost Garden: A Memoir. Julian Messner / Simon & Schuster, 1991.",
+  "sections": [
+    {
+      "heading": "Growing Up Between Two Worlds",
+      "epigraph": {
+        "quote": "I was an American child living in an immigrant neighborhood, speaking English with my parents while breathing the smells of Chinatown.",
+        "attribution": "\u2014Laurence Yep, The Lost Garden"
+      },
+      "paragraphs": [
+        "In this reflective memoir, award-winning author Laurence Yep explores his childhood growing up as a third-generation Chinese American in San Francisco during the 1950s. Raised in a non-Chinese neighborhood before moving closer to his family's grocery store on the edge of Chinatown, Yep felt perpetually suspended between two cultures.",
+        "In Chinatown, because he did not speak Cantonese fluently, traditional elders viewed him as an outsider. In white suburban schools, classmates treated him as foreign based purely on his physical appearance. Yep experienced what many immigrant children endure: the disorienting feeling of belonging everywhere and nowhere at the same time."
+      ]
+    },
+    {
+      "heading": "The Seed of Storytelling and the Lost Garden",
+      "epigraph": {
+        "quote": "Writing became my way of building a bridge across the silence, connecting who I was with who my ancestors had been.",
+        "attribution": "\u2014Laurence Yep, The Lost Garden"
+      },
+      "paragraphs": [
+        "Yep's inspiration for Dragonwings originated from his grandfather's stories and a small historical footnote about Fung Joe Guey, a real Chinese immigrant aviator who built and flew a biplane in Oakland in 1909, only six years after the Wright brothers.",
+        "The 'lost garden' of Yep's title symbolizes the forgotten cultural roots and oral histories of immigrant families that risk disappearing with time. By writing historical novels, Yep discovered that storytelling was not merely an artistic pursuit; it was an act of reclamation. Through the character of Moon Shadow and Windrider, Yep honored the unsung dignity, humor, and brilliance of Chinese pioneers who built the railroads, leveled the hills, and enriched American civilization."
+      ]
+    }
+  ]
+}

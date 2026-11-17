@@ -1,0 +1,36 @@
+{
+  "slug": "steve-jobs-commencement-address",
+  "type": "reading",
+  "title": "Stanford University Commencement Address (2005)",
+  "author": "Steve Jobs",
+  "source": "Speech delivered at Stanford University, Stanford, California, June 12, 2005",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 2A, Unit 1 Anchor Informational Speech",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m2a-u1-l8",
+  "citation": "Jobs, Steve. 'You've Got to Find What You Love.' Stanford University Commencement Address, Stanford, California, 12 June 2005.",
+  "sections": [
+    {
+      "heading": "Three Stories from My Life: Connecting the Dots & Love and Loss",
+      "epigraph": {
+        "quote": "You can't connect the dots looking forward; you can only connect them looking backwards. You have to trust that the dots will somehow connect in your future.",
+        "attribution": "\u2014Steve Jobs"
+      },
+      "paragraphs": [
+        "I am honored to be with you today at your commencement from one of the finest universities in the world. I never graduated from college. Truth be told, this is the closest I've ever gotten to a college graduation. Today I want to tell you three stories from my life. That's it. No big deal. Just three stories.",
+        "The first story is about connecting the dots. When I dropped out of Reed College after six months, I stopped taking required classes and began dropping in on calligraphy courses. I learned about serif and sans serif typefaces, about varying the space between letter combinations, about what makes great typography great. Ten years later, when we designed the first Macintosh computer, we put it all into the Mac. It was the first computer with beautiful typography. If I had never dropped in on that course, personal computers might not have the wonderful typography they do.",
+        "My second story is about love and loss. I was lucky\u2014I found what I loved to do early in life. Woz and I started Apple in my parents' garage when I was twenty. In ten years Apple grew into a $2 billion company. And then I got fired. What had been the focus of my entire adult life was gone, and it was devastating. But getting fired from Apple was the best thing that could have ever happened to me. The heaviness of being successful was replaced by the lightness of being a beginner again. It freed me to enter one of the most creative periods of my life, founding NeXT and Pixar. Sometimes life hits you in the head with a brick. Don't lose faith. You've got to find what you love."
+      ]
+    },
+    {
+      "heading": "The Third Story: Death & Staying Hungry, Staying Foolish",
+      "epigraph": {
+        "quote": "Your time is limited, so don't waste it living someone else's life... Stay Hungry. Stay Foolish.",
+        "attribution": "\u2014Steve Jobs"
+      },
+      "paragraphs": [
+        "My third story is about death. When I was seventeen, I read a quote that went something like: 'If you live each day as if it was your last, someday you'll most certainly be right.' Since then, I have looked in the mirror every morning and asked myself: 'If today were the last day of my life, would I want to do what I am about to do today?' Remembering that you are going to die is the best way I know to avoid the trap of thinking you have something to lose. You are already naked. There is no reason not to follow your heart.",
+        "Your time is limited, so don't waste it living someone else's life. Don't be trapped by dogma\u2014which is living with the results of other people's thinking. Don't let the noise of others' opinions drown out your own inner voice. And most important, have the courage to follow your heart and intuition. When I was young, there was an amazing publication called The Whole Earth Catalog. On the back cover of their final issue was a photograph of an early morning country road, and beneath it were the words: 'Stay Hungry. Stay Foolish.' It was their farewell message as they signed off. I have always wished that for myself. And now, as you graduate to begin anew, I wish that for you. Stay Hungry. Stay Foolish."
+      ]
+    }
+  ]
+}

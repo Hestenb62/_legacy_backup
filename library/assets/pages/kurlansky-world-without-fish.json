@@ -1,0 +1,35 @@
+{
+  "slug": "kurlansky-world-without-fish",
+  "type": "reading",
+  "title": "World Without Fish (Selected Chapters & Marine Ecosystems)",
+  "author": "Mark Kurlansky",
+  "source": "World Without Fish: How Kids Can Help Save the Oceans (Workman Publishing, 2011)",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 3B, Units 1\u20133 Central Nonfiction Anchor",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m3b-u1-l2",
+  "citation": "Kurlansky, Mark. World Without Fish: How Kids Can Help Save the Oceans. Illustrated by Frank Stockton, Workman Publishing, 2011.",
+  "sections": [
+    {
+      "heading": "The Tragedy of the Grand Banks & Modern Industrial Trawling",
+      "epigraph": {
+        "quote": "If we continue fishing the oceans the way we are doing now, within fifty years most of the commercial fish we eat will be completely gone.",
+        "attribution": "\u2014Mark Kurlansky, World Without Fish"
+      },
+      "paragraphs": [
+        "For five hundred years, the Grand Banks off the coast of Newfoundland, Canada, held the richest cod fishery on Earth. When explorer John Cabot arrived in 1497, the waters were so densely packed with cod that sailors could dip wicker baskets into the sea and haul them up overflowing. For centuries, generation after generation of fishermen believed the supply of ocean fish was inexhaustible.",
+        "However, in the mid-twentieth century, the nature of fishing underwent a catastrophic industrial revolution. Giant factory-freezer trawlers, equipped with radar, sonar fish-finders, and football-field-sized bottom-drag nets weighted with heavy iron rollers, began scraping the ocean floor bare. By 1992, the northern cod population had collapsed by ninety-nine percent, forcing the Canadian government to declare a total moratorium and devastating coastal fishing communities."
+      ]
+    },
+    {
+      "heading": "The Fragile Marine Food Web and The Path to Sustainable Oceans",
+      "epigraph": {
+        "quote": "An ocean without fish is not simply an ocean where you can't go fishing; it is an ocean of slime, toxic jellyfish, and ecological collapse.",
+        "attribution": "\u2014Mark Kurlansky, World Without Fish"
+      },
+      "paragraphs": [
+        "Overfishing does not simply deplete target species like cod, bluefin tuna, and salmon; it fundamentally unravels marine food webs. When top ocean predators are removed, their prey\u2014smaller fish, squid, and zooplankton\u2014proliferate uncontrollably, disrupting microscopic phytoplankton that produce more than half of the oxygen in Earth's atmosphere.",
+        "Furthermore, rising ocean temperatures and acidification caused by burning fossil fuels threaten coral reefs and shellfish. Yet Kurlansky emphasizes that ocean recovery is still entirely possible. By implementing strict scientific catch quotas, establishing Marine Protected Areas (no-take reserves where fish can breed safely), eliminating bottom-trawling gear, and educating consumers to buy sustainably harvested seafood, humanity can restore the vitality of the oceans for generations to come."
+      ]
+    }
+  ]
+}

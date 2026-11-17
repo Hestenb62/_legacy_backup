@@ -1,0 +1,35 @@
+{
+  "slug": "riordan-the-lightning-thief",
+  "type": "reading",
+  "title": "The Lightning Thief (Percy Jackson: Identity and Myth)",
+  "author": "Rick Riordan",
+  "source": "The Lightning Thief: Percy Jackson & the Olympians, Book One (Hyperion Books, 2005)",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 1, Central Literary Anchor",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m1-u1-l2",
+  "citation": "Riordan, Rick. The Lightning Thief. Hyperion Books for Children, 2005.",
+  "sections": [
+    {
+      "heading": "Chapter 1: I Accidentally Vaporize My Pre-Algebra Teacher",
+      "epigraph": {
+        "quote": "Look, I didn't want to be a half-blood. If you're reading this because you think you might be one, my advice is: close this book right now.",
+        "attribution": "\u2014Percy Jackson, The Lightning Thief"
+      },
+      "paragraphs": [
+        "Twelve-year-old Percy Jackson has always considered himself a troubled kid. Diagnosed with ADHD and dyslexia, he has bounced between six boarding schools in six years, perpetually misunderstood by teachers and peers alike. But on a sixth-grade museum field trip to the Metropolitan Museum of Art to study Greek and Roman antiquities, the world he thought he knew dissolves.",
+        "When his strict math teacher, Mrs. Dodds, transforms into a terrifying, leather-winged Fury\u2014a hag with bat wings, yellow talons, and a mouth full of fangs\u2014his Latin teacher, Mr. Brunner (who is secretly Chiron the Centaur), tosses Percy a ballpoint pen that transforms into a gleaming bronze sword named Riptide. With a single instinctive slash, Percy vaporizes the monster into golden dust, thrusting him into an ancient, hidden world where the gods of Mount Olympus are alive and warring in twenty-first-century America."
+      ]
+    },
+    {
+      "heading": "The Threshold of Camp Half-Blood and The Demigod Dilemma",
+      "epigraph": {
+        "quote": "Your father is not dead, Percy. He is one of the Olympians.",
+        "attribution": "\u2014Chiron, The Lightning Thief"
+      },
+      "paragraphs": [
+        "Following a desperate escape from a Minotaur on Long Island in which his mother disappears in a flash of golden light, Percy wakes up in Camp Half-Blood\u2014a sanctuary nestled in strawberry fields where demigod children of mortal humans and Greek deities are trained in swordsmanship, archery, and ancient lore.",
+        "There Percy learns that his ADHD is actually his hyperactive battlefield reflexes, and his dyslexia is because his brain is hardwired to read Ancient Greek. When Poseidon, God of the Sea, claims Percy as his son with a glowing holographic trident above his head, Percy is marked as a child of the 'Big Three.' Accused by Zeus of stealing the Master Lightning Bolt, Percy, along with the fierce Athena daughter Annabeth Chase and the satyr Grover Underwood, embarks on a cross-country quest across the United States to prevent a catastrophic civil war among the gods."
+      ]
+    }
+  ]
+}

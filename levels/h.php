@@ -52,17 +52,21 @@ if (!empty($requestedLesson)) {
 
 // Page Metadata
 $pageTitle       = "6th Grade Level H | Hesten's Learning";
-$pageDescription = "Ratios, unit rates, rational numbers, algebraic expressions, surface area, and statistics for 6th-grade students.";
-$pageKeywords    = "Grade 6, 6th Grade, ratios and rates, negative numbers, rational numbers, coordinate plane, expressions, equations, surface area, statistics";
+$pageDescription = "Ratios, unit rates, rational numbers, literature analysis, and argumentative writing for 6th-grade students.";
+$pageKeywords    = "Grade 6, 6th Grade, ratios and rates, negative numbers, expressions, surface area, ELA, Literature, EngageNY";
 
 // Template Variables
 $themeColor = 'violet';
 $levelId = 'h';
 $levelTitle = 'Level H';
 $gradeText = '6th Grade';
-$initialSubject = 'math';
-$initialSubjectName = 'Math';
-$initialSubjectDesc = 'Ratios, rates, fractions, algebraic expressions, area, and statistics for middle schoolers.';
+$initialSubject = (isset($_GET['subject']) && in_array(strtolower($_GET['subject']), ['math', 'ela', 'science', 'social']))
+    ? strtolower($_GET['subject'])
+    : 'math';
+$initialSubjectName = ($initialSubject === 'ela') ? 'English Language Arts' : 'Math';
+$initialSubjectDesc = ($initialSubject === 'ela')
+    ? 'Close reading, literary analysis, argument craft, and research across 6 core modules.'
+    : 'Ratios, rates, fractions, algebraic expressions, area, and statistics for middle schoolers.';
 
 $modules = [
     [

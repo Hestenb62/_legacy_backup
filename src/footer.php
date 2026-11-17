@@ -98,9 +98,9 @@
 
         <!-- Version Status & Release Info Strip (WCAG Operable) -->
         <?php
-        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.46.0';
-        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Grade 7 ELA Full Curriculum & Digital Library Release';
-        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 7 ELA (Level I) Complete Across All 6 Modules (238 Lessons), 11 Dedicated Digital Library Reading Pages; Total Platform Lessons Expanded to 2,785';
+        $siteVersion = defined('HL_SITE_VERSION') ? HL_SITE_VERSION : 'v2.47.0';
+        $siteVersionLabel = defined('HL_SITE_VERSION_LABEL') ? HL_SITE_VERSION_LABEL : 'November 2026 Grade 6 ELA & Middle School ELA Completion Release';
+        $siteVersionSummary = defined('HL_SITE_VERSION_SUMMARY') ? HL_SITE_VERSION_SUMMARY : 'Grade 6 ELA (Level H) Complete Across All 6 Modules (227 Lessons), 10 Dedicated Digital Library Reading Pages; Middle School ELA (Grades 6–8) 100% Complete; Platform Lessons Exceed 3,000 (3,012 Total)';
         ?>
         <div class="footer-version-strip" role="region" aria-label="Platform Version Information">
             <div class="footer-version-info">
@@ -273,9 +273,23 @@
                 </span>
             </div>
             <p class="footer-vmodal-lead">
-                Version <?= htmlspecialchars($siteVersion) ?> delivers the complete <strong>Grade 7 (Level I) English Language Arts Curriculum</strong> across all 6 EngageNY / Expeditionary Learning modules (Modules 1, 2A, 2B, 3, 4A, and 4B — 238 total lessons) alongside 11 dedicated Digital Library reading pages, expanding the platform's verified curriculum to 2,785 total lessons.
+                Version <?= htmlspecialchars($siteVersion) ?> achieves the major milestone of <strong>100% Middle School English Language Arts Completion (Grades 6–8)</strong>, delivering Grade 6 (Level H) across all 6 EngageNY / Expeditionary Learning modules (Modules 1, 2A, 2B, 3A, 3B, and 4 — 227 total lessons) alongside 10 dedicated Digital Library reading pages, pushing total platform curriculum lessons past 3,000 to <strong>3,012 lessons</strong>.
             </p>
             <ul class="footer-vmodal-features">
+                <li class="footer-vmodal-feature-item">
+                    <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(139, 92, 246, 0.15); color: #7c3aed;">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <div class="footer-vmodal-feature-text">
+                        <strong>Grade 6 ELA &amp; Middle School ELA Band Completion (v2.47.0):</strong> Comprehensive EngageNY / Expeditionary Learning buildout for Level H spanning 227 lessons across 6 core and alternate modules:
+                        <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
+                            <li><strong>Complete 6-Module Scope (227 Lessons):</strong> Module 1 (Myth &amp; The Hero's Journey: Rick Riordan's <em>The Lightning Thief</em> &amp; Joseph Campbell, 40 lessons), Module 2A (Rules to Live By: Christopher Paul Curtis's <em>Bud, Not Buddy</em> &amp; Steve Jobs's Stanford address, 38 lessons), Module 2B (Voices of Adversity: Laura Amy Schlitz's <em>Good Masters! Sweet Ladies!</em>, 39 lessons), Module 3A (Point of View &amp; Cultural Perspective: Laurence Yep's <em>Dragonwings</em> &amp; <em>The Lost Garden</em>, 36 lessons), Module 3B (Ocean Sustainability: Mark Kurlansky's <em>World Without Fish</em>, 36 lessons), Module 4 (Decision Making &amp; The Environment: Jean Craighead George's <em>Frightful's Mountain</em> &amp; Rachel Carson's <em>Silent Spring</em>, 38 lessons).</li>
+                            <li><strong>10 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book shelves.</li>
+                            <li><strong>Middle School ELA 100% Complete (Grades 6–8):</strong> Full coverage across Grades 6, 7, and 8 totaling 704 middle school lessons across 18 modules.</li>
+                            <li><strong>Platform Milestone:</strong> Total platform lessons now surpass 3,000 to reach <strong>3,012</strong> in <code>assets/data/lessons.json</code>.</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="footer-vmodal-feature-item">
                     <div class="footer-vmodal-feature-icon" aria-hidden="true" style="background: rgba(168, 85, 247, 0.15); color: #9333ea;">
                         <i class="fas fa-book-reader"></i>
@@ -285,7 +299,6 @@
                         <ul style="margin: 0.35rem 0 0 1rem; padding: 0; font-size: 0.85rem; color: var(--color-text-secondary, #475569); line-height: 1.5;">
                             <li><strong>Complete 6-Module Scope (238 Lessons):</strong> Module 1 (Journeys &amp; Survival: Linda Sue Park's <em>A Long Walk to Water</em> &amp; Lost Boys of Sudan, 39 lessons), Module 2A (Working Conditions: Katherine Paterson's <em>Lyddie</em>, César Chávez's Commonwealth Club Address, 38 lessons), Module 2B (Identity &amp; Transformation: George Bernard Shaw's <em>Pygmalion</em>, gender stereotypes &amp; counter-ads, 42 lessons), Module 3 (What Gives Stories Power?: <em>Narrative of the Life of Frederick Douglass</em> &amp; abolitionist poetry, 43 lessons), Module 4A (Adolescent Brain Development &amp; Screen Time: Dr. Jay Giedd, NIDA, Matt Richtel, 39 lessons), Module 4B (Water Sustainability: Charles Fishman's <em>The Big Thirst</em> &amp; Barbara Kingsolver's <em>Water Is Life</em>, 37 lessons).</li>
                             <li><strong>11 Dedicated Digital Library Reading Pages:</strong> Anchor literature ingested into <code>library/assets/pages/</code> as distraction-free reading pages (<code>/library/?page=&lt;slug&gt;</code>) decoupled from book shelves.</li>
-                            <li><strong>Master Lessons Index:</strong> Total platform lessons now reach <strong>2,785</strong> in <code>assets/data/lessons.json</code>.</li>
                         </ul>
                     </div>
                 </li>

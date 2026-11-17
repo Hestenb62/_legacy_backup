@@ -1,0 +1,35 @@
+{
+  "slug": "carson-silent-spring-and-ddt",
+  "type": "reading",
+  "title": "Silent Spring & Sounding the Alarm on Pollution",
+  "author": "Rachel Carson & Robert Peterson",
+  "source": "Silent Spring (Houghton Mifflin, 1962) & Boy's Life Historical Review",
+  "gradeLevel": "Grade 6 ELA (Level H)",
+  "moduleInfo": "Module 4, Unit 1 Central Informational Anchor",
+  "backLessonUrl": "/levels/h.php?lesson=h-ela-m4-u1-l6",
+  "citation": "Carson, Rachel. Silent Spring. Houghton Mifflin, 1962; Peterson, Robert W. 'Rachel Carson: Sounding the Alarm on Pollution.' Boy's Life, vol. 84, no. 8, 1994, pp. 38\u201341.",
+  "sections": [
+    {
+      "heading": "A Fable for Tomorrow: The Silent Spring",
+      "epigraph": {
+        "quote": "There was a strange stillness. The birds, for example\u2014where had they gone? Many people spoke of them, puzzled and disturbed.",
+        "attribution": "\u2014Rachel Carson, Silent Spring"
+      },
+      "paragraphs": [
+        "In 1962, marine biologist and author Rachel Carson published Silent Spring, a landmark book that ignited the modern global environmental movement. Carson opened with a haunting 'Fable for Tomorrow,' depicting a prosperous American town where all life seemed to live in harmony with its surroundings. Then a mysterious blight crept over the area: farm animals sickened, apple trees blossomed but bore no fruit, and the cheerful songbirds disappeared from the hedgerows.",
+        "Carson revealed that this catastrophe was not caused by supernatural forces or foreign enemies, but by human hubris: the reckless, widespread spraying of synthetic chemical insecticides\u2014chief among them dichloro-diphenyl-trichloroethane (DDT). Marketed aggressively after World War II as a miracle pesticide to kill mosquitoes and agricultural pests, DDT was sprayed indiscriminately over millions of acres of farmland, suburban lawns, and public waterways."
+      ]
+    },
+    {
+      "heading": "Bioaccumulation and The Fight for the Bald Eagle",
+      "epigraph": {
+        "quote": "Man is a part of nature, and his war against nature is inevitably a war against himself.",
+        "attribution": "\u2014Rachel Carson"
+      },
+      "paragraphs": [
+        "Carson scientifically documented the phenomenon of 'bioaccumulation' and 'biomagnification.' DDT did not break down in nature; instead, microscopic doses in pond water were absorbed by plankton, concentrated in the fat tissues of small fish, and magnified thousands of times as it traveled up the food chain to apex predators like osprey, peregrine falcons, and the American bald eagle.",
+        "In birds of prey, DDT interfered with calcium metabolism, causing females to lay eggs with paper-thin shells that crushed under their own weight during incubation. By the late 1960s, America's national symbol, the bald eagle, was reduced to fewer than five hundred nesting pairs in the contiguous United States. Despite fierce smear campaigns by the chemical industry, Carson testified before the U.S. Senate. Her courage led directly to the creation of the Environmental Protection Agency (EPA) and the 1972 federal ban on DDT, enabling peregrines, eagles, and falcons to make one of the greatest wildlife comebacks in human history."
+      ]
+    }
+  ]
+}
